@@ -1,0 +1,179 @@
+{
+  "matchId": "guaxupe-vs-muzambinho-2025-01",
+  "title": "Guaxupé vs Muzambinho",
+  "theme": "socioeconomic-battle",
+  "cities": [
+    {
+      "ibgeId": 3128709,
+      "name": "Guaxupé",
+      "state": "MG",
+      "nickname": "Capital do Café",
+      "geo": {
+        "areaKm2": 285.0,
+        "altitudeM": 830,
+        "latitude": -21.305,
+        "longitude": -46.708
+      },
+      "demographics": {
+        "populationTotal": 54000,
+        "populationUrban": 50000,
+        "populationRural": 4000,
+        "densityHabKm2": 190.0,
+        "ageStructure": {
+          "pct0a14": 20.5,
+          "pct15a64": 69.0,
+          "pct65mais": 10.5,
+          "medianAge": 33.0
+        },
+        "sexRatio": 94.0
+      },
+      "development": {
+        "idhm": 0.770,
+        "idhmEducation": 0.750,
+        "idhmIncome": 0.780,
+        "idhmLongevity": 0.790,
+        "lifeExpectancy": 76.5
+      },
+      "incomeAndWork": {
+        "gdpTotal": 1500000000,
+        "gdpPerCapita": 28000,
+        "incomePerCapita": 1400,
+        "unemploymentRate": 7.5,
+        "employmentRate": 54.0,
+        "averageFormalWage": 2500
+      },
+      "economyStructure": {
+        "gdpAgroPct": 8.0,
+        "gdpIndustryPct": 22.0,
+        "gdpServicesPct": 60.0,
+        "gdpPublicAdminPct": 10.0
+      },
+      "education": {
+        "literacy15plusPct": 96.5,
+        "schoolEnrollment6to14Pct": 98.0,
+        "schoolEnrollment15to17Pct": 85.0,
+        "meanYearsSchooling18plus": 9.5
+      },
+      "healthAndInfra": {
+        "infantMortalityPerThousand": 12.0,
+        "waterCoveragePct": 99.0,
+        "sewageCoveragePct": 95.0,
+        "wasteCollectionPct": 98.0,
+        "hospitalBedsPerThousand": 2.0,
+        "healthUnits": 15
+      },
+      "businessAndServices": {
+        "companiesTotal": 2500,
+        "companiesPerThousandHab": 46.3,
+        "commercialAppealScore": 72
+      },
+      "scores": {
+        "economyScore": 78,
+        "qualityOfLifeScore": 82,
+        "educationScore": 80,
+        "healthScore": 79,
+        "overallScore": 80
+      },
+      "meta": {
+        "dataYear": 2022,
+        "sources": [
+          "IBGE",
+          "IMRS-FJP",
+          "AtlasHDI"
+        ]
+      }
+    },
+    {
+      "ibgeId": 3144102,
+      "name": "Muzambinho",
+      "state": "MG",
+      "nickname": "Terra do Café e do IF",
+      "geo": {
+        "areaKm2": 409.0,
+        "altitudeM": 900,
+        "latitude": -21.370,
+        "longitude": -46.523
+      },
+      "demographics": {
+        "populationTotal": 21000,
+        "populationUrban": 18000,
+        "populationRural": 3000,
+        "densityHabKm2": 51.0,
+        "ageStructure": {
+          "pct0a14": 19.0,
+          "pct15a64": 70.0,
+          "pct65mais": 11.0,
+          "medianAge": 34.0
+        },
+        "sexRatio": 96.0
+      },
+      "development": {
+        "idhm": 0.760,
+        "idhmEducation": 0.740,
+        "idhmIncome": 0.770,
+        "idhmLongevity": 0.780,
+        "lifeExpectancy": 75.8
+      },
+      "incomeAndWork": {
+        "gdpTotal": 700000000,
+        "gdpPerCapita": 33000,
+        "incomePerCapita": 1450,
+        "unemploymentRate": 6.8,
+        "employmentRate": 56.0,
+        "averageFormalWage": 2550
+      },
+      "economyStructure": {
+        "gdpAgroPct": 20.0,
+        "gdpIndustryPct": 18.0,
+        "gdpServicesPct": 52.0,
+        "gdpPublicAdminPct": 10.0
+      },
+      "education": {
+        "literacy15plusPct": 96.0,
+        "schoolEnrollment6to14Pct": 99.0,
+        "schoolEnrollment15to17Pct": 87.0,
+        "meanYearsSchooling18plus": 9.3
+      },
+      "healthAndInfra": {
+        "infantMortalityPerThousand": 11.0,
+        "waterCoveragePct": 98.0,
+        "sewageCoveragePct": 90.0,
+        "wasteCollectionPct": 97.0,
+        "hospitalBedsPerThousand": 1.8,
+        "healthUnits": 8
+      },
+      "businessAndServices": {
+        "companiesTotal": 900,
+        "companiesPerThousandHab": 42.8,
+        "commercialAppealScore": 68
+      },
+      "scores": {
+        "economyScore": 76,
+        "qualityOfLifeScore": 79,
+        "educationScore": 78,
+        "healthScore": 78,
+        "overallScore": 78
+      },
+      "meta": {
+        "dataYear": 2022,
+        "sources": [
+          "IBGE",
+          "IMRS-FJP",
+          "AtlasHDI"
+        ]
+      }
+    }
+  ],
+  "battleWeights": {
+    "economyScoreWeight": 0.3,
+    "qualityOfLifeScoreWeight": 0.3,
+    "educationScoreWeight": 0.2,
+    "healthScoreWeight": 0.2
+  },
+  "visual": {
+    "primaryColorCity1": "#1E88E5",
+    "primaryColorCity2": "#E53935",
+    "backgroundTheme": "dark-map",
+    "useMap": true
+  }
+}
