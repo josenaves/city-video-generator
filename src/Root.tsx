@@ -1,9 +1,11 @@
 import "./index.css";
 import { Composition } from "remotion";
-import { CityComparison } from "./CityComparison";
-import { CityComparisonPortrait } from "./CityComparisonPortrait";
-import { BattleCityPortrait } from "./BattleCityPortrait";
-import { BattleCampoGrandeCuiaba } from "./BattleCampoGrandeCuiaba";
+import { BattleVideo } from "./BattleVideo";
+
+// @ts-ignore
+import uberlandiaUberabaData from "./data/uberlandia-uberaba.json";
+// @ts-ignore
+import campoGrandeCuiabaData from "./data/campo-grande-cuiaba.json";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -11,39 +13,31 @@ export const RemotionRoot: React.FC = () => {
   return (
     <>
       <Composition
-        id="CityComparison"
-        component={CityComparison}
-        durationInFrames={1500}
-        fps={30}
-        width={1920}
-        height={1080}
-      />
-
-      <Composition
-        id="CityComparisonPortrait"
-        component={CityComparisonPortrait}
-        durationInFrames={1500}
-        fps={30}
-        width={1080}
-        height={1920}
-      />
-
-      <Composition
-        id="BattleCityPortrait"
-        component={BattleCityPortrait}
+        id="BattleUberlandiaUberaba"
+        component={BattleVideo}
         durationInFrames={1200}
         fps={30}
         width={1080}
         height={1920}
+        defaultProps={{
+          battleData: uberlandiaUberabaData,
+          image1: "uberlandia.jpg",
+          image2: "uberaba.jpg",
+        }}
       />
 
       <Composition
         id="BattleCampoGrandeCuiaba"
-        component={BattleCampoGrandeCuiaba}
+        component={BattleVideo}
         durationInFrames={1200}
         fps={30}
         width={1080}
         height={1920}
+        defaultProps={{
+          battleData: campoGrandeCuiabaData,
+          image1: "campo_grande.jpg",
+          image2: "cuiaba.jpg",
+        }}
       />
     </>
   );

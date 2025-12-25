@@ -3,10 +3,14 @@ import { AbsoluteFill, Sequence, Audio, staticFile } from 'remotion';
 import { BattleIntro } from './components/BattleIntro';
 import { BattleRound } from './components/BattleRound';
 import { BattleWinner } from './components/BattleWinner';
-// @ts-ignore
-import battleData from './data/campo-grande-cuiaba.json';
 
-export const BattleCampoGrandeCuiaba: React.FC = () => {
+type BattleVideoProps = {
+    battleData: any;
+    image1: string;
+    image2: string;
+};
+
+export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, image2 }) => {
     const { cities, rounds } = battleData;
     const city1 = cities[0];
     const city2 = cities[1];
@@ -41,14 +45,14 @@ export const BattleCampoGrandeCuiaba: React.FC = () => {
                             unit={round.unit}
                             format={round.format}
                             type={round.type}
-                            backgroundImage1={staticFile('campo_grande.jpg')}
-                            backgroundImage2={staticFile('cuiaba.jpg')}
+                            backgroundImage1={staticFile(image1)}
+                            backgroundImage2={staticFile(image2)}
                         />
                     </Sequence>
                 );
             })}
 
-            {/* Calculate Score */}
+            {/* Calculate Score and Show Winner */}
             {(() => {
                 let wins1 = 0;
                 let wins2 = 0;
@@ -60,7 +64,7 @@ export const BattleCampoGrandeCuiaba: React.FC = () => {
                 });
 
                 const winner = wins1 >= wins2 ? city1 : city2;
-                const winnerImage = wins1 >= wins2 ? 'campo_grande.jpg' : 'cuiaba.jpg';
+                const winnerImage = wins1 >= wins2 ? image1 : image2;
 
                 return (
                     <Sequence from={introDuration + (rounds.length * roundDuration)} durationInFrames={finalDuration}>
