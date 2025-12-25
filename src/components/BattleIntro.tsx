@@ -1,10 +1,12 @@
 import React from 'react';
-import { AbsoluteFill, useVideoConfig, spring, useCurrentFrame, interpolate, Img, staticFile } from 'remotion';
+import { AbsoluteFill, useVideoConfig, spring, useCurrentFrame, interpolate, Img } from 'remotion';
 
 export const BattleIntro: React.FC<{
     city1Name: string;
     city2Name: string;
-}> = ({ city1Name, city2Name }) => {
+    image1: string;
+    image2: string;
+}> = ({ city1Name, city2Name, image1, image2 }) => {
     const frame = useCurrentFrame();
     const { fps } = useVideoConfig();
 
@@ -26,11 +28,11 @@ export const BattleIntro: React.FC<{
         <AbsoluteFill style={{ backgroundColor: 'black' }}>
             <AbsoluteFill style={{ flexDirection: 'row' }}>
                 <div style={{ flex: 1, backgroundColor: '#003300', transform: `translateX(${slideLeft}%)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Img src={staticFile('uberlandia.jpg')} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
+                    <Img src={image1} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
                     <h1 style={{ position: 'absolute', fontSize: 80, color: 'white', textShadow: '0 0 10px black' }}>{city1Name}</h1>
                 </div>
                 <div style={{ flex: 1, backgroundColor: '#330000', transform: `translateX(${slideRight}%)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Img src={staticFile('uberaba.jpg')} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
+                    <Img src={image2} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
                     <h1 style={{ position: 'absolute', fontSize: 80, color: 'white', textShadow: '0 0 10px black' }}>{city2Name}</h1>
                 </div>
             </AbsoluteFill>

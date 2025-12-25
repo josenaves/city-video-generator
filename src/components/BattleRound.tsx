@@ -54,7 +54,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
     const formatValue = (val: number) => {
         if (format === 'compact') return new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(val);
         if (format === 'currency') return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumSignificantDigits: 3 }).format(val);
-        if (format === 'percent') return `${val}%`;
+        if (format === 'percent') return `${val.toFixed(2)}%`;
         return val.toFixed(format === 'decimal3' ? 3 : 1);
     };
 

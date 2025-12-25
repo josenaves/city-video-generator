@@ -6,6 +6,8 @@ import { BattleVideo } from "./BattleVideo";
 import uberlandiaUberabaData from "./data/uberlandia-uberaba.json";
 // @ts-ignore
 import campoGrandeCuiabaData from "./data/campo-grande-cuiaba.json";
+// @ts-ignore
+import arceburgoGuaranesiaData from "./data/arceburgo-guaranesia.json";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -37,6 +39,20 @@ export const RemotionRoot: React.FC = () => {
           battleData: campoGrandeCuiabaData,
           image1: "campo_grande.jpg",
           image2: "cuiaba.jpg",
+        }}
+      />
+
+      <Composition
+        id="BattleArceburgoGuaranesia"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: arceburgoGuaranesiaData,
+          image1: "arceburgo.jpg",
+          image2: "guaranesia.jpg",
         }}
       />
     </>

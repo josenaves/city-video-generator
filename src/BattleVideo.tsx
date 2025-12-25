@@ -24,7 +24,12 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, im
             <Audio src={staticFile('Beat Your Competition - Vibe Tracks.mp3')} volume={0.5} />
 
             <Sequence from={0} durationInFrames={introDuration}>
-                <BattleIntro city1Name={city1.name} city2Name={city2.name} />
+                <BattleIntro
+                    city1Name={city1.name}
+                    city2Name={city2.name}
+                    image1={staticFile(image1)}
+                    image2={staticFile(image2)}
+                />
             </Sequence>
 
             {rounds.map((round: any, index: number) => {
