@@ -1,0 +1,95 @@
+{
+    "matchId": "extrema-vs-pouso-alegre-2025",
+    "title": "Extrema vs Pouso Alegre",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 3125101,
+            "name": "Extrema",
+            "state": "MG",
+            "nickname": "Portal Sul de Minas",
+            "data": {
+                "population": 57913,
+                "areaKm2": 245,
+                "gdpPerCapita": 377791,
+                "hospitalBedsPerThousand": 1.8,
+                "idh": 0.732,
+                "higherEducationPct": 15
+            },
+            "visual": {
+                "primaryColor": "#1B5E20",
+                "secondaryColor": "#0D3D12",
+                "image": "extrema.jpg"
+            }
+        },
+        {
+            "ibgeId": 3152501,
+            "name": "Pouso Alegre",
+            "state": "MG",
+            "nickname": "Cidade Carinho",
+            "data": {
+                "population": 160751,
+                "areaKm2": 543,
+                "gdpPerCapita": 93296,
+                "hospitalBedsPerThousand": 3.2,
+                "idh": 0.774,
+                "higherEducationPct": 18
+            },
+            "visual": {
+                "primaryColor": "#C62828",
+                "secondaryColor": "#B71C1C",
+                "image": "pouso-alegre.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}

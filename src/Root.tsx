@@ -10,6 +10,8 @@ import campoGrandeCuiabaData from "./data/campo-grande-cuiaba.json";
 import arceburgoGuaranesiaData from "./data/arceburgo-guaranesia.json";
 // @ts-ignore
 import saoJoseRioPardoMococaData from "./data/sao-jose-rio-pardo-mococa.json";
+// @ts-ignore
+import extremaPousoAlegreData from "./data/extrema-pouso-alegre.json";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -71,6 +73,22 @@ export const RemotionRoot: React.FC = () => {
           image2: "mococa.jpg",
         }}
       />
+
+      {/* Horizontal format for YouTube (1920x1080) */}
+      <Composition
+        id="BattleExtremaPousoAlegre"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          battleData: extremaPousoAlegreData,
+          image1: "extrema.jpg",
+          image2: "pouso-alegre.jpg",
+        }}
+      />
     </>
   );
 };
+
