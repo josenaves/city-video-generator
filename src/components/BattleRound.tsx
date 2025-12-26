@@ -112,8 +112,8 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                 <div style={{ width: '80%', display: 'flex', flexDirection: 'column', gap: 40 }}>
                     {/* City 1 */}
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 55, textShadow: '0 2px 5px rgba(0,0,0,0.8)' }}>
-                            <span style={{ color: city1Color, fontWeight: 'bold' }}>{city1Name}</span>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 70, textShadow: '0 2px 5px rgba(0,0,0,0.8)' }}>
+                            <span style={{ color: '#FFD700', fontWeight: 'bold' }}>{city1Name}</span>
                             <span>{formatValue(val1)} <span style={{ fontSize: 30 }}>{unit}</span></span>
                         </div>
                         <div style={{ width: '100%', height: 60, backgroundColor: 'rgba(50,50,50,0.8)', borderRadius: 10, overflow: 'hidden' }}>
@@ -123,8 +123,8 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
 
                     {/* City 2 */}
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 55, textShadow: '0 2px 5px rgba(0,0,0,0.8)' }}>
-                            <span style={{ color: city2Color, fontWeight: 'bold' }}>{city2Name}</span>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 70, textShadow: '0 2px 5px rgba(0,0,0,0.8)' }}>
+                            <span style={{ color: '#FFFFFF', fontWeight: 'bold' }}>{city2Name}</span>
                             <span>{formatValue(val2)} <span style={{ fontSize: 30 }}>{unit}</span></span>
                         </div>
                         <div style={{ width: '100%', height: 60, backgroundColor: 'rgba(50,50,50,0.8)', borderRadius: 10, overflow: 'hidden' }}>
