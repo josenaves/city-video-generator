@@ -12,6 +12,7 @@ type BattleRoundProps = {
     type: string;
     city1Color: string;
     city2Color: string;
+    inverse?: boolean;
     backgroundImage1: string;
     backgroundImage2: string;
 };
@@ -27,6 +28,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
     type,
     city1Color,
     city2Color,
+    inverse = false,
     backgroundImage1,
     backgroundImage2
 }) => {
@@ -47,7 +49,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
     const bar1Width = `${(val1 / maxVal) * 100}%`;
     const bar2Width = `${(val2 / maxVal) * 100}%`;
 
-    const isWinner1 = city1Value > city2Value;
+    const isWinner1 = inverse ? city1Value < city2Value : city1Value > city2Value;
 
     const showWinner = frame > 60;
 
@@ -139,7 +141,15 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                         bottom: 200,
                         transform: `scale(${spring({ frame: frame - 60, fps, config: { stiffness: 200 } })})`
                     }}>
-                        <h2 style={{ fontSize: 80, color: isWinner1 ? city1Color : city2Color, textShadow: '0 0 20px rgba(0,0,0,1)', textAlign: 'center', backgroundColor: 'rgba(0,0,0,0.7)', padding: '10px 30px', borderRadius: 20 }}>
+                        <h2 style={{
+                            fontSize: 80,
+                            color: isWinner1 ? city1Color : city2Color,
+                            textShadow: '2px 2px 4px rgba(0,0,0,1)',
+                            textAlign: 'center',
+                            backgroundColor: 'rgba(0,0,0,0.7)',
+                            padding: '10px 30px',
+                            borderRadius: 20
+                        }}>
                             {isWinner1 ? city1Name : city2Name}<br />VENCE!
                         </h2>
                     </div>

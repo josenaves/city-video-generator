@@ -14,6 +14,8 @@ import saoJoseRioPardoMococaData from "./data/sao-jose-rio-pardo-mococa.json";
 import extremaPousoAlegreData from "./data/extrema-pouso-alegre.json";
 // @ts-ignore
 import bauruRibeiraoPretoData from "./data/bauru-ribeirao-preto.json";
+// @ts-ignore
+import alfenasGuaxupeData from "./data/alfenas-guaxupe.json";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -104,6 +106,20 @@ export const RemotionRoot: React.FC = () => {
           image2: "ribeirao-preto.jpg",
         }}
       />
+      <Composition
+        id="BattleAlfenasGuaxupe"
+        component={BattleVideo}
+        durationInFrames={1350}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: alfenasGuaxupeData,
+          image1: "alfenas.jpg",
+          image2: "guaxupe.jpeg",
+        }}
+      />
     </>
   );
 };
+

@@ -1,0 +1,106 @@
+{
+    "matchId": "alfenas-vs-guaxupe-2025",
+    "title": "Alfenas vs Guaxupé",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 3101607,
+            "name": "Alfenas",
+            "state": "MG",
+            "nickname": "Cidade Universitária",
+            "data": {
+                "population": 82303,
+                "areaKm2": 850,
+                "gdpPerCapita": 46472,
+                "hospitalBedsPerThousand": 2.5,
+                "idh": 0.761,
+                "higherEducationPct": 20,
+                "costOfLiving": 3500
+            },
+            "visual": {
+                "primaryColor": "#1565C0",
+                "secondaryColor": "#0D47A1",
+                "image": "alfenas.jpg"
+            }
+        },
+        {
+            "ibgeId": 3128709,
+            "name": "Guaxupé",
+            "state": "MG",
+            "nickname": "Capital do Café",
+            "data": {
+                "population": 52621,
+                "areaKm2": 286,
+                "gdpPerCapita": 47761,
+                "hospitalBedsPerThousand": 2.0,
+                "idh": 0.751,
+                "higherEducationPct": 14,
+                "costOfLiving": 3200
+            },
+            "visual": {
+                "primaryColor": "#C62828",
+                "secondaryColor": "#B71C1C",
+                "image": "guaxupe.jpeg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        },
+        {
+            "id": "costOfLiving",
+            "title": "CUSTO VIDA",
+            "type": "bar",
+            "unit": "R$",
+            "field": "costOfLiving",
+            "format": "currency",
+            "inverse": true
+        }
+    ]
+}

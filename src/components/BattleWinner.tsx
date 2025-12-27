@@ -53,7 +53,7 @@ export const BattleWinner: React.FC<{
                     color: 'white',
                     marginBottom: 20,
                     fontWeight: 'bold',
-                    textShadow: '0 0 10px rgba(255,255,255,0.5)'
+                    textShadow: '2px 2px 4px rgba(0,0,0,0.8)'
                 }}>
                     PLACAR FINAL
                 </div>
@@ -63,7 +63,8 @@ export const BattleWinner: React.FC<{
                     color: 'gold',
                     fontWeight: 'bold',
                     marginBottom: 50,
-                    transform: `scale(${scale})`
+                    transform: `scale(${scale})`,
+                    textShadow: '0 5px 15px rgba(0,0,0,0.8)'
                 }}>
                     {score}
                 </div>
@@ -77,10 +78,11 @@ export const BattleWinner: React.FC<{
                 </div>
 
                 <h1 style={{
-                    fontSize: 120,
+                    fontSize: 150,
+                    fontWeight: '900',
                     color: winnerColor,
                     textAlign: 'center',
-                    textShadow: '0 0 30px currentColor',
+                    textShadow: '3px 3px 0 #000, -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 0 10px 20px rgba(0,0,0,0.5)',
                     margin: 0
                 }}>
                     {winnerName}

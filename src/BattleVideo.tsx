@@ -50,6 +50,7 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, im
                             unit={round.unit}
                             format={round.format}
                             type={round.type}
+                            inverse={round.inverse}
                             backgroundImage1={staticFile(image1)}
                             backgroundImage2={staticFile(image2)}
                         />
@@ -64,8 +65,14 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, im
                 rounds.forEach((round: any) => {
                     const v1 = city1.data[round.field];
                     const v2 = city2.data[round.field];
-                    if (v1 > v2) wins1++;
-                    else if (v2 > v1) wins2++;
+
+                    if (round.inverse) {
+                        if (v1 < v2) wins1++;
+                        else if (v2 < v1) wins2++;
+                    } else {
+                        if (v1 > v2) wins1++;
+                        else if (v2 > v1) wins2++;
+                    }
                 });
 
                 const winner = wins1 >= wins2 ? city1 : city2;
