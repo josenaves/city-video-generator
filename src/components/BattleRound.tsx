@@ -56,7 +56,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
     const formatValue = (val: number) => {
         if (format === 'compact') return new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(val);
         if (format === 'currency') return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumSignificantDigits: 3 }).format(val);
-        if (format === 'percent') return `${val.toFixed(2)}%`;
+        if (format === 'percent') return val.toFixed(1);
         return val.toFixed(format === 'decimal3' ? 3 : 1);
     };
 
@@ -116,7 +116,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 70, textShadow: '0 2px 5px rgba(0,0,0,0.8)' }}>
                             <span style={{ color: '#FFD700', fontWeight: 'bold' }}>{city1Name}</span>
-                            <span>{formatValue(val1)} <span style={{ fontSize: 30 }}>{unit}</span></span>
+                            <span>{formatValue(val1)} {format !== 'currency' && <span style={{ fontSize: 30 }}>{unit}</span>}</span>
                         </div>
                         <div style={{ width: '100%', height: 60, backgroundColor: 'rgba(50,50,50,0.8)', borderRadius: 10, overflow: 'hidden' }}>
                             <div style={{ width: bar1Width, height: '100%', backgroundColor: city1Color }} />
@@ -127,7 +127,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 70, textShadow: '0 2px 5px rgba(0,0,0,0.8)' }}>
                             <span style={{ color: '#FFFFFF', fontWeight: 'bold' }}>{city2Name}</span>
-                            <span>{formatValue(val2)} <span style={{ fontSize: 30 }}>{unit}</span></span>
+                            <span>{formatValue(val2)} {format !== 'currency' && <span style={{ fontSize: 30 }}>{unit}</span>}</span>
                         </div>
                         <div style={{ width: '100%', height: 60, backgroundColor: 'rgba(50,50,50,0.8)', borderRadius: 10, overflow: 'hidden' }}>
                             <div style={{ width: bar2Width, height: '100%', backgroundColor: city2Color }} />

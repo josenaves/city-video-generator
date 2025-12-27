@@ -16,6 +16,8 @@ import extremaPousoAlegreData from "./data/extrema-pouso-alegre.json";
 import bauruRibeiraoPretoData from "./data/bauru-ribeirao-preto.json";
 // @ts-ignore
 import alfenasGuaxupeData from "./data/alfenas-guaxupe.json";
+// @ts-ignore
+import lemeArarasData from "./data/leme-araras.json";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -117,6 +119,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: alfenasGuaxupeData,
           image1: "alfenas.jpg",
           image2: "guaxupe.jpeg",
+        }}
+      />
+      <Composition
+        id="BattleLemeAraras"
+        component={BattleVideo}
+        durationInFrames={1500}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: lemeArarasData,
+          image1: "leme.jpeg",
+          image2: "araras.jpg",
         }}
       />
     </>
