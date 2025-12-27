@@ -12,6 +12,8 @@ import arceburgoGuaranesiaData from "./data/arceburgo-guaranesia.json";
 import saoJoseRioPardoMococaData from "./data/sao-jose-rio-pardo-mococa.json";
 // @ts-ignore
 import extremaPousoAlegreData from "./data/extrema-pouso-alegre.json";
+// @ts-ignore
+import bauruRibeiraoPretoData from "./data/bauru-ribeirao-preto.json";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -88,7 +90,20 @@ export const RemotionRoot: React.FC = () => {
           image2: "pouso-alegre.jpg",
         }}
       />
+
+      <Composition
+        id="BattleBauruRibeiraoPreto"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: bauruRibeiraoPretoData,
+          image1: "bauru.jpg",
+          image2: "ribeirao-preto.jpg",
+        }}
+      />
     </>
   );
 };
-
