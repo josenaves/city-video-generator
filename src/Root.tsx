@@ -18,6 +18,8 @@ import bauruRibeiraoPretoData from "./data/bauru-ribeirao-preto.json";
 import alfenasGuaxupeData from "./data/alfenas-guaxupe.json";
 // @ts-ignore
 import lemeArarasData from "./data/leme-araras.json";
+// @ts-ignore
+import santaMariaPelotasData from "./data/santa-maria-pelotas.json";
 
 // Each <Composition> is an entry in the sidebar!
 
@@ -124,7 +126,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleLemeAraras"
         component={BattleVideo}
-        durationInFrames={1500}
+        durationInFrames={1200}
         fps={30}
         width={1080}
         height={1920}
@@ -134,7 +136,19 @@ export const RemotionRoot: React.FC = () => {
           image2: "araras.jpg",
         }}
       />
+      <Composition
+        id="BattleSantaMariaPelotas"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: santaMariaPelotasData,
+          image1: 'santa-maria.png',
+          image2: 'pelotas.png',
+        }}
+      />
     </>
   );
 };
-
