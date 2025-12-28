@@ -1,0 +1,89 @@
+{
+    "matchId": "joinville-blumenau",
+    "title": "A Batalha do Vale do Itajaí",
+    "theme": "Cidades Catarinenses",
+    "cities": [
+        {
+            "ibgeId": "4209102",
+            "name": "Joinville",
+            "state": "SC",
+            "nickname": "Cidade das Flores",
+            "data": {
+                "populacao": 654888,
+                "areaKm2": 1127,
+                "pibPerCapita": 80828,
+                "leitos": 1570,
+                "idh": 0.809,
+                "ensinoSuperior": 26.7
+            },
+            "visual": {
+                "primaryColor": "#003399",
+                "secondaryColor": "#ffffff",
+                "image": "joinvile.webp"
+            }
+        },
+        {
+            "ibgeId": "4202404",
+            "name": "Blumenau",
+            "state": "SC",
+            "nickname": "Capital Brasileira da Cerveja",
+            "data": {
+                "populacao": 380597,
+                "areaKm2": 518,
+                "pibPerCapita": 68847,
+                "leitos": 770,
+                "idh": 0.806,
+                "ensinoSuperior": 26.3
+            },
+            "visual": {
+                "primaryColor": "#cc0000",
+                "secondaryColor": "#ffffff",
+                "image": "blumenau.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS",
+            "field": "leitos",
+            "format": "number",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}
