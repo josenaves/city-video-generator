@@ -143,14 +143,20 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                     }}>
                         <h2 style={{
                             fontSize: 80,
-                            color: isWinner1 ? city1Color : city2Color,
+                            color: formatValue(city1Value) === formatValue(city2Value) ? '#FFFFFF' : (isWinner1 ? '#FFD700' : '#FFFFFF'),
                             textShadow: '2px 2px 4px rgba(0,0,0,1)',
                             textAlign: 'center',
                             backgroundColor: 'rgba(0,0,0,0.7)',
                             padding: '10px 30px',
                             borderRadius: 20
                         }}>
-                            {isWinner1 ? city1Name : city2Name}<br />VENCE!
+                            {(() => {
+                                const formatted1 = formatValue(city1Value);
+                                const formatted2 = formatValue(city2Value);
+                                if (formatted1 === formatted2) return 'EMPATE!';
+                                return <>{isWinner1 ? city1Name : city2Name}<br />VENCE!</>;
+                            })()}
+
                         </h2>
                     </div>
                 )}

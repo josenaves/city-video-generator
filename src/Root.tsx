@@ -22,6 +22,9 @@ import lemeArarasData from "./data/leme-araras.json";
 import santaMariaPelotasData from "./data/santa-maria-pelotas.json";
 // @ts-ignore
 import joinvilleBlumenauData from "./data/joinville-blumenau.json";
+// @ts-ignore
+import itajaiJoinvilleData from "./data/itajai-joinville.json";
+
 
 
 // Each <Composition> is an entry in the sidebar!
@@ -163,6 +166,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: joinvilleBlumenauData,
           image1: 'joinvile.webp',
           image2: 'blumenau.jpg',
+        }}
+      />
+      <Composition
+        id="BattleItajaiJoinville"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: itajaiJoinvilleData,
+          image1: 'itajai.jpg',
+          image2: 'joinvile.webp',
         }}
       />
     </>

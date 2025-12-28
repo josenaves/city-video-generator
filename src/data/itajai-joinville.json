@@ -1,0 +1,89 @@
+{
+    "matchId": "itajai-joinville",
+    "title": "A Batalha do Norte",
+    "theme": "Cidades Catarinenses",
+    "cities": [
+        {
+            "ibgeId": "4208203",
+            "name": "Itajaí",
+            "state": "SC",
+            "nickname": "Cidade do Porto",
+            "data": {
+                "populacao": 294850,
+                "areaKm2": 289,
+                "pibPerCapita": 182522,
+                "leitos": 620,
+                "idh": 0.795,
+                "ensinoSuperior": 23.8
+            },
+            "visual": {
+                "primaryColor": "#003399",
+                "secondaryColor": "#ffcc00",
+                "image": "itajai.jpg"
+            }
+        },
+        {
+            "ibgeId": "4209102",
+            "name": "Joinville",
+            "state": "SC",
+            "nickname": "Cidade das Flores",
+            "data": {
+                "populacao": 654888,
+                "areaKm2": 1127,
+                "pibPerCapita": 80828,
+                "leitos": 1570,
+                "idh": 0.809,
+                "ensinoSuperior": 26.7
+            },
+            "visual": {
+                "primaryColor": "#003399",
+                "secondaryColor": "#ffffff",
+                "image": "joinvile.webp"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS",
+            "field": "leitos",
+            "format": "number",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}
