@@ -30,6 +30,8 @@ import itajaiJoinvilleData from "./data/itajai-joinville.json";
 import ribeiraoPretoSJRioPretoData from "./data/ribeirao-preto-sj-rio-preto.json";
 // @ts-ignore
 import bauruMariliaData from "./data/bauru-marilia.json";
+// @ts-ignore
+import saoSebastiaoPassosData from "./data/sao-sebastiao-passos.json";
 
 
 
@@ -226,6 +228,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: bauruMariliaData,
           image1: 'bauru.jpg',
           image2: 'marilia.jpg',
+        }}
+      />
+      <Composition
+        id="BattleSaoSebastiaoPassos"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: saoSebastiaoPassosData,
+          image1: 'sao-sebastiao-do-paraiso.jpeg',
+          image2: 'passos.jpg',
         }}
       />
     </>
