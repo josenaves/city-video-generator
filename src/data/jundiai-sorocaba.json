@@ -1,0 +1,95 @@
+{
+    "matchId": "jundiai-vs-sorocaba-2025",
+    "title": "Jundiaí vs Sorocaba",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 3525904,
+            "name": "Jundiaí",
+            "state": "SP",
+            "nickname": "Terra da Uva",
+            "data": {
+                "population": 443221,
+                "areaKm2": 431,
+                "gdpPerCapita": 147597,
+                "hospitalBedsPerThousand": 1.7,
+                "idh": 0.822,
+                "higherEducationPct": 23.5
+            },
+            "visual": {
+                "primaryColor": "#2E7D32",
+                "secondaryColor": "#1B5E20",
+                "image": "jundiai.jpg"
+            }
+        },
+        {
+            "ibgeId": 3552205,
+            "name": "Sorocaba",
+            "state": "SP",
+            "nickname": "Manchester Paulista",
+            "data": {
+                "population": 723682,
+                "areaKm2": 450,
+                "gdpPerCapita": 81273,
+                "hospitalBedsPerThousand": 0.74,
+                "idh": 0.798,
+                "higherEducationPct": 17
+            },
+            "visual": {
+                "primaryColor": "#1976D2",
+                "secondaryColor": "#0D47A1",
+                "image": "sorocaba.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}
