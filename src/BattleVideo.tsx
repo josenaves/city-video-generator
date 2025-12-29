@@ -92,17 +92,21 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, im
                     }
                 });
 
-                const winner = wins1 >= wins2 ? city1 : city2;
-                const winnerImage = wins1 >= wins2 ? image1 : image2;
+                const isTie = wins1 === wins2;
+                const result = isTie ? 'tie' : (wins1 > wins2 ? 'city1' : 'city2');
+
+                const winnerName = isTie ? 'EMPATE' : (wins1 > wins2 ? city1.name : city2.name);
+                const winnerColor = isTie ? '#FFFFFF' : (wins1 > wins2 ? city1.visual.primaryColor : city2.visual.primaryColor);
 
                 return (
                     <Sequence from={introDuration + (rounds.length * roundDuration)} durationInFrames={finalDuration}>
                         <BattleWinner
-                            winnerName={winner.name}
-                            winnerColor={winner.visual.primaryColor}
+                            winnerName={winnerName}
+                            winnerColor={winnerColor}
                             score={`${wins1} x ${wins2}`}
-                            backgroundImage1={staticFile(winnerImage)}
-                            backgroundImage2={staticFile(winnerImage)}
+                            backgroundImage1={staticFile(image1)}
+                            backgroundImage2={staticFile(image2)}
+                            result={result}
                         />
                     </Sequence>
                 );

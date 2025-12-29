@@ -1,0 +1,95 @@
+{
+    "matchId": "curitiba-vs-campinas-2025",
+    "title": "Curitiba vs Campinas",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 4106902,
+            "name": "Curitiba",
+            "state": "PR",
+            "nickname": "Cidade Modelo",
+            "data": {
+                "population": 1830795,
+                "areaKm2": 435.3,
+                "gdpPerCapita": 67691,
+                "hospitalBedsPerThousand": 1.63,
+                "idh": 0.823,
+                "higherEducationPct": 27.16
+            },
+            "visual": {
+                "primaryColor": "#2E7D32",
+                "secondaryColor": "#1B5E20",
+                "image": "curitiba.webp"
+            }
+        },
+        {
+            "ibgeId": 3509502,
+            "name": "Campinas",
+            "state": "SP",
+            "nickname": "Princesa D'Oeste",
+            "data": {
+                "population": 1187974,
+                "areaKm2": 794.6,
+                "gdpPerCapita": 80741,
+                "hospitalBedsPerThousand": 1.0,
+                "idh": 0.805,
+                "higherEducationPct": 27.5
+            },
+            "visual": {
+                "primaryColor": "#0288D1",
+                "secondaryColor": "#01579B",
+                "image": "campinas.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}

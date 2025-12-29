@@ -36,6 +36,8 @@ import saoSebastiaoPassosData from "./data/sao-sebastiao-passos.json";
 import francaSaoSebastiaoData from "./data/franca-sao-sebastiao.json";
 // @ts-ignore
 import tubaraoCriciumaData from "./data/tubarao-criciuma.json";
+// @ts-ignore
+import curitibaCampinasData from "./data/curitiba-campinas.json";
 
 
 
@@ -271,6 +273,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: tubaraoCriciumaData,
           image1: 'tubarao.jpg',
           image2: 'criciuma.webp',
+        }}
+      />
+      <Composition
+        id="BattleCuritibaCampinas"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: curitibaCampinasData,
+          image1: 'curitiba.webp',
+          image2: 'campinas.jpg',
         }}
       />
     </>

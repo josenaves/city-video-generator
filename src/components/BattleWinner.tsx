@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig } from 'remotion';
+import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig, Img } from 'remotion';
 
 export const BattleWinner: React.FC<{
     winnerName: string;
@@ -7,7 +7,8 @@ export const BattleWinner: React.FC<{
     score: string;
     backgroundImage1: string;
     backgroundImage2: string;
-}> = ({ winnerName, winnerColor, score, backgroundImage1 }) => {
+    result: 'city1' | 'city2' | 'tie';
+}> = ({ winnerName, winnerColor, score, backgroundImage1, backgroundImage2, result }) => {
     const frame = useCurrentFrame();
     const { fps } = useVideoConfig();
 
@@ -23,14 +24,39 @@ export const BattleWinner: React.FC<{
         <AbsoluteFill>
             {/* Background Layer - FIRST in DOM for natural stacking */}
             <AbsoluteFill style={{ zIndex: 0 }}>
-                <img
-                    src={backgroundImage1}
-                    style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                    }}
-                />
+                {result === 'tie' ? (
+                    <div style={{ display: 'flex', flexDirection: 'row', width: '100%', height: '100%' }}>
+                        <div style={{ flex: 1, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <Img
+                                src={backgroundImage1}
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover',
+                                }}
+                            />
+                        </div>
+                        <div style={{ flex: 1, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <Img
+                                src={backgroundImage2}
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover',
+                                }}
+                            />
+                        </div>
+                    </div>
+                ) : (
+                    <Img
+                        src={result === 'city1' ? backgroundImage1 : backgroundImage2}
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                        }}
+                    />
+                )}
                 {/* Dark overlay for text readability */}
                 <div style={{
                     position: 'absolute',
@@ -38,7 +64,7 @@ export const BattleWinner: React.FC<{
                     left: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: 'rgba(0,0,0,0.4)'
+                    backgroundColor: 'rgba(0,0,0,0.6)'
                 }} />
             </AbsoluteFill>
 
@@ -69,13 +95,15 @@ export const BattleWinner: React.FC<{
                     {score}
                 </div>
 
-                <div style={{
-                    fontSize: 120,
-                    marginBottom: 30,
-                    transform: `rotate(${rotate}deg)`
-                }}>
-                    🏆
-                </div>
+                {result !== 'tie' && (
+                    <div style={{
+                        fontSize: 120,
+                        marginBottom: 30,
+                        transform: `rotate(${rotate}deg)`
+                    }}>
+                        🏆
+                    </div>
+                )}
 
                 <h1 style={{
                     fontSize: 150,
@@ -87,7 +115,9 @@ export const BattleWinner: React.FC<{
                 }}>
                     {winnerName}
                 </h1>
-                <h2 style={{ color: 'white', fontSize: 60, marginTop: 20 }}>GRANDE CAMPEÃ!</h2>
+                {result !== 'tie' && (
+                    <h2 style={{ color: 'white', fontSize: 60, marginTop: 20 }}>GRANDE CAMPEÃ!</h2>
+                )}
             </AbsoluteFill>
         </AbsoluteFill>
     );
