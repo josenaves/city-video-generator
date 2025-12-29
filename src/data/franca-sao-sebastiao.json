@@ -1,0 +1,95 @@
+{
+    "matchId": "franca-vs-sao-sebastiao-2025",
+    "title": "Franca vs S.S. Paraíso",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 3516200,
+            "name": "Franca",
+            "state": "SP",
+            "nickname": "Capital do Calçado",
+            "data": {
+                "population": 352537,
+                "areaKm2": 605.7,
+                "gdpPerCapita": 40778,
+                "hospitalBedsPerThousand": 2.5,
+                "idh": 0.780,
+                "higherEducationPct": 17.95
+            },
+            "visual": {
+                "primaryColor": "#D32F2F",
+                "secondaryColor": "#C62828",
+                "image": "franca.webp"
+            }
+        },
+        {
+            "ibgeId": 3164704,
+            "name": "S.S. Paraíso",
+            "state": "MG",
+            "nickname": "Cidade dos Ipês",
+            "data": {
+                "population": 71796,
+                "areaKm2": 814.9,
+                "gdpPerCapita": 39476,
+                "hospitalBedsPerThousand": 3.0,
+                "idh": 0.722,
+                "higherEducationPct": 16
+            },
+            "visual": {
+                "primaryColor": "#FFD700",
+                "secondaryColor": "#FFA000",
+                "image": "sao-sebastiao-do-paraiso.jpeg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}
