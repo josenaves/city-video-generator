@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig } from 'remotion';
+import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig, Img } from 'remotion';
 
 type BattleRoundProps = {
     title: string;
@@ -70,7 +70,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
             {/* Background Layer - FIRST in DOM with zIndex: 0 */}
             <AbsoluteFill style={{ zIndex: 0, flexDirection: 'row' }}>
                 <div style={{ flex: 1, backgroundColor: '#003300', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <img
+                    <Img
                         src={backgroundImage1}
                         style={{
                             width: '100%',
@@ -81,7 +81,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                     />
                 </div>
                 <div style={{ flex: 1, backgroundColor: '#330000', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <img
+                    <Img
                         src={backgroundImage2}
                         style={{
                             width: '100%',
@@ -94,7 +94,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
 
                 {/* Winner Reveal Background Overlay */}
                 <AbsoluteFill style={{ opacity: winnerImageWithFade }}>
-                    <img
+                    <Img
                         src={currentBackgroundImage}
                         style={{
                             width: '100%',
