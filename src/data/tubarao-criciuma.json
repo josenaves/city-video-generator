@@ -1,0 +1,95 @@
+{
+    "matchId": "tubarao-vs-criciuma-2025",
+    "title": "Tubarão vs Criciúma",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 4218707,
+            "name": "Tubarão",
+            "state": "SC",
+            "nickname": "Cidade Azul",
+            "data": {
+                "population": 110088,
+                "areaKm2": 301.5,
+                "gdpPerCapita": 54566,
+                "hospitalBedsPerThousand": 3.6,
+                "idh": 0.796,
+                "higherEducationPct": 22
+            },
+            "visual": {
+                "primaryColor": "#0288D1",
+                "secondaryColor": "#01579B",
+                "image": "tubarao.jpg"
+            }
+        },
+        {
+            "ibgeId": 4204608,
+            "name": "Criciúma",
+            "state": "SC",
+            "nickname": "Capital do Carvão",
+            "data": {
+                "population": 214493,
+                "areaKm2": 234.8,
+                "gdpPerCapita": 57528,
+                "hospitalBedsPerThousand": 2.5,
+                "idh": 0.788,
+                "higherEducationPct": 21.4
+            },
+            "visual": {
+                "primaryColor": "#FBC02D",
+                "secondaryColor": "#F57F17",
+                "image": "criciuma.webp"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}

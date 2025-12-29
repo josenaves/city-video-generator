@@ -34,6 +34,8 @@ import bauruMariliaData from "./data/bauru-marilia.json";
 import saoSebastiaoPassosData from "./data/sao-sebastiao-passos.json";
 // @ts-ignore
 import francaSaoSebastiaoData from "./data/franca-sao-sebastiao.json";
+// @ts-ignore
+import tubaraoCriciumaData from "./data/tubarao-criciuma.json";
 
 
 
@@ -256,6 +258,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: francaSaoSebastiaoData,
           image1: 'franca.webp',
           image2: 'sao-sebastiao-do-paraiso.jpeg',
+        }}
+      />
+      <Composition
+        id="BattleTubaraoCriciuma"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: tubaraoCriciumaData,
+          image1: 'tubarao.jpg',
+          image2: 'criciuma.webp',
         }}
       />
     </>
