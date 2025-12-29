@@ -24,6 +24,9 @@ import santaMariaPelotasData from "./data/santa-maria-pelotas.json";
 import joinvilleBlumenauData from "./data/joinville-blumenau.json";
 // @ts-ignore
 import itajaiJoinvilleData from "./data/itajai-joinville.json";
+// @ts-ignore
+import ribeiraoPretoSJRioPretoData from "./data/ribeirao-preto-sj-rio-preto.json";
+
 
 
 
@@ -179,6 +182,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: itajaiJoinvilleData,
           image1: 'itajai.jpg',
           image2: 'joinvile.webp',
+        }}
+      />
+      <Composition
+        id="BattleRibeiraoPretoSJRioPreto"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: ribeiraoPretoSJRioPretoData,
+          image1: 'ribeirao-preto.jpg',
+          image2: 'sao-jose-do-rio-preto.jpg',
         }}
       />
     </>
