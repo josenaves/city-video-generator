@@ -40,6 +40,8 @@ import tubaraoCriciumaData from "./data/tubarao-criciuma.json";
 import curitibaCampinasData from "./data/curitiba-campinas.json";
 // @ts-ignore
 import barueriItapeviData from "./data/barueri-itapevi.json";
+// @ts-ignore
+import portoUniaoUniaoDaVitoriaData from "./data/porto-uniao-uniao-da-vitoria.json";
 
 
 
@@ -301,6 +303,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: barueriItapeviData,
           image1: 'barueri.jpg',
           image2: 'itapevi.jpg',
+        }}
+      />
+      <Composition
+        id="BattlePortoUniaoUniaoDaVitoria"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: portoUniaoUniaoDaVitoriaData,
+          image1: 'porto-uniao.jpg',
+          image2: 'uniao-da-vitoria.jpg',
         }}
       />
     </>
