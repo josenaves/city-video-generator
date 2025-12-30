@@ -38,6 +38,8 @@ import francaSaoSebastiaoData from "./data/franca-sao-sebastiao.json";
 import tubaraoCriciumaData from "./data/tubarao-criciuma.json";
 // @ts-ignore
 import curitibaCampinasData from "./data/curitiba-campinas.json";
+// @ts-ignore
+import barueriItapeviData from "./data/barueri-itapevi.json";
 
 
 
@@ -286,6 +288,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: curitibaCampinasData,
           image1: 'curitiba.webp',
           image2: 'campinas.jpg',
+        }}
+      />
+      <Composition
+        id="BattleBarueriItapevi"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: barueriItapeviData,
+          image1: 'barueri.jpg',
+          image2: 'itapevi.jpg',
         }}
       />
     </>
