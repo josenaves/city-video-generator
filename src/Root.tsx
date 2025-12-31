@@ -50,6 +50,8 @@ import aracajuMaceioData from "./data/aracaju-maceio.json";
 import santaMariaPassoFundoData from "./data/santa-maria-passo-fundo.json";
 // @ts-ignore
 import muzambinhoArceburgoData from "./data/muzambinho-arceburgo.json";
+// @ts-ignore
+import ribeiraoSaoCarlosData from "./data/ribeirao-sao-carlos.json";
 
 
 
@@ -376,6 +378,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: muzambinhoArceburgoData,
           image1: 'muzambinho.jpg',
           image2: 'arceburgo.jpg',
+        }}
+      />
+      <Composition
+        id="BattleRibeiraoSaoCarlos"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: ribeiraoSaoCarlosData,
+          image1: 'ribeirao-preto.jpg',
+          image2: 'sao-carlos.webp',
         }}
       />
     </>
