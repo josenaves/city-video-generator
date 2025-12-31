@@ -44,6 +44,8 @@ import barueriItapeviData from "./data/barueri-itapevi.json";
 import portoUniaoUniaoDaVitoriaData from "./data/porto-uniao-uniao-da-vitoria.json";
 // @ts-ignore
 import mococaParaisoData from "./data/mococa-paraiso.json";
+// @ts-ignore
+import aracajuMaceioData from "./data/aracaju-maceio.json";
 
 
 
@@ -331,6 +333,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: mococaParaisoData,
           image1: 'mococa.jpg',
           image2: 'sao-sebastiao-do-paraiso.jpeg',
+        }}
+      />
+      <Composition
+        id="BattleAracajuMaceio"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: aracajuMaceioData,
+          image1: 'aracaju.jpg',
+          image2: 'maceio.jpg',
         }}
       />
     </>
