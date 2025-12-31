@@ -42,6 +42,8 @@ import curitibaCampinasData from "./data/curitiba-campinas.json";
 import barueriItapeviData from "./data/barueri-itapevi.json";
 // @ts-ignore
 import portoUniaoUniaoDaVitoriaData from "./data/porto-uniao-uniao-da-vitoria.json";
+// @ts-ignore
+import mococaParaisoData from "./data/mococa-paraiso.json";
 
 
 
@@ -316,6 +318,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: portoUniaoUniaoDaVitoriaData,
           image1: 'porto-uniao.jpg',
           image2: 'uniao-da-vitoria.jpg',
+        }}
+      />
+      <Composition
+        id="BattleMococaParaiso"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: mococaParaisoData,
+          image1: 'mococa.jpg',
+          image2: 'sao-sebastiao-do-paraiso.jpeg',
         }}
       />
     </>
