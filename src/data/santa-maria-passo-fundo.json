@@ -1,0 +1,95 @@
+{
+    "matchId": "santa-maria-vs-passo-fundo-2025",
+    "title": "Santa Maria vs Passo Fundo",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 4316907,
+            "name": "Santa Maria",
+            "state": "RS",
+            "nickname": "Coração do Rio Grande",
+            "data": {
+                "population": 271735,
+                "areaKm2": 1780.2,
+                "gdpPerCapita": 40230,
+                "hospitalBedsPerThousand": 3.9,
+                "idh": 0.784,
+                "higherEducationPct": 22
+            },
+            "visual": {
+                "primaryColor": "#D32F2F",
+                "secondaryColor": "#B71C1C",
+                "image": "santa-maria.png"
+            }
+        },
+        {
+            "ibgeId": 4314100,
+            "name": "Passo Fundo",
+            "state": "RS",
+            "nickname": "Capital do Planalto Médio",
+            "data": {
+                "population": 206224,
+                "areaKm2": 784.4,
+                "gdpPerCapita": 68227,
+                "hospitalBedsPerThousand": 4.8,
+                "idh": 0.776,
+                "higherEducationPct": 19
+            },
+            "visual": {
+                "primaryColor": "#2E7D32",
+                "secondaryColor": "#388E3C",
+                "image": "passo-fundo.webp"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}

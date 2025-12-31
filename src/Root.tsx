@@ -46,6 +46,8 @@ import portoUniaoUniaoDaVitoriaData from "./data/porto-uniao-uniao-da-vitoria.js
 import mococaParaisoData from "./data/mococa-paraiso.json";
 // @ts-ignore
 import aracajuMaceioData from "./data/aracaju-maceio.json";
+// @ts-ignore
+import santaMariaPassoFundoData from "./data/santa-maria-passo-fundo.json";
 
 
 
@@ -346,6 +348,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: aracajuMaceioData,
           image1: 'aracaju.jpg',
           image2: 'maceio.jpg',
+        }}
+      />
+      <Composition
+        id="BattleSantaMariaPassoFundo"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: santaMariaPassoFundoData,
+          image1: 'santa-maria.png',
+          image2: 'passo-fundo.webp',
         }}
       />
     </>
