@@ -52,6 +52,8 @@ import santaMariaPassoFundoData from "./data/santa-maria-passo-fundo.json";
 import muzambinhoArceburgoData from "./data/muzambinho-arceburgo.json";
 // @ts-ignore
 import ribeiraoSaoCarlosData from "./data/ribeirao-sao-carlos.json";
+// @ts-ignore
+import mariliaPrudenteData from "./data/marilia-prudente.json";
 
 
 
@@ -391,6 +393,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: ribeiraoSaoCarlosData,
           image1: 'ribeirao-preto.jpg',
           image2: 'sao-carlos.webp',
+        }}
+      />
+      <Composition
+        id="BattleMariliaPrudente"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: mariliaPrudenteData,
+          image1: 'marilia.jpg',
+          image2: 'presidente-prudente.jpg',
         }}
       />
     </>
