@@ -48,6 +48,8 @@ import mococaParaisoData from "./data/mococa-paraiso.json";
 import aracajuMaceioData from "./data/aracaju-maceio.json";
 // @ts-ignore
 import santaMariaPassoFundoData from "./data/santa-maria-passo-fundo.json";
+// @ts-ignore
+import muzambinhoArceburgoData from "./data/muzambinho-arceburgo.json";
 
 
 
@@ -361,6 +363,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: santaMariaPassoFundoData,
           image1: 'santa-maria.png',
           image2: 'passo-fundo.webp',
+        }}
+      />
+      <Composition
+        id="BattleMuzambinhoArceburgo"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: muzambinhoArceburgoData,
+          image1: 'muzambinho.jpg',
+          image2: 'arceburgo.jpg',
         }}
       />
     </>
