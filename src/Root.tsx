@@ -54,6 +54,9 @@ import muzambinhoArceburgoData from "./data/muzambinho-arceburgo.json";
 import ribeiraoSaoCarlosData from "./data/ribeirao-sao-carlos.json";
 // @ts-ignore
 import mariliaPrudenteData from "./data/marilia-prudente.json";
+// @ts-ignore
+import goianiaCampoGrandeData from "./data/goiania-campo-grande.json";
+
 
 
 
@@ -86,7 +89,7 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: campoGrandeCuiabaData,
-          image1: "campo_grande.jpg",
+          image1: "campo-grande.jpg",
           image2: "cuiaba.jpg",
         }}
       />
@@ -406,6 +409,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: mariliaPrudenteData,
           image1: 'marilia.jpg',
           image2: 'presidente-prudente.jpg',
+        }}
+      />
+      <Composition
+        id="BattleGoianiaCampoGrande"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: goianiaCampoGrandeData,
+          image1: 'goiania.jpg',
+          image2: 'campo-grande.jpg',
         }}
       />
     </>
