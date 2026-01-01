@@ -56,6 +56,9 @@ import ribeiraoSaoCarlosData from "./data/ribeirao-sao-carlos.json";
 import mariliaPrudenteData from "./data/marilia-prudente.json";
 // @ts-ignore
 import goianiaCampoGrandeData from "./data/goiania-campo-grande.json";
+// @ts-ignore
+import guaxupeTapiratibaData from "./data/guaxupe-tapiratiba.json";
+
 
 
 
@@ -422,6 +425,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: goianiaCampoGrandeData,
           image1: 'goiania.jpg',
           image2: 'campo-grande.jpg',
+        }}
+      />
+      <Composition
+        id="BattleGuaxupeTapiratiba"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: guaxupeTapiratibaData,
+          image1: 'guaxupe.jpeg',
+          image2: 'tapiratiba.jpg',
         }}
       />
     </>
