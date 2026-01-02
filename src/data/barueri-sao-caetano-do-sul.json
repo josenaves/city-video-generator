@@ -1,0 +1,95 @@
+{
+    "matchId": "barueri-vs-sao-caetano-2025",
+    "title": "Barueri vs São Caetano do Sul",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 3505708,
+            "name": "Barueri",
+            "state": "SP",
+            "nickname": "Flor Vermelha",
+            "data": {
+                "population": 316473,
+                "areaKm2": 65.7,
+                "gdpPerCapita": 226391,
+                "hospitalBedsPerThousand": 2.38,
+                "idh": 0.786,
+                "higherEducationPct": 12.18
+            },
+            "visual": {
+                "primaryColor": "#FFD700",
+                "secondaryColor": "#B8860B",
+                "image": "barueri.jpg"
+            }
+        },
+        {
+            "ibgeId": 3548604,
+            "name": "São Caetano do Sul",
+            "state": "SP",
+            "nickname": "Cidade da Educação",
+            "data": {
+                "population": 165655,
+                "areaKm2": 15.331,
+                "gdpPerCapita": 136147,
+                "hospitalBedsPerThousand": 2.5,
+                "idh": 0.862,
+                "higherEducationPct": 48.2
+            },
+            "visual": {
+                "primaryColor": "#1E90FF",
+                "secondaryColor": "#104E8B",
+                "image": "sao-caetano.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}

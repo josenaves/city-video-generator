@@ -41,6 +41,8 @@ import curitibaCampinasData from "./data/curitiba-campinas.json";
 // @ts-ignore
 import barueriItapeviData from "./data/barueri-itapevi.json";
 // @ts-ignore
+import barueriSaoCaetanoData from "./data/barueri-sao-caetano-do-sul.json";
+// @ts-ignore
 import portoUniaoUniaoDaVitoriaData from "./data/porto-uniao-uniao-da-vitoria.json";
 // @ts-ignore
 import mococaParaisoData from "./data/mococa-paraiso.json";
@@ -323,6 +325,21 @@ export const RemotionRoot: React.FC = () => {
           battleData: barueriItapeviData,
           image1: 'barueri.jpg',
           image2: 'itapevi.jpg',
+        }}
+      />
+
+      {/* New battle Barueri vs São Caetano do Sul */}
+      <Composition
+        id="BattleBarueriSaoCaetano"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: barueriSaoCaetanoData,
+          image1: "barueri.jpg",
+          image2: "sao-caetano-do-sul.jpeg",
         }}
       />
       <Composition
