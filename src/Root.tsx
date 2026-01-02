@@ -68,6 +68,8 @@ import goianiaCampoGrandeData from "./data/goiania-campo-grande.json";
 import guaxupeTapiratibaData from "./data/guaxupe-tapiratiba.json";
 // @ts-ignore
 import guaxupeMococaData from "./data/guaxupe-mococa.json";
+// @ts-ignore
+import pelotasBageData from "./data/pelotas-bage.json";
 
 
 
@@ -517,6 +519,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: guaxupeMococaData,
           image1: 'guaxupe.jpeg',
           image2: 'mococa.jpg',
+        }}
+      />
+      <Composition
+        id="BattlePelotasBage"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: pelotasBageData,
+          image1: 'pelotas.png',
+          image2: 'bage.webp',
         }}
       />
     </>
