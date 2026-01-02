@@ -70,6 +70,8 @@ import guaxupeTapiratibaData from "./data/guaxupe-tapiratiba.json";
 import guaxupeMococaData from "./data/guaxupe-mococa.json";
 // @ts-ignore
 import pelotasBageData from "./data/pelotas-bage.json";
+// @ts-ignore
+import pontaPoraDouradosData from "./data/ponta-pora-dourados.json";
 
 
 
@@ -532,6 +534,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: pelotasBageData,
           image1: 'pelotas.png',
           image2: 'bage.webp',
+        }}
+      />
+      <Composition
+        id="BattlePontaPoraDourados"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: pontaPoraDouradosData,
+          image1: 'ponta-pora.jpg',
+          image2: 'dourados.jpg',
         }}
       />
     </>
