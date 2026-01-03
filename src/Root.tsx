@@ -72,6 +72,8 @@ import guaxupeMococaData from "./data/guaxupe-mococa.json";
 import pelotasBageData from "./data/pelotas-bage.json";
 // @ts-ignore
 import pontaPoraDouradosData from "./data/ponta-pora-dourados.json";
+// @ts-ignore
+import mariliaAssisData from "./data/marilia-assis.json";
 
 
 
@@ -524,6 +526,19 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
       <Composition
+        id="BattleGuaxupeMococaHorizontal"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          battleData: guaxupeMococaData,
+          image1: 'guaxupe.jpeg',
+          image2: 'mococa.jpg',
+        }}
+      />
+      <Composition
         id="BattlePelotasBage"
         component={BattleVideo}
         durationInFrames={1200}
@@ -547,6 +562,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: pontaPoraDouradosData,
           image1: 'ponta-pora.jpg',
           image2: 'dourados.jpg',
+        }}
+      />
+      <Composition
+        id="BattleMariliaAssis"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: mariliaAssisData,
+          image1: 'marilia.jpg',
+          image2: 'assis.jpg',
         }}
       />
     </>

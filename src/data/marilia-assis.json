@@ -1,0 +1,95 @@
+{
+    "matchId": "marilia-vs-assis-2025",
+    "title": "Marília vs Assis",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 3529005,
+            "name": "Marília",
+            "state": "SP",
+            "nickname": "Capital Nacional do Alimento",
+            "data": {
+                "population": 237627,
+                "areaKm2": 1170.515,
+                "gdpPerCapita": 40272.64,
+                "hospitalBedsPerThousand": 4.3,
+                "idh": 0.798,
+                "higherEducationPct": 17.26
+            },
+            "visual": {
+                "primaryColor": "#E30613",
+                "secondaryColor": "#FFFFFF",
+                "image": "marilia.jpg"
+            }
+        },
+        {
+            "ibgeId": 3504008,
+            "name": "Assis",
+            "state": "SP",
+            "nickname": "Cidade Fraternal",
+            "data": {
+                "population": 101409,
+                "areaKm2": 460.609,
+                "gdpPerCapita": 38598.78,
+                "hospitalBedsPerThousand": 4.2,
+                "idh": 0.805,
+                "higherEducationPct": 17.15
+            },
+            "visual": {
+                "primaryColor": "#87CEEB",
+                "secondaryColor": "#FFD700",
+                "image": "assis.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}
