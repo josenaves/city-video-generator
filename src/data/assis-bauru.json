@@ -1,0 +1,89 @@
+{
+    "matchId": "assis-bauru",
+    "title": "A Batalha Paulista",
+    "theme": "Cidades do Interior de São Paulo",
+    "cities": [
+        {
+            "ibgeId": "3504008",
+            "name": "Assis",
+            "state": "SP",
+            "nickname": "Cidade Sorriso",
+            "data": {
+                "populacao": 105087,
+                "areaKm2": 461,
+                "pibPerCapita": 45218,
+                "leitos": 320,
+                "idh": 0.801,
+                "ensinoSuperior": 22.3
+            },
+            "visual": {
+                "primaryColor": "#0066cc",
+                "secondaryColor": "#ffffff",
+                "image": "assis.png"
+            }
+        },
+        {
+            "ibgeId": "3506003",
+            "name": "Bauru",
+            "state": "SP",
+            "nickname": "Cidade do Sanduíche",
+            "data": {
+                "populacao": 379297,
+                "areaKm2": 673,
+                "pibPerCapita": 52345,
+                "leitos": 850,
+                "idh": 0.801,
+                "ensinoSuperior": 25.7
+            },
+            "visual": {
+                "primaryColor": "#ff6600",
+                "secondaryColor": "#ffffff",
+                "image": "bauru.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS",
+            "field": "leitos",
+            "format": "number",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}

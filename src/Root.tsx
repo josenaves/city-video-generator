@@ -25,6 +25,8 @@ import santaMariaPelotasData from "./data/santa-maria-pelotas.json";
 // @ts-ignore
 import joinvilleBlumenauData from "./data/joinville-blumenau.json";
 // @ts-ignore
+import assisBauruData from "./data/assis-bauru.json";
+// @ts-ignore
 import itajaiJoinvilleData from "./data/itajai-joinville.json";
 // @ts-ignore
 import ribeiraoPretoSJRioPretoData from "./data/ribeirao-preto-sj-rio-preto.json";
@@ -575,6 +577,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: mariliaAssisData,
           image1: 'marilia.jpg',
           image2: 'assis.jpg',
+        }}
+      />
+      <Composition
+        id="BattleAssisBauru"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: assisBauruData,
+          image1: 'assis.jpg',
+          image2: 'bauru.jpg',
         }}
       />
     </>
