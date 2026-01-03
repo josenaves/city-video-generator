@@ -1,0 +1,89 @@
+{
+    "matchId": "franco-da-rocha-francisco-morato",
+    "title": "Duelo de Gigantes da CPTM",
+    "theme": "Cidades da Grande São Paulo",
+    "cities": [
+        {
+            "ibgeId": "3516408",
+            "name": "Franco da Rocha",
+            "state": "SP",
+            "nickname": "Cidade das Águas",
+            "data": {
+                "populacao": 144849,
+                "areaKm2": 133,
+                "pibPerCapita": 37543,
+                "leitos": 1.2,
+                "idh": 0.731,
+                "ensinoSuperior": 11.5
+            },
+            "visual": {
+                "primaryColor": "#c1121f",
+                "secondaryColor": "#ffffff",
+                "image": "franco-da-rocha.jpg"
+            }
+        },
+        {
+            "ibgeId": "3516309",
+            "name": "Francisco Morato",
+            "state": "SP",
+            "nickname": "Cidade Simpatia",
+            "data": {
+                "populacao": 165139,
+                "areaKm2": 49,
+                "pibPerCapita": 13549,
+                "leitos": 0.7,
+                "idh": 0.703,
+                "ensinoSuperior": 6.8
+            },
+            "visual": {
+                "primaryColor": "#2980b9",
+                "secondaryColor": "#ffffff",
+                "image": "francisco-morato.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS/1K",
+            "field": "leitos",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal3",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}
