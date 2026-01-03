@@ -84,6 +84,8 @@ import maringaPontaGrossaData from "./data/maringa-ponta-grossa.json";
 import pontaGrossaLondrinaData from "./data/ponta-grossa-londrina.json";
 // @ts-ignore
 import joaoPessoaMaceioData from "./data/joao-pessoa-maceio.json";
+// @ts-ignore
+import joaoPessoaNatalData from "./data/joao-pessoa-natal.json";
 
 
 
@@ -650,6 +652,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: joaoPessoaMaceioData,
           image1: 'joao-pessoa.jpg',
           image2: 'maceio.jpg',
+        }}
+      />
+      <Composition
+        id="BattleJoaoPessoaNatal"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: joaoPessoaNatalData,
+          image1: 'joao-pessoa.jpg',
+          image2: 'natal.jpg',
         }}
       />
     </>
