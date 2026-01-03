@@ -509,6 +509,19 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
       <Composition
+        id="BattleMariliaPrudenteHorizontal"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          battleData: mariliaPrudenteData,
+          image1: 'marilia.jpg',
+          image2: 'presidente-prudente.jpg',
+        }}
+      />
+      <Composition
         id="BattleGoianiaCampoGrande"
         component={BattleVideo}
         durationInFrames={1200}
