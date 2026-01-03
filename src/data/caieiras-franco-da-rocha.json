@@ -1,0 +1,89 @@
+{
+    "matchId": "caieiras-franco-da-rocha",
+    "title": "A Batalha da Grande São Paulo",
+    "theme": "Cidades da Região Norte",
+    "cities": [
+        {
+            "ibgeId": "3509007",
+            "name": "Caieiras",
+            "state": "SP",
+            "nickname": "Cidade dos Pinheirais",
+            "data": {
+                "populacao": 95032,
+                "areaKm2": 97,
+                "pibPerCapita": 57955,
+                "leitos": 0.4,
+                "idh": 0.781,
+                "ensinoSuperior": 11.0
+            },
+            "visual": {
+                "primaryColor": "#1b4332",
+                "secondaryColor": "#ffffff",
+                "image": "caieiras.jpg"
+            }
+        },
+        {
+            "ibgeId": "3516408",
+            "name": "Franco da Rocha",
+            "state": "SP",
+            "nickname": "Cidade das Águas",
+            "data": {
+                "populacao": 144849,
+                "areaKm2": 133,
+                "pibPerCapita": 37543,
+                "leitos": 1.2,
+                "idh": 0.731,
+                "ensinoSuperior": 11.5
+            },
+            "visual": {
+                "primaryColor": "#c1121f",
+                "secondaryColor": "#ffffff",
+                "image": "franco-da-rocha.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS/1K",
+            "field": "leitos",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal3",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}

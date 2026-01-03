@@ -92,6 +92,8 @@ import joaoPessoaRecifeData from "./data/joao-pessoa-recife.json";
 import francoDaRochaJundiaiData from "./data/franco-da-rocha-jundiai.json";
 // @ts-ignore
 import francoDaRochaFranciscoMoratoData from "./data/franco-da-rocha-francisco-morato.json";
+// @ts-ignore
+import caieirasFrancoDaRochaData from "./data/caieiras-franco-da-rocha.json";
 
 
 
@@ -710,6 +712,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: francoDaRochaFranciscoMoratoData,
           image1: 'franco-da-rocha.jpg',
           image2: 'francisco-morato.jpg',
+        }}
+      />
+      <Composition
+        id="BattleCaieirasFrancoDaRocha"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: caieirasFrancoDaRochaData,
+          image1: 'caieiras.jpg',
+          image2: 'franco-da-rocha.jpg',
         }}
       />
     </>
