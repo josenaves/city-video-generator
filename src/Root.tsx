@@ -27,6 +27,8 @@ import joinvilleBlumenauData from "./data/joinville-blumenau.json";
 // @ts-ignore
 import assisBauruData from "./data/assis-bauru.json";
 // @ts-ignore
+import londrinaMaringaData from "./data/londrina-maringa.json";
+// @ts-ignore
 import itajaiJoinvilleData from "./data/itajai-joinville.json";
 // @ts-ignore
 import ribeiraoPretoSJRioPretoData from "./data/ribeirao-preto-sj-rio-preto.json";
@@ -590,6 +592,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: assisBauruData,
           image1: 'assis.jpg',
           image2: 'bauru.jpg',
+        }}
+      />
+      <Composition
+        id="BattleLondrinaMaringa"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: londrinaMaringaData,
+          image1: 'londrina.jpg',
+          image2: 'maringa.jpg',
         }}
       />
     </>
