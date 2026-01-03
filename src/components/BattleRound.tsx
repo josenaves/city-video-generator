@@ -63,13 +63,19 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
     // Background animation
     const scale = interpolate(frame, [0, 300], [1, 1.2]);
     const winnerImageWithFade = interpolate(frame, [60, 70], [0, 1], { extrapolateRight: 'clamp' });
+
+    // Improved tie detection to match the scoreboard logic exactly
+    const formattedVal1 = formatValue(city1Value);
+    const formattedVal2 = formatValue(city2Value);
+    const isTie = formattedVal1 === formattedVal2;
+
     const currentBackgroundImage = isWinner1 ? backgroundImage1 : backgroundImage2;
 
     return (
         <AbsoluteFill>
-            {/* Background Layer - FIRST in DOM with zIndex: 0 */}
+            {/* Background Layer - Underlay */}
             <AbsoluteFill style={{ zIndex: 0, flexDirection: 'row' }}>
-                <div style={{ flex: 1, backgroundColor: '#003300', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ flex: 1, backgroundColor: '#003300', overflow: 'hidden', position: 'relative' }}>
                     <Img
                         src={backgroundImage1}
                         style={{
@@ -80,7 +86,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                         }}
                     />
                 </div>
-                <div style={{ flex: 1, backgroundColor: '#330000', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ flex: 1, backgroundColor: '#330000', overflow: 'hidden', position: 'relative' }}>
                     <Img
                         src={backgroundImage2}
                         style={{
@@ -94,20 +100,45 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
 
                 {/* Winner Reveal Background Overlay */}
                 <AbsoluteFill style={{ opacity: winnerImageWithFade }}>
-                    <Img
-                        src={currentBackgroundImage}
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            opacity: 1,
-                            transform: `scale(${scale})`,
-                        }}
-                    />
+                    {isTie ? (
+                        <div style={{ display: 'flex', width: '100%', height: '100%', flexDirection: 'row', transform: `scale(${scale})` }}>
+                            <div style={{ flex: 1, height: '100%', overflow: 'hidden' }}>
+                                <Img
+                                    src={backgroundImage1}
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                    }}
+                                />
+                            </div>
+                            <div style={{ flex: 1, height: '100%', overflow: 'hidden' }}>
+                                <Img
+                                    src={backgroundImage2}
+                                    style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                    }}
+                                />
+                            </div>
+                        </div>
+                    ) : (
+                        <Img
+                            src={currentBackgroundImage}
+                            style={{
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                                opacity: 1,
+                                transform: `scale(${scale})`,
+                            }}
+                        />
+                    )}
                 </AbsoluteFill>
             </AbsoluteFill>
 
-            {/* Content Layer - SECOND in DOM with zIndex: 1 */}
+            {/* Content Layer - Foreground */}
             <AbsoluteFill style={{ zIndex: 1, justifyContent: 'center', alignItems: 'center', color: 'white' }}>
                 <h1 style={{ fontSize: 80, color: 'gold', marginBottom: 60, textTransform: 'uppercase', textShadow: '0 4px 10px rgba(0,0,0,0.8)' }}>{title}</h1>
 
@@ -143,20 +174,14 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                     }}>
                         <h2 style={{
                             fontSize: 80,
-                            color: formatValue(city1Value) === formatValue(city2Value) ? '#FFFFFF' : (isWinner1 ? '#FFD700' : '#FFFFFF'),
+                            color: isTie ? '#FFFFFF' : (isWinner1 ? '#FFD700' : '#FFFFFF'),
                             textShadow: '2px 2px 4px rgba(0,0,0,1)',
                             textAlign: 'center',
                             backgroundColor: 'rgba(0,0,0,0.7)',
                             padding: '10px 30px',
                             borderRadius: 20
                         }}>
-                            {(() => {
-                                const formatted1 = formatValue(city1Value);
-                                const formatted2 = formatValue(city2Value);
-                                if (formatted1 === formatted2) return 'EMPATE!';
-                                return <>{isWinner1 ? city1Name : city2Name}<br />VENCE!</>;
-                            })()}
-
+                            {isTie ? 'EMPATE!' : <>{isWinner1 ? city1Name : city2Name}<br />VENCE!</>}
                         </h2>
                     </div>
                 )}

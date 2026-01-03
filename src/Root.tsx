@@ -78,6 +78,8 @@ import pelotasBageData from "./data/pelotas-bage.json";
 import pontaPoraDouradosData from "./data/ponta-pora-dourados.json";
 // @ts-ignore
 import mariliaAssisData from "./data/marilia-assis.json";
+// @ts-ignore
+import maringaPontaGrossaData from "./data/maringa-ponta-grossa.json";
 
 
 
@@ -605,6 +607,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: londrinaMaringaData,
           image1: 'londrina.jpg',
           image2: 'maringa.jpg',
+        }}
+      />
+      <Composition
+        id="BattleMaringaPontaGrossa"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: maringaPontaGrossaData,
+          image1: 'maringa.jpg',
+          image2: 'ponta-grossa.jpeg',
         }}
       />
     </>
