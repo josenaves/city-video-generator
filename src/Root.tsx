@@ -94,6 +94,8 @@ import francoDaRochaJundiaiData from "./data/franco-da-rocha-jundiai.json";
 import francoDaRochaFranciscoMoratoData from "./data/franco-da-rocha-francisco-morato.json";
 // @ts-ignore
 import caieirasFrancoDaRochaData from "./data/caieiras-franco-da-rocha.json";
+// @ts-ignore
+import presidentePrudenteLondrinaData from "./data/presidente-prudente-londrina.json";
 
 
 
@@ -725,6 +727,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: caieirasFrancoDaRochaData,
           image1: 'caieiras.jpg',
           image2: 'franco-da-rocha.jpg',
+        }}
+      />
+      <Composition
+        id="BattlePresidentePrudenteLondrina"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: presidentePrudenteLondrinaData,
+          image1: 'presidente-prudente.jpg',
+          image2: 'londrina.jpg',
         }}
       />
     </>
