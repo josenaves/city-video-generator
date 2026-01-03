@@ -1,0 +1,89 @@
+{
+    "matchId": "guaxupe-muzambinho",
+    "title": "A Batalha do Café",
+    "theme": "Cidades Mineiras",
+    "cities": [
+        {
+            "ibgeId": "3128709",
+            "name": "Guaxupé",
+            "state": "MG",
+            "nickname": "Cidade das Abelhas",
+            "data": {
+                "populacao": 50911,
+                "areaKm2": 286,
+                "pibPerCapita": 47761,
+                "leitos": 1.5,
+                "idh": 0.751,
+                "ensinoSuperior": 18.4
+            },
+            "visual": {
+                "primaryColor": "#0047AB",
+                "secondaryColor": "#FFFFFF",
+                "image": "guaxupe.jpeg"
+            }
+        },
+        {
+            "ibgeId": "3144104",
+            "name": "Muzambinho",
+            "state": "MG",
+            "nickname": "Terra do Doce de Leite",
+            "data": {
+                "populacao": 21891,
+                "areaKm2": 409,
+                "pibPerCapita": 26091,
+                "leitos": 1.0,
+                "idh": 0.740,
+                "ensinoSuperior": 10.5
+            },
+            "visual": {
+                "primaryColor": "#D32F2F",
+                "secondaryColor": "#FFFFFF",
+                "image": "muzambinho.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS/1K",
+            "field": "leitos",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal3",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}

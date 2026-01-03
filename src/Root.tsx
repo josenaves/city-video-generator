@@ -93,6 +93,8 @@ import francoDaRochaJundiaiData from "./data/franco-da-rocha-jundiai.json";
 // @ts-ignore
 import francoDaRochaFranciscoMoratoData from "./data/franco-da-rocha-francisco-morato.json";
 // @ts-ignore
+import guaxupeMuzambinhoData from "./data/guaxupe-muzambinho.json";
+// @ts-ignore
 import caieirasFrancoDaRochaData from "./data/caieiras-franco-da-rocha.json";
 // @ts-ignore
 import presidentePrudenteLondrinaData from "./data/presidente-prudente-londrina.json";
@@ -753,6 +755,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: presidentePrudenteLondrinaData,
           image1: 'presidente-prudente.jpg',
           image2: 'londrina.jpg',
+        }}
+      />
+      <Composition
+        id="BattleGuaxupeMuzambinhoHorizontal"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          battleData: guaxupeMuzambinhoData,
+          image1: 'guaxupe.jpeg',
+          image2: 'muzambinho.jpg',
         }}
       />
     </>
