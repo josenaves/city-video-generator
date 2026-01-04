@@ -102,6 +102,8 @@ import presidentePrudenteLondrinaData from "./data/presidente-prudente-londrina.
 import betimContagemData from "./data/betim-contagem.json";
 // @ts-ignore
 import aiuruocaCaxambuData from "./data/aiuruoca-caxambu.json";
+// @ts-ignore
+import tombosFariaLemosData from "./data/tombos-faria-lemos.json";
 
 
 
@@ -798,6 +800,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: aiuruocaCaxambuData,
           image1: 'aiuruoca.jpg',
           image2: 'caxambu.jpg',
+        }}
+      />
+      <Composition
+        id="BattleTombosFariaLemos"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: tombosFariaLemosData,
+          image1: 'tombos.jpg',
+          image2: 'faria-lemos.jpg',
         }}
       />
     </>

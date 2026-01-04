@@ -1,0 +1,95 @@
+{
+    "matchId": "tombos-vs-faria-lemos-2025",
+    "title": "Tombos vs Faria Lemos",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 3169305,
+            "name": "Tombos",
+            "state": "MG",
+            "nickname": "Cidade Hospitaleira",
+            "data": {
+                "population": 8609,
+                "areaKm2": 285.12,
+                "gdpPerCapita": 17047,
+                "hospitalBedsPerThousand": 3.6,
+                "idh": 0.718,
+                "higherEducationPct": 17.4
+            },
+            "visual": {
+                "primaryColor": "#D32F2F",
+                "secondaryColor": "#FFFFFF",
+                "image": "tombos.jpg"
+            }
+        },
+        {
+            "ibgeId": 3125406,
+            "name": "Faria Lemos",
+            "state": "MG",
+            "nickname": "Cidade Hospitaleira",
+            "data": {
+                "population": 3188,
+                "areaKm2": 165.22,
+                "gdpPerCapita": 24926,
+                "hospitalBedsPerThousand": 0.0,
+                "idh": 0.687,
+                "higherEducationPct": 8.0
+            },
+            "visual": {
+                "primaryColor": "#2E7D32",
+                "secondaryColor": "#FFFFFF",
+                "image": "faria-lemos.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}
