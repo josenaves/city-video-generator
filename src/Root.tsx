@@ -100,6 +100,8 @@ import caieirasFrancoDaRochaData from "./data/caieiras-franco-da-rocha.json";
 import presidentePrudenteLondrinaData from "./data/presidente-prudente-londrina.json";
 // @ts-ignore
 import betimContagemData from "./data/betim-contagem.json";
+// @ts-ignore
+import aiuruocaCaxambuData from "./data/aiuruoca-caxambu.json";
 
 
 
@@ -783,6 +785,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: betimContagemData,
           image1: 'betim.jpg',
           image2: 'contagem.jpg',
+        }}
+      />
+      <Composition
+        id="BattleAiuruocaCaxambu"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: aiuruocaCaxambuData,
+          image1: 'aiuruoca.jpg',
+          image2: 'caxambu.jpg',
         }}
       />
     </>
