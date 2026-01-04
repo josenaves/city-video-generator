@@ -98,6 +98,8 @@ import guaxupeMuzambinhoData from "./data/guaxupe-muzambinho.json";
 import caieirasFrancoDaRochaData from "./data/caieiras-franco-da-rocha.json";
 // @ts-ignore
 import presidentePrudenteLondrinaData from "./data/presidente-prudente-londrina.json";
+// @ts-ignore
+import betimContagemData from "./data/betim-contagem.json";
 
 
 
@@ -768,6 +770,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: guaxupeMuzambinhoData,
           image1: 'guaxupe.jpeg',
           image2: 'muzambinho.jpg',
+        }}
+      />
+      <Composition
+        id="BattleBetimContagem"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: betimContagemData,
+          image1: 'betim.jpg',
+          image2: 'contagem.jpg',
         }}
       />
     </>
