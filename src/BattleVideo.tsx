@@ -16,8 +16,8 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, im
     const city2 = cities[1];
 
     const introDuration = 90; // 3 sec
-    const roundDuration = 150; // 5 sec
-    const finalDuration = 210; // 7 sec
+    const roundDuration = 120; // 4 sec
+    const finalDuration = 60; // 2 sec
 
     return (
         <AbsoluteFill style={{ backgroundColor: '#000' }}>

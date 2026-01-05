@@ -122,7 +122,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleUberlandiaUberaba"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -136,7 +136,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleCampoGrandeCuiaba"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -150,7 +150,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleArceburgoGuaranesia"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -164,7 +164,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleSaoJoseRioPardoMococa"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -178,7 +178,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleJundiaiSorocaba"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -193,7 +193,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleExtremaPousoAlegre"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1920}
         height={1080}
@@ -207,7 +207,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleBauruRibeiraoPreto"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -220,7 +220,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleAlfenasGuaxupe"
         component={BattleVideo}
-        durationInFrames={1350}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -233,7 +233,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleLemeAraras"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -246,7 +246,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleSantaMariaPelotas"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -259,7 +259,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleJoinvilleBlumenau"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -272,7 +272,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleItajaiJoinville"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -285,7 +285,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleRibeiraoPretoSJRioPreto"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -298,7 +298,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleBauruMarilia"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -311,7 +311,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleSaoSebastiaoPassos"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -324,7 +324,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleFrancaSaoSebastiao"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -337,7 +337,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleTubaraoCriciuma"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -350,7 +350,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleCuritibaCampinas"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -363,7 +363,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleBarueriItapevi"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -378,7 +378,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleBarueriSaoCaetano"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -392,7 +392,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleBarueriCarapicuiba"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -406,7 +406,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleBarueriOsasco"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -419,7 +419,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleBarueriSantanaParnaiba"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -432,7 +432,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattlePortoUniaoUniaoDaVitoria"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -445,7 +445,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleMococaParaiso"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -458,7 +458,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleAracajuMaceio"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -471,7 +471,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleSantaMariaPassoFundo"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -484,7 +484,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleMuzambinhoArceburgo"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -497,7 +497,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleRibeiraoSaoCarlos"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -510,7 +510,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleMariliaPrudente"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -523,7 +523,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleMariliaPrudenteHorizontal"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1920}
         height={1080}
@@ -536,7 +536,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleGoianiaCampoGrande"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -549,7 +549,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleGuaxupeTapiratiba"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -562,7 +562,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleGuaxupeMococa"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -575,7 +575,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleGuaxupeMococaHorizontal"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1920}
         height={1080}
@@ -588,7 +588,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattlePelotasBage"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -601,7 +601,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattlePontaPoraDourados"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -614,7 +614,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleMariliaAssis"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -627,7 +627,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleAssisBauru"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -640,7 +640,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleLondrinaMaringa"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -653,7 +653,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleMaringaPontaGrossa"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -666,7 +666,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattlePontaGrossaLondrina"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -679,7 +679,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleJoaoPessoaMaceio"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -692,7 +692,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleJoaoPessoaNatal"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -705,7 +705,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleJoaoPessoaRecife"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -718,7 +718,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleFrancoDaRochaJundiai"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -731,7 +731,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleFrancoDaRochaFranciscoMorato"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -744,7 +744,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleCaieirasFrancoDaRocha"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -757,7 +757,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattlePresidentePrudenteLondrina"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -770,7 +770,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleGuaxupeMuzambinhoHorizontal"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1920}
         height={1080}
@@ -783,7 +783,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleBetimContagem"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -796,7 +796,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleAiuruocaCaxambu"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -809,7 +809,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleTombosFariaLemos"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -822,7 +822,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleCacondeTapiratiba"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
@@ -835,7 +835,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleCampinaGrandeDoSulQuatroBarras"
         component={BattleVideo}
-        durationInFrames={1200}
+        durationInFrames={1050}
         fps={30}
         width={1080}
         height={1920}
