@@ -1,0 +1,95 @@
+{
+    "matchId": "juruaia-vs-muzambinho-2025",
+    "title": "Juruaia vs Muzambinho",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 3136900,
+            "name": "Juruaia",
+            "state": "MG",
+            "nickname": "Capital da Lingerie",
+            "data": {
+                "population": 11084,
+                "areaKm2": 220.4,
+                "gdpPerCapita": 25394,
+                "hospitalBedsPerThousand": 0.7,
+                "idh": 0.723,
+                "higherEducationPct": 9.5
+            },
+            "visual": {
+                "primaryColor": "#FF69B4",
+                "secondaryColor": "#FFFFFF",
+                "image": "juruaia.jpg"
+            }
+        },
+        {
+            "ibgeId": 3144104,
+            "name": "Muzambinho",
+            "state": "MG",
+            "nickname": "Terra do Doce de Leite",
+            "data": {
+                "population": 21891,
+                "areaKm2": 409.9,
+                "gdpPerCapita": 33933,
+                "hospitalBedsPerThousand": 1.0,
+                "idh": 0.740,
+                "higherEducationPct": 10.5
+            },
+            "visual": {
+                "primaryColor": "#D32F2F",
+                "secondaryColor": "#FFFFFF",
+                "image": "muzambinho.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}

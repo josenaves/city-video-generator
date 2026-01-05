@@ -108,6 +108,8 @@ import tombosFariaLemosData from "./data/tombos-faria-lemos.json";
 import cacondeTapiratibaData from "./data/caconde-tapiratiba.json";
 // @ts-ignore
 import campinaGrandeDoSulQuatroBarrasData from "./data/campina-grande-do-sul-quatro-barras.json";
+// @ts-ignore
+import juruaiaMuzambinhoData from "./data/juruaia-muzambinho.json";
 
 
 
@@ -843,6 +845,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: campinaGrandeDoSulQuatroBarrasData,
           image1: 'campina-grande-do-sul.jpg',
           image2: 'quatro-barras.jpg',
+        }}
+      />
+      <Composition
+        id="BattleJuruaiaMuzambinho"
+        component={BattleVideo}
+        durationInFrames={870}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: juruaiaMuzambinhoData,
+          image1: 'juruaia.jpg',
+          image2: 'muzambinho.jpg',
         }}
       />
     </>
