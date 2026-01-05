@@ -104,6 +104,8 @@ import betimContagemData from "./data/betim-contagem.json";
 import aiuruocaCaxambuData from "./data/aiuruoca-caxambu.json";
 // @ts-ignore
 import tombosFariaLemosData from "./data/tombos-faria-lemos.json";
+// @ts-ignore
+import cacondeTapiratibaData from "./data/caconde-tapiratiba.json";
 
 
 
@@ -813,6 +815,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: tombosFariaLemosData,
           image1: 'tombos.jpg',
           image2: 'faria-lemos.jpg',
+        }}
+      />
+      <Composition
+        id="BattleCacondeTapiratiba"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: cacondeTapiratibaData,
+          image1: 'caconde.jpg',
+          image2: 'tapiratiba.jpg',
         }}
       />
     </>
