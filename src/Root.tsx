@@ -106,6 +106,8 @@ import aiuruocaCaxambuData from "./data/aiuruoca-caxambu.json";
 import tombosFariaLemosData from "./data/tombos-faria-lemos.json";
 // @ts-ignore
 import cacondeTapiratibaData from "./data/caconde-tapiratiba.json";
+// @ts-ignore
+import campinaGrandeDoSulQuatroBarrasData from "./data/campina-grande-do-sul-quatro-barras.json";
 
 
 
@@ -828,6 +830,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: cacondeTapiratibaData,
           image1: 'caconde.jpg',
           image2: 'tapiratiba.jpg',
+        }}
+      />
+      <Composition
+        id="BattleCampinaGrandeDoSulQuatroBarras"
+        component={BattleVideo}
+        durationInFrames={1200}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: campinaGrandeDoSulQuatroBarrasData,
+          image1: 'campina-grande-do-sul.jpg',
+          image2: 'quatro-barras.jpg',
         }}
       />
     </>

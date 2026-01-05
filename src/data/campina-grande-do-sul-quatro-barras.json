@@ -1,0 +1,95 @@
+{
+    "matchId": "campina-grande-do-sul-vs-quatro-barras-2025",
+    "title": "Campina Grande do Sul vs Quatro Barras",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 4104006,
+            "name": "Campina G. do Sul",
+            "state": "PR",
+            "nickname": "Terra do Caqui",
+            "data": {
+                "population": 47799,
+                "areaKm2": 539.2,
+                "gdpPerCapita": 60047,
+                "hospitalBedsPerThousand": 9.7,
+                "idh": 0.718,
+                "higherEducationPct": 18.5
+            },
+            "visual": {
+                "primaryColor": "#0047AB",
+                "secondaryColor": "#FFFFFF",
+                "image": "campina-grande-do-sul.jpg"
+            }
+        },
+        {
+            "ibgeId": 4120804,
+            "name": "Quatro Barras",
+            "state": "PR",
+            "nickname": "Portal da Graciosa",
+            "data": {
+                "population": 24191,
+                "areaKm2": 180.5,
+                "gdpPerCapita": 96572,
+                "hospitalBedsPerThousand": 1.8,
+                "idh": 0.742,
+                "higherEducationPct": 20.5
+            },
+            "visual": {
+                "primaryColor": "#008000",
+                "secondaryColor": "#FFFFFF",
+                "image": "quatro-barras.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}
