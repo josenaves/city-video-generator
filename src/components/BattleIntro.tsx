@@ -4,9 +4,11 @@ import { AbsoluteFill, useVideoConfig, spring, useCurrentFrame, interpolate, Img
 export const BattleIntro: React.FC<{
     city1Name: string;
     city2Name: string;
+    city1Nickname?: string;
+    city2Nickname?: string;
     image1: string;
     image2: string;
-}> = ({ city1Name, city2Name, image1, image2 }) => {
+}> = ({ city1Name, city2Name, city1Nickname, city2Nickname, image1, image2 }) => {
     const frame = useCurrentFrame();
     const { fps } = useVideoConfig();
 
@@ -29,33 +31,75 @@ export const BattleIntro: React.FC<{
             <AbsoluteFill style={{ flexDirection: 'row' }}>
                 <div style={{ flex: 1, backgroundColor: '#111', transform: `translateX(${slideLeft}%)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Img src={image1} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
-                    <h1 style={{
+                    <div style={{
                         position: 'absolute',
-                        fontSize: 55, // Reduced from 90 to fit better
-                        fontWeight: 900,
-                        color: 'white',
-                        letterSpacing: '-0.02em',
-                        textShadow: '0 4px 20px rgba(0,0,0,0.5)',
-                        width: '85%', // Prevent touching edges
-                        textAlign: 'center',
-                        wordWrap: 'break-word',
-                        transform: 'translateY(-40px)' // Move up slightly
-                    }}>{city1Name.toUpperCase()}</h1>
+                        width: '85%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        transform: 'translateY(-40px)'
+                    }}>
+                        <h1 style={{
+                            margin: 0,
+                            fontSize: 70, // Increased from 55
+                            fontWeight: 900,
+                            color: 'white',
+                            letterSpacing: '-0.02em',
+                            textShadow: '0 4px 20px rgba(0,0,0,0.5)',
+                            textAlign: 'center',
+                            wordWrap: 'break-word',
+                            lineHeight: 1
+                        }}>{city1Name.toUpperCase()}</h1>
+                        {city1Nickname && (
+                            <h2 style={{
+                                margin: '5px 0 0 0',
+                                fontSize: 38, // Increased from 22
+                                fontWeight: 500,
+                                color: '#FFD700',
+                                letterSpacing: '0.04em',
+                                textShadow: '0 2px 10px rgba(0,0,0,0.8)',
+                                textAlign: 'center',
+                                textTransform: 'uppercase',
+                            }}>{city1Nickname}</h2>
+                        )}
+                    </div>
                 </div>
                 <div style={{ flex: 1, backgroundColor: '#111', transform: `translateX(${slideRight}%)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Img src={image2} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
-                    <h1 style={{
+                    <div style={{
                         position: 'absolute',
-                        fontSize: 55, // Reduced from 90
-                        fontWeight: 900,
-                        color: 'white',
-                        letterSpacing: '-0.02em',
-                        textShadow: '0 4px 20px rgba(0,0,0,0.5)',
                         width: '85%',
-                        textAlign: 'center',
-                        wordWrap: 'break-word',
-                        transform: 'translateY(40px)' // Move down slightly
-                    }}>{city2Name.toUpperCase()}</h1>
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        transform: 'translateY(40px)'
+                    }}>
+                        <h1 style={{
+                            margin: 0,
+                            fontSize: 70, // Increased from 55
+                            fontWeight: 900,
+                            color: 'white',
+                            letterSpacing: '-0.02em',
+                            textShadow: '0 4px 20px rgba(0,0,0,0.5)',
+                            textAlign: 'center',
+                            wordWrap: 'break-word',
+                            lineHeight: 1
+                        }}>{city2Name.toUpperCase()}</h1>
+                        {city2Nickname && (
+                            <h2 style={{
+                                margin: '5px 0 0 0',
+                                fontSize: 38, // Increased from 22
+                                fontWeight: 500,
+                                color: '#FFD700',
+                                letterSpacing: '0.04em',
+                                textShadow: '0 2px 10px rgba(0,0,0,0.8)',
+                                textAlign: 'center',
+                                textTransform: 'uppercase',
+                            }}>{city2Nickname}</h2>
+                        )}
+                    </div>
                 </div>
             </AbsoluteFill>
             <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center' }}>
@@ -68,7 +112,7 @@ export const BattleIntro: React.FC<{
                 }}>
                     <h3 style={{
                         color: 'rgba(255,255,255,0.7)',
-                        fontSize: 24,
+                        fontSize: 32, // Increased from 24
                         fontWeight: 600,
                         margin: '0 0 10px 0',
                         letterSpacing: '0.2em',
@@ -78,7 +122,7 @@ export const BattleIntro: React.FC<{
                     </h3>
                     <h2 style={{
                         color: 'white',
-                        fontSize: 80,
+                        fontSize: 110, // Increased from 80
                         fontWeight: 900,
                         margin: 0,
                         lineHeight: 0.9,
@@ -89,7 +133,7 @@ export const BattleIntro: React.FC<{
                     </h2>
                     <h2 style={{
                         color: '#FFD700', // Gold accent for "DE CIDADES"
-                        fontSize: 50,
+                        fontSize: 60, // Increased from 50
                         fontWeight: 700,
                         margin: '5px 0 0 0',
                         letterSpacing: '0.05em',
@@ -103,8 +147,8 @@ export const BattleIntro: React.FC<{
                     opacity,
                     // Minimalist VS badge
                     backgroundColor: 'white',
-                    width: 140,
-                    height: 140,
+                    width: 180, // Increased from 140
+                    height: 180, // Increased from 140
                     borderRadius: '50%',
                     display: 'flex',
                     alignItems: 'center',
@@ -113,7 +157,7 @@ export const BattleIntro: React.FC<{
                 }}>
                     <h1 style={{
                         color: 'black',
-                        fontSize: 60,
+                        fontSize: 80, // Increased from 60
                         margin: 0,
                         fontWeight: 900,
                         letterSpacing: '-0.05em'

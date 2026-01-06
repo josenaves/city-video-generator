@@ -27,6 +27,8 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, im
                 <BattleIntro
                     city1Name={city1.name}
                     city2Name={city2.name}
+                    city1Nickname={city1.nickname}
+                    city2Nickname={city2.nickname}
                     image1={staticFile(image1)}
                     image2={staticFile(image2)}
                 />
