@@ -64,7 +64,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
     const scale = interpolate(frame, [0, 300], [1, 1.2]);
     const winnerImageWithFade = interpolate(frame, [60, 70], [0, 1], { extrapolateRight: 'clamp' });
 
-    // Improved tie detection to match the scoreboard logic exactly
+    // Improved tie detection to match the scoreboard logic
     const formattedVal1 = formatValue(city1Value);
     const formattedVal2 = formatValue(city2Value);
     const isTie = formattedVal1 === formattedVal2;
@@ -73,28 +73,18 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
 
     return (
         <AbsoluteFill>
-            {/* Background Layer - Underlay */}
+            {/* Background Layer */}
             <AbsoluteFill style={{ zIndex: 0, flexDirection: 'row' }}>
-                <div style={{ flex: 1, backgroundColor: '#003300', overflow: 'hidden', position: 'relative' }}>
+                <div style={{ flex: 1, backgroundColor: '#111', overflow: 'hidden', position: 'relative' }}>
                     <Img
                         src={backgroundImage1}
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            opacity: 0.6,
-                        }}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.4 }} // Lower opacity for better text readability
                     />
                 </div>
-                <div style={{ flex: 1, backgroundColor: '#330000', overflow: 'hidden', position: 'relative' }}>
+                <div style={{ flex: 1, backgroundColor: '#111', overflow: 'hidden', position: 'relative' }}>
                     <Img
                         src={backgroundImage2}
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            opacity: 0.6,
-                        }}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.4 }}
                     />
                 </div>
 
@@ -103,64 +93,70 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                     {isTie ? (
                         <div style={{ display: 'flex', width: '100%', height: '100%', flexDirection: 'row', transform: `scale(${scale})` }}>
                             <div style={{ flex: 1, height: '100%', overflow: 'hidden' }}>
-                                <Img
-                                    src={backgroundImage1}
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                    }}
-                                />
+                                <Img src={backgroundImage1} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             </div>
                             <div style={{ flex: 1, height: '100%', overflow: 'hidden' }}>
-                                <Img
-                                    src={backgroundImage2}
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                    }}
-                                />
+                                <Img src={backgroundImage2} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             </div>
+                            {/* Overlay for tie */}
+                            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6))' }} />
                         </div>
                     ) : (
-                        <Img
-                            src={currentBackgroundImage}
-                            style={{
-                                width: '100%',
-                                height: '100%',
-                                objectFit: 'cover',
-                                opacity: 1,
-                                transform: `scale(${scale})`,
-                            }}
-                        />
+                        <div style={{ width: '100%', height: '100%', position: 'relative', overflow: 'hidden' }}>
+                            <Img
+                                src={currentBackgroundImage}
+                                style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 1, transform: `scale(${scale})` }}
+                            />
+                            {/* Gradient Overlay for Readability */}
+                            <div style={{
+                                position: 'absolute',
+                                inset: 0,
+                                background: 'linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7))'
+                            }} />
+                        </div>
                     )}
                 </AbsoluteFill>
             </AbsoluteFill>
 
-            {/* Content Layer - Foreground */}
-            <AbsoluteFill style={{ zIndex: 1, justifyContent: 'center', alignItems: 'center', color: 'white' }}>
-                <h1 style={{ fontSize: 80, color: 'gold', marginBottom: 60, textTransform: 'uppercase', textShadow: '0 4px 10px rgba(0,0,0,0.8)' }}>{title}</h1>
+            {/* Content Layer */}
+            <AbsoluteFill style={{ zIndex: 1, justifyContent: 'center', alignItems: 'center', padding: '0 40px' }}>
+                <h1 style={{
+                    fontSize: 70,
+                    fontWeight: 700,
+                    color: 'white',
+                    marginBottom: 80,
+                    textTransform: 'uppercase',
+                    letterSpacing: '-0.02em',
+                    textShadow: '0 4px 20px rgba(0,0,0,0.8)' // Increased shadow opacity
+                }}>{title}</h1>
 
-                <div style={{ width: '80%', display: 'flex', flexDirection: 'column', gap: 40 }}>
+                <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: 60 }}>
                     {/* City 1 */}
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 70, textShadow: '0 2px 5px rgba(0,0,0,0.8)' }}>
-                            <span style={{ color: '#FFD700', fontWeight: 'bold' }}>{city1Name}</span>
-                            <span>{formatValue(val1)} {format !== 'currency' && <span style={{ fontSize: 30 }}>{unit}</span>}</span>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 15 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                            <span style={{ color: 'white', fontSize: 60, fontWeight: 800, letterSpacing: '-0.02em', textShadow: '0 4px 10px rgba(0,0,0,0.8)' }}>
+                                {city1Name}
+                            </span>
+                            <span style={{ color: 'white', fontSize: 70, fontWeight: 300, fontVariantNumeric: 'tabular-nums', textShadow: '0 4px 10px rgba(0,0,0,0.8)' }}>
+                                {formatValue(val1)} {format !== 'currency' && <span style={{ fontSize: 30, opacity: 0.8 }}>{unit}</span>}
+                            </span>
                         </div>
-                        <div style={{ width: '100%', height: 60, backgroundColor: 'rgba(50,50,50,0.8)', borderRadius: 10, overflow: 'hidden' }}>
+                        <div style={{ width: '100%', height: 50, backgroundColor: 'rgba(255,255,255,0.2)', borderRadius: 25, overflow: 'hidden' }}>
                             <div style={{ width: bar1Width, height: '100%', backgroundColor: city1Color }} />
                         </div>
                     </div>
 
                     {/* City 2 */}
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 70, textShadow: '0 2px 5px rgba(0,0,0,0.8)' }}>
-                            <span style={{ color: '#FFFFFF', fontWeight: 'bold' }}>{city2Name}</span>
-                            <span>{formatValue(val2)} {format !== 'currency' && <span style={{ fontSize: 30 }}>{unit}</span>}</span>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 15 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                            <span style={{ color: 'white', fontSize: 60, fontWeight: 800, letterSpacing: '-0.02em', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+                                {city2Name}
+                            </span>
+                            <span style={{ color: 'white', fontSize: 70, fontWeight: 300, fontVariantNumeric: 'tabular-nums' }}>
+                                {formatValue(val2)} {format !== 'currency' && <span style={{ fontSize: 30, opacity: 0.8 }}>{unit}</span>}
+                            </span>
                         </div>
-                        <div style={{ width: '100%', height: 60, backgroundColor: 'rgba(50,50,50,0.8)', borderRadius: 10, overflow: 'hidden' }}>
+                        <div style={{ width: '100%', height: 50, backgroundColor: 'rgba(255,255,255,0.2)', borderRadius: 25, overflow: 'hidden' }}>
                             <div style={{ width: bar2Width, height: '100%', backgroundColor: city2Color }} />
                         </div>
                     </div>
@@ -169,20 +165,26 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                 {showWinner && (
                     <div style={{
                         position: 'absolute',
-                        bottom: 200,
+                        bottom: 250,
                         transform: `scale(${spring({ frame: frame - 60, fps, config: { stiffness: 200 } })})`
                     }}>
-                        <h2 style={{
-                            fontSize: 80,
-                            color: isTie ? '#FFFFFF' : (isWinner1 ? '#FFD700' : '#FFFFFF'),
-                            textShadow: '2px 2px 4px rgba(0,0,0,1)',
-                            textAlign: 'center',
-                            backgroundColor: 'rgba(0,0,0,0.7)',
-                            padding: '10px 30px',
-                            borderRadius: 20
+                        <div style={{
+                            backgroundColor: 'white',
+                            padding: '15px 40px',
+                            borderRadius: 40,
+                            boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
                         }}>
-                            {isTie ? 'EMPATE!' : <>{isWinner1 ? city1Name : city2Name}<br />VENCE!</>}
-                        </h2>
+                            <h2 style={{
+                                fontSize: 50,
+                                margin: 0,
+                                fontWeight: 800,
+                                color: 'black',
+                                letterSpacing: '-0.03em',
+                                textTransform: 'uppercase'
+                            }}>
+                                {isTie ? 'EMPATE' : (isWinner1 ? `${city1Name} VENCE` : `${city2Name} VENCE`)}
+                            </h2>
+                        </div>
                     </div>
                 )}
             </AbsoluteFill>

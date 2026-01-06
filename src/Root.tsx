@@ -112,6 +112,8 @@ import campinaGrandeDoSulQuatroBarrasData from "./data/campina-grande-do-sul-qua
 import juruaiaMuzambinhoData from "./data/juruaia-muzambinho.json";
 // @ts-ignore
 import guaranesiaJuruaiaData from "./data/guaranesia-juruaia.json";
+// @ts-ignore
+import guaxupeGuaranesiaData from "./data/guaxupe-guaranesia.json";
 
 
 
@@ -873,6 +875,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: guaranesiaJuruaiaData,
           image1: 'guaranesia.jpg',
           image2: 'juruaia.jpg',
+        }}
+      />
+      <Composition
+        id="BattleGuaxupeGuaranesia"
+        component={BattleVideo}
+        durationInFrames={870}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: guaxupeGuaranesiaData,
+          image1: 'guaxupe.jpg',
+          image2: 'guaranesia.jpg',
         }}
       />
     </>
