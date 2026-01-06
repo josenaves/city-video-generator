@@ -36,9 +36,9 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
     const { fps } = useVideoConfig();
 
     const progress = spring({
-        frame: frame - 10,
+        frame: frame - 5,
         fps,
-        config: { damping: 200 }
+        config: { stiffness: 200, damping: 20 } // Snappier for Shorts
     });
 
     const val1 = interpolate(progress, [0, 1], [0, city1Value]);
@@ -51,7 +51,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
 
     const isWinner1 = inverse ? city1Value < city2Value : city1Value > city2Value;
 
-    const showWinner = frame > 60;
+    const showWinner = frame > 45;
 
     const formatValue = (val: number) => {
         if (format === 'compact') return new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(val);
@@ -166,7 +166,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                     <div style={{
                         position: 'absolute',
                         bottom: 250,
-                        transform: `scale(${spring({ frame: frame - 60, fps, config: { stiffness: 200 } })})`
+                        transform: `scale(${spring({ frame: frame - 45, fps, config: { stiffness: 300, damping: 15 } })})`
                     }}>
                         <div style={{
                             backgroundColor: 'white',

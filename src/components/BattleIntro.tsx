@@ -16,15 +16,16 @@ export const BattleIntro: React.FC<{
         frame,
         fps,
         config: {
-            damping: 200,
+            damping: 15, // Faster settle
+            stiffness: 200
         },
     });
 
     const scale = interpolate(entrance, [0, 1], [3, 1]);
-    const opacity = interpolate(frame, [0, 20], [0, 1]);
+    const opacity = interpolate(frame, [0, 10], [0, 1]); // Faster fade in
 
-    const slideLeft = interpolate(frame, [0, 30], [-100, 0], { extrapolateRight: 'clamp' });
-    const slideRight = interpolate(frame, [0, 30], [100, 0], { extrapolateRight: 'clamp' });
+    const slideLeft = interpolate(frame, [0, 15], [-100, 0], { extrapolateRight: 'clamp' }); // Faster slide
+    const slideRight = interpolate(frame, [0, 15], [100, 0], { extrapolateRight: 'clamp' });
 
     return (
         <AbsoluteFill style={{ backgroundColor: 'black' }}>

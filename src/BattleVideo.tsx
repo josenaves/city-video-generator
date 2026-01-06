@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, Sequence, Audio, staticFile } from 'remotion';
+import { AbsoluteFill, Sequence, Audio, staticFile, useCurrentFrame, interpolate } from 'remotion';
 import { BattleIntro } from './components/BattleIntro';
 import { BattleRound } from './components/BattleRound';
 import { BattleWinner } from './components/BattleWinner';
@@ -11,13 +11,14 @@ type BattleVideoProps = {
 };
 
 export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, image2 }) => {
+    const frame = useCurrentFrame();
     const { cities, rounds } = battleData;
     const city1 = cities[0];
     const city2 = cities[1];
 
-    const introDuration = 90; // 3 sec
-    const roundDuration = 120; // 4 sec
-    const finalDuration = 60; // 2 sec
+    const introDuration = 60; // 2 sec (was 3 sec)
+    const roundDuration = 90; // 3 sec (was 4 sec)
+    const finalDuration = 90; // 3 sec (was 2 sec)
 
     return (
         <AbsoluteFill style={{ backgroundColor: '#000' }}>
@@ -111,6 +112,24 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, im
                             result={result}
                         />
                     </Sequence>
+                );
+            })()}
+            {/* Progress Bar - Retention Hook */}
+            {(() => {
+                const totalDuration = introDuration + (rounds.length * roundDuration) + finalDuration;
+                const progress = interpolate(frame, [0, totalDuration], [0, 100], { extrapolateRight: 'clamp' });
+
+                return (
+                    <div style={{
+                        position: 'absolute',
+                        bottom: 0,
+                        left: 0,
+                        width: `${progress}%`,
+                        height: 15,
+                        backgroundColor: '#FFD700', // Gold color
+                        zIndex: 100,
+                        boxShadow: '0 -2px 10px rgba(255, 215, 0, 0.5)'
+                    }} />
                 );
             })()}
         </AbsoluteFill>

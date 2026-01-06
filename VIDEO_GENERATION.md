@@ -11,14 +11,14 @@ Os vídeos são estruturados como uma "batalha" onde duas cidades competem em di
 O vídeo é composto por três seções principais, orquestradas pelo componente `BattleVideo` (`src/BattleVideo.tsx`):
 
 ### 1. Introdução (`BattleIntro`)
-*   **Duração**: 3 segundos (90 frames @ 30fps).
-*   **Função**: Apresenta os nomes e imagens das duas cidades competidoras.
+*   **Duração**: 2 segundos (60 frames @ 30fps). [Otimizado para Shorts]
+*   **Função**: Apresenta os nomes, nicknames e imagens das duas cidades competidoras.
 *   **Componente**: `src/components/BattleIntro.tsx`
 
 ### 2. Rodadas de Comparação (`BattleRound`)
-*   **Duração**: 5 segundos por rodada (150 frames @ 30fps).
+*   **Duração**: 3 segundos por rodada (90 frames @ 30fps).
 *   **Função**: Exibe a comparação de um indicador específico.
-*   **Quantidade Padrão**: Geralmente 6 rodadas, totalizando 30 segundos.
+*   **Quantidade Padrão**: Geralmente 6 rodadas.
 *   **Componente**: `src/components/BattleRound.tsx`
 *   **Indicadores Comuns**:
     *   População
@@ -29,23 +29,23 @@ O vídeo é composto por três seções principais, orquestradas pelo componente
     *   Escolaridade (Ensino Superior Completo %)
 
 ### 3. Vencedor / Encerramento (`BattleWinner`)
-*   **Duração**: 7 segundos (210 frames @ 30fps).
+*   **Duração**: 3 segundos (90 frames @ 30fps).
 *   **Função**: Calcula automaticamente o placar final com base nos dados e exibe o vencedor (ou empate).
-*   **Lógica de Pontuação**:
-    *   Ganha 1 ponto a cidade com o melhor indicador na rodada.
-    *   Em caso de empate visual (mesmo valor formatado), ambas ganham ponto.
-    *   Alguns indicadores podem ser invertidos (menor é melhor), embora a lógica atual suporte isso via flag `inverse`.
-*   **Componente**: `src/components/BattleWinner.tsx`
+
+## Design Philosophy: "Sugar Rush" (Shorts Optimization)
+O vídeo foi otimizado para retenção em plataformas de vídeo curto (YouTube Shorts, Reels, TikTok).
+*   **Ritmo Acelerado**: Cortes rápidos para manter o espectador engajado.
+*   **Barra de Progresso**: Uma barra visual dourada no rodapé indica o progresso da batalha.
+*   **Animações "Snappy"**: Física de mola ajustada (`stiffness: 200`, `damping: 15-20`) para movimentos explosivos e rápidos.
 
 ## Duração Total
-
 Para uma batalha padrão de 6 rodadas:
-*   Intro: 3s
-*   Rodadas: 30s (6 x 5s)
-*   Final: 7s
-*   **Total Aproximado**: 40 segundos.
+*   Intro: 2s
+*   Rodadas: 18s (6 x 3s)
+*   Final: 3s
+*   **Total Aproximado**: 23 segundos (ideal para looping em Shorts).
 
-Em termos de frames (a 30fps), costuma-se configurar `durationInFrames={1200}` no `Root.tsx` para cobrir o fluxo completo com margem.
+Em termos de frames (a 30fps), costuma-se configurar `durationInFrames={1050}` no `Root.tsx`.
 
 ## Configuração de Dados
 

@@ -52,3 +52,16 @@ Found an issue with Remotion? [File an issue here](https://github.com/remotion-d
 ## License
 
 Note that for some entities a company license is needed. [Read the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+
+## Changelog
+
+### 2026-01-06 - YouTube Shorts Optimization
+- **Faster Pacing (Sugar Rush):**
+    - Intro reduced from 3s to 2s.
+    - Rounds reduced from 4s to 3s.
+    - Winner reveal reduced to 3s.
+- **Visual Improvements:**
+    - New gold Progress Bar at the bottom.
+    - City Nicknames added to Intro.
+    - Typography sizes increased for better mobile readability.
+    - Animations tuned/speeded up for better retention.
