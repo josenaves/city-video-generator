@@ -114,6 +114,8 @@ import juruaiaMuzambinhoData from "./data/juruaia-muzambinho.json";
 import guaranesiaJuruaiaData from "./data/guaranesia-juruaia.json";
 // @ts-ignore
 import guaxupeGuaranesiaData from "./data/guaxupe-guaranesia.json";
+// @ts-ignore
+import cananeiaIlhaCompridaData from "./data/cananeia-ilha-comprida.json";
 
 
 
@@ -888,6 +890,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: guaxupeGuaranesiaData,
           image1: 'guaxupe.jpg',
           image2: 'guaranesia.jpg',
+        }}
+      />
+      <Composition
+        id="BattleCananeiaIlhaComprida"
+        component={BattleVideo}
+        durationInFrames={870}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: cananeiaIlhaCompridaData,
+          image1: 'cananeia.jpg',
+          image2: 'ilha-comprida.jpg',
         }}
       />
     </>
