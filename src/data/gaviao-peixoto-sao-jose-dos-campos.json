@@ -1,0 +1,95 @@
+{
+    "matchId": "gaviao-peixoto-vs-sao-jose-dos-campos-2025",
+    "title": "Gavião Peixoto vs São José dos Campos",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 3516853,
+            "name": "Gavião Peixoto",
+            "state": "SP",
+            "nickname": "Cidade de Asas",
+            "data": {
+                "population": 4806,
+                "areaKm2": 243.77,
+                "gdpPerCapita": 369126,
+                "hospitalBedsPerThousand": 1.8,
+                "idh": 0.719,
+                "higherEducationPct": 4.01
+            },
+            "visual": {
+                "primaryColor": "#0000FF",
+                "secondaryColor": "#FFFFFF",
+                "image": "gaviao-peixoto.jpg"
+            }
+        },
+        {
+            "ibgeId": 3549904,
+            "name": "S. José dos Campos",
+            "state": "SP",
+            "nickname": "Capital do Vale",
+            "data": {
+                "population": 697428,
+                "areaKm2": 1099.4,
+                "gdpPerCapita": 88077,
+                "hospitalBedsPerThousand": 2.2,
+                "idh": 0.807,
+                "higherEducationPct": 26.0
+            },
+            "visual": {
+                "primaryColor": "#FFD700",
+                "secondaryColor": "#000000",
+                "image": "sao-jose-dos-campos.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}
