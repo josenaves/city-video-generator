@@ -71,6 +71,31 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
 
     const currentBackgroundImage = isWinner1 ? backgroundImage1 : backgroundImage2;
 
+    const getEmoji = (title: string) => {
+        const t = title.toUpperCase();
+        if (t.includes('POPULAÇÃO')) return '👥';
+        if (t.includes('ÁREA')) return '🗺️';
+        if (t.includes('PIB')) return '💰';
+        if (t.includes('LEITO') || t.includes('HOSPITAL')) return '🏥';
+        if (t.includes('IDH')) return '📈';
+        if (t.includes('ESCOLARIDADE') || t.includes('SUPERIOR')) return '🎓';
+        if (t.includes('FROTA') || t.includes('VEÍCULO')) return '🚗';
+        if (t.includes('SALÁRIO') || t.includes('RENDA')) return '💵';
+        return '📊';
+    };
+
+    const iconSpring = spring({
+        frame,
+        fps,
+        config: {
+            stiffness: 200,
+            damping: 12,
+        },
+    });
+
+    const iconRotation = interpolate(iconSpring, [0, 1], [-25, 0]);
+    const floating = Math.sin(frame / 15) * 10;
+
     return (
         <AbsoluteFill>
             {/* Background Layer */}
@@ -120,6 +145,14 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
 
             {/* Content Layer */}
             <AbsoluteFill style={{ zIndex: 1, justifyContent: 'center', alignItems: 'center', padding: '0 40px' }}>
+                <div style={{
+                    fontSize: 160,
+                    marginBottom: 10,
+                    transform: `scale(${iconSpring}) rotate(${iconRotation}deg) translateY(${floating}px)`,
+                    filter: 'drop-shadow(0 15px 25px rgba(0,0,0,0.6))'
+                }}>
+                    {getEmoji(title)}
+                </div>
                 <h1 style={{
                     fontSize: 70,
                     fontWeight: 700,
@@ -127,6 +160,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                     marginBottom: 80,
                     textTransform: 'uppercase',
                     letterSpacing: '-0.02em',
+                    textAlign: 'center',
                     textShadow: '0 4px 20px rgba(0,0,0,0.8)' // Increased shadow opacity
                 }}>{title}</h1>
 
