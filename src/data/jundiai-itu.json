@@ -1,0 +1,89 @@
+{
+    "matchId": "jundiai-itu",
+    "title": "A Batalha do Interior Paulista",
+    "theme": "Cidades de São Paulo",
+    "cities": [
+        {
+            "ibgeId": "3525904",
+            "name": "Jundiaí",
+            "state": "SP",
+            "nickname": "Terra da Uva",
+            "data": {
+                "populacao": 443221,
+                "areaKm2": 431,
+                "pibPerCapita": 147597,
+                "leitos": 1.7,
+                "idh": 0.822,
+                "ensinoSuperior": 23.5
+            },
+            "visual": {
+                "primaryColor": "#003049",
+                "secondaryColor": "#ffffff",
+                "image": "jundiai.jpg"
+            }
+        },
+        {
+            "ibgeId": "3523909",
+            "name": "Itu",
+            "state": "SP",
+            "nickname": "Berço da República",
+            "data": {
+                "populacao": 168240,
+                "areaKm2": 640.7,
+                "pibPerCapita": 83288,
+                "leitos": 1.4,
+                "idh": 0.773,
+                "ensinoSuperior": 20.5
+            },
+            "visual": {
+                "primaryColor": "#c1121f",
+                "secondaryColor": "#ffffff",
+                "image": "itu.webp"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS/1K",
+            "field": "leitos",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal3",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}
