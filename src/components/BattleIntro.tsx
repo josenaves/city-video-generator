@@ -56,8 +56,9 @@ export const BattleIntro: React.FC<{
             <AbsoluteFill style={{ backgroundColor: 'rgba(0,0,0,0.7)', zIndex: 1 }} />
 
             <AbsoluteFill style={{ flexDirection: 'row', zIndex: 2 }}>
-                <div style={{ flex: 1, transform: `translateX(${slideLeft}%)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Img src={image1} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
+                <div style={{ flex: 1, transform: `translateX(${slideLeft}%)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+                    <Img src={image1} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <AbsoluteFill style={{ backgroundColor: 'rgba(0,0,0,0.4)' }} />
                     <div style={{
                         position: 'absolute',
                         width: '85%',
@@ -92,8 +93,9 @@ export const BattleIntro: React.FC<{
                         )}
                     </div>
                 </div>
-                <div style={{ flex: 1, transform: `translateX(${slideRight}%)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Img src={image2} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
+                <div style={{ flex: 1, transform: `translateX(${slideRight}%)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
+                    <Img src={image2} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    <AbsoluteFill style={{ backgroundColor: 'rgba(0,0,0,0.4)' }} />
                     <div style={{
                         position: 'absolute',
                         width: '85%',
