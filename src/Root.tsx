@@ -118,6 +118,8 @@ import guaxupeGuaranesiaData from "./data/guaxupe-guaranesia.json";
 import cananeiaIlhaCompridaData from "./data/cananeia-ilha-comprida.json";
 // @ts-ignore
 import gaviaoPeixotoSaoJoseDosCamposData from "./data/gaviao-peixoto-sao-jose-dos-campos.json";
+// @ts-ignore
+import jundiaiItuData from "./data/jundiai-itu.json";
 
 
 
@@ -920,6 +922,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: gaviaoPeixotoSaoJoseDosCamposData,
           image1: "gaviao-peixoto.jpg",
           image2: "sao-jose-dos-campos.jpg",
+        }}
+      />
+      <Composition
+        id="BattleJundiaiItu"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(jundiaiItuData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: jundiaiItuData,
+          image1: "jundiai.jpg",
+          image2: "itu.webp",
         }}
       />
     </>
