@@ -1,0 +1,89 @@
+{
+    "matchId": "brusque-blumenau",
+    "title": "A Batalha do Vale do Itajaí",
+    "theme": "Cidades de Santa Catarina",
+    "cities": [
+        {
+            "ibgeId": "4202909",
+            "name": "Brusque",
+            "state": "SC",
+            "nickname": "Berço da Fiação / Capital da Moda",
+            "data": {
+                "populacao": 141385,
+                "areaKm2": 284.67,
+                "pibPerCapita": 62044,
+                "leitos": 1.96,
+                "idh": 0.795,
+                "ensinoSuperior": 10.9
+            },
+            "visual": {
+                "primaryColor": "#008148",
+                "secondaryColor": "#ffffff",
+                "image": "brusque.jpg"
+            }
+        },
+        {
+            "ibgeId": "4202404",
+            "name": "Blumenau",
+            "state": "SC",
+            "nickname": "Capital Brasileira da Cerveja",
+            "data": {
+                "populacao": 361261,
+                "areaKm2": 518.63,
+                "pibPerCapita": 56155,
+                "leitos": 2.13,
+                "idh": 0.806,
+                "ensinoSuperior": 26.3
+            },
+            "visual": {
+                "primaryColor": "#d62828",
+                "secondaryColor": "#ffffff",
+                "image": "blumenau.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS/1K",
+            "field": "leitos",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal3",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}

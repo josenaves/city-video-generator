@@ -120,6 +120,10 @@ import cananeiaIlhaCompridaData from "./data/cananeia-ilha-comprida.json";
 import gaviaoPeixotoSaoJoseDosCamposData from "./data/gaviao-peixoto-sao-jose-dos-campos.json";
 // @ts-ignore
 import jundiaiItuData from "./data/jundiai-itu.json";
+// @ts-ignore
+import uberabaSacramentoData from "./data/uberaba-sacramento.json";
+// @ts-ignore
+import brusqueBlumenauData from "./data/brusque-blumenau.json";
 
 
 
@@ -935,6 +939,32 @@ export const RemotionRoot: React.FC = () => {
           battleData: jundiaiItuData,
           image1: "jundiai.jpg",
           image2: "itu.webp",
+        }}
+      />
+      <Composition
+        id="BattleUberabaSacramento"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(uberabaSacramentoData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: uberabaSacramentoData,
+          image1: "uberaba.jpg",
+          image2: "sacramento.jpg",
+        }}
+      />
+      <Composition
+        id="BattleBrusqueBlumenau"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(brusqueBlumenauData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: brusqueBlumenauData,
+          image1: "brusque.jpg",
+          image2: "blumenau.jpg",
         }}
       />
     </>
