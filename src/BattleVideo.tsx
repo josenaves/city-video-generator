@@ -10,15 +10,15 @@ type BattleVideoProps = {
     image2: string;
 };
 
+export const introDuration = 60; // 2 sec
+export const roundDuration = 90; // 3 sec
+export const finalDuration = 90; // 3 sec
+
 export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, image2 }) => {
     const frame = useCurrentFrame();
     const { cities, rounds } = battleData;
     const city1 = cities[0];
     const city2 = cities[1];
-
-    const introDuration = 60; // 2 sec (was 3 sec)
-    const roundDuration = 90; // 3 sec (was 4 sec)
-    const finalDuration = 90; // 3 sec (was 2 sec)
 
     return (
         <AbsoluteFill style={{ backgroundColor: '#000' }}>

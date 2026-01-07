@@ -45,7 +45,7 @@ Para uma batalha padrão de 6 rodadas:
 *   Final: 3s
 *   **Total Aproximado**: 23 segundos (ideal para looping em Shorts).
 
-Em termos de frames (a 30fps), costuma-se configurar `durationInFrames={1050}` no `Root.tsx`.
+Em termos de frames (a 30fps), costuma-se configurar `durationInFrames={690}` no `Root.tsx`.
 
 ## Configuração de Dados
 

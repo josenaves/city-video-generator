@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, useVideoConfig, spring, useCurrentFrame, interpolate, Img } from 'remotion';
+import { AbsoluteFill, useVideoConfig, spring, useCurrentFrame, interpolate, Img, random, staticFile } from 'remotion';
 
 export const BattleIntro: React.FC<{
     city1Name: string;
@@ -11,6 +11,18 @@ export const BattleIntro: React.FC<{
 }> = ({ city1Name, city2Name, city1Nickname, city2Nickname, image1, image2 }) => {
     const frame = useCurrentFrame();
     const { fps } = useVideoConfig();
+
+    const backgroundImages = [
+        'intro/earth.png',
+        'intro/water.png',
+        'intro/fire.png',
+        'intro/wind.png'
+    ];
+
+    // Deterministic random selection based on city names
+    const seed = city1Name + city2Name;
+    const randomIndex = Math.floor(random(seed) * backgroundImages.length);
+    const selectedBackground = backgroundImages[randomIndex];
 
     const entrance = spring({
         frame,
@@ -28,9 +40,23 @@ export const BattleIntro: React.FC<{
     const slideRight = interpolate(frame, [0, 15], [100, 0], { extrapolateRight: 'clamp' });
 
     return (
-        <AbsoluteFill style={{ backgroundColor: 'black' }}>
-            <AbsoluteFill style={{ flexDirection: 'row' }}>
-                <div style={{ flex: 1, backgroundColor: '#111', transform: `translateX(${slideLeft}%)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <AbsoluteFill>
+            {/* Dynamic Background */}
+            <Img
+                src={staticFile(selectedBackground)}
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    position: 'absolute',
+                    zIndex: 0
+                }}
+            />
+            {/* Overlay for contrast */}
+            <AbsoluteFill style={{ backgroundColor: 'rgba(0,0,0,0.7)', zIndex: 1 }} />
+
+            <AbsoluteFill style={{ flexDirection: 'row', zIndex: 2 }}>
+                <div style={{ flex: 1, transform: `translateX(${slideLeft}%)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Img src={image1} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
                     <div style={{
                         position: 'absolute',
@@ -66,7 +92,7 @@ export const BattleIntro: React.FC<{
                         )}
                     </div>
                 </div>
-                <div style={{ flex: 1, backgroundColor: '#111', transform: `translateX(${slideRight}%)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div style={{ flex: 1, transform: `translateX(${slideRight}%)`, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Img src={image2} style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5 }} />
                     <div style={{
                         position: 'absolute',
@@ -103,7 +129,7 @@ export const BattleIntro: React.FC<{
                     </div>
                 </div>
             </AbsoluteFill>
-            <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center' }}>
+            <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', zIndex: 3 }}>
                 <div style={{
                     position: 'absolute',
                     top: 100,

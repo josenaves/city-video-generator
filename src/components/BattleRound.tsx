@@ -78,13 +78,13 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                 <div style={{ flex: 1, backgroundColor: '#111', overflow: 'hidden', position: 'relative' }}>
                     <Img
                         src={backgroundImage1}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.4 }} // Lower opacity for better text readability
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} // Increased opacity for better visibility
                     />
                 </div>
                 <div style={{ flex: 1, backgroundColor: '#111', overflow: 'hidden', position: 'relative' }}>
                     <Img
                         src={backgroundImage2}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.4 }}
+                        style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }}
                     />
                 </div>
 
@@ -111,7 +111,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                             <div style={{
                                 position: 'absolute',
                                 inset: 0,
-                                background: 'linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7))'
+                                background: 'linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5))'
                             }} />
                         </div>
                     )}
