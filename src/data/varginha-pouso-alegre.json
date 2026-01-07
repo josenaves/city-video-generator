@@ -1,0 +1,89 @@
+{
+    "matchId": "varginha-pouso-alegre",
+    "title": "Varginha vs Pouso Alegre",
+    "theme": "Duelo do Sul de Minas",
+    "cities": [
+        {
+            "ibgeId": "3170701",
+            "name": "Varginha",
+            "state": "MG",
+            "nickname": "Cidade do ET",
+            "data": {
+                "populacao": 136467,
+                "areaKm2": 395.4,
+                "pibPerCapita": 73780.24,
+                "leitos": 1.2,
+                "idh": 0.778,
+                "ensinoSuperior": 18.5
+            },
+            "visual": {
+                "primaryColor": "#228b22",
+                "secondaryColor": "#ffffff",
+                "image": "varginha.jpg"
+            }
+        },
+        {
+            "ibgeId": "3152501",
+            "name": "Pouso Alegre",
+            "state": "MG",
+            "nickname": "Capital do Sul de Minas",
+            "data": {
+                "populacao": 152217,
+                "areaKm2": 542.8,
+                "pibPerCapita": 93295.79,
+                "leitos": 1.5,
+                "idh": 0.774,
+                "ensinoSuperior": 21.2
+            },
+            "visual": {
+                "primaryColor": "#000080",
+                "secondaryColor": "#ffffff",
+                "image": "pouso-alegre.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS/1K",
+            "field": "leitos",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal3",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}

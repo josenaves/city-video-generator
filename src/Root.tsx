@@ -124,6 +124,8 @@ import jundiaiItuData from "./data/jundiai-itu.json";
 import uberabaSacramentoData from "./data/uberaba-sacramento.json";
 // @ts-ignore
 import brusqueBlumenauData from "./data/brusque-blumenau.json";
+// @ts-ignore
+import varginhaPousoAlegreData from "./data/varginha-pouso-alegre.json";
 
 
 
@@ -965,6 +967,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: brusqueBlumenauData,
           image1: "brusque.jpg",
           image2: "blumenau.jpg",
+        }}
+      />
+      <Composition
+        id="BattleVarginhaPousoAlegre"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(varginhaPousoAlegreData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: varginhaPousoAlegreData,
+          image1: "varginha.jpg",
+          image2: "pouso-alegre.jpg",
         }}
       />
     </>
