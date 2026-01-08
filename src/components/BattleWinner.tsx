@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig, Img } from 'remotion';
+import { AbsoluteFill, useCurrentFrame, spring, useVideoConfig, Img } from 'remotion';
 
 export const BattleWinner: React.FC<{
     winnerName: string;

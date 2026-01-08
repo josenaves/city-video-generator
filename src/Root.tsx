@@ -130,6 +130,9 @@ import varginhaPousoAlegreData from "./data/varginha-pouso-alegre.json";
 import aguasDeLindoiaSerraNegraData from "./data/aguas-de-lindoia-serra-negra.json";
 // @ts-ignore
 import jundiaiIndaiatubaData from "./data/jundiai-indaiatuba.json";
+// @ts-ignore
+import mococaSaoJoseRioPardoData from "./data/mococa-sao-jose-do-rio-pardo.json";
+
 
 
 
@@ -1025,6 +1028,20 @@ export const RemotionRoot: React.FC = () => {
           image2: "muzambinho.jpg",
         }}
       />
+      <Composition
+        id="BattleMococaSaoJoseRioPardo"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(mococaSaoJoseRioPardoData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: mococaSaoJoseRioPardoData,
+          image1: "mococa.jpg",
+          image2: "sao-jose-do-rio-pardo.png",
+        }}
+      />
+
     </>
   );
 };
