@@ -1,0 +1,95 @@
+{
+    "matchId": "santa-cruz-do-sul-vs-lajeado-2026",
+    "title": "Santa Cruz do Sul vs Lajeado",
+    "theme": "Batalha Gaúcha",
+    "cities": [
+        {
+            "ibgeId": 4316808,
+            "name": "Santa Cruz do Sul",
+            "state": "RS",
+            "nickname": "Terra da Oktoberfest",
+            "data": {
+                "population": 133230,
+                "areaKm2": 734.5,
+                "gdpPerCapita": 100540,
+                "hospitalBedsPerThousand": 1.8,
+                "idh": 0.773,
+                "higherEducationPct": 21.9
+            },
+            "visual": {
+                "primaryColor": "#008000",
+                "secondaryColor": "#FFD700",
+                "image": "santa-cruz-do-sul.jpg"
+            }
+        },
+        {
+            "ibgeId": 4311403,
+            "name": "Lajeado",
+            "state": "RS",
+            "nickname": "Capital do Vale do Taquari",
+            "data": {
+                "population": 93646,
+                "areaKm2": 91.2,
+                "gdpPerCapita": 65068,
+                "hospitalBedsPerThousand": 2.5,
+                "idh": 0.778,
+                "higherEducationPct": 19.8
+            },
+            "visual": {
+                "primaryColor": "#0000FF",
+                "secondaryColor": "#FFFFFF",
+                "image": "lajeado.webp"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}

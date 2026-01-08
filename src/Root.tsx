@@ -132,6 +132,9 @@ import aguasDeLindoiaSerraNegraData from "./data/aguas-de-lindoia-serra-negra.js
 import jundiaiIndaiatubaData from "./data/jundiai-indaiatuba.json";
 // @ts-ignore
 import mococaSaoJoseRioPardoData from "./data/mococa-sao-jose-do-rio-pardo.json";
+// @ts-ignore
+import santaCruzDoSulLajeadoData from "./data/santa-cruz-do-sul-lajeado.json";
+
 
 
 
@@ -1041,6 +1044,20 @@ export const RemotionRoot: React.FC = () => {
           image2: "sao-jose-do-rio-pardo.png",
         }}
       />
+      <Composition
+        id="BattleSantaCruzDoSulLajeado"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(santaCruzDoSulLajeadoData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: santaCruzDoSulLajeadoData,
+          image1: "santa-cruz-do-sul.jpg",
+          image2: "lajeado.webp",
+        }}
+      />
+
 
     </>
   );
