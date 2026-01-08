@@ -1012,6 +1012,19 @@ export const RemotionRoot: React.FC = () => {
           image2: "indaiatuba.jpg",
         }}
       />
+      <Composition
+        id="BattleGuaxupeMuzambinho"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(guaxupeMuzambinhoData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: guaxupeMuzambinhoData,
+          image1: "guaxupe.jpeg",
+          image2: "muzambinho.jpg",
+        }}
+      />
     </>
   );
 };
