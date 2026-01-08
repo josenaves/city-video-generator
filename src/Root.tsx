@@ -126,6 +126,8 @@ import uberabaSacramentoData from "./data/uberaba-sacramento.json";
 import brusqueBlumenauData from "./data/brusque-blumenau.json";
 // @ts-ignore
 import varginhaPousoAlegreData from "./data/varginha-pouso-alegre.json";
+// @ts-ignore
+import aguasDeLindoiaSerraNegraData from "./data/aguas-de-lindoia-serra-negra.json";
 
 
 
@@ -980,6 +982,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: varginhaPousoAlegreData,
           image1: "varginha.jpg",
           image2: "pouso-alegre.jpg",
+        }}
+      />
+      <Composition
+        id="BattleAguasDeLindoiaSerraNegra"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(aguasDeLindoiaSerraNegraData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: aguasDeLindoiaSerraNegraData,
+          image1: "aguas-de-lindoia.jpg",
+          image2: "serra-negra.jpg",
         }}
       />
     </>
