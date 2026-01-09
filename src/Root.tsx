@@ -85,6 +85,8 @@ import pontaGrossaLondrinaData from "./data/ponta-grossa-londrina.json";
 // @ts-ignore
 import cabreuvaItupevaData from "./data/cabreuva-itupeva.json";
 // @ts-ignore
+import itupevaLouveiraData from "./data/itupeva-louveira.json";
+// @ts-ignore
 import joaoPessoaMaceioData from "./data/joao-pessoa-maceio.json";
 // @ts-ignore
 import joaoPessoaNatalData from "./data/joao-pessoa-natal.json";
@@ -1086,6 +1088,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: cabreuvaItupevaData,
           image1: "cabreuva.jpg",
           image2: "itupeva.jpg",
+        }}
+      />
+      <Composition
+        id="BattleItupevaLouveira"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(itupevaLouveiraData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: itupevaLouveiraData,
+          image1: "itupeva.jpg",
+          image2: "louveira.webp",
         }}
       />
 
