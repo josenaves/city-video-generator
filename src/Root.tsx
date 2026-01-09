@@ -134,6 +134,8 @@ import jundiaiIndaiatubaData from "./data/jundiai-indaiatuba.json";
 import mococaSaoJoseRioPardoData from "./data/mococa-sao-jose-do-rio-pardo.json";
 // @ts-ignore
 import santaCruzDoSulLajeadoData from "./data/santa-cruz-do-sul-lajeado.json";
+// @ts-ignore
+import parintinsSantaremData from "./data/parintins-santarem.json";
 
 
 
@@ -1055,6 +1057,20 @@ export const RemotionRoot: React.FC = () => {
           battleData: santaCruzDoSulLajeadoData,
           image1: "santa-cruz-do-sul.jpg",
           image2: "lajeado.webp",
+        }}
+      />
+
+      <Composition
+        id="BattleParintinsSantarem"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(parintinsSantaremData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: parintinsSantaremData,
+          image1: "parintins.jpeg",
+          image2: "santarem.avif",
         }}
       />
 
