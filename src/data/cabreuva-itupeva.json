@@ -1,0 +1,89 @@
+{
+    "matchId": "cabreuva-itupeva",
+    "title": "Batalha na Região de Jundiaí",
+    "theme": "Cidades de São Paulo",
+    "cities": [
+        {
+            "ibgeId": "3509608",
+            "name": "Cabreúva",
+            "state": "SP",
+            "nickname": "Terra da Amizade",
+            "data": {
+                "populacao": 50000,
+                "areaKm2": 260,
+                "pibPerCapita": 100000,
+                "leitos": 1.5,
+                "idh": 0.750,
+                "ensinoSuperior": 15
+            },
+            "visual": {
+                "primaryColor": "#003049",
+                "secondaryColor": "#ffffff",
+                "image": "cabreuva.jpg"
+            }
+        },
+        {
+            "ibgeId": "3524006",
+            "name": "Itupeva",
+            "state": "SP",
+            "nickname": "Cidade dos Parques",
+            "data": {
+                "populacao": 70000,
+                "areaKm2": 200,
+                "pibPerCapita": 120000,
+                "leitos": 1.2,
+                "idh": 0.780,
+                "ensinoSuperior": 18
+            },
+            "visual": {
+                "primaryColor": "#c1121f",
+                "secondaryColor": "#ffffff",
+                "image": "itupeva.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS/1K",
+            "field": "leitos",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal3",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}

@@ -83,6 +83,8 @@ import maringaPontaGrossaData from "./data/maringa-ponta-grossa.json";
 // @ts-ignore
 import pontaGrossaLondrinaData from "./data/ponta-grossa-londrina.json";
 // @ts-ignore
+import cabreuvaItupevaData from "./data/cabreuva-itupeva.json";
+// @ts-ignore
 import joaoPessoaMaceioData from "./data/joao-pessoa-maceio.json";
 // @ts-ignore
 import joaoPessoaNatalData from "./data/joao-pessoa-natal.json";
@@ -1071,6 +1073,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: parintinsSantaremData,
           image1: "parintins.jpeg",
           image2: "santarem.avif",
+        }}
+      />
+      <Composition
+        id="BattleCabreuvaItupeva"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(cabreuvaItupevaData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: cabreuvaItupevaData,
+          image1: "cabreuva.jpg",
+          image2: "itupeva.jpg",
         }}
       />
 
