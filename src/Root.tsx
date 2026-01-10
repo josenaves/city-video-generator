@@ -91,6 +91,8 @@ import vinhedoValinhosData from "./data/vinhedo-valinhos.json";
 // @ts-ignore
 import tresCoracoesVarginhaData from "./data/tres-coracoes-varginha.json";
 // @ts-ignore
+import mogiGuacuMogiMirimData from "./data/mogi-guacu-mogi-mirim.json";
+// @ts-ignore
 import joaoPessoaMaceioData from "./data/joao-pessoa-maceio.json";
 // @ts-ignore
 import joaoPessoaNatalData from "./data/joao-pessoa-natal.json";
@@ -1131,6 +1133,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: tresCoracoesVarginhaData,
           image1: "tres-coracoes.webp",
           image2: "varginha.jpg",
+        }}
+      />
+      <Composition
+        id="BattleMogiGuacuMogiMirim"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(mogiGuacuMogiMirimData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: mogiGuacuMogiMirimData,
+          image1: "mogi-guacu.jpg",
+          image2: "mogi-mirim.jpg",
         }}
       />
 
