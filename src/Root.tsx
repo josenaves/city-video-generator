@@ -87,6 +87,8 @@ import cabreuvaItupevaData from "./data/cabreuva-itupeva.json";
 // @ts-ignore
 import itupevaLouveiraData from "./data/itupeva-louveira.json";
 // @ts-ignore
+import vinhedoValinhosData from "./data/vinhedo-valinhos.json";
+// @ts-ignore
 import joaoPessoaMaceioData from "./data/joao-pessoa-maceio.json";
 // @ts-ignore
 import joaoPessoaNatalData from "./data/joao-pessoa-natal.json";
@@ -1101,6 +1103,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: itupevaLouveiraData,
           image1: "itupeva.jpg",
           image2: "louveira.webp",
+        }}
+      />
+      <Composition
+        id="BattleVinhedoValinhos"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(vinhedoValinhosData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: vinhedoValinhosData,
+          image1: "vinhedo.jpg",
+          image2: "valinhos.webp",
         }}
       />
 
