@@ -1,0 +1,89 @@
+{
+    "matchId": "tres-coracoes-varginha",
+    "title": "A Batalha Mineira",
+    "theme": "Cidades de Minas Gerais",
+    "cities": [
+        {
+            "ibgeId": "3169307",
+            "name": "Três Corações",
+            "state": "MG",
+            "nickname": "Cidade do Rei Pelé",
+            "data": {
+                "populacao": 78542,
+                "areaKm2": 828,
+                "pibPerCapita": 38245,
+                "leitos": 185,
+                "idh": 0.754,
+                "ensinoSuperior": 21.8
+            },
+            "visual": {
+                "primaryColor": "#1e88e5",
+                "secondaryColor": "#ffffff",
+                "image": "tres-coracoes.webp"
+            }
+        },
+        {
+            "ibgeId": "3170701",
+            "name": "Varginha",
+            "state": "MG",
+            "nickname": "Cidade do ET",
+            "data": {
+                "populacao": 136602,
+                "areaKm2": 395,
+                "pibPerCapita": 41230,
+                "leitos": 245,
+                "idh": 0.771,
+                "ensinoSuperior": 23.5
+            },
+            "visual": {
+                "primaryColor": "#43a047",
+                "secondaryColor": "#ffffff",
+                "image": "varginha.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS",
+            "field": "leitos",
+            "format": "number",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}
