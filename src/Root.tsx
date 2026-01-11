@@ -97,6 +97,8 @@ import saoJoseDosPinhaisCuritibaData from "./data/sao-jose-dos-pinhais-curitiba.
 // @ts-ignore
 import saoJoseDosPinhaisPontaGrossaData from "./data/sao-jose-dos-pinhais-ponta-grossa.json";
 // @ts-ignore
+import saoJoseDosPinhaisAraucariaData from "./data/sao-jose-dos-pinhais-araucaria.json";
+// @ts-ignore
 import joaoPessoaMaceioData from "./data/joao-pessoa-maceio.json";
 // @ts-ignore
 import joaoPessoaNatalData from "./data/joao-pessoa-natal.json";
@@ -1176,6 +1178,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: saoJoseDosPinhaisPontaGrossaData,
           image1: "sao-jose-dos-pinhais.jpg",
           image2: "ponta-grossa.jpeg",
+        }}
+      />
+      <Composition
+        id="BattleSaoJoseDosPinhaisAraucaria"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(saoJoseDosPinhaisAraucariaData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: saoJoseDosPinhaisAraucariaData,
+          image1: "sao-jose-dos-pinhais.jpg",
+          image2: "araucaria.jpg",
         }}
       />
 

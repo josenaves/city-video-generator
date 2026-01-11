@@ -1,0 +1,89 @@
+{
+    "matchId": "sao-jose-dos-pinhais-araucaria",
+    "title": "A Batalha da Região Metropolitana",
+    "theme": "Cidades da Região Metropolitana de Curitiba",
+    "cities": [
+        {
+            "ibgeId": "4125506",
+            "name": "São José dos Pinhais",
+            "state": "PR",
+            "nickname": "Cidade dos Pinheirais",
+            "data": {
+                "populacao": 329058,
+                "areaKm2": 946,
+                "pibPerCapita": 45218,
+                "leitos": 485,
+                "idh": 0.750,
+                "ensinoSuperior": 23.8
+            },
+            "visual": {
+                "primaryColor": "#2e7d32",
+                "secondaryColor": "#ffffff",
+                "image": "sao-jose-dos-pinhais.jpg"
+            }
+        },
+        {
+            "ibgeId": "4101804",
+            "name": "Araucária",
+            "state": "PR",
+            "nickname": "Cidade do Petróleo",
+            "data": {
+                "populacao": 151666,
+                "areaKm2": 469,
+                "pibPerCapita": 68215,
+                "leitos": 285,
+                "idh": 0.759,
+                "ensinoSuperior": 21.5
+            },
+            "visual": {
+                "primaryColor": "#ff9800",
+                "secondaryColor": "#ffffff",
+                "image": "araucaria.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS",
+            "field": "leitos",
+            "format": "number",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}
