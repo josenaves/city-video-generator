@@ -93,6 +93,8 @@ import tresCoracoesVarginhaData from "./data/tres-coracoes-varginha.json";
 // @ts-ignore
 import mogiGuacuMogiMirimData from "./data/mogi-guacu-mogi-mirim.json";
 // @ts-ignore
+import saoJoseDosPinhaisCuritibaData from "./data/sao-jose-dos-pinhais-curitiba.json";
+// @ts-ignore
 import joaoPessoaMaceioData from "./data/joao-pessoa-maceio.json";
 // @ts-ignore
 import joaoPessoaNatalData from "./data/joao-pessoa-natal.json";
@@ -1146,6 +1148,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: mogiGuacuMogiMirimData,
           image1: "mogi-guacu.jpg",
           image2: "mogi-mirim.jpg",
+        }}
+      />
+      <Composition
+        id="BattleSaoJoseDosPinhaisCuritiba"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(saoJoseDosPinhaisCuritibaData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: saoJoseDosPinhaisCuritibaData,
+          image1: "sao-jose-dos-pinhais.jpg",
+          image2: "curitiba.webp",
         }}
       />
 
