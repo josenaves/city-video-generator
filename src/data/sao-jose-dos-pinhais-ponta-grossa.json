@@ -1,0 +1,89 @@
+{
+    "matchId": "sao-jose-dos-pinhais-ponta-grossa",
+    "title": "A Batalha Paranaense",
+    "theme": "Cidades do Paraná",
+    "cities": [
+        {
+            "ibgeId": "4125506",
+            "name": "São José dos Pinhais",
+            "state": "PR",
+            "nickname": "Cidade dos Pinheirais",
+            "data": {
+                "populacao": 329058,
+                "areaKm2": 946,
+                "pibPerCapita": 45218,
+                "leitos": 485,
+                "idh": 0.750,
+                "ensinoSuperior": 23.8
+            },
+            "visual": {
+                "primaryColor": "#2e7d32",
+                "secondaryColor": "#ffffff",
+                "image": "sao-jose-dos-pinhais.jpg"
+            }
+        },
+        {
+            "ibgeId": "4119905",
+            "name": "Ponta Grossa",
+            "state": "PR",
+            "nickname": "Capital dos Campos Gerais",
+            "data": {
+                "populacao": 358838,
+                "areaKm2": 2057,
+                "pibPerCapita": 38245,
+                "leitos": 585,
+                "idh": 0.751,
+                "ensinoSuperior": 25.3
+            },
+            "visual": {
+                "primaryColor": "#d32f2f",
+                "secondaryColor": "#ffffff",
+                "image": "ponta-grossa.jpeg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS",
+            "field": "leitos",
+            "format": "number",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}

@@ -95,6 +95,8 @@ import mogiGuacuMogiMirimData from "./data/mogi-guacu-mogi-mirim.json";
 // @ts-ignore
 import saoJoseDosPinhaisCuritibaData from "./data/sao-jose-dos-pinhais-curitiba.json";
 // @ts-ignore
+import saoJoseDosPinhaisPontaGrossaData from "./data/sao-jose-dos-pinhais-ponta-grossa.json";
+// @ts-ignore
 import joaoPessoaMaceioData from "./data/joao-pessoa-maceio.json";
 // @ts-ignore
 import joaoPessoaNatalData from "./data/joao-pessoa-natal.json";
@@ -1161,6 +1163,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: saoJoseDosPinhaisCuritibaData,
           image1: "sao-jose-dos-pinhais.jpg",
           image2: "curitiba.webp",
+        }}
+      />
+      <Composition
+        id="BattleSaoJoseDosPinhaisPontaGrossa"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(saoJoseDosPinhaisPontaGrossaData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: saoJoseDosPinhaisPontaGrossaData,
+          image1: "sao-jose-dos-pinhais.jpg",
+          image2: "ponta-grossa.jpeg",
         }}
       />
 
