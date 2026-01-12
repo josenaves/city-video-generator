@@ -1,0 +1,89 @@
+{
+    "matchId": "joanopolis-piracaia",
+    "title": "A Batalha Paulista",
+    "theme": "Cidades da Serra da Mantiqueira",
+    "cities": [
+        {
+            "ibgeId": "3525508",
+            "name": "Joanópolis",
+            "state": "SP",
+            "nickname": "Cidade do Lobisomem",
+            "data": {
+                "populacao": 12987,
+                "areaKm2": 374,
+                "pibPerCapita": 28245,
+                "leitos": 32,
+                "idh": 0.742,
+                "ensinoSuperior": 18.2
+            },
+            "visual": {
+                "primaryColor": "#0288d1",
+                "secondaryColor": "#ffffff",
+                "image": "joanopolis.jpg"
+            }
+        },
+        {
+            "ibgeId": "3538600",
+            "name": "Piracaia",
+            "state": "SP",
+            "nickname": "Cidade do Pêssego",
+            "data": {
+                "populacao": 27845,
+                "areaKm2": 386,
+                "pibPerCapita": 31230,
+                "leitos": 45,
+                "idh": 0.748,
+                "ensinoSuperior": 20.5
+            },
+            "visual": {
+                "primaryColor": "#f57c00",
+                "secondaryColor": "#ffffff",
+                "image": "piracaia.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS",
+            "field": "leitos",
+            "format": "number",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}

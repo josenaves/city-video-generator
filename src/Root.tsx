@@ -99,6 +99,8 @@ import saoJoseDosPinhaisPontaGrossaData from "./data/sao-jose-dos-pinhais-ponta-
 // @ts-ignore
 import saoJoseDosPinhaisAraucariaData from "./data/sao-jose-dos-pinhais-araucaria.json";
 // @ts-ignore
+import joanopolisPiracaiaData from "./data/joanopolis-piracaia.json";
+// @ts-ignore
 import joaoPessoaMaceioData from "./data/joao-pessoa-maceio.json";
 // @ts-ignore
 import joaoPessoaNatalData from "./data/joao-pessoa-natal.json";
@@ -1191,6 +1193,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: saoJoseDosPinhaisAraucariaData,
           image1: "sao-jose-dos-pinhais.jpg",
           image2: "araucaria.jpg",
+        }}
+      />
+      <Composition
+        id="BattleJoanopolisPiracaia"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(joanopolisPiracaiaData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: joanopolisPiracaiaData,
+          image1: "joanopolis.jpg",
+          image2: "piracaia.jpg",
         }}
       />
 
