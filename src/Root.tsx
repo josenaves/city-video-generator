@@ -101,6 +101,8 @@ import saoJoseDosPinhaisAraucariaData from "./data/sao-jose-dos-pinhais-araucari
 // @ts-ignore
 import joanopolisPiracaiaData from "./data/joanopolis-piracaia.json";
 // @ts-ignore
+import itapiraEstivaGerbiData from "./data/itapira-estiva-gerbi.json";
+// @ts-ignore
 import joaoPessoaMaceioData from "./data/joao-pessoa-maceio.json";
 // @ts-ignore
 import joaoPessoaNatalData from "./data/joao-pessoa-natal.json";
@@ -1206,6 +1208,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: joanopolisPiracaiaData,
           image1: "joanopolis.jpg",
           image2: "piracaia.jpg",
+        }}
+      />
+      <Composition
+        id="BattleItapiraEstivaGerbi"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(itapiraEstivaGerbiData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: itapiraEstivaGerbiData,
+          image1: "itapira.jpg",
+          image2: "estiva-gerbi.jpg",
         }}
       />
 

@@ -1,0 +1,89 @@
+{
+    "matchId": "itapira-estiva-gerbi",
+    "title": "A Batalha Paulista",
+    "theme": "Cidades do Interior de São Paulo",
+    "cities": [
+        {
+            "ibgeId": "3522604",
+            "name": "Itapira",
+            "state": "SP",
+            "nickname": "Cidade das Rosas",
+            "data": {
+                "populacao": 74582,
+                "areaKm2": 518,
+                "pibPerCapita": 38245,
+                "leitos": 125,
+                "idh": 0.786,
+                "ensinoSuperior": 22.8
+            },
+            "visual": {
+                "primaryColor": "#e91e63",
+                "secondaryColor": "#ffffff",
+                "image": "itapira.jpg"
+            }
+        },
+        {
+            "ibgeId": "3557303",
+            "name": "Estiva Gerbi",
+            "state": "SP",
+            "nickname": "Cidade do Progresso",
+            "data": {
+                "populacao": 11245,
+                "areaKm2": 74,
+                "pibPerCapita": 31230,
+                "leitos": 28,
+                "idh": 0.758,
+                "ensinoSuperior": 18.5
+            },
+            "visual": {
+                "primaryColor": "#4caf50",
+                "secondaryColor": "#ffffff",
+                "image": "estiva-gerbi.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS",
+            "field": "leitos",
+            "format": "number",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}
