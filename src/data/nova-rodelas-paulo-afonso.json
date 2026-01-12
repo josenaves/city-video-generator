@@ -1,0 +1,89 @@
+{
+    "matchId": "nova-rodelas-paulo-afonso",
+    "title": "A Batalha do Sertão Baiano",
+    "theme": "Cidades do Interior da Bahia",
+    "cities": [
+        {
+            "ibgeId": "2927101",
+            "name": "Nova Rodelas",
+            "state": "BA",
+            "nickname": "Cidade do Velho Chico",
+            "data": {
+                "populacao": 10884,
+                "areaKm2": 2207,
+                "pibPerCapita": 15766,
+                "leitos": 18,
+                "idh": 0.632,
+                "ensinoSuperior": 12.5
+            },
+            "visual": {
+                "primaryColor": "#2e7d32",
+                "secondaryColor": "#ffffff",
+                "image": "nova-rodelas.jpg"
+            }
+        },
+        {
+            "ibgeId": "2924009",
+            "name": "Paulo Afonso",
+            "state": "BA",
+            "nickname": "Cidade das Cataratas",
+            "data": {
+                "populacao": 119418,
+                "areaKm2": 1544,
+                "pibPerCapita": 37733               ,
+ "leitos": 125,
+                "idh": 0.674,
+                "ensinoSuperior": 22.8
+            },
+            "visual": {
+                "primaryColor": "#1565c0",
+                "secondaryColor": "#ffffff",
+                "image": "paulo-afonso.webp"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS",
+            "field": "leitos",
+            "format": "number",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}

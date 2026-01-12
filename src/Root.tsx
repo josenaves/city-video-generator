@@ -156,10 +156,8 @@ import mococaSaoJoseRioPardoData from "./data/mococa-sao-jose-do-rio-pardo.json"
 import santaCruzDoSulLajeadoData from "./data/santa-cruz-do-sul-lajeado.json";
 // @ts-ignore
 import parintinsSantaremData from "./data/parintins-santarem.json";
-
-
-
-
+// @ts-ignore
+import novaRodelasPauloAfonsoData from "./data/nova-rodelas-paulo-afonso.json";
 
 
 
@@ -1221,6 +1219,20 @@ export const RemotionRoot: React.FC = () => {
           battleData: itapiraEstivaGerbiData,
           image1: "itapira.jpg",
           image2: "estiva-gerbi.jpg",
+        }}
+      />
+
+      <Composition
+        id="BattleNovaRodelasPauloAfonso"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(novaRodelasPauloAfonsoData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: novaRodelasPauloAfonsoData,
+          image1: "nova-rodelas.jpg",
+          image2: "paulo-afonso.webp",
         }}
       />
 
