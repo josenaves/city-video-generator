@@ -1,6 +1,7 @@
 import "./index.css";
 import { Composition } from "remotion";
 import { BattleVideo, introDuration, roundDuration, finalDuration } from "./BattleVideo";
+import { ChampionshipVideo, CHAMP_INTRO_DURATION, CHAMP_ROUND_DURATION, CHAMP_FINAL_DURATION, CHAMP_OPENING_DURATION, CHAMP_LEADERBOARD_DURATION, CHAMP_CHAMPION_DURATION, CHAMP_CAMPAIGN_DURATION } from "./ChampionshipVideo";
 
 // @ts-ignore
 import uberlandiaUberabaData from "./data/uberlandia-uberaba.json";
@@ -159,6 +160,12 @@ import parintinsSantaremData from "./data/parintins-santarem.json";
 // @ts-ignore
 import novaRodelasPauloAfonsoData from "./data/nova-rodelas-paulo-afonso.json";
 
+// Championships
+// @ts-ignore
+import mogiChampionshipData from "./data/championships/mogi.json";
+// @ts-ignore
+import oestePaulistaData from "./data/championships/oeste-paulista.json";
+
 
 
 
@@ -166,9 +173,40 @@ import novaRodelasPauloAfonsoData from "./data/nova-rodelas-paulo-afonso.json";
 
 const calculateDuration = (data: any) => introDuration + (data.rounds.length * roundDuration) + finalDuration;
 
+const calculateChampionshipDuration = (numCities: number, numRounds: number) => {
+  const numMatches = (numCities * (numCities - 1)) / 2;
+  const battleDuration = CHAMP_INTRO_DURATION + (numRounds * CHAMP_ROUND_DURATION) + CHAMP_FINAL_DURATION;
+  return CHAMP_OPENING_DURATION +
+    (numMatches * (battleDuration + CHAMP_LEADERBOARD_DURATION)) +
+    CHAMP_CHAMPION_DURATION +
+    CHAMP_CAMPAIGN_DURATION;
+};
+
 export const RemotionRoot: React.FC = () => {
+  const championships = [
+    { id: "ChampionshipMogi", data: mogiChampionshipData },
+    { id: "ChampionshipWestPaulista", data: oestePaulistaData },
+  ];
+
   return (
     <>
+      {championships.map((champ) => (
+        <Composition
+          key={champ.id}
+          id={champ.id}
+          component={ChampionshipVideo}
+          durationInFrames={calculateChampionshipDuration(champ.data.cities.length, champ.data.rounds.length)}
+          fps={30}
+          width={1920}
+          height={1080}
+          defaultProps={{
+            championshipName: champ.data.name,
+            cities: champ.data.cities,
+            rounds: champ.data.rounds,
+          }}
+        />
+      ))}
+
       <Composition
         id="BattleUberlandiaUberaba"
         component={BattleVideo}

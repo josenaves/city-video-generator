@@ -3,7 +3,7 @@
 ## 📋 Sobre o Produto
 O **City Video Generator** é uma ferramenta automatizada de criação de vídeos baseada em **Remotion** (React para vídeo). Seu objetivo principal é gerar vídeos de alta qualidade no formato vertical (9:16) para plataformas de consumo rápido, como **YouTube Shorts, Instagram Reels e TikTok**.
 
-O foco do projeto é a criação de **"Batalhas de Cidades"**, onde dois municípios são comparados através de indicadores estatísticos reais, gerando engajamento através da curiosidade, competitividade regional e orgulho local.
+O foco do projeto é a criação de **"Batalhas de Cidades"** e **"Campeonatos Regionais"**, onde municípios são comparados através de indicadores estatísticos reais, gerando engajamento através da curiosidade, competitividade regional e orgulho local.
 
 ---
 
@@ -43,27 +43,38 @@ Cada vídeo é composto por uma sequência lógica de 3 tipos de cenas:
 *   **Funcionalidade**: Proclama a cidade vencedora com base na pontuação total dos rounds.
 *   **Elementos**:
     *   Placar final (Ex: 4 x 2).
-    *   Animação de "Confete" ou destaque para a cidade campeã.
+    *   Efeito visual de destaque para a cidade campeã.
     *   Call to Action (implícito) para os espectadores comentarem sobre o resultado.
 
 ---
 
-## ⚙️ Especificações Técnicas
-*   **Resolução**: 1080x1920 (Vertical).
-*   **FPS**: 30 frames por segundo.
-*   **Duração Total**: ~23 segundos (690 frames) — ideal para o algoritmo do YouTube Shorts.
-*   **Áudio**: Trilha sonora de alta energia ("Beat Your Competition") sincronizada.
+## 🏆 Modo Campeonato (Regional Tournaments)
+Além das batalhas 1v1, o sistema suporta torneios entre 4 ou mais cidades no formato "todos contra todos".
+
+### Estrutura do Campeonato
+1.  **Abertura**: Apresentação de todas as cidades participantes.
+2.  **Ciclo de Partidas**: Sequência de batalhas 1v1 seguindo a lógica do torneio.
+3.  **Tabelas Parciais**: Após cada jogo, exibição da classificação atualizada (Pontos, Vitórias, Saldo de Rounds).
+4.  **Grande Final**: Revelação da campeã com **Efeito de Confete** e resumo da campanha vitoriosa.
+
+### Especificações do Campeonato
+*   **Sincronia Musical**: Totalmente sincronizado com 128 BPM.
+*   **Tempo das Rodadas**: Ajustado para 6 batidas (~2.8s) para maior legibilidade.
+*   **Duração Total**: Limitada a **2:47** para coincidir com a trilha sonora.
+*   **Formato**: Horizontal (1920x1080) por padrão.
 
 ---
 
-## 📝 Como Adicionar uma Nova Batalha
-Para criar um novo vídeo, siga este fluxo:
-
-1.  **Coletar Dados**: Obtenha os dados das duas cidades (IBGE/Google).
-2.  **Criar JSON**: Crie um arquivo em `src/data/nome-das-cidades.json` (use um existente como template).
-3.  **Adicionar Imagens**: Coloque as fotos das cidades na pasta `public/` (JPG/PNG/WEBP).
+### Adicionar Batalha 1v1
+1.  **Coletar Dados**: Obtenha os dados das duas cidades.
+2.  **Criar JSON**: Salve em `src/data/nome-das-cidades.json`.
+3.  **Adicionar Imagens**: Coloque as fotos das cidades na pasta `public/`.
 4.  **Registrar no Root**: Adicione a nova `<Composition>` no arquivo `src/Root.tsx`.
-5.  **Renderizar**: Execute `npx remotion render BattleID` para gerar o arquivo MP4.
+
+### Adicionar Campeonato
+1.  **Configurar JSON**: Crie o arquivo em `src/data/championships/nome.json`.
+2.  **Configurar Cidades**: Inclua os objetos completos das cidades (data e visual) no JSON do campeonato.
+3.  **Registrar no Root**: Adicione o JSON ao array `championships` dentro do componente `RemotionRoot`.
 
 ---
 

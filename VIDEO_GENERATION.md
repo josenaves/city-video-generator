@@ -53,17 +53,38 @@ Cada batalha é definida por um arquivo JSON em `src/data/` (ex: `src/data/araca
 
 Estrutura do JSON:
 *   `matchId`: Identificador único.
-*   `cities`: Array com 2 objetos contendo:
-    *   Dados estatísticos (`data`).
-    *   Identidade visual (`visual`: cores e nome da imagem).
+*   `cities`: Array com 2 objetos contendo dados estatísticos (`data`) e identidade visual (`visual`).
 *   `rounds`: Array definindo quais indicadores serão comparados, ordem e formatação.
 
-## Como Gerar Novos Vídeos
+---
 
-1.  Adicione as imagens das cidades em `public/`.
-2.  Crie um novo JSON em `src/data/` com os dados das cidades.
-3.  Registre uma nova `<Composition>` em `src/Root.tsx`, importando o JSON criado e definindo os mesmos parâmetros de largura/altura e duração.
+## 🏆 Motor de Campeonatos (`ChampionshipVideo`)
+
+O sistema agora suporta um modo de campeonato completo para torneios regionais.
+
+### Sincronia Musical (128 BPM)
+Diferente das batalhas simples, este modo é sincronizado matematicamente com a batida:
+*   **Batida**: 1 beat = 14.0625 frames (em 30fps).
+*   **Partidas**: Rodadas de 6 batidas para garantir melhor leitura em formatos mais longos.
+*   **Duração Máxima**: **2:47** (tempo total da música).
+
+### Lógica de Torneio (`ChampionshipManager`)
+O gerenciamento dos jogos e rankings é feito programaticamente:
+*   **Pontuação**: Vitória = 1 ponto, Empate/Derrota = 0.
+*   **Desempate**: 1º Saldo de Rounds, 2º Número de Vitórias.
+
+### Configuração via JSON
+Os campeonatos são configurados em `src/data/championships/*.json`:
+```json
+{
+  "name": "Nome do Campeonato",
+  "cities": [...],
+  "rounds": [...]
+}
+```
 
 ## Componentes Técnicos
-*   **`src/Root.tsx`**: Ponto de entrada que registra todas as composições de vídeo disponíveis.
-*   **`src/BattleVideo.tsx`**: Componente "pai" que sequencia a Intro, Rounds e Winner.
+*   **`src/Root.tsx`**: Orquestrador que registra batalhas e campeonatos via mapeamento de JSON.
+*   **`src/ChampionshipVideo.tsx`**: Engine que renderiza a sequência de jogos, tabelas e pódio.
+*   **`src/utils/ChampionshipManager.ts`**: Cérebro matemático do torneio.
+*   **`src/components/ChampionshipComponents.tsx`**: UI especializada (Abertura, Tabelas, Confete).

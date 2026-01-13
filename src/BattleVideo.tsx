@@ -12,8 +12,8 @@ type BattleVideoProps = {
 
 // Sincronizado com música de 128 BPM - cada transição a cada 2 batidas (28 frames)
 const beatsPerTransition = 2;
-const framesPerBeat = 14.0625; // 60s / 128BPM * 30FPS
-const transitionFrames = Math.round(beatsPerTransition * framesPerBeat); // 28 frames
+export const framesPerBeat = 14.0625; // 60s / 128BPM * 30FPS
+export const transitionFrames = Math.round(beatsPerTransition * framesPerBeat); // 28 frames
 
 export const introDuration = transitionFrames * 2; // 56 frames (4 batidas)
 export const roundDuration = transitionFrames * 2; // 56 frames (4 batidas)
@@ -106,8 +106,8 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, im
                 const winnerName = isTie ? 'EMPATE' : (wins1 > wins2 ? city1.name : city2.name);
                 const winnerColor = isTie ? '#FFFFFF' : (wins1 > wins2 ? city1.visual.primaryColor : city2.visual.primaryColor);
 
-                 return (
-                     <Sequence from={introDuration + (rounds.length * roundDuration)} durationInFrames={finalDuration}>
+                return (
+                    <Sequence from={introDuration + (rounds.length * roundDuration)} durationInFrames={finalDuration}>
                         <BattleWinner
                             winnerName={winnerName}
                             winnerColor={winnerColor}
