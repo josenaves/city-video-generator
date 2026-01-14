@@ -167,6 +167,8 @@ import mogiChampionshipData from "./data/championships/mogi.json";
 import oestePaulistaData from "./data/championships/oeste-paulista.json";
 // @ts-ignore
 import fronteiraMSData from "./data/championships/fronteira-ms.json";
+// @ts-ignore
+import capitaisSudesteData from "./data/championships/capitais-sudeste.json";
 
 
 
@@ -189,6 +191,7 @@ export const RemotionRoot: React.FC = () => {
     { id: "ChampionshipMogi", data: mogiChampionshipData },
     { id: "ChampionshipWestPaulista", data: oestePaulistaData },
     { id: "ChampionshipFronteiraMS", data: fronteiraMSData },
+    { id: "ChampionshipCapitaisSudeste", data: capitaisSudesteData },
   ];
 
   return (
