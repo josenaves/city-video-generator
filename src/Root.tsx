@@ -160,6 +160,9 @@ import parintinsSantaremData from "./data/parintins-santarem.json";
 // @ts-ignore
 import novaRodelasPauloAfonsoData from "./data/nova-rodelas-paulo-afonso.json";
 
+// @ts-ignore
+import tombosRessaquinhaData from "./data/tombos-ressaquinha.json";
+
 // Championships
 // @ts-ignore
 import mogiChampionshipData from "./data/championships/mogi.json";
@@ -1281,6 +1284,19 @@ export const RemotionRoot: React.FC = () => {
       />
 
 
+      <Composition
+        id="BattleTombosRessaquinha"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(tombosRessaquinhaData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: tombosRessaquinhaData,
+          image1: "tombos.jpg",
+          image2: "ressaquinha.jpeg",
+        }}
+      />
     </>
   );
 };
