@@ -1,0 +1,95 @@
+{
+    "matchId": "mirassol-vs-votuporanga-2026",
+    "title": "Mirassol vs Votuporanga",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 3530706,
+            "name": "Mirassol",
+            "state": "SP",
+            "nickname": "Terra do Leão",
+            "data": {
+                "population": 63337,
+                "areaKm2": 243.228,
+                "gdpPerCapita": 52826,
+                "hospitalBedsPerThousand": 3.47,
+                "idh": 0.762,
+                "higherEducationPct": 98.92
+            },
+            "visual": {
+                "primaryColor": "#007D3E",
+                "secondaryColor": "#FFCE00",
+                "image": "mirassol.png"
+            }
+        },
+        {
+            "ibgeId": 3557007,
+            "name": "Votuporanga",
+            "state": "SP",
+            "nickname": "Brisas Suaves",
+            "data": {
+                "population": 96634,
+                "areaKm2": 420.703,
+                "gdpPerCapita": 47418,
+                "hospitalBedsPerThousand": 2.27,
+                "idh": 0.790,
+                "higherEducationPct": 98.32
+            },
+            "visual": {
+                "primaryColor": "#0033A0",
+                "secondaryColor": "#FAFAFA",
+                "image": "votuporanga.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIZAÇÃO",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}

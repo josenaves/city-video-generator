@@ -11,7 +11,7 @@ type BattleVideoProps = {
 };
 
 // Sincronizado com música de 128 BPM - cada transição a cada 2 batidas (28 frames)
-const beatsPerTransition = 2;
+const beatsPerTransition = 3;
 export const framesPerBeat = 14.0625; // 60s / 128BPM * 30FPS
 export const transitionFrames = Math.round(beatsPerTransition * framesPerBeat); // 28 frames
 
