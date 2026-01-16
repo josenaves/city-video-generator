@@ -164,6 +164,8 @@ import novaRodelasPauloAfonsoData from "./data/nova-rodelas-paulo-afonso.json";
 import tombosRessaquinhaData from "./data/tombos-ressaquinha.json";
 // @ts-ignore
 import mirassolVotuporangaData from "./data/mirassol-votuporanga.json";
+// @ts-ignore
+import atibaiaBragancaData from "./data/atibaia-braganca.json";
 
 // Championships
 // @ts-ignore
@@ -1311,6 +1313,20 @@ export const RemotionRoot: React.FC = () => {
           battleData: mirassolVotuporangaData,
           image1: "mirassol.png",
           image2: "votuporanga.jpg",
+        }}
+      />
+
+      <Composition
+        id="BattleAtibaiaBraganca"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(atibaiaBragancaData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: atibaiaBragancaData,
+          image1: "atibaia.jpg",
+          image2: "braganca-paulista.jpg",
         }}
       />
     </>

@@ -1,0 +1,95 @@
+{
+    "matchId": "atibaia-vs-braganca-2026",
+    "title": "Atibaia vs Bragança Paulista",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 3504107,
+            "name": "Atibaia",
+            "state": "SP",
+            "nickname": "Cidade dos Morangos",
+            "data": {
+                "population": 158647,
+                "areaKm2": 478.521,
+                "gdpPerCapita": 57512,
+                "hospitalBedsPerThousand": 0.62,
+                "idh": 0.765,
+                "higherEducationPct": 97.87
+            },
+            "visual": {
+                "primaryColor": "#003399",
+                "secondaryColor": "#FFFFFF",
+                "image": "atibaia.jpg"
+            }
+        },
+        {
+            "ibgeId": 3507605,
+            "name": "Bragança Paulista",
+            "state": "SP",
+            "nickname": "Cidade Poesia",
+            "data": {
+                "population": 176811,
+                "areaKm2": 512.584,
+                "gdpPerCapita": 46153,
+                "hospitalBedsPerThousand": 0.96,
+                "idh": 0.776,
+                "higherEducationPct": 98.79
+            },
+            "visual": {
+                "primaryColor": "#CC0000",
+                "secondaryColor": "#FFFFFF",
+                "image": "braganca-paulista.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIZAÇÃO",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}
