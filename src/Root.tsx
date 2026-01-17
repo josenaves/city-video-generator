@@ -161,6 +161,9 @@ import parintinsSantaremData from "./data/parintins-santarem.json";
 import novaRodelasPauloAfonsoData from "./data/nova-rodelas-paulo-afonso.json";
 
 // @ts-ignore
+import caxiasDoSulPassoFundoData from "./data/caxias-do-sul-passo-fundo.json";
+
+// @ts-ignore
 import tombosRessaquinhaData from "./data/tombos-ressaquinha.json";
 // @ts-ignore
 import mirassolVotuporangaData from "./data/mirassol-votuporanga.json";
@@ -801,6 +804,34 @@ export const RemotionRoot: React.FC = () => {
           battleData: joaoPessoaNatalData,
           image1: 'joao-pessoa.jpg',
           image2: 'natal.jpg',
+        }}
+      />
+
+      <Composition
+        id="BattleCaxiasDoSulPassoFundo"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(caxiasDoSulPassoFundoData)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          battleData: caxiasDoSulPassoFundoData,
+          image1: "caxias-do-sul.jpg",
+          image2: "passo-fundo.webp",
+        }}
+      />
+
+      <Composition
+        id="BattleCaxiasDoSulPassoFundoVertical"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(caxiasDoSulPassoFundoData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: caxiasDoSulPassoFundoData,
+          image1: "caxias-do-sul.jpg",
+          image2: "passo-fundo.webp",
         }}
       />
       <Composition

@@ -1,0 +1,95 @@
+{
+    "matchId": "caxias-do-sul-vs-passo-fundo-2026",
+    "title": "Caxias do Sul vs Passo Fundo",
+    "theme": "epic-battle",
+    "cities": [
+        {
+            "ibgeId": 4305108,
+            "name": "Caxias do Sul",
+            "state": "RS",
+            "nickname": "Pérola das Colônias",
+            "data": {
+                "population": 479599,
+                "areaKm2": 1652,
+                "gdpPerCapita": 81683,
+                "hospitalBedsPerThousand": 5.83,
+                "idh": 0.782,
+                "higherEducationPct": 35.5
+            },
+            "visual": {
+                "primaryColor": "#990000",
+                "secondaryColor": "#660000",
+                "image": "caxias-do-sul.jpg"
+            }
+        },
+        {
+            "ibgeId": 4314100,
+            "name": "Passo Fundo",
+            "state": "RS",
+            "nickname": "Capital Nacional da Literatura",
+            "data": {
+                "population": 214811,
+                "areaKm2": 784,
+                "gdpPerCapita": 68227,
+                "hospitalBedsPerThousand": 5.81,
+                "idh": 0.776,
+                "higherEducationPct": 31.2
+            },
+            "visual": {
+                "primaryColor": "#006600",
+                "secondaryColor": "#004400",
+                "image": "passo-fundo.webp"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ]
+}

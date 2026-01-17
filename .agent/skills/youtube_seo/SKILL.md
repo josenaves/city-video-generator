@@ -18,7 +18,7 @@ Esta skill aproveita as capacidades de raciocínio profundo e criatividade do ag
 
 Cada saída deve ser um único arquivo Markdown contendo:
 
--   **Título Viral**: Título com alto CTR (Click-Through Rate), emojis e o ano 2026.
+-   **Título Viral**: Título com alto CTR (Click-Through Rate), começando obrigatoriamente com o emoji de espadas (⚔️), nomes das cidades em CAIXA ALTA, emojis e o ano 2026. Ex: "⚔️ CIDADE A vs CIDADE B: [Gancho Viral] 2026".
 -   **Descrição Narrativa**: 2-3 parágrafos curtos e impactantes com um "gancho" forte.
 -   **Destaques dos Dados**: Principais conclusões da batalha (ex: "Cidade X vence no PIB, mas Cidade Y domina na Saúde").
 -   **CTA Padrão**: "🔔 Inscreva-se para mais Batalhas de Cidades!"
