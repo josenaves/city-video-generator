@@ -161,6 +161,9 @@ import parintinsSantaremData from "./data/parintins-santarem.json";
 import novaRodelasPauloAfonsoData from "./data/nova-rodelas-paulo-afonso.json";
 
 // @ts-ignore
+import caxambuSaoLourencoData from "./data/caxambu-sao-lourenco.json";
+
+// @ts-ignore
 import caxiasDoSulPassoFundoData from "./data/caxias-do-sul-passo-fundo.json";
 
 // @ts-ignore
@@ -817,7 +820,7 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           battleData: caxiasDoSulPassoFundoData,
           image1: "caxias-do-sul.jpg",
-          image2: "passo-fundo.webp",
+          image2: "passo-fundo.jpg",
         }}
       />
 
@@ -1309,8 +1312,8 @@ export const RemotionRoot: React.FC = () => {
         component={BattleVideo}
         durationInFrames={calculateDuration(novaRodelasPauloAfonsoData)}
         fps={30}
-        width={1080}
-        height={1920}
+        width={1920}
+        height={1080}
         defaultProps={{
           battleData: novaRodelasPauloAfonsoData,
           image1: "nova-rodelas.jpg",
@@ -1324,12 +1327,12 @@ export const RemotionRoot: React.FC = () => {
         component={BattleVideo}
         durationInFrames={calculateDuration(tombosRessaquinhaData)}
         fps={30}
-        width={1080}
-        height={1920}
+        width={1920}
+        height={1080}
         defaultProps={{
           battleData: tombosRessaquinhaData,
           image1: "tombos.jpg",
-          image2: "ressaquinha.jpeg",
+          image2: "ressaquinha.jpg",
         }}
       />
 
@@ -1338,11 +1341,11 @@ export const RemotionRoot: React.FC = () => {
         component={BattleVideo}
         durationInFrames={calculateDuration(mirassolVotuporangaData)}
         fps={30}
-        width={1080}
-        height={1920}
+        width={1920}
+        height={1080}
         defaultProps={{
           battleData: mirassolVotuporangaData,
-          image1: "mirassol.png",
+          image1: "mirassol.jpg",
           image2: "votuporanga.jpg",
         }}
       />
@@ -1352,12 +1355,26 @@ export const RemotionRoot: React.FC = () => {
         component={BattleVideo}
         durationInFrames={calculateDuration(atibaiaBragancaData)}
         fps={30}
-        width={1080}
-        height={1920}
+        width={1920}
+        height={1080}
         defaultProps={{
           battleData: atibaiaBragancaData,
           image1: "atibaia.jpg",
           image2: "braganca-paulista.jpg",
+        }}
+      />
+
+      <Composition
+        id="BattleCaxambuSaoLourenco"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(caxambuSaoLourencoData)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          battleData: caxambuSaoLourencoData,
+          image1: "caxambu.jpg",
+          image2: "sao-lourenco.jpg",
         }}
       />
     </>
