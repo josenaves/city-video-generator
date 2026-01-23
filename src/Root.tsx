@@ -174,6 +174,8 @@ import mirassolVotuporangaData from "./data/mirassol-votuporanga.json";
 import atibaiaBragancaData from "./data/atibaia-braganca.json";
 // @ts-ignore
 import alfenasVarginhaData from "./data/alfenas-varginha.json";
+// @ts-ignore
+import varginhaTresCoracoesData from "./data/varginha-tres-coracoes.json";
 
 // Championships
 // @ts-ignore
@@ -1405,6 +1407,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: alfenasVarginhaData,
           image1: "alfenas.jpg",
           image2: "varginha.jpg",
+        }}
+      />
+      <Composition
+        id="BattleVarginhaTresCoracoesHorizontal"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(varginhaTresCoracoesData)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          battleData: varginhaTresCoracoesData,
+          image1: "varginha.jpg",
+          image2: "tres-coracoes.webp",
         }}
       />
     </>
