@@ -1,0 +1,261 @@
+{
+    "feature": "campaign_one_vs_many",
+    "mainCity": {
+        "name": "Varginha",
+        "nickname": "Cidade do ET",
+        "data": {
+            "population": 136467,
+            "areaKm2": 395.4,
+            "gdpPerCapita": 73780.24,
+            "hospitalBedsPerThousand": 1.8,
+            "idh": 0.778,
+            "higherEducationPct": 18.5
+        },
+        "visual": {
+            "primaryColor": "#228b22",
+            "secondaryColor": "#ffffff",
+            "image": "varginha.jpg"
+        }
+    },
+    "opponentCities": [
+        {
+            "name": "Três Corações",
+            "nickname": "Terra do Rei Pelé",
+            "data": {
+                "population": 75485,
+                "areaKm2": 828.038,
+                "gdpPerCapita": 47277.07,
+                "hospitalBedsPerThousand": 2.62,
+                "idh": 0.744,
+                "higherEducationPct": 14.8
+            },
+            "visual": {
+                "primaryColor": "#D32F2F",
+                "secondaryColor": "#1976D2",
+                "image": "tres-coracoes.webp"
+            }
+        },
+        {
+            "name": "Caxambu",
+            "nickname": "Cidade das Águas",
+            "data": {
+                "population": 21056,
+                "areaKm2": 100.48,
+                "gdpPerCapita": 22079.72,
+                "hospitalBedsPerThousand": 1.0,
+                "idh": 0.743,
+                "higherEducationPct": 14.2
+            },
+            "visual": {
+                "primaryColor": "#1E90FF",
+                "secondaryColor": "#FFFFFF",
+                "image": "caxambu.jpg"
+            }
+        },
+        {
+            "name": "Guaxupé",
+            "nickname": "Capital do Café",
+            "data": {
+                "population": 52621,
+                "areaKm2": 286,
+                "gdpPerCapita": 47761,
+                "hospitalBedsPerThousand": 2.0,
+                "idh": 0.751,
+                "higherEducationPct": 14.0
+            },
+            "visual": {
+                "primaryColor": "#C62828",
+                "secondaryColor": "#B71C1C",
+                "image": "guaxupe.jpeg"
+            }
+        },
+        {
+            "name": "Muzambinho",
+            "nickname": "Terra do Doce de Leite",
+            "data": {
+                "population": 21891,
+                "areaKm2": 409,
+                "gdpPerCapita": 26091,
+                "hospitalBedsPerThousand": 1.0,
+                "idh": 0.740,
+                "higherEducationPct": 10.5
+            },
+            "visual": {
+                "primaryColor": "#D32F2F",
+                "secondaryColor": "#FFFFFF",
+                "image": "muzambinho.jpg"
+            }
+        },
+        {
+            "name": "Alfenas",
+            "nickname": "Cidade Universitária",
+            "data": {
+                "population": 82303,
+                "areaKm2": 850,
+                "gdpPerCapita": 46472,
+                "hospitalBedsPerThousand": 2.5,
+                "idh": 0.761,
+                "higherEducationPct": 20.0
+            },
+            "visual": {
+                "primaryColor": "#1565C0",
+                "secondaryColor": "#0D47A1",
+                "image": "alfenas.jpg"
+            }
+        },
+        {
+            "name": "Aiuruoca",
+            "nickname": "Cidade das Cachoeiras",
+            "data": {
+                "population": 6233,
+                "areaKm2": 649.68,
+                "gdpPerCapita": 24774.89,
+                "hospitalBedsPerThousand": 5.5,
+                "idh": 0.668,
+                "higherEducationPct": 8.5
+            },
+            "visual": {
+                "primaryColor": "#228B22",
+                "secondaryColor": "#8B4513",
+                "image": "aiuruoca.jpg"
+            }
+        },
+        {
+            "name": "Arceburgo",
+            "nickname": "Cidade Forte",
+            "data": {
+                "population": 9177,
+                "areaKm2": 162.90,
+                "gdpPerCapita": 50160,
+                "hospitalBedsPerThousand": 1.5,
+                "idh": 0.683,
+                "higherEducationPct": 7.4
+            },
+            "visual": {
+                "primaryColor": "#1976D2",
+                "secondaryColor": "#0D47A1",
+                "image": "arceburgo.jpg"
+            }
+        },
+        {
+            "name": "Passos",
+            "nickname": "Capital do Sudoeste",
+            "data": {
+                "population": 111939,
+                "areaKm2": 1338.1,
+                "gdpPerCapita": 36449,
+                "hospitalBedsPerThousand": 4.5,
+                "idh": 0.756,
+                "higherEducationPct": 19.0
+            },
+            "visual": {
+                "primaryColor": "#1976D2",
+                "secondaryColor": "#0D47A1",
+                "image": "passos.jpg"
+            }
+        },
+        {
+            "name": "Pouso Alegre",
+            "nickname": "Capital do Sul de Minas",
+            "data": {
+                "population": 152217,
+                "areaKm2": 542.8,
+                "gdpPerCapita": 93295.79,
+                "hospitalBedsPerThousand": 1.5,
+                "idh": 0.774,
+                "higherEducationPct": 21.2
+            },
+            "visual": {
+                "primaryColor": "#000080",
+                "secondaryColor": "#ffffff",
+                "image": "pouso-alegre.jpg"
+            }
+        },
+        {
+            "name": "Uberaba",
+            "nickname": "Terra do Zebu",
+            "data": {
+                "population": 340000,
+                "areaKm2": 2855,
+                "gdpPerCapita": 38000,
+                "hospitalBedsPerThousand": 2.2,
+                "idh": 0.768,
+                "higherEducationPct": 15.0
+            },
+            "visual": {
+                "primaryColor": "#FFD700",
+                "secondaryColor": "#B8860B",
+                "image": "uberaba.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ],
+    "sponsorship": {
+        "enabled": false,
+        "title": "Oferecimento",
+        "items": [
+            {
+                "type": "logo",
+                "src": "favicon.ico",
+                "label": "Canal City Battles"
+            }
+        ]
+    },
+    "video": {
+        "aspectRatio": "16:9",
+        "title": "Uma Varginha contra outras 10 cidades",
+        "soundtrack": {
+            "src": "audio/Beat Your Competition - Vibe Tracks.mp3",
+            "bpm": 128
+        }
+    }
+}

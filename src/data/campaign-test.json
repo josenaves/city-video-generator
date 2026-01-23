@@ -1,0 +1,126 @@
+{
+    "feature": "campaign_one_vs_many",
+    "mainCity": {
+        "name": "Uberlândia",
+        "nickname": "Capital da Logística",
+        "data": {
+            "population": 720000,
+            "areaKm2": 4785,
+            "gdpPerCapita": 45000,
+            "hospitalBedsPerThousand": 2.8,
+            "idh": 0.778,
+            "higherEducationPct": 18
+        },
+        "visual": {
+            "primaryColor": "#00FF00",
+            "secondaryColor": "#008800",
+            "image": "uberlandia-skyline.jpg"
+        }
+    },
+    "opponentCities": [
+        {
+            "name": "Uberaba",
+            "nickname": "Terra do Zebu",
+            "data": {
+                "population": 340000,
+                "areaKm2": 2855,
+                "gdpPerCapita": 38000,
+                "hospitalBedsPerThousand": 2.2,
+                "idh": 0.768,
+                "higherEducationPct": 15
+            },
+            "visual": {
+                "primaryColor": "#FFD700",
+                "secondaryColor": "#B8860B",
+                "image": "uberaba-historic.jpg"
+            }
+        },
+        {
+            "name": "Franca",
+            "nickname": "Capital do Calçado",
+            "data": {
+                "population": 350000,
+                "areaKm2": 605,
+                "gdpPerCapita": 32000,
+                "hospitalBedsPerThousand": 1.8,
+                "idh": 0.780,
+                "higherEducationPct": 14
+            },
+            "visual": {
+                "primaryColor": "#0000FF",
+                "secondaryColor": "#000088",
+                "image": "franca.webp"
+            }
+        },
+        {
+            "name": "Ribeirão Preto",
+            "nickname": "Califórnia Brasileira",
+            "data": {
+                "population": 710000,
+                "areaKm2": 650,
+                "gdpPerCapita": 52000,
+                "hospitalBedsPerThousand": 3.2,
+                "idh": 0.800,
+                "higherEducationPct": 22
+            },
+            "visual": {
+                "primaryColor": "#FF4500",
+                "secondaryColor": "#8B0000",
+                "image": "ribeirao-preto.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        }
+    ],
+    "sponsorship": {
+        "enabled": true,
+        "title": "Um oferecimento",
+        "items": [
+            {
+                "type": "logo",
+                "src": "favicon.ico",
+                "label": "City Battles 2026"
+            }
+        ]
+    },
+    "video": {
+        "aspectRatio": "16:9",
+        "title": "DESAFIO UBERLÂNDIA: A SOBERANIA DO TRIÂNGULO",
+        "soundtrack": {
+            "src": "audio/Beat Your Competition - Vibe Tracks.mp3",
+            "bpm": 128
+        }
+    }
+}

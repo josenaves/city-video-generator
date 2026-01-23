@@ -5,6 +5,12 @@ import { ChampionshipVideo, CHAMP_INTRO_DURATION, CHAMP_ROUND_DURATION, CHAMP_FI
 
 // @ts-ignore
 import uberlandiaUberabaData from "./data/uberlandia-uberaba.json";
+import { CampaignVideo, calculateCampaignTotalDuration } from "./features/campaign-one-vs-many";
+
+// @ts-ignore
+import campaignTestData from "./data/campaign-test.json";
+// @ts-ignore
+import varginhaCampaignData from "./data/varginha-campaign-test.json";
 // @ts-ignore
 import campoGrandeCuiabaData from "./data/campo-grande-cuiaba.json";
 // @ts-ignore
@@ -215,6 +221,25 @@ export const RemotionRoot: React.FC = () => {
 
   return (
     <>
+      <Composition
+        id="CampaignOneVsManyTest"
+        component={CampaignVideo}
+        durationInFrames={calculateCampaignTotalDuration(campaignTestData)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={campaignTestData as any}
+      />
+      <Composition
+        id="VarginhaCampaign"
+        component={CampaignVideo}
+        durationInFrames={calculateCampaignTotalDuration(varginhaCampaignData)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={varginhaCampaignData as any}
+      />
+
       {championships.map((champ) => (
         <Composition
           key={champ.id}
