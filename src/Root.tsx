@@ -172,6 +172,8 @@ import tombosRessaquinhaData from "./data/tombos-ressaquinha.json";
 import mirassolVotuporangaData from "./data/mirassol-votuporanga.json";
 // @ts-ignore
 import atibaiaBragancaData from "./data/atibaia-braganca.json";
+// @ts-ignore
+import alfenasVarginhaData from "./data/alfenas-varginha.json";
 
 // Championships
 // @ts-ignore
@@ -1375,6 +1377,34 @@ export const RemotionRoot: React.FC = () => {
           battleData: caxambuSaoLourencoData,
           image1: "caxambu.jpg",
           image2: "sao-lourenco.jpg",
+        }}
+      />
+
+      <Composition
+        id="BattleAlfenasVarginha"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(alfenasVarginhaData)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: alfenasVarginhaData,
+          image1: "alfenas.jpg",
+          image2: "varginha.jpg",
+        }}
+      />
+
+      <Composition
+        id="BattleAlfenasVarginhaHorizontal"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(alfenasVarginhaData)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          battleData: alfenasVarginhaData,
+          image1: "alfenas.jpg",
+          image2: "varginha.jpg",
         }}
       />
     </>
