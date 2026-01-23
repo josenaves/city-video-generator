@@ -1,0 +1,89 @@
+{
+    "matchId": "gv-ipatinga",
+    "title": "Governador Valadares vs Ipatinga",
+    "theme": "A Batalha do Leste Mineiro",
+    "cities": [
+        {
+            "ibgeId": "3127701",
+            "name": "Governador Valadares",
+            "state": "MG",
+            "nickname": "Capital Mundial do Voo Livre",
+            "data": {
+                "populacao": 257171,
+                "areaKm2": 1842.879,
+                "pibPerCapita": 26162.46,
+                "leitos": 2.10,
+                "idh": 0.727,
+                "ensinoSuperior": 14.5
+            },
+            "visual": {
+                "primaryColor": "#1D428A",
+                "secondaryColor": "#FFD700",
+                "image": "governador-valadares.jpg"
+            }
+        },
+        {
+            "ibgeId": "3131307",
+            "name": "Ipatinga",
+            "state": "MG",
+            "nickname": "Capital do Vale do Aço",
+            "data": {
+                "populacao": 227731,
+                "areaKm2": 164.884,
+                "pibPerCapita": 65864.45,
+                "leitos": 2.09,
+                "idh": 0.771,
+                "ensinoSuperior": 16.98
+            },
+            "visual": {
+                "primaryColor": "#008000",
+                "secondaryColor": "#ffffff",
+                "image": "ipatinga.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "populacao",
+            "title": "POPULAÇÃO",
+            "field": "populacao",
+            "format": "number",
+            "unit": "hab"
+        },
+        {
+            "id": "areaKm2",
+            "title": "ÁREA",
+            "field": "areaKm2",
+            "format": "number",
+            "unit": "km²"
+        },
+        {
+            "id": "pibPerCapita",
+            "title": "PIB/CAPITA",
+            "field": "pibPerCapita",
+            "format": "currency",
+            "unit": "R$"
+        },
+        {
+            "id": "leitos",
+            "title": "LEITOS/1K",
+            "field": "leitos",
+            "format": "decimal",
+            "unit": ""
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "field": "idh",
+            "format": "decimal3",
+            "unit": ""
+        },
+        {
+            "id": "ensinoSuperior",
+            "title": "ENSINO SUPERIOR",
+            "field": "ensinoSuperior",
+            "format": "decimal",
+            "unit": "%"
+        }
+    ]
+}

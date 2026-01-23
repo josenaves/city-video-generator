@@ -176,6 +176,8 @@ import atibaiaBragancaData from "./data/atibaia-braganca.json";
 import alfenasVarginhaData from "./data/alfenas-varginha.json";
 // @ts-ignore
 import varginhaTresCoracoesData from "./data/varginha-tres-coracoes.json";
+// @ts-ignore
+import gvIpatingaData from "./data/gv-ipatinga.json";
 
 // Championships
 // @ts-ignore
@@ -1420,6 +1422,19 @@ export const RemotionRoot: React.FC = () => {
           battleData: varginhaTresCoracoesData,
           image1: "varginha.jpg",
           image2: "tres-coracoes.webp",
+        }}
+      />
+      <Composition
+        id="BattleGVIpatingaHorizontal"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(gvIpatingaData)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          battleData: gvIpatingaData,
+          image1: "governador-valadares.jpg",
+          image2: "ipatinga.jpg",
         }}
       />
     </>
