@@ -165,6 +165,8 @@ import santaCruzDoSulLajeadoData from "./data/santa-cruz-do-sul-lajeado.json";
 import parintinsSantaremData from "./data/parintins-santarem.json";
 // @ts-ignore
 import novaRodelasPauloAfonsoData from "./data/nova-rodelas-paulo-afonso.json";
+// @ts-ignore
+import guaxupeRegiaoData from "./data/guaxupe-regiao-1v10.json";
 
 // @ts-ignore
 import caxambuSaoLourencoData from "./data/caxambu-sao-lourenco.json";
@@ -238,6 +240,15 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={varginhaCampaignData as any}
+      />
+      <Composition
+        id="GuaxupeRegiaoCampaign"
+        component={CampaignVideo}
+        durationInFrames={calculateCampaignTotalDuration(guaxupeRegiaoData as any)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={guaxupeRegiaoData as any}
       />
 
       {championships.map((champ) => (

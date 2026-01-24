@@ -1,0 +1,253 @@
+{
+    "feature": "campaign_one_vs_many",
+    "mainCity": {
+        "name": "Guaxupé",
+        "nickname": "Cidade das Abelhas",
+        "data": {
+            "population": 50911,
+            "areaKm2": 286,
+            "gdpPerCapita": 47761,
+            "hospitalBedsPerThousand": 1.5,
+            "idh": 0.751,
+            "higherEducationPct": 18.4
+        },
+        "visual": {
+            "primaryColor": "#0047AB",
+            "secondaryColor": "#FFFFFF",
+            "image": "guaxupe.jpeg"
+        }
+    },
+    "opponentCities": [
+        {
+            "name": "Arceburgo",
+            "nickname": "Cidade Forte",
+            "data": {
+                "population": 10701,
+                "areaKm2": 162.9,
+                "gdpPerCapita": 52410,
+                "hospitalBedsPerThousand": 1.5,
+                "idh": 0.683,
+                "higherEducationPct": 7.4
+            },
+            "visual": {
+                "primaryColor": "#1976D2",
+                "secondaryColor": "#FFFFFF",
+                "image": "arceburgo.jpg"
+            }
+        },
+        {
+            "name": "Cabo Verde",
+            "nickname": "Cidade Amizade",
+            "data": {
+                "population": 13562,
+                "areaKm2": 271,
+                "gdpPerCapita": 31250,
+                "hospitalBedsPerThousand": 1.2,
+                "idh": 0.710,
+                "higherEducationPct": 9.0
+            },
+            "visual": {
+                "primaryColor": "#2E7D32",
+                "secondaryColor": "#FFFFFF",
+                "image": "cabo-verde.webp"
+            }
+        },
+        {
+            "name": "Guaranésia",
+            "nickname": "Polo Industrial",
+            "data": {
+                "population": 19150,
+                "areaKm2": 294.8,
+                "gdpPerCapita": 33420,
+                "hospitalBedsPerThousand": 1.8,
+                "idh": 0.730,
+                "higherEducationPct": 12.0
+            },
+            "visual": {
+                "primaryColor": "#EF6C00",
+                "secondaryColor": "#FFFFFF",
+                "image": "guaranesia.jpg"
+            }
+        },
+        {
+            "name": "Juruaia",
+            "nickname": "Capital da Lingerie",
+            "data": {
+                "population": 11230,
+                "areaKm2": 134,
+                "gdpPerCapita": 42100,
+                "hospitalBedsPerThousand": 1.0,
+                "idh": 0.720,
+                "higherEducationPct": 10.0
+            },
+            "visual": {
+                "primaryColor": "#C2185B",
+                "secondaryColor": "#FFFFFF",
+                "image": "juruaia.jpg"
+            }
+        },
+        {
+            "name": "Monte Belo",
+            "nickname": "Cidade do Café",
+            "data": {
+                "population": 12870,
+                "areaKm2": 221,
+                "gdpPerCapita": 28150,
+                "hospitalBedsPerThousand": 1.3,
+                "idh": 0.700,
+                "higherEducationPct": 8.5
+            },
+            "visual": {
+                "primaryColor": "#5D4037",
+                "secondaryColor": "#FFFFFF",
+                "image": "monte-belo.jpg"
+            }
+        },
+        {
+            "name": "Muzambinho",
+            "nickname": "Terra do Doce de Leite",
+            "data": {
+                "population": 21891,
+                "areaKm2": 409,
+                "gdpPerCapita": 26091,
+                "hospitalBedsPerThousand": 1.0,
+                "idh": 0.740,
+                "higherEducationPct": 10.5
+            },
+            "visual": {
+                "primaryColor": "#D32F2F",
+                "secondaryColor": "#FFFFFF",
+                "image": "muzambinho.jpg"
+            }
+        },
+        {
+            "name": "Nova Resende",
+            "nickname": "Cidade das Colinas",
+            "data": {
+                "population": 14120,
+                "areaKm2": 390,
+                "gdpPerCapita": 29840,
+                "hospitalBedsPerThousand": 1.1,
+                "idh": 0.690,
+                "higherEducationPct": 8.0
+            },
+            "visual": {
+                "primaryColor": "#7B1FA2",
+                "secondaryColor": "#FFFFFF",
+                "image": "nova-resende.avif"
+            }
+        },
+        {
+            "name": "São Pedro da União",
+            "nickname": "Riqueza das Águas",
+            "data": {
+                "population": 4850,
+                "areaKm2": 196,
+                "gdpPerCapita": 24180,
+                "hospitalBedsPerThousand": 0.8,
+                "idh": 0.660,
+                "higherEducationPct": 7.0
+            },
+            "visual": {
+                "primaryColor": "#0097A7",
+                "secondaryColor": "#FFFFFF",
+                "image": "sao-pedro-da-uniao.jpg"
+            }
+        },
+        {
+            "name": "Caconde",
+            "nickname": "Estância Climática",
+            "data": {
+                "population": 18520,
+                "areaKm2": 470,
+                "gdpPerCapita": 34200,
+                "hospitalBedsPerThousand": 1.4,
+                "idh": 0.730,
+                "higherEducationPct": 11.0
+            },
+            "visual": {
+                "primaryColor": "#FFA000",
+                "secondaryColor": "#FFFFFF",
+                "image": "caconde.jpg"
+            }
+        },
+        {
+            "name": "Monte Santo de Minas",
+            "nickname": "Capital Regional",
+            "data": {
+                "population": 21513,
+                "areaKm2": 594.6,
+                "gdpPerCapita": 32540,
+                "hospitalBedsPerThousand": 1.6,
+                "idh": 0.710,
+                "higherEducationPct": 11.5
+            },
+            "visual": {
+                "primaryColor": "#388E3C",
+                "secondaryColor": "#FFFFFF",
+                "image": "monte-santo-de-minas.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB/CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ],
+    "sponsorship": {
+        "enabled": false,
+        "title": "Oferecimento",
+        "items": [
+            {
+                "type": "logo",
+                "src": "favicon.ico",
+                "label": "Canal City Battles"
+            }
+        ]
+    },
+    "video": {
+        "aspectRatio": "16:9",
+        "title": "Guaxupé vs 10 cidades da região",
+        "soundtrack": {
+            "src": "audio/Beat Your Competition - Vibe Tracks.mp3",
+            "bpm": 128
+        }
+    }
+}

@@ -40,7 +40,7 @@ export const IntroScene: React.FC<IntroSceneProps> = ({
                     height: '100%',
                     objectFit: 'cover',
                     transform: `scale(${scale})`,
-                    filter: 'brightness(0.5)'
+                    filter: 'brightness(0.8)'
                 }}
                 alt={mainCity.name}
             />
@@ -51,20 +51,8 @@ export const IntroScene: React.FC<IntroSceneProps> = ({
                 justifyContent: 'center',
                 alignItems: 'center',
                 textAlign: 'center',
-                background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)'
+                background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)'
             }}>
-                <h2 style={{
-                    fontFamily: 'Outfit, sans-serif',
-                    color: mainCity.visual.primaryColor,
-                    fontSize: '40px',
-                    textTransform: 'uppercase',
-                    letterSpacing: '8px',
-                    margin: 0,
-                    textShadow: '0 2px 10px rgba(0,0,0,0.5)'
-                }}>
-                    Campanha Épica
-                </h2>
-
                 <h1 style={{
                     fontFamily: 'Outfit, sans-serif',
                     color: '#FFF',
