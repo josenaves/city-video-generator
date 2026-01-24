@@ -46,6 +46,7 @@ curl -s -G "https://api.search.brave.com/res/v1/web/content" \
 ## 📋 Diretrizes de Execução
 
 1.  **Prioridade**: Use esta skill antes de tentar o `browser_subagent` se o objetivo for apenas extrair texto ou dados numéricos, pois é significativamente mais rápido.
-2.  **Tratamento de Dados**: Ao receber o JSON do Brave, extraia os campos `description` e `extra_snippets` no caso de busca, ou o campo `content` no caso de extração de URL.
-3.  **Fallback**: Se a API do Brave falhar (limite de quota ou erro 4xx/5xx), utilize a ferramenta `search_web` padrão como fallback.
-4.  **SEO & Dados**: Use os dados obtidos para alimentar as outras skills do projeto, como a `youtube_seo`.
+2.  **Arquivos Temporários**: **NUNCA** salve resultados da API em arquivos na raiz do projeto (ex: `brave_results.json`). Prefira processar o output diretamente via pipes (`| python3 ...`) ou use o diretório temporário do sistema se necessário.
+3.  **Tratamento de Dados**: Ao receber o JSON do Brave, extraia os campos `description` e `extra_snippets` no caso de busca, ou o campo `content` no caso de extração de URL.
+4.  **Fallback**: Se a API do Brave falhar (limite de quota ou erro 4xx/5xx), utilize a ferramenta `search_web` padrão como fallback.
+5.  **SEO & Dados**: Use os dados obtidos para alimentar as outras skills do projeto, como a `youtube_seo`.
