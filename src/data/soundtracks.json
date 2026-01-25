@@ -1,0 +1,59 @@
+{
+  "soundtracks": [
+    {
+      "id": "beat-your-competition",
+      "title": "Beat Your Competition - Vibe Tracks",
+      "filename": "Beat Your Competition - Vibe Tracks.mp3",
+      "path": "audio/Beat Your Competition - Vibe Tracks.mp3",
+      "bpm": 128,
+      "duration": "3:45",
+      "size": "6.95 MB",
+      "genre": "Electronic/Instrumental",
+      "mood": "Competitive/Energetic",
+      "added": "2025-12-21",
+      "recommended_for": ["battle_videos", "campaign_videos", "championships"]
+    },
+    {
+      "id": "come-with-us",
+      "title": "Come With Us - Nat Keefe & Hot Buttered Rum",
+      "filename": "Come With Us - Nat Keefe & Hot Buttered Rum.mp3",
+      "path": "audio/Come With Us - Nat Keefe & Hot Buttered Rum.mp3",
+      "bpm": 85,
+      "duration": "3:18",
+      "size": "7.93 MB",
+      "genre": "Folk/Americana",
+      "mood": "Friendly/Inviting",
+      "added": "2026-01-25",
+      "recommended_for": [
+        "campaign_videos",
+        "regional_battles",
+        "educational_content"
+      ]
+    },
+    {
+      "id": "schizo",
+      "title": "Schizo - Anno Domini Beats",
+      "filename": "Schizo - Anno Domini Beats.mp3",
+      "path": "audio/Schizo - Anno Domini Beats.mp3",
+      "bpm": 140,
+      "duration": "4:55",
+      "size": "11.82 MB",
+      "genre": "Hip-Hop/Trap",
+      "mood": "Intense/Aggressive",
+      "added": "2026-01-05",
+      "recommended_for": [
+        "intense_battles",
+        "championships",
+        "competitive_content"
+      ]
+    }
+  ],
+  "metadata": {
+    "total_tracks": 3,
+    "last_updated": "2026-01-25",
+    "folder_path": "public/audio/",
+    "supported_formats": ["mp3"],
+    "default_bpm_range": [85, 140],
+    "total_size": "26.70 MB"
+  }
+}
