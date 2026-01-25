@@ -192,6 +192,9 @@ import caxambuSaoLourencoData from "./data/caxambu-sao-lourenco.json";
 import caxambuCampaignData from "./data/caxambu-campaign.json";
 
 // @ts-ignore
+import caxambuVs10Data from "./data/caxambu-vs-10.json";
+
+// @ts-ignore
 import caxiasDoSulPassoFundoData from "./data/caxias-do-sul-passo-fundo.json";
 
 // @ts-ignore
@@ -277,6 +280,15 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={caxambuCampaignData as any}
+      />
+      <Composition
+        id="CaxambuVs10Campaign"
+        component={CampaignVideo}
+        durationInFrames={calculateCampaignTotalDuration(caxambuVs10Data)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={caxambuVs10Data as any}
       />
 
       {championships.map((champ) => (

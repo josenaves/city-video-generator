@@ -1,0 +1,261 @@
+{
+  "feature": "campaign_one_vs_many",
+  "mainCity": {
+    "name": "Caxambu",
+    "nickname": "Terra das Águas",
+    "data": {
+      "population": 26000,
+      "areaKm2": 100,
+      "gdpPerCapita": 28000,
+      "hospitalBedsPerThousand": 1.5,
+      "idh": 0.72,
+      "higherEducationPct": 8
+    },
+    "visual": {
+      "primaryColor": "#00CED1",
+      "secondaryColor": "#008B8B",
+      "image": "caxambu.jpg"
+    }
+  },
+  "opponentCities": [
+    {
+      "name": "Soledade",
+      "nickname": "Portal das Águas",
+      "data": {
+        "population": 5678,
+        "areaKm2": 196.9,
+        "gdpPerCapita": 19850,
+        "hospitalBedsPerThousand": 0.8,
+        "idh": 0.665,
+        "higherEducationPct": 10.2
+      },
+      "visual": {
+        "primaryColor": "#FF9800",
+        "secondaryColor": "#FFFFFF",
+        "image": "soledade.jpg"
+      }
+    },
+    {
+      "name": "São Lourenço",
+      "nickname": "Estância Hidromineral",
+      "data": {
+        "population": 22000,
+        "areaKm2": 57,
+        "gdpPerCapita": 26000,
+        "hospitalBedsPerThousand": 1.8,
+        "idh": 0.74,
+        "higherEducationPct": 7
+      },
+      "visual": {
+        "primaryColor": "#4169E1",
+        "secondaryColor": "#191970",
+        "image": "sao-lourenco.jpg"
+      }
+    },
+    {
+      "name": "Baependi",
+      "nickname": "Terra de Nhá Chica",
+      "data": {
+        "population": 18542,
+        "areaKm2": 751.6,
+        "gdpPerCapita": 21540,
+        "hospitalBedsPerThousand": 1.2,
+        "idh": 0.68,
+        "higherEducationPct": 12.5
+      },
+      "visual": {
+        "primaryColor": "#4CAF50",
+        "secondaryColor": "#FFFFFF",
+        "image": "baependi.jpg"
+      }
+    },
+    {
+      "name": "Aiuruoca",
+      "nickname": "Cidade das Cachoeiras",
+      "data": {
+        "population": 6233,
+        "areaKm2": 649.68,
+        "gdpPerCapita": 24774.89,
+        "hospitalBedsPerThousand": 5.5,
+        "idh": 0.668,
+        "higherEducationPct": 8.5
+      },
+      "visual": {
+        "primaryColor": "#228B22",
+        "secondaryColor": "#8B4513",
+        "image": "aiuruoca.jpg"
+      }
+    },
+    {
+      "name": "Itajubá",
+      "nickname": "Capital da Eletrônica",
+      "data": {
+        "population": 95000,
+        "areaKm2": 290,
+        "gdpPerCapita": 32000,
+        "hospitalBedsPerThousand": 2.2,
+        "idh": 0.76,
+        "higherEducationPct": 15
+      },
+      "visual": {
+        "primaryColor": "#32CD32",
+        "secondaryColor": "#228B22",
+        "image": "itajuba.jpg"
+      }
+    },
+    {
+      "name": "Cambuquira",
+      "nickname": "Cidade Saúde",
+      "data": {
+        "population": 12985,
+        "areaKm2": 246.4,
+        "gdpPerCapita": 23450,
+        "hospitalBedsPerThousand": 2.1,
+        "idh": 0.71,
+        "higherEducationPct": 15.8
+      },
+      "visual": {
+        "primaryColor": "#9C27B0",
+        "secondaryColor": "#FFFFFF",
+        "image": "cambuquira.jpg"
+      }
+    },
+    {
+      "name": "Três Corações",
+      "nickname": "Terra do Rei Pelé",
+      "data": {
+        "population": 75485,
+        "areaKm2": 828.038,
+        "gdpPerCapita": 47277.07,
+        "hospitalBedsPerThousand": 2.62,
+        "idh": 0.744,
+        "higherEducationPct": 14.8
+      },
+      "visual": {
+        "primaryColor": "#D32F2F",
+        "secondaryColor": "#1976D2",
+        "image": "tres-coracoes.webp"
+      }
+    },
+    {
+      "name": "Varginha",
+      "nickname": "Cidade do ET",
+      "data": {
+        "population": 136467,
+        "areaKm2": 395.4,
+        "gdpPerCapita": 73780.24,
+        "hospitalBedsPerThousand": 1.8,
+        "idh": 0.778,
+        "higherEducationPct": 18.5
+      },
+      "visual": {
+        "primaryColor": "#228b22",
+        "secondaryColor": "#ffffff",
+        "image": "varginha.jpg"
+      }
+    },
+    {
+      "name": "Poços de Caldas",
+      "nickname": "Princesa da Serra",
+      "data": {
+        "population": 170000,
+        "areaKm2": 544,
+        "gdpPerCapita": 35000,
+        "hospitalBedsPerThousand": 2.5,
+        "idh": 0.78,
+        "higherEducationPct": 12
+      },
+      "visual": {
+        "primaryColor": "#FF6347",
+        "secondaryColor": "#8B0000",
+        "image": "pocos-de-caldas.jpg"
+      }
+    },
+    {
+      "name": "Águas de Lindóia",
+      "nickname": "Capital Termal",
+      "data": {
+        "population": 18765,
+        "areaKm2": 60.1,
+        "gdpPerCapita": 41230,
+        "hospitalBedsPerThousand": 3.2,
+        "idh": 0.775,
+        "higherEducationPct": 25.4
+      },
+      "visual": {
+        "primaryColor": "#00BCD4",
+        "secondaryColor": "#FFFFFF",
+        "image": "aguas-de-lindoia.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ],
+  "sponsorship": {
+    "enabled": false,
+    "title": "Um oferecimento",
+    "items": [
+      {
+        "type": "logo",
+        "src": "favicon.ico",
+        "label": "City Battles 2026"
+      }
+    ]
+  },
+  "video": {
+    "aspectRatio": "16:9",
+    "title": "Uma Caxambu vs 10 cidades",
+    "soundtrack": {
+      "src": "audio/Beat Your Competition - Vibe Tracks.mp3",
+      "bpm": 128
+    }
+  }
+}
