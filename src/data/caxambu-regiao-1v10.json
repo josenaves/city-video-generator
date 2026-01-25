@@ -1,0 +1,299 @@
+{
+    "feature": "campaign_one_vs_many",
+    "mainCity": {
+        "name": "Caxambu",
+        "nickname": "Cidade das Águas Virtuosas",
+        "data": {
+            "population": 24256,
+            "areaKm2": 100,
+            "gdpPerCapita": 28766,
+            "hospitalBedsPerThousand": 3.5,
+            "idh": 0.745,
+            "higherEducationPct": 22.8,
+            "thermalSprings": 12,
+            "hotels": 45,
+            "annualTourism": 185000
+        },
+        "visual": {
+            "primaryColor": "#1E88E5",
+            "secondaryColor": "#FFFFFF",
+            "image": "caxambu.jpg"
+        }
+    },
+    "opponentCities": [
+        {
+            "name": "Baependi",
+            "nickname": "Terra de Nhá Chica",
+            "data": {
+                "population": 18542,
+                "areaKm2": 751.6,
+                "gdpPerCapita": 21540,
+                "hospitalBedsPerThousand": 1.2,
+                "idh": 0.680,
+                "higherEducationPct": 12.5,
+                "thermalSprings": 0,
+                "hotels": 18,
+                "annualTourism": 85000
+            },
+            "visual": {
+                "primaryColor": "#4CAF50",
+                "secondaryColor": "#FFFFFF",
+                "image": "baependi.jpg"
+            }
+        },
+        {
+            "name": "Soledade de Minas",
+            "nickname": "Portal das Águas",
+            "data": {
+                "population": 5678,
+                "areaKm2": 196.9,
+                "gdpPerCapita": 19850,
+                "hospitalBedsPerThousand": 0.8,
+                "idh": 0.665,
+                "higherEducationPct": 10.2,
+                "thermalSprings": 2,
+                "hotels": 12,
+                "annualTourism": 45000
+            },
+            "visual": {
+                "primaryColor": "#FF9800",
+                "secondaryColor": "#FFFFFF",
+                "image": "soledade.jpg"
+            }
+        },
+        {
+            "name": "Cambuquira",
+            "nickname": "Cidade Saúde",
+            "data": {
+                "population": 12985,
+                "areaKm2": 246.4,
+                "gdpPerCapita": 23450,
+                "hospitalBedsPerThousand": 2.1,
+                "idh": 0.710,
+                "higherEducationPct": 15.8,
+                "thermalSprings": 8,
+                "hotels": 28,
+                "annualTourism": 120000
+            },
+            "visual": {
+                "primaryColor": "#9C27B0",
+                "secondaryColor": "#FFFFFF",
+                "image": "cambuquira.jpg"
+            }
+        },
+        {
+            "name": "São Lourenço",
+            "nickname": "Cidade das Águas",
+            "data": {
+                "population": 45678,
+                "areaKm2": 57.1,
+                "gdpPerCapita": 32560,
+                "hospitalBedsPerThousand": 2.8,
+                "idh": 0.760,
+                "higherEducationPct": 20.5,
+                "thermalSprings": 10,
+                "hotels": 65,
+                "annualTourism": 320000
+            },
+            "visual": {
+                "primaryColor": "#2196F3",
+                "secondaryColor": "#FFFFFF",
+                "image": "sao-lourenco.jpg"
+            }
+        },
+        {
+            "name": "Águas de Lindóia",
+            "nickname": "Capital Termal",
+            "data": {
+                "population": 18765,
+                "areaKm2": 60.1,
+                "gdpPerCapita": 41230,
+                "hospitalBedsPerThousand": 3.2,
+                "idh": 0.775,
+                "higherEducationPct": 25.4,
+                "thermalSprings": 15,
+                "hotels": 85,
+                "annualTourism": 280000
+            },
+            "visual": {
+                "primaryColor": "#00BCD4",
+                "secondaryColor": "#FFFFFF",
+                "image": "aguas-de-lindoia.jpg"
+            }
+        },
+        {
+            "name": "Monte Alegre do Sul",
+            "nickname": "Paraíso das Montanhas",
+            "data": {
+                "population": 7890,
+                "areaKm2": 110.3,
+                "gdpPerCapita": 28750,
+                "hospitalBedsPerThousand": 1.5,
+                "idh": 0.735,
+                "higherEducationPct": 18.9,
+                "thermalSprings": 4,
+                "hotels": 32,
+                "annualTourism": 95000
+            },
+            "visual": {
+                "primaryColor": "#8BC34A",
+                "secondaryColor": "#FFFFFF",
+                "image": "monte-alegre-sul.jpg"
+            }
+        },
+        {
+            "name": "Poços de Caldas",
+            "nickname": "Princesa do Oeste",
+            "data": {
+                "population": 168641,
+                "areaKm2": 547.1,
+                "gdpPerCapita": 45680,
+                "hospitalBedsPerThousand": 4.2,
+                "idh": 0.779,
+                "higherEducationPct": 28.7,
+                "thermalSprings": 15,
+                "hotels": 125,
+                "annualTourism": 850000
+            },
+            "visual": {
+                "primaryColor": "#F44336",
+                "secondaryColor": "#FFFFFF",
+                "image": "pocos-de-caldas.jpg"
+            }
+        },
+        {
+            "name": "Teresópolis",
+            "nickname": "Cidade dos Esportes Radicais",
+            "data": {
+                "population": 184240,
+                "areaKm2": 770.6,
+                "gdpPerCapita": 38950,
+                "hospitalBedsPerThousand": 3.8,
+                "idh": 0.747,
+                "higherEducationPct": 24.3,
+                "thermalSprings": 6,
+                "hotels": 95,
+                "annualTourism": 520000
+            },
+            "visual": {
+                "primaryColor": "#3F51B5",
+                "secondaryColor": "#FFFFFF",
+                "image": "teresopolis.jpg"
+            }
+        },
+        {
+            "name": "Três Corações",
+            "nickname": "Cidade do Rei Pelé",
+            "data": {
+                "population": 78965,
+                "areaKm2": 828.0,
+                "gdpPerCapita": 34560,
+                "hospitalBedsPerThousand": 2.5,
+                "idh": 0.752,
+                "higherEducationPct": 21.8,
+                "thermalSprings": 3,
+                "hotels": 42,
+                "annualTourism": 185000
+            },
+            "visual": {
+                "primaryColor": "#FF5722",
+                "secondaryColor": "#FFFFFF",
+                "image": "tres-coracoes.jpg"
+            }
+        },
+        {
+            "name": "Varginha",
+            "nickname": "Cidade do ET",
+            "data": {
+                "population": 136602,
+                "areaKm2": 395.4,
+                "gdpPerCapita": 73780,
+                "hospitalBedsPerThousand": 3.1,
+                "idh": 0.778,
+                "higherEducationPct": 26.5,
+                "thermalSprings": 2,
+                "hotels": 68,
+                "annualTourism": 210000
+            },
+            "visual": {
+                "primaryColor": "#9C27B0",
+                "secondaryColor": "#FFFFFF",
+                "image": "varginha.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "bar",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "compact"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB PER CAPITA",
+            "type": "bar",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "health",
+            "title": "LEITOS HOSPITALARES",
+            "type": "bar",
+            "unit": "por mil hab",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "bar",
+            "unit": "índice",
+            "field": "idh",
+            "format": "decimal"
+        },
+        {
+            "id": "education",
+            "title": "ENSINO SUPERIOR",
+            "type": "bar",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percentage"
+        },
+        {
+            "id": "thermal",
+            "title": "FONTES TERMAIS",
+            "type": "bar",
+            "unit": "fontes",
+            "field": "thermalSprings",
+            "format": "compact"
+        },
+        {
+            "id": "hotels",
+            "title": "HOTÉIS",
+            "type": "bar",
+            "unit": "unidades",
+            "field": "hotels",
+            "format": "compact"
+        },
+        {
+            "id": "tourism",
+            "title": "TURISMO ANUAL",
+            "type": "bar",
+            "unit": "visitantes",
+            "field": "annualTourism",
+            "format": "compact"
+        }
+    ]
+}

@@ -1,11 +1,28 @@
 import "./index.css";
 import { Composition } from "remotion";
-import { BattleVideo, introDuration, roundDuration, finalDuration } from "./BattleVideo";
-import { ChampionshipVideo, CHAMP_INTRO_DURATION, CHAMP_ROUND_DURATION, CHAMP_FINAL_DURATION, CHAMP_OPENING_DURATION, CHAMP_LEADERBOARD_DURATION, CHAMP_CHAMPION_DURATION, CHAMP_CAMPAIGN_DURATION } from "./ChampionshipVideo";
+import {
+  BattleVideo,
+  introDuration,
+  roundDuration,
+  finalDuration,
+} from "./BattleVideo";
+import {
+  ChampionshipVideo,
+  CHAMP_INTRO_DURATION,
+  CHAMP_ROUND_DURATION,
+  CHAMP_FINAL_DURATION,
+  CHAMP_OPENING_DURATION,
+  CHAMP_LEADERBOARD_DURATION,
+  CHAMP_CHAMPION_DURATION,
+  CHAMP_CAMPAIGN_DURATION,
+} from "./ChampionshipVideo";
 
 // @ts-ignore
 import uberlandiaUberabaData from "./data/uberlandia-uberaba.json";
-import { CampaignVideo, calculateCampaignTotalDuration } from "./features/campaign-one-vs-many";
+import {
+  CampaignVideo,
+  calculateCampaignTotalDuration,
+} from "./features/campaign-one-vs-many";
 
 // @ts-ignore
 import campaignTestData from "./data/campaign-test.json";
@@ -172,6 +189,9 @@ import guaxupeRegiaoData from "./data/guaxupe-regiao-1v10.json";
 import caxambuSaoLourencoData from "./data/caxambu-sao-lourenco.json";
 
 // @ts-ignore
+import caxambuCampaignData from "./data/caxambu-campaign.json";
+
+// @ts-ignore
 import caxiasDoSulPassoFundoData from "./data/caxias-do-sul-passo-fundo.json";
 
 // @ts-ignore
@@ -197,20 +217,26 @@ import fronteiraMSData from "./data/championships/fronteira-ms.json";
 // @ts-ignore
 import capitaisSudesteData from "./data/championships/capitais-sudeste.json";
 
-
-
-
 // Each <Composition> is an entry in the sidebar!
 
-const calculateDuration = (data: any) => introDuration + (data.rounds.length * roundDuration) + finalDuration;
+const calculateDuration = (data: any) =>
+  introDuration + data.rounds.length * roundDuration + finalDuration;
 
-const calculateChampionshipDuration = (numCities: number, numRounds: number) => {
+const calculateChampionshipDuration = (
+  numCities: number,
+  numRounds: number,
+) => {
   const numMatches = (numCities * (numCities - 1)) / 2;
-  const battleDuration = CHAMP_INTRO_DURATION + (numRounds * CHAMP_ROUND_DURATION) + CHAMP_FINAL_DURATION;
-  return CHAMP_OPENING_DURATION +
-    (numMatches * (battleDuration + CHAMP_LEADERBOARD_DURATION)) +
+  const battleDuration =
+    CHAMP_INTRO_DURATION +
+    numRounds * CHAMP_ROUND_DURATION +
+    CHAMP_FINAL_DURATION;
+  return (
+    CHAMP_OPENING_DURATION +
+    numMatches * (battleDuration + CHAMP_LEADERBOARD_DURATION) +
     CHAMP_CHAMPION_DURATION +
-    CHAMP_CAMPAIGN_DURATION;
+    CHAMP_CAMPAIGN_DURATION
+  );
 };
 
 export const RemotionRoot: React.FC = () => {
@@ -233,22 +259,24 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={campaignTestData as any}
       />
       <Composition
-        id="VarginhaCampaign"
-        component={CampaignVideo}
-        durationInFrames={calculateCampaignTotalDuration(varginhaCampaignData)}
-        fps={30}
-        width={1920}
-        height={1080}
-        defaultProps={varginhaCampaignData as any}
-      />
-      <Composition
         id="GuaxupeRegiaoCampaign"
         component={CampaignVideo}
-        durationInFrames={calculateCampaignTotalDuration(guaxupeRegiaoData as any)}
+        durationInFrames={calculateCampaignTotalDuration(
+          guaxupeRegiaoData as any,
+        )}
         fps={30}
         width={1920}
         height={1080}
         defaultProps={guaxupeRegiaoData as any}
+      />
+      <Composition
+        id="CaxambuCampaign"
+        component={CampaignVideo}
+        durationInFrames={calculateCampaignTotalDuration(caxambuCampaignData)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={caxambuCampaignData as any}
       />
 
       {championships.map((champ) => (
@@ -256,7 +284,10 @@ export const RemotionRoot: React.FC = () => {
           key={champ.id}
           id={champ.id}
           component={ChampionshipVideo}
-          durationInFrames={calculateChampionshipDuration(champ.data.cities.length, champ.data.rounds.length)}
+          durationInFrames={calculateChampionshipDuration(
+            champ.data.cities.length,
+            champ.data.rounds.length,
+          )}
           fps={30}
           width={1920}
           height={1080}
@@ -401,8 +432,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: santaMariaPelotasData,
-          image1: 'santa-maria.png',
-          image2: 'pelotas.png',
+          image1: "santa-maria.png",
+          image2: "pelotas.png",
         }}
       />
       <Composition
@@ -414,8 +445,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: joinvilleBlumenauData,
-          image1: 'joinvile.webp',
-          image2: 'blumenau.jpg',
+          image1: "joinvile.webp",
+          image2: "blumenau.jpg",
         }}
       />
       <Composition
@@ -427,8 +458,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: itajaiJoinvilleData,
-          image1: 'itajai.jpg',
-          image2: 'joinvile.webp',
+          image1: "itajai.jpg",
+          image2: "joinvile.webp",
         }}
       />
       <Composition
@@ -440,8 +471,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: ribeiraoPretoSJRioPretoData,
-          image1: 'ribeirao-preto.jpg',
-          image2: 'sao-jose-do-rio-preto.jpg',
+          image1: "ribeirao-preto.jpg",
+          image2: "sao-jose-do-rio-preto.jpg",
         }}
       />
       <Composition
@@ -453,8 +484,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: bauruMariliaData,
-          image1: 'bauru.jpg',
-          image2: 'marilia.jpg',
+          image1: "bauru.jpg",
+          image2: "marilia.jpg",
         }}
       />
       <Composition
@@ -466,8 +497,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: saoSebastiaoPassosData,
-          image1: 'sao-sebastiao-do-paraiso.jpeg',
-          image2: 'passos.jpg',
+          image1: "sao-sebastiao-do-paraiso.jpeg",
+          image2: "passos.jpg",
         }}
       />
       <Composition
@@ -479,8 +510,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: francaSaoSebastiaoData,
-          image1: 'franca.webp',
-          image2: 'sao-sebastiao-do-paraiso.jpeg',
+          image1: "franca.webp",
+          image2: "sao-sebastiao-do-paraiso.jpeg",
         }}
       />
       <Composition
@@ -492,8 +523,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: tubaraoCriciumaData,
-          image1: 'tubarao.jpg',
-          image2: 'criciuma.webp',
+          image1: "tubarao.jpg",
+          image2: "criciuma.webp",
         }}
       />
       <Composition
@@ -505,8 +536,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: curitibaCampinasData,
-          image1: 'curitiba.webp',
-          image2: 'campinas.jpg',
+          image1: "curitiba.webp",
+          image2: "campinas.jpg",
         }}
       />
       <Composition
@@ -518,8 +549,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: barueriItapeviData,
-          image1: 'barueri.jpg',
-          image2: 'itapevi.jpg',
+          image1: "barueri.jpg",
+          image2: "itapevi.jpg",
         }}
       />
 
@@ -587,8 +618,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: portoUniaoUniaoDaVitoriaData,
-          image1: 'porto-uniao.jpg',
-          image2: 'uniao-da-vitoria.jpg',
+          image1: "porto-uniao.jpg",
+          image2: "uniao-da-vitoria.jpg",
         }}
       />
       <Composition
@@ -600,8 +631,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: mococaParaisoData,
-          image1: 'mococa.jpg',
-          image2: 'sao-sebastiao-do-paraiso.jpeg',
+          image1: "mococa.jpg",
+          image2: "sao-sebastiao-do-paraiso.jpeg",
         }}
       />
       <Composition
@@ -613,8 +644,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: aracajuMaceioData,
-          image1: 'aracaju.jpg',
-          image2: 'maceio.jpg',
+          image1: "aracaju.jpg",
+          image2: "maceio.jpg",
         }}
       />
       <Composition
@@ -626,8 +657,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: santaMariaPassoFundoData,
-          image1: 'santa-maria.png',
-          image2: 'passo-fundo.webp',
+          image1: "santa-maria.png",
+          image2: "passo-fundo.webp",
         }}
       />
       <Composition
@@ -639,8 +670,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: muzambinhoArceburgoData,
-          image1: 'muzambinho.jpg',
-          image2: 'arceburgo.jpg',
+          image1: "muzambinho.jpg",
+          image2: "arceburgo.jpg",
         }}
       />
       <Composition
@@ -652,8 +683,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: ribeiraoSaoCarlosData,
-          image1: 'ribeirao-preto.jpg',
-          image2: 'sao-carlos.webp',
+          image1: "ribeirao-preto.jpg",
+          image2: "sao-carlos.webp",
         }}
       />
       <Composition
@@ -665,8 +696,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: mariliaPrudenteData,
-          image1: 'marilia.jpg',
-          image2: 'presidente-prudente.jpg',
+          image1: "marilia.jpg",
+          image2: "presidente-prudente.jpg",
         }}
       />
       <Composition
@@ -678,8 +709,8 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
         defaultProps={{
           battleData: mariliaPrudenteData,
-          image1: 'marilia.jpg',
-          image2: 'presidente-prudente.jpg',
+          image1: "marilia.jpg",
+          image2: "presidente-prudente.jpg",
         }}
       />
       <Composition
@@ -691,8 +722,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: goianiaCampoGrandeData,
-          image1: 'goiania.jpg',
-          image2: 'campo-grande.jpg',
+          image1: "goiania.jpg",
+          image2: "campo-grande.jpg",
         }}
       />
       <Composition
@@ -704,8 +735,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: guaxupeTapiratibaData,
-          image1: 'guaxupe.jpeg',
-          image2: 'tapiratiba.jpg',
+          image1: "guaxupe.jpeg",
+          image2: "tapiratiba.jpg",
         }}
       />
       <Composition
@@ -717,8 +748,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: guaxupeMococaData,
-          image1: 'guaxupe.jpeg',
-          image2: 'mococa.jpg',
+          image1: "guaxupe.jpeg",
+          image2: "mococa.jpg",
         }}
       />
       <Composition
@@ -730,8 +761,8 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
         defaultProps={{
           battleData: guaxupeMococaData,
-          image1: 'guaxupe.jpeg',
-          image2: 'mococa.jpg',
+          image1: "guaxupe.jpeg",
+          image2: "mococa.jpg",
         }}
       />
       <Composition
@@ -743,8 +774,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: pelotasBageData,
-          image1: 'pelotas.png',
-          image2: 'bage.webp',
+          image1: "pelotas.png",
+          image2: "bage.webp",
         }}
       />
       <Composition
@@ -756,8 +787,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: pontaPoraDouradosData,
-          image1: 'ponta-pora.jpg',
-          image2: 'dourados.jpg',
+          image1: "ponta-pora.jpg",
+          image2: "dourados.jpg",
         }}
       />
       <Composition
@@ -769,8 +800,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: mariliaAssisData,
-          image1: 'marilia.jpg',
-          image2: 'assis.jpg',
+          image1: "marilia.jpg",
+          image2: "assis.jpg",
         }}
       />
       <Composition
@@ -782,8 +813,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: assisBauruData,
-          image1: 'assis.jpg',
-          image2: 'bauru.jpg',
+          image1: "assis.jpg",
+          image2: "bauru.jpg",
         }}
       />
       <Composition
@@ -795,8 +826,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: londrinaMaringaData,
-          image1: 'londrina.jpg',
-          image2: 'maringa.jpg',
+          image1: "londrina.jpg",
+          image2: "maringa.jpg",
         }}
       />
       <Composition
@@ -808,8 +839,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: maringaPontaGrossaData,
-          image1: 'maringa.jpg',
-          image2: 'ponta-grossa.jpeg',
+          image1: "maringa.jpg",
+          image2: "ponta-grossa.jpeg",
         }}
       />
       <Composition
@@ -821,8 +852,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: pontaGrossaLondrinaData,
-          image1: 'ponta-grossa.jpeg',
-          image2: 'londrina.jpg',
+          image1: "ponta-grossa.jpeg",
+          image2: "londrina.jpg",
         }}
       />
       <Composition
@@ -834,8 +865,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: joaoPessoaMaceioData,
-          image1: 'joao-pessoa.jpg',
-          image2: 'maceio.jpg',
+          image1: "joao-pessoa.jpg",
+          image2: "maceio.jpg",
         }}
       />
       <Composition
@@ -847,8 +878,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: joaoPessoaNatalData,
-          image1: 'joao-pessoa.jpg',
-          image2: 'natal.jpg',
+          image1: "joao-pessoa.jpg",
+          image2: "natal.jpg",
         }}
       />
 
@@ -888,8 +919,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: joaoPessoaRecifeData,
-          image1: 'joao-pessoa.jpg',
-          image2: 'recife.jpg',
+          image1: "joao-pessoa.jpg",
+          image2: "recife.jpg",
         }}
       />
       <Composition
@@ -901,8 +932,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: francoDaRochaJundiaiData,
-          image1: 'franco-da-rocha.jpg',
-          image2: 'jundiai.jpg',
+          image1: "franco-da-rocha.jpg",
+          image2: "jundiai.jpg",
         }}
       />
       <Composition
@@ -914,8 +945,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: francoDaRochaFranciscoMoratoData,
-          image1: 'franco-da-rocha.jpg',
-          image2: 'francisco-morato.jpg',
+          image1: "franco-da-rocha.jpg",
+          image2: "francisco-morato.jpg",
         }}
       />
       <Composition
@@ -927,8 +958,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: caieirasFrancoDaRochaData,
-          image1: 'caieiras.jpg',
-          image2: 'franco-da-rocha.jpg',
+          image1: "caieiras.jpg",
+          image2: "franco-da-rocha.jpg",
         }}
       />
       <Composition
@@ -940,8 +971,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: presidentePrudenteLondrinaData,
-          image1: 'presidente-prudente.jpg',
-          image2: 'londrina.jpg',
+          image1: "presidente-prudente.jpg",
+          image2: "londrina.jpg",
         }}
       />
       <Composition
@@ -953,8 +984,8 @@ export const RemotionRoot: React.FC = () => {
         height={1080}
         defaultProps={{
           battleData: guaxupeMuzambinhoData,
-          image1: 'guaxupe.jpeg',
-          image2: 'muzambinho.jpg',
+          image1: "guaxupe.jpeg",
+          image2: "muzambinho.jpg",
         }}
       />
       <Composition
@@ -966,8 +997,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: betimContagemData,
-          image1: 'betim.jpg',
-          image2: 'contagem.jpg',
+          image1: "betim.jpg",
+          image2: "contagem.jpg",
         }}
       />
       <Composition
@@ -979,8 +1010,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: aiuruocaCaxambuData,
-          image1: 'aiuruoca.jpg',
-          image2: 'caxambu.jpg',
+          image1: "aiuruoca.jpg",
+          image2: "caxambu.jpg",
         }}
       />
       <Composition
@@ -992,8 +1023,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: tombosFariaLemosData,
-          image1: 'tombos.jpg',
-          image2: 'faria-lemos.jpg',
+          image1: "tombos.jpg",
+          image2: "faria-lemos.jpg",
         }}
       />
       <Composition
@@ -1005,8 +1036,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: cacondeTapiratibaData,
-          image1: 'caconde.jpg',
-          image2: 'tapiratiba.jpg',
+          image1: "caconde.jpg",
+          image2: "tapiratiba.jpg",
         }}
       />
       <Composition
@@ -1018,8 +1049,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: campinaGrandeDoSulQuatroBarrasData,
-          image1: 'campina-grande-do-sul.jpg',
-          image2: 'quatro-barras.jpg',
+          image1: "campina-grande-do-sul.jpg",
+          image2: "quatro-barras.jpg",
         }}
       />
       <Composition
@@ -1031,8 +1062,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: juruaiaMuzambinhoData,
-          image1: 'juruaia.jpg',
-          image2: 'muzambinho.jpg',
+          image1: "juruaia.jpg",
+          image2: "muzambinho.jpg",
         }}
       />
       <Composition
@@ -1044,8 +1075,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: guaranesiaJuruaiaData,
-          image1: 'guaranesia.jpg',
-          image2: 'juruaia.jpg',
+          image1: "guaranesia.jpg",
+          image2: "juruaia.jpg",
         }}
       />
       <Composition
@@ -1057,8 +1088,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: guaxupeGuaranesiaData,
-          image1: 'guaxupe.jpg',
-          image2: 'guaranesia.jpg',
+          image1: "guaxupe.jpg",
+          image2: "guaranesia.jpg",
         }}
       />
       <Composition
@@ -1070,8 +1101,8 @@ export const RemotionRoot: React.FC = () => {
         height={1920}
         defaultProps={{
           battleData: cananeiaIlhaCompridaData,
-          image1: 'cananeia.jpg',
-          image2: 'ilha-comprida.jpg',
+          image1: "cananeia.jpg",
+          image2: "ilha-comprida.jpg",
         }}
       />
       <Composition
@@ -1362,7 +1393,6 @@ export const RemotionRoot: React.FC = () => {
           image2: "paulo-afonso.webp",
         }}
       />
-
 
       <Composition
         id="BattleTombosRessaquinha"

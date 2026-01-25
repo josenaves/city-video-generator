@@ -1,0 +1,126 @@
+{
+  "feature": "campaign_one_vs_many",
+  "mainCity": {
+    "name": "Caxambu",
+    "nickname": "Terra das Águas",
+    "data": {
+      "population": 26000,
+      "areaKm2": 100,
+      "gdpPerCapita": 28000,
+      "hospitalBedsPerThousand": 1.5,
+      "idh": 0.72,
+      "higherEducationPct": 8
+    },
+    "visual": {
+      "primaryColor": "#00CED1",
+      "secondaryColor": "#008B8B",
+      "image": "caxambu.jpg"
+    }
+  },
+  "opponentCities": [
+    {
+      "name": "São Lourenço",
+      "nickname": "Estância Hidromineral",
+      "data": {
+        "population": 22000,
+        "areaKm2": 57,
+        "gdpPerCapita": 26000,
+        "hospitalBedsPerThousand": 1.8,
+        "idh": 0.74,
+        "higherEducationPct": 7
+      },
+      "visual": {
+        "primaryColor": "#4169E1",
+        "secondaryColor": "#191970",
+        "image": "sao-lourenco.jpg"
+      }
+    },
+    {
+      "name": "Poços de Caldas",
+      "nickname": "Princesa da Serra",
+      "data": {
+        "population": 170000,
+        "areaKm2": 544,
+        "gdpPerCapita": 35000,
+        "hospitalBedsPerThousand": 2.5,
+        "idh": 0.78,
+        "higherEducationPct": 12
+      },
+      "visual": {
+        "primaryColor": "#FF6347",
+        "secondaryColor": "#8B0000",
+        "image": "pocos-de-caldas.jpg"
+      }
+    },
+    {
+      "name": "Itajubá",
+      "nickname": "Capital da Eletrônica",
+      "data": {
+        "population": 95000,
+        "areaKm2": 290,
+        "gdpPerCapita": 32000,
+        "hospitalBedsPerThousand": 2.2,
+        "idh": 0.76,
+        "higherEducationPct": 15
+      },
+      "visual": {
+        "primaryColor": "#32CD32",
+        "secondaryColor": "#228B22",
+        "image": "itajuba.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    }
+  ],
+  "sponsorship": {
+    "enabled": true,
+    "title": "Um oferecimento",
+    "items": [
+      {
+        "type": "logo",
+        "src": "favicon.ico",
+        "label": "City Battles 2026"
+      }
+    ]
+  },
+  "video": {
+    "aspectRatio": "16:9",
+    "title": "Uma Caxambu vs 3 cidades",
+    "soundtrack": {
+      "src": "audio/Beat Your Competition - Vibe Tracks.mp3",
+      "bpm": 128
+    }
+  }
+}
