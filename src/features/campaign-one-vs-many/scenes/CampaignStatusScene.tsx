@@ -23,7 +23,7 @@ export const CampaignStatusScene: React.FC<CampaignStatusSceneProps> = ({
         { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }
     );
 
-    const numBattles = state.battles.length;
+
 
     return (
         <AbsoluteFill style={{

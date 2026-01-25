@@ -1,4 +1,4 @@
-import { City } from '../../utils/ChampionshipManager';
+import { City } from '../../../utils/ChampionshipManager';
 
 export type CampaignBattleResult = "win" | "loss" | "tie";
 

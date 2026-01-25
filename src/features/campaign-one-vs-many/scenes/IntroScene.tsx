@@ -1,6 +1,6 @@
 import React from 'react';
 import { AbsoluteFill, interpolate, useCurrentFrame, staticFile } from 'remotion';
-import { City } from '../../utils/ChampionshipManager';
+import { City } from '../../../utils/ChampionshipManager';
 
 type IntroSceneProps = {
     mainCity: City;

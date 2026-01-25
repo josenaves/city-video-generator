@@ -26,8 +26,7 @@ import {
 
 // @ts-ignore
 import campaignTestData from "./data/campaign-test.json";
-// @ts-ignore
-import varginhaCampaignData from "./data/varginha-campaign-test.json";
+
 // @ts-ignore
 import campoGrandeCuiabaData from "./data/campo-grande-cuiaba.json";
 // @ts-ignore
@@ -195,6 +194,9 @@ import caxambuCampaignData from "./data/caxambu-campaign.json";
 import caxambuVs10Data from "./data/caxambu-vs-10.json";
 
 // @ts-ignore
+import jacuiVs10Data from "./data/jacui-vs-10.json";
+
+// @ts-ignore
 import caxiasDoSulPassoFundoData from "./data/caxias-do-sul-passo-fundo.json";
 
 // @ts-ignore
@@ -289,6 +291,15 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={caxambuVs10Data as any}
+      />
+      <Composition
+        id="JacuiVs10Campaign"
+        component={CampaignVideo}
+        durationInFrames={calculateCampaignTotalDuration(jacuiVs10Data)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={jacuiVs10Data as any}
       />
 
       {championships.map((champ) => (

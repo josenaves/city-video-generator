@@ -5,8 +5,8 @@ export type City = {
     visual: {
         primaryColor: string;
         secondaryColor: string;
+        image: string;
     };
-    image: string;
 };
 
 export type Round = {

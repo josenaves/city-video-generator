@@ -1,0 +1,279 @@
+{
+  "feature": "campaign_one_vs_many",
+  "mainCity": {
+    "name": "Jacuí",
+    "nickname": "Mãe do Sudoeste Mineiro",
+    "data": {
+      "population": 7668,
+      "areaKm2": 409.229,
+      "gdpPerCapita": 19619.02,
+      "hospitalBedsPerThousand": 1.2,
+      "idh": 0.668,
+      "higherEducationPct": 8.5
+    },
+    "visual": {
+      "primaryColor": "#8B4513",
+      "secondaryColor": "#D2691E",
+      "image": "jacui.jpg"
+    }
+  },
+  "opponentCities": [
+    {
+      "name": "Guaxupé",
+      "nickname": "Capital do Café",
+      "data": {
+        "population": 52621,
+        "areaKm2": 286,
+        "gdpPerCapita": 47761,
+        "hospitalBedsPerThousand": 2.0,
+        "idh": 0.751,
+        "higherEducationPct": 14.0
+      },
+      "visual": {
+        "primaryColor": "#C62828",
+        "secondaryColor": "#B71C1C",
+        "image": "guaxupe.jpeg"
+      }
+    },
+    {
+      "name": "São Sebastião do Paraíso",
+      "nickname": "Terra do Café Fino",
+      "data": {
+        "population": 70956,
+        "areaKm2": 814.925,
+        "gdpPerCapita": 16351,
+        "hospitalBedsPerThousand": 1.5,
+        "idh": 0.71,
+        "higherEducationPct": 12.0
+      },
+      "visual": {
+        "primaryColor": "#2E7D32",
+        "secondaryColor": "#1B5E20",
+        "image": "sao-sebastiao-do-paraiso.jpeg"
+      }
+    },
+    {
+      "name": "Passos",
+      "nickname": "Portal do Sudoeste",
+      "data": {
+        "population": 106290,
+        "areaKm2": 1338.07,
+        "gdpPerCapita": 13246,
+        "hospitalBedsPerThousand": 2.8,
+        "idh": 0.756,
+        "higherEducationPct": 15.5
+      },
+      "visual": {
+        "primaryColor": "#1565C0",
+        "secondaryColor": "#0D47A1",
+        "image": "passos.jpg"
+      }
+    },
+    {
+      "name": "Guaranésia",
+      "nickname": "Cidade da Amizade",
+      "data": {
+        "population": 8500,
+        "areaKm2": 183.24,
+        "gdpPerCapita": 25000,
+        "hospitalBedsPerThousand": 1.0,
+        "idh": 0.695,
+        "higherEducationPct": 9.0
+      },
+      "visual": {
+        "primaryColor": "#FF8F00",
+        "secondaryColor": "#E65100",
+        "image": "guaranesia.jpg"
+      }
+    },
+    {
+      "name": "Juruaia",
+      "nickname": "Pequena Notável",
+      "data": {
+        "population": 9238,
+        "areaKm2": 220,
+        "gdpPerCapita": 9158,
+        "hospitalBedsPerThousand": 0.8,
+        "idh": 0.68,
+        "higherEducationPct": 7.5
+      },
+      "visual": {
+        "primaryColor": "#6A1B9A",
+        "secondaryColor": "#4A148C",
+        "image": "juruaia.jpg"
+      }
+    },
+    {
+      "name": "Pratápolis",
+      "nickname": "Cidade da Paz",
+      "data": {
+        "population": 9300,
+        "areaKm2": 192.56,
+        "gdpPerCapita": 22000,
+        "hospitalBedsPerThousand": 1.0,
+        "idh": 0.695,
+        "higherEducationPct": 8.8
+      },
+      "visual": {
+        "primaryColor": "#00897B",
+        "secondaryColor": "#00695C",
+        "image": "pratapolis.jpg"
+      }
+    },
+    {
+      "name": "Itamogi",
+      "nickname": "Rio das Pedras",
+      "data": {
+        "population": 11092,
+        "areaKm2": 243.714,
+        "gdpPerCapita": 18000,
+        "hospitalBedsPerThousand": 1.1,
+        "idh": 0.674,
+        "higherEducationPct": 10.2
+      },
+      "visual": {
+        "primaryColor": "#AD1457",
+        "secondaryColor": "#880E4F",
+        "image": "itamogi.jpg"
+      }
+    },
+    {
+      "name": "Monte Santo de Minas",
+      "nickname": "Cidade da Fé",
+      "data": {
+        "population": 21294,
+        "areaKm2": 594.632,
+        "gdpPerCapita": 16000,
+        "hospitalBedsPerThousand": 1.3,
+        "idh": 0.695,
+        "higherEducationPct": 9.5
+      },
+      "visual": {
+        "primaryColor": "#455A64",
+        "secondaryColor": "#263238",
+        "image": "monte-santo-de-minas.jpg"
+      }
+    },
+    {
+      "name": "Nova Resende",
+      "nickname": "Cidade Nova",
+      "data": {
+        "population": 16854,
+        "areaKm2": 390.152,
+        "gdpPerCapita": 24000,
+        "hospitalBedsPerThousand": 1.4,
+        "idh": 0.71,
+        "higherEducationPct": 11.8
+      },
+      "visual": {
+        "primaryColor": "#00ACC1",
+        "secondaryColor": "#0097A7",
+        "image": "nova-resende.avif"
+      }
+    },
+    {
+      "name": "Alpinópolis",
+      "nickname": "Cidade das Alturas",
+      "data": {
+        "population": 18673,
+        "areaKm2": 460.685,
+        "gdpPerCapita": 28000,
+        "hospitalBedsPerThousand": 1.8,
+        "idh": 0.725,
+        "higherEducationPct": 13.5
+      },
+      "visual": {
+        "primaryColor": "#9E9D24",
+        "secondaryColor": "#827717",
+        "image": "alpinopolis.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ],
+  "sponsorship": {
+    "enabled": false,
+    "title": "Um oferecimento",
+    "items": [
+      {
+        "type": "logo",
+        "src": "favicon.ico",
+        "label": "City Battles 2026"
+      }
+    ]
+  },
+  "video": {
+    "aspectRatio": "16:9",
+    "title": "Uma Jacuí vs 10 cidades",
+    "soundtrack": {
+      "src": "audio/Come With Us - Nat Keefe & Hot Buttered Rum.mp3",
+      "bpm": 85,
+      "maxDuration": "3:18",
+      "maxFrames": 5940,
+      "strictTiming": true,
+      "timingProfile": "campaign_compact_85bpm"
+    },
+    "finalComments": {
+      "dominant": {
+        "text": "Jacuí provou seu valor mas não conseguiu se sobressair frente ao poderio econômico das cidades maiores. Mesmo assim, a 'Mãe do Sudoeste' mostrou que história e resiliência valem muito mais que simples números."
+      },
+      "competitive": {
+        "text": "Apesar de alguns momentos brilhantes, Jacuí enfrentou adversários muito maiores em população e economia. Uma jornada de superação que fortalece o orgulho de ser jacuiense."
+      },
+      "balanced": {
+        "text": "Jacuí equilibrou a balança mostrando que, mesmo sendo menor, consegue competir de igual para igual com cidades gigantes da região. O verdadeiro espírito do Sudoeste Mineiro."
+      },
+      "underdog": {
+        "text": "A pequena Jacuí se tornou a grande surpresa desta campanha! Mostrou que tamanho não é documento quando o assunto é coragem e determinação."
+      }
+    }
+  }
+}
