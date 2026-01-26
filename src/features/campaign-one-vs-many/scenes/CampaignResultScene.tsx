@@ -1,6 +1,7 @@
 import React from "react";
 import {
   AbsoluteFill,
+  Img,
   interpolate,
   useCurrentFrame,
   staticFile,
@@ -18,7 +19,6 @@ export type CampaignResultSceneProps = {
 export const CampaignResultScene: React.FC<CampaignResultSceneProps> = ({
   mainCity,
   state,
-  durationInFrames,
 }) => {
   const frame = useCurrentFrame();
 
@@ -31,7 +31,6 @@ export const CampaignResultScene: React.FC<CampaignResultSceneProps> = ({
   });
 
   const totalBattles = state.wins + state.losses + state.ties;
-  const winRate = totalBattles > 0 ? (state.wins / totalBattles) * 100 : 0;
 
   // Get dynamic comment from reusable utility
   const dynamicComment = getFormattedCampaignPhrase(mainCity, state);
@@ -45,7 +44,7 @@ export const CampaignResultScene: React.FC<CampaignResultSceneProps> = ({
       }}
     >
       {/* Background Image with blur */}
-      <img
+      <Img
         src={staticFile(mainCity.visual.image)}
         style={{
           width: "100%",
@@ -89,13 +88,8 @@ export const CampaignResultScene: React.FC<CampaignResultSceneProps> = ({
           >
             {mainCity.name}
           </h1>
-          <div
-            style={{
-              display: "flex",
-              gap: "120px",
-              marginTop: "80px",
-            }}
-          >
+          {/* Batalhas Total */}
+          <div style={{ marginTop: "80px", marginBottom: "40px" }}>
             <div
               style={{ fontSize: "30px", color: "#AAA", marginBottom: "10px" }}
             >
@@ -103,43 +97,87 @@ export const CampaignResultScene: React.FC<CampaignResultSceneProps> = ({
             </div>
             <div
               style={{
-                fontSize: "90px",
+                fontSize: "70px",
                 fontWeight: "bold",
-                color: "#4CAF50",
-                marginBottom: "10px",
+                color: "#FFF",
               }}
             >
               {totalBattles}
             </div>
-            <div
-              style={{
-                fontSize: "90px",
-                fontWeight: "bold",
-                color: "#F44336",
-                marginBottom: "10px",
-              }}
-            >
-              VITÓRIAS
+          </div>
+
+          {/* Vitórias, Empates, Derrotas */}
+          <div
+            style={{
+              display: "flex",
+              gap: "80px",
+              marginTop: "20px",
+            }}
+          >
+            {/* Vitórias */}
+            <div style={{ textAlign: "center" }}>
+              <div
+                style={{
+                  fontSize: "30px",
+                  color: "#AAA",
+                  marginBottom: "10px",
+                }}
+              >
+                VITÓRIAS
+              </div>
+              <div
+                style={{
+                  fontSize: "90px",
+                  fontWeight: "bold",
+                  color: "#4CAF50",
+                }}
+              >
+                {state.wins}
+              </div>
             </div>
-            <div
-              style={{
-                fontSize: "90px",
-                fontWeight: "bold",
-                color: "#4CAF50",
-                marginBottom: "10px",
-              }}
-            >
-              {state.wins}
+
+            {/* Empates */}
+            <div style={{ textAlign: "center" }}>
+              <div
+                style={{
+                  fontSize: "30px",
+                  color: "#AAA",
+                  marginBottom: "10px",
+                }}
+              >
+                EMPATES
+              </div>
+              <div
+                style={{
+                  fontSize: "90px",
+                  fontWeight: "bold",
+                  color: "#FF9800",
+                }}
+              >
+                {state.ties}
+              </div>
             </div>
-            <div
-              style={{
-                fontSize: "90px",
-                fontWeight: "bold",
-                color: "#F44336",
-                marginBottom: "10px",
-              }}
-            >
-              {state.losses}
+
+            {/* Derrotas */}
+            <div style={{ textAlign: "center" }}>
+              <div
+                style={{
+                  fontSize: "30px",
+                  color: "#AAA",
+                  marginBottom: "10px",
+                }}
+              >
+                DERROTAS
+              </div>
+              <div
+                style={{
+                  fontSize: "90px",
+                  fontWeight: "bold",
+                  color: "#F44336",
+                }}
+              >
+                {state.losses}
+              </div>
             </div>
           </div>
         </div>

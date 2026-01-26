@@ -1,0 +1,279 @@
+{
+  "feature": "campaign_one_vs_many",
+  "mainCity": {
+    "name": "Marília",
+    "nickname": "Capital Nacional do Alimento",
+    "data": {
+      "population": 237629,
+      "areaKm2": 1170.05,
+      "gdpPerCapita": 52635,
+      "hospitalBedsPerThousand": 3.2,
+      "idh": 0.798,
+      "higherEducationPct": 23.0
+    },
+    "visual": {
+      "primaryColor": "#D32F2F",
+      "secondaryColor": "#B71C1C",
+      "image": "marilia.jpg"
+    }
+  },
+  "opponentCities": [
+    {
+      "name": "Araraquara",
+      "nickname": "Cidade do Sol",
+      "data": {
+        "population": 238339,
+        "areaKm2": 1004.5,
+        "gdpPerCapita": 51000,
+        "hospitalBedsPerThousand": 2.8,
+        "idh": 0.815,
+        "higherEducationPct": 22.5
+      },
+      "visual": {
+        "primaryColor": "#FF9800",
+        "secondaryColor": "#F57C00",
+        "image": "araraquara.jpg"
+      }
+    },
+    {
+      "name": "Presidente Prudente",
+      "nickname": "Capital do Oeste Paulista",
+      "data": {
+        "population": 225668,
+        "areaKm2": 560.64,
+        "gdpPerCapita": 51481,
+        "hospitalBedsPerThousand": 3.5,
+        "idh": 0.806,
+        "higherEducationPct": 24.0
+      },
+      "visual": {
+        "primaryColor": "#1976D2",
+        "secondaryColor": "#0D47A1",
+        "image": "presidente-prudente.jpg"
+      }
+    },
+    {
+      "name": "Bauru",
+      "nickname": "Cidade sem Limites",
+      "data": {
+        "population": 391740,
+        "areaKm2": 668,
+        "gdpPerCapita": 54477,
+        "hospitalBedsPerThousand": 3.5,
+        "idh": 0.801,
+        "higherEducationPct": 22.0
+      },
+      "visual": {
+        "primaryColor": "#1565C0",
+        "secondaryColor": "#0D47A1",
+        "image": "bauru.jpg"
+      }
+    },
+    {
+      "name": "Araçatuba",
+      "nickname": "Capital do Boi Gordo",
+      "data": {
+        "population": 198129,
+        "areaKm2": 1167.4,
+        "gdpPerCapita": 48000,
+        "hospitalBedsPerThousand": 2.5,
+        "idh": 0.78,
+        "higherEducationPct": 18.0
+      },
+      "visual": {
+        "primaryColor": "#4CAF50",
+        "secondaryColor": "#388E3C",
+        "image": "aracatuba.png"
+      }
+    },
+    {
+      "name": "Jaú",
+      "nickname": "Capital do Calçado Feminino",
+      "data": {
+        "population": 150482,
+        "areaKm2": 687.3,
+        "gdpPerCapita": 52000,
+        "hospitalBedsPerThousand": 2.2,
+        "idh": 0.79,
+        "higherEducationPct": 19.5
+      },
+      "visual": {
+        "primaryColor": "#9C27B0",
+        "secondaryColor": "#7B1FA2",
+        "image": "jau.webp"
+      }
+    },
+    {
+      "name": "Botucatu",
+      "nickname": "Cidade dos Bons Ares",
+      "data": {
+        "population": 148130,
+        "areaKm2": 1482.6,
+        "gdpPerCapita": 49000,
+        "hospitalBedsPerThousand": 3.8,
+        "idh": 0.81,
+        "higherEducationPct": 21.0
+      },
+      "visual": {
+        "primaryColor": "#009688",
+        "secondaryColor": "#00796B",
+        "image": "botucatu.jpg"
+      }
+    },
+    {
+      "name": "Ourinhos",
+      "nickname": "Princesa do Vale do Paranapanema",
+      "data": {
+        "population": 114352,
+        "areaKm2": 296.2,
+        "gdpPerCapita": 46000,
+        "hospitalBedsPerThousand": 2.0,
+        "idh": 0.785,
+        "higherEducationPct": 17.5
+      },
+      "visual": {
+        "primaryColor": "#FF5722",
+        "secondaryColor": "#D84315",
+        "image": "ourinhos.jpg"
+      }
+    },
+    {
+      "name": "Birigui",
+      "nickname": "Capital do Calçado Infantil",
+      "data": {
+        "population": 123436,
+        "areaKm2": 530.9,
+        "gdpPerCapita": 47000,
+        "hospitalBedsPerThousand": 1.8,
+        "idh": 0.775,
+        "higherEducationPct": 16.8
+      },
+      "visual": {
+        "primaryColor": "#E91E63",
+        "secondaryColor": "#C2185B",
+        "image": "birigui.jpg"
+      }
+    },
+    {
+      "name": "São Carlos",
+      "nickname": "Capital da Tecnologia",
+      "data": {
+        "population": 254822,
+        "areaKm2": 1136.9,
+        "gdpPerCapita": 72146,
+        "hospitalBedsPerThousand": 2.2,
+        "idh": 0.805,
+        "higherEducationPct": 24.9
+      },
+      "visual": {
+        "primaryColor": "#FFCC00",
+        "secondaryColor": "#FFAA00",
+        "image": "sao-carlos.webp"
+      }
+    },
+    {
+      "name": "Limeira",
+      "nickname": "Capital da Laranja",
+      "data": {
+        "population": 308482,
+        "areaKm2": 580.9,
+        "gdpPerCapita": 53000,
+        "hospitalBedsPerThousand": 2.4,
+        "idh": 0.795,
+        "higherEducationPct": 20.5
+      },
+      "visual": {
+        "primaryColor": "#FFC107",
+        "secondaryColor": "#FFA000",
+        "image": "limeira.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ],
+  "sponsorship": {
+    "enabled": false,
+    "title": "Um oferecimento",
+    "items": [
+      {
+        "type": "logo",
+        "src": "favicon.ico",
+        "label": "City Battles 2026"
+      }
+    ]
+  },
+  "video": {
+    "aspectRatio": "16:9",
+    "title": "Marília vs 10 cidades",
+    "soundtrack": {
+      "src": "audio/Everything Where it Needs to Be - Nat Keefe & Hot Buttered Rum.mp3",
+      "bpm": 85,
+      "maxDuration": "3:18",
+      "maxFrames": 5940,
+      "strictTiming": true,
+      "timingProfile": "campaign_compact_85bpm"
+    },
+    "finalComments": {
+      "dominant": {
+        "text": "Marília arrasou! Com vitórias consistentes contra as 10 cidades, a 'Capital Nacional do Alimento' provou que é uma força a ser reconhecida no interior paulista. Quando se trata de competir, Marília não brinca em serviço! 🏆"
+      },
+      "competitive": {
+        "text": "Marília enfrentou um desafio e tanto: 10 cidades de peso! A batalha foi acirrada, mas a cidade mostrou que tem o que é preciso para competir no alto nível. Algumas vitórias, algumas derrotas, mas sempre com garra! 💪"
+      },
+      "balanced": {
+        "text": "Marília equilibrou bem a balança nesta campanha! Não foi uma vitória esmagadora, mas também não foi um fracasso. A cidade mostrou que está no meio do caminho, com espaço para crescer e conquistar mais território. ⚖️"
+      },
+      "underdog": {
+        "text": "Marília entrou como favorita, mas descobriu que o interior paulista é competitivo! Algumas derrotas dolorosas mostraram que há trabalho a fazer, mas a cidade não desiste fácil. É hora de aprender e voltar mais forte! 📈"
+      }
+    }
+  }
+}
