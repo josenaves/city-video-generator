@@ -1,0 +1,261 @@
+{
+  "feature": "campaign_one_vs_many",
+  "mainCity": {
+    "name": "Tubarão",
+    "nickname": "Cidade Azul",
+    "data": {
+      "population": 110088,
+      "areaKm2": 301.5,
+      "gdpPerCapita": 54566,
+      "hospitalBedsPerThousand": 3.6,
+      "idh": 0.796,
+      "higherEducationPct": 22
+    },
+    "visual": {
+      "primaryColor": "#0288D1",
+      "secondaryColor": "#01579B",
+      "image": "tubarao.jpg"
+    }
+  },
+  "opponentCities": [
+    {
+      "name": "Criciúma",
+      "nickname": "Capital do Carvão",
+      "data": {
+        "population": 214493,
+        "areaKm2": 234.8,
+        "gdpPerCapita": 57528,
+        "hospitalBedsPerThousand": 2.5,
+        "idh": 0.788,
+        "higherEducationPct": 21.4
+      },
+      "visual": {
+        "primaryColor": "#FBC02D",
+        "secondaryColor": "#F57F17",
+        "image": "criciuma.webp"
+      }
+    },
+    {
+      "name": "Araranguá",
+      "nickname": "Portal do Extremo Sul",
+      "data": {
+        "population": 71345,
+        "areaKm2": 303.383,
+        "gdpPerCapita": 39907,
+        "hospitalBedsPerThousand": 2.0,
+        "idh": 0.76,
+        "higherEducationPct": 15.0
+      },
+      "visual": {
+        "primaryColor": "#9C27B0",
+        "secondaryColor": "#FFFFFF",
+        "image": "ararangua.jpg"
+      }
+    },
+    {
+      "name": "Laguna",
+      "nickname": "Cidade Juliana",
+      "data": {
+        "population": 45000,
+        "areaKm2": 336.0,
+        "gdpPerCapita": 42000,
+        "hospitalBedsPerThousand": 2.2,
+        "idh": 0.78,
+        "higherEducationPct": 18.0
+      },
+      "visual": {
+        "primaryColor": "#2196F3",
+        "secondaryColor": "#0D47A1",
+        "image": "laguna.jpg"
+      }
+    },
+    {
+      "name": "Brusque",
+      "nickname": "Berço da Fiação / Capital da Moda",
+      "data": {
+        "population": 141385,
+        "areaKm2": 284.67,
+        "gdpPerCapita": 62044,
+        "hospitalBedsPerThousand": 1.96,
+        "idh": 0.795,
+        "higherEducationPct": 10.9
+      },
+      "visual": {
+        "primaryColor": "#008148",
+        "secondaryColor": "#FFFFFF",
+        "image": "brusque.jpg"
+      }
+    },
+    {
+      "name": "Jaraguá do Sul",
+      "nickname": "Cidade das Flores",
+      "data": {
+        "population": 180000,
+        "areaKm2": 530.0,
+        "gdpPerCapita": 75000,
+        "hospitalBedsPerThousand": 2.5,
+        "idh": 0.8,
+        "higherEducationPct": 25.0
+      },
+      "visual": {
+        "primaryColor": "#4CAF50",
+        "secondaryColor": "#2E7D32",
+        "image": "jaragua-do-sul.jpg"
+      }
+    },
+    {
+      "name": "Lages",
+      "nickname": "Capital Nacional da Maçã",
+      "data": {
+        "population": 157000,
+        "areaKm2": 2631.0,
+        "gdpPerCapita": 48000,
+        "hospitalBedsPerThousand": 2.8,
+        "idh": 0.77,
+        "higherEducationPct": 20.0
+      },
+      "visual": {
+        "primaryColor": "#FF9800",
+        "secondaryColor": "#E65100",
+        "image": "lages.webp"
+      }
+    },
+    {
+      "name": "Caxias do Sul",
+      "nickname": "Pérola das Colônias",
+      "data": {
+        "population": 479599,
+        "areaKm2": 1652,
+        "gdpPerCapita": 81683,
+        "hospitalBedsPerThousand": 5.83,
+        "idh": 0.782,
+        "higherEducationPct": 35.5
+      },
+      "visual": {
+        "primaryColor": "#990000",
+        "secondaryColor": "#660000",
+        "image": "caxias-do-sul.jpg"
+      }
+    },
+    {
+      "name": "Pelotas",
+      "nickname": "Capital Nacional do Doce",
+      "data": {
+        "population": 343000,
+        "areaKm2": 1610.0,
+        "gdpPerCapita": 45000,
+        "hospitalBedsPerThousand": 3.0,
+        "idh": 0.75,
+        "higherEducationPct": 22.0
+      },
+      "visual": {
+        "primaryColor": "#FF4081",
+        "secondaryColor": "#C2185B",
+        "image": "pelotas.png"
+      }
+    },
+    {
+      "name": "Chapecó",
+      "nickname": "Capital da Agroindústria",
+      "data": {
+        "population": 224000,
+        "areaKm2": 625.0,
+        "gdpPerCapita": 70000,
+        "hospitalBedsPerThousand": 3.2,
+        "idh": 0.79,
+        "higherEducationPct": 28.0
+      },
+      "visual": {
+        "primaryColor": "#00BCD4",
+        "secondaryColor": "#0097A7",
+        "image": "chapeco.jpg"
+      }
+    },
+    {
+      "name": "Joinville",
+      "nickname": "Cidade das Flores",
+      "data": {
+        "population": 654888,
+        "areaKm2": 1127,
+        "gdpPerCapita": 80828,
+        "hospitalBedsPerThousand": 2.4,
+        "idh": 0.809,
+        "higherEducationPct": 26.7
+      },
+      "visual": {
+        "primaryColor": "#003399",
+        "secondaryColor": "#FFFFFF",
+        "image": "joinvile.webp"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ],
+  "sponsorship": {
+    "enabled": false,
+    "title": "Um oferecimento",
+    "items": [
+      {
+        "type": "logo",
+        "src": "favicon.ico",
+        "label": "City Battles 2026"
+      }
+    ]
+  },
+  "video": {
+    "aspectRatio": "16:9",
+    "title": "Uma Tubarão vs 10 cidades",
+    "soundtrack": {
+      "src": "audio/Everything Where it Needs to Be - Nat Keefe & Hot Buttered Rum.mp3",
+      "bpm": 120
+    }
+  }
+}

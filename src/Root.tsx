@@ -198,6 +198,8 @@ import jacuiVs10Data from "./data/jacui-vs-10.json";
 
 // @ts-expect-error JSON import without type definitions
 import mariliaVs10Data from "./data/marilia-vs-10.json";
+// @ts-ignore
+import tubaraoVs10Data from "./data/tubarao-vs-10.json";
 
 // @ts-ignore
 import caxiasDoSulPassoFundoData from "./data/caxias-do-sul-passo-fundo.json";
@@ -312,6 +314,15 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={mariliaVs10Data as any}
+      />
+      <Composition
+        id="TubaraoVs10Campaign"
+        component={CampaignVideo}
+        durationInFrames={calculateCampaignTotalDuration(tubaraoVs10Data)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={tubaraoVs10Data as any}
       />
 
       {championships.map((champ) => (
