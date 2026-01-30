@@ -19,7 +19,7 @@
                 "idh": 0.723,
                 "ensinoSuperior": 9.5,
                 "fundacao": 1948,
-                "frota": 7300
+                "esgotamentoSanitario": 47.8
             },
             "visual": {
                 "primaryColor": "#FF69B4",
@@ -40,7 +40,7 @@
                 "idh": 0.751,
                 "ensinoSuperior": 18.4,
                 "fundacao": 1912,
-                "frota": 39500
+                "esgotamentoSanitario": 84.0
             },
             "visual": {
                 "primaryColor": "#0047AB",
@@ -54,7 +54,7 @@
             "id": "populacao",
             "title": "POPULAÇÃO",
             "field": "populacao",
-            "format": "number",
+            "format": "integer",
             "unit": "hab"
         },
         {
@@ -96,16 +96,16 @@
             "id": "fundacao",
             "title": "FUNDAÇÃO (ANO)",
             "field": "fundacao",
-            "format": "number",
+            "format": "year",
             "unit": "",
             "inverse": true
         },
         {
-            "id": "frota",
-            "title": "FROTA VEÍCULOS",
-            "field": "frota",
-            "format": "number",
-            "unit": ""
+            "id": "esgotamentoSanitario",
+            "title": "SANEAMENTO",
+            "field": "esgotamentoSanitario",
+            "format": "decimal",
+            "unit": "%"
         }
     ]
 }

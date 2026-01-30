@@ -1601,6 +1601,26 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
       <Composition
+        id="BattleJuruaiaGuaxupe"
+        component={BattleVideo}
+        durationInFrames={calculateDuration({
+          ...juruaiaGuaxupeData,
+          rounds: juruaiaGuaxupeData.rounds.filter((r: any) => ['populacao', 'areaKm2', 'pibPerCapita', 'idh', 'esgotamentoSanitario'].includes(r.id))
+        }, 3)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: {
+            ...juruaiaGuaxupeData,
+            rounds: juruaiaGuaxupeData.rounds.filter((r: any) => ['populacao', 'areaKm2', 'pibPerCapita', 'idh', 'esgotamentoSanitario'].includes(r.id))
+          },
+          image1: "juruaia.jpg",
+          image2: "guaxupe.jpeg",
+          overrideBeatsPerTransition: 3,
+        }}
+      />
+      <Composition
         id="BattleJuruaiaGuaxupeHorizontal"
         component={BattleVideo}
         durationInFrames={calculateDuration(juruaiaGuaxupeData, 3, 85, true, true)}
