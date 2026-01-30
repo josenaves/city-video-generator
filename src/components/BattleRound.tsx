@@ -15,6 +15,7 @@ type BattleRoundProps = {
     inverse?: boolean;
     backgroundImage1: string;
     backgroundImage2: string;
+    durationInFrames: number;
 };
 
 export const BattleRound: React.FC<BattleRoundProps> = ({
@@ -30,7 +31,8 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
     city2Color,
     inverse = false,
     backgroundImage1,
-    backgroundImage2
+    backgroundImage2,
+    durationInFrames
 }) => {
     const frame = useCurrentFrame();
     const { fps } = useVideoConfig();
@@ -51,7 +53,8 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
 
     const isWinner1 = inverse ? city1Value < city2Value : city1Value > city2Value;
 
-    const showWinner = frame > 45;
+    // Show winner after 50% of the duration
+    const showWinner = frame > durationInFrames * 0.5;
 
     const formatValue = (val: number) => {
         if (format === 'compact') return new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(val);
@@ -61,8 +64,8 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
     };
 
     // Background animation
-    const scale = interpolate(frame, [0, 300], [1, 1.2]);
-    const winnerImageWithFade = interpolate(frame, [60, 70], [0, 1], { extrapolateRight: 'clamp' });
+    const scale = interpolate(frame, [0, durationInFrames], [1, 1.2]);
+    const winnerImageWithFade = interpolate(frame, [durationInFrames * 0.6, durationInFrames * 0.8], [0, 1], { extrapolateRight: 'clamp' });
 
     // Improved tie detection to match the scoreboard logic
     const formattedVal1 = formatValue(city1Value);
@@ -200,7 +203,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
                     <div style={{
                         position: 'absolute',
                         bottom: 250,
-                        transform: `scale(${spring({ frame: frame - 45, fps, config: { stiffness: 300, damping: 15 } })})`
+                        transform: `scale(${spring({ frame: frame - (durationInFrames * 0.5), fps, config: { stiffness: 300, damping: 15 } })})`
                     }}>
                         <div style={{
                             backgroundColor: 'white',

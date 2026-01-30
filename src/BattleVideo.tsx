@@ -8,28 +8,46 @@ type BattleVideoProps = {
     battleData: any;
     image1: string;
     image2: string;
+    overrideBeatsPerTransition?: number;
 };
 
 // Sincronizado com música de 128 BPM - cada transição a cada 2 batidas (28 frames)
-const beatsPerTransition = 3;
+const beatsPerTransitionDefault = 3;
 export const framesPerBeat = 14.0625; // 60s / 128BPM * 30FPS
-export const transitionFrames = Math.round(beatsPerTransition * framesPerBeat); // 28 frames
+export const transitionFrames = Math.round(beatsPerTransitionDefault * framesPerBeat); // 42 frames
 
-export const introDuration = transitionFrames * 2; // 56 frames (4 batidas)
-export const roundDuration = transitionFrames * 2; // 56 frames (4 batidas)
-export const finalDuration = transitionFrames * 2; // 56 frames (4 batidas)
+export const introDuration = transitionFrames * 2; // 84 frames (6 batidas)
+export const roundDuration = transitionFrames * 2; // 84 frames (6 batidas)
+export const finalDuration = transitionFrames * 2; // 84 frames (6 batidas)
 
-export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, image2 }) => {
+export const getTiming = (beats = 3) => {
+    const transition = Math.round(beats * framesPerBeat);
+    return {
+        transition,
+        intro: transition * 2,
+        round: transition * 2,
+        final: transition * 2,
+    };
+};
+
+export const BattleVideo: React.FC<BattleVideoProps> = ({
+    battleData,
+    image1,
+    image2,
+    overrideBeatsPerTransition
+}) => {
     const frame = useCurrentFrame();
-    const { cities, rounds } = battleData;
+    const { cities, rounds, timing } = battleData;
     const city1 = cities[0];
     const city2 = cities[1];
+
+    const currentTiming = getTiming(overrideBeatsPerTransition || timing?.beatsPerTransition || 3);
 
     return (
         <AbsoluteFill style={{ backgroundColor: '#000' }}>
             <Audio src={staticFile('audio/Beat Your Competition - Vibe Tracks.mp3')} volume={0.5} />
 
-            <Sequence from={0} durationInFrames={introDuration}>
+            <Sequence from={0} durationInFrames={currentTiming.intro}>
                 <BattleIntro
                     city1Name={city1.name}
                     city2Name={city2.name}
@@ -41,12 +59,12 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, im
             </Sequence>
 
             {rounds.map((round: any, index: number) => {
-                const startTime = introDuration + (index * roundDuration);
+                const startTime = currentTiming.intro + (index * currentTiming.round);
                 const city1Val = city1.data[round.field];
                 const city2Val = city2.data[round.field];
 
                 return (
-                    <Sequence key={round.id} from={startTime} durationInFrames={roundDuration}>
+                    <Sequence key={round.id} from={startTime} durationInFrames={currentTiming.round}>
                         <BattleRound
                             title={round.title}
                             city1Name={city1.name}
@@ -61,6 +79,7 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, im
                             inverse={round.inverse}
                             backgroundImage1={staticFile(image1)}
                             backgroundImage2={staticFile(image2)}
+                            durationInFrames={currentTiming.round}
                         />
                     </Sequence>
                 );
@@ -107,7 +126,7 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, im
                 const winnerColor = isTie ? '#FFFFFF' : (wins1 > wins2 ? city1.visual.primaryColor : city2.visual.primaryColor);
 
                 return (
-                    <Sequence from={introDuration + (rounds.length * roundDuration)} durationInFrames={finalDuration}>
+                    <Sequence from={currentTiming.intro + (rounds.length * currentTiming.round)} durationInFrames={currentTiming.final}>
                         <BattleWinner
                             winnerName={winnerName}
                             winnerColor={winnerColor}
@@ -121,7 +140,7 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({ battleData, image1, im
             })()}
             {/* Progress Bar - Retention Hook */}
             {(() => {
-                const totalDuration = introDuration + (rounds.length * roundDuration) + finalDuration;
+                const totalDuration = currentTiming.intro + (rounds.length * currentTiming.round) + currentTiming.final;
                 const progress = interpolate(frame, [0, totalDuration], [0, 100], { extrapolateRight: 'clamp' });
 
                 return (

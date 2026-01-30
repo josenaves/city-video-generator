@@ -2,9 +2,7 @@ import "./index.css";
 import { Composition } from "remotion";
 import {
   BattleVideo,
-  introDuration,
-  roundDuration,
-  finalDuration,
+  getTiming,
 } from "./BattleVideo";
 import {
   ChampionshipVideo,
@@ -219,6 +217,8 @@ import alfenasVarginhaData from "./data/alfenas-varginha.json";
 import varginhaTresCoracoesData from "./data/varginha-tres-coracoes.json";
 // @ts-ignore
 import gvIpatingaData from "./data/gv-ipatinga.json";
+// @ts-ignore
+import recifeOlindaData from "./data/recife-olinda.json";
 
 // Championships
 // @ts-ignore
@@ -232,8 +232,10 @@ import capitaisSudesteData from "./data/championships/capitais-sudeste.json";
 
 // Each <Composition> is an entry in the sidebar!
 
-const calculateDuration = (data: any) =>
-  introDuration + data.rounds.length * roundDuration + finalDuration;
+const calculateDuration = (data: any, beatsOverride?: number) => {
+  const timing = getTiming(beatsOverride || data.timing?.beatsPerTransition || 3);
+  return timing.intro + data.rounds.length * timing.round + timing.final;
+};
 
 const calculateChampionshipDuration = (
   numCities: number,
@@ -795,6 +797,33 @@ export const RemotionRoot: React.FC = () => {
           battleData: guaxupeTapiratibaData,
           image1: "guaxupe.jpeg",
           image2: "tapiratiba.jpg",
+        }}
+      />
+      <Composition
+        id="BattleRecifeOlinda"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(recifeOlindaData, 2)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          battleData: recifeOlindaData,
+          image1: "recife.jpg",
+          image2: "olinda.webp",
+          overrideBeatsPerTransition: 2,
+        }}
+      />
+      <Composition
+        id="BattleRecifeOlindaHorizontal"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(recifeOlindaData)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          battleData: recifeOlindaData,
+          image1: "recife.jpg",
+          image2: "olinda.webp",
         }}
       />
       <Composition
