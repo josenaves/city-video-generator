@@ -57,10 +57,14 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
     const showWinner = frame > durationInFrames * 0.5;
 
     const formatValue = (val: number) => {
+        if (format === 'year') return Math.round(val).toString();
+        if (format === 'integer') return new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 }).format(val);
+        if (format === 'number') return new Intl.NumberFormat('pt-BR').format(val);
         if (format === 'compact') return new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(val);
         if (format === 'currency') return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumSignificantDigits: 3 }).format(val);
         if (format === 'percent') return val.toFixed(1);
-        return val.toFixed(format === 'decimal3' ? 3 : 1);
+        if (format === 'decimal3') return val.toFixed(3);
+        return val.toFixed(1);
     };
 
     // Background animation
@@ -84,6 +88,7 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
         if (t.includes('ESCOLARIDADE') || t.includes('SUPERIOR')) return '🎓';
         if (t.includes('FROTA') || t.includes('VEÍCULO')) return '🚗';
         if (t.includes('SALÁRIO') || t.includes('RENDA')) return '💵';
+        if (t.includes('SANEAMENTO') || t.includes('ESGOTO')) return '🚰';
         return '📊';
     };
 
