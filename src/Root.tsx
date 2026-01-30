@@ -2,6 +2,7 @@ import "./index.css";
 import { Composition } from "remotion";
 import {
   BattleVideo,
+  getDynamicTiming,
   getTiming,
 } from "./BattleVideo";
 import {
@@ -219,6 +220,8 @@ import varginhaTresCoracoesData from "./data/varginha-tres-coracoes.json";
 import gvIpatingaData from "./data/gv-ipatinga.json";
 // @ts-ignore
 import recifeOlindaData from "./data/recife-olinda.json";
+// @ts-ignore
+import juruaiaGuaxupeData from "./data/juruaia-guaxupe.json";
 
 // Championships
 // @ts-ignore
@@ -232,8 +235,12 @@ import capitaisSudesteData from "./data/championships/capitais-sudeste.json";
 
 // Each <Composition> is an entry in the sidebar!
 
-const calculateDuration = (data: any, beatsOverride?: number) => {
-  const timing = getTiming(beatsOverride || data.timing?.beatsPerTransition || 3);
+const calculateDuration = (data: any, beatsOverride?: number, bpm = 128, useDynamicTiming = false, isLong = false) => {
+  if (useDynamicTiming) {
+    const timing = getDynamicTiming(data.rounds.length, bpm, isLong);
+    return timing.totalFrames;
+  }
+  const timing = getTiming(beatsOverride || data.timing?.beatsPerTransition || 3, bpm);
   return timing.intro + data.rounds.length * timing.round + timing.final;
 };
 
@@ -339,25 +346,28 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={caxiasDoSulVs10Data as any}
       />
 
-      {championships.map((champ) => (
-        <Composition
-          key={champ.id}
-          id={champ.id}
-          component={ChampionshipVideo}
-          durationInFrames={calculateChampionshipDuration(
-            champ.data.cities.length,
-            champ.data.rounds.length,
-          )}
-          fps={30}
-          width={1920}
-          height={1080}
-          defaultProps={{
-            championshipName: champ.data.name,
-            cities: champ.data.cities,
-            rounds: champ.data.rounds,
-          }}
-        />
-      ))}
+      {championships.map((champ) => {
+        if (!champ.data || !champ.data.cities || !champ.data.rounds) return null;
+        return (
+          <Composition
+            key={champ.id}
+            id={champ.id}
+            component={ChampionshipVideo}
+            durationInFrames={calculateChampionshipDuration(
+              champ.data.cities.length,
+              champ.data.rounds.length,
+            )}
+            fps={30}
+            width={1920}
+            height={1080}
+            defaultProps={{
+              championshipName: champ.data.name,
+              cities: champ.data.cities,
+              rounds: champ.data.rounds,
+            }}
+          />
+        );
+      })}
 
       <Composition
         id="BattleUberlandiaUberaba"
@@ -1588,6 +1598,23 @@ export const RemotionRoot: React.FC = () => {
           battleData: gvIpatingaData,
           image1: "governador-valadares.jpg",
           image2: "ipatinga.jpg",
+        }}
+      />
+      <Composition
+        id="BattleJuruaiaGuaxupeHorizontal"
+        component={BattleVideo}
+        durationInFrames={calculateDuration(juruaiaGuaxupeData, 3, 85, true, true)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          battleData: juruaiaGuaxupeData,
+          image1: "juruaia.jpg",
+          image2: "guaxupe.jpeg",
+          audioTrack: "audio/Come With Us - Nat Keefe & Hot Buttered Rum.mp3",
+          bpm: 85,
+          useDynamicTiming: true,
+          isLong: true,
         }}
       />
     </>

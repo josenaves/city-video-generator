@@ -9,24 +9,56 @@ type BattleVideoProps = {
     image1: string;
     image2: string;
     overrideBeatsPerTransition?: number;
+    audioTrack?: string;
+    bpm?: number;
+    useDynamicTiming?: boolean;
+    isLong?: boolean;
 };
 
-// Sincronizado com música de 128 BPM - cada transição a cada 2 batidas (28 frames)
-const beatsPerTransitionDefault = 3;
-export const framesPerBeat = 14.0625; // 60s / 128BPM * 30FPS
-export const transitionFrames = Math.round(beatsPerTransitionDefault * framesPerBeat); // 42 frames
+// Sincronizado com música - cada transição a cada X batidas
+export const calculateFramesPerBeat = (bpm: number) => (60 / bpm) * 30;
+export const framesPerBeat = calculateFramesPerBeat(128); // Default 128 BPM
 
-export const introDuration = transitionFrames * 2; // 84 frames (6 batidas)
-export const roundDuration = transitionFrames * 2; // 84 frames (6 batidas)
-export const finalDuration = transitionFrames * 2; // 84 frames (6 batidas)
+/**
+ * Função para calcular o timing dinâmico das seções (Rápido-Lento-Rápido)
+ * Agora suporta uma versão estendida para vídeos de mais de 1 minuto.
+ */
+export const getDynamicTiming = (numRounds: number, bpm = 128, isLong = false) => {
+    const fpb = calculateFramesPerBeat(bpm);
 
-export const getTiming = (beats = 3) => {
-    const transition = Math.round(beats * framesPerBeat);
+    // Intro: Mais épica na versão longa
+    const intro = Math.round((isLong ? 12 : 4) * fpb);
+
+    // Padrões de batidas para evitar monotonia
+    const standardBeats = [4, 2, 6, 3, 5, 2, 4, 3];
+    const longBeats = [10, 6, 12, 8, 10, 6, 14, 8, 10, 12]; // Batidas mais longas para contemplação
+
+    const pattern = isLong ? longBeats : standardBeats;
+
+    const rounds = Array.from({ length: numRounds }).map((_, i) =>
+        Math.round((pattern[i % pattern.length]) * fpb)
+    );
+
+    // Final: Fechamento com mais impacto
+    const final = Math.round((isLong ? 12 : 6) * fpb);
+    const totalFrames = intro + rounds.reduce((a, b) => a + b, 0) + final;
+
+    return { intro, rounds, final, totalFrames, isDynamic: true as const };
+};
+
+/**
+ * Função para calcular o timing fixo tradicional (Legado)
+ */
+export const getTiming = (beats = 3, bpm = 128) => {
+    const fpb = calculateFramesPerBeat(bpm);
+    const transition = Math.round(beats * fpb);
     return {
         transition,
         intro: transition * 2,
         round: transition * 2,
         final: transition * 2,
+        totalFrames: (transition * 2) + (transition * 2 * 6 /* placeholder, calculated in component */) + (transition * 2), // This totalFrames is just for type consistency
+        isDynamic: false as const
     };
 };
 
@@ -34,18 +66,32 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({
     battleData,
     image1,
     image2,
-    overrideBeatsPerTransition
+    overrideBeatsPerTransition,
+    audioTrack = 'audio/Beat Your Competition - Vibe Tracks.mp3',
+    bpm = 128,
+    useDynamicTiming = false,
+    isLong = false
 }) => {
     const frame = useCurrentFrame();
-    const { cities, rounds, timing } = battleData;
+    const { cities, rounds } = battleData;
     const city1 = cities[0];
     const city2 = cities[1];
 
-    const currentTiming = getTiming(overrideBeatsPerTransition || timing?.beatsPerTransition || 3);
+    // Decide qual sistema de timing usar
+    const currentTiming = useDynamicTiming
+        ? getDynamicTiming(rounds.length, bpm, isLong)
+        : (() => {
+            const t = getTiming(overrideBeatsPerTransition || battleData.timing?.beatsPerTransition || 3, bpm);
+            return {
+                ...t,
+                rounds: Array(rounds.length).fill(t.round),
+                totalFrames: t.intro + (rounds.length * t.round) + t.final
+            };
+        })();
 
     return (
         <AbsoluteFill style={{ backgroundColor: '#000' }}>
-            <Audio src={staticFile('audio/Beat Your Competition - Vibe Tracks.mp3')} volume={0.5} />
+            <Audio src={staticFile(audioTrack)} volume={0.5} />
 
             <Sequence from={0} durationInFrames={currentTiming.intro}>
                 <BattleIntro
@@ -59,12 +105,15 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({
             </Sequence>
 
             {rounds.map((round: any, index: number) => {
-                const startTime = currentTiming.intro + (index * currentTiming.round);
+                // Calcula o início somando as durações anteriores
+                const startTime = currentTiming.intro + (currentTiming.rounds.slice(0, index).reduce((a, b) => a + b, 0));
+                const duration = currentTiming.rounds[index];
+
                 const city1Val = city1.data[round.field];
                 const city2Val = city2.data[round.field];
 
                 return (
-                    <Sequence key={round.id} from={startTime} durationInFrames={currentTiming.round}>
+                    <Sequence key={round.id} from={startTime} durationInFrames={duration}>
                         <BattleRound
                             title={round.title}
                             city1Name={city1.name}
@@ -79,7 +128,7 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({
                             inverse={round.inverse}
                             backgroundImage1={staticFile(image1)}
                             backgroundImage2={staticFile(image2)}
-                            durationInFrames={currentTiming.round}
+                            durationInFrames={duration}
                         />
                     </Sequence>
                 );
@@ -125,8 +174,10 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({
                 const winnerName = isTie ? 'EMPATE' : (wins1 > wins2 ? city1.name : city2.name);
                 const winnerColor = isTie ? '#FFFFFF' : (wins1 > wins2 ? city1.visual.primaryColor : city2.visual.primaryColor);
 
+                const finalStart = currentTiming.intro + currentTiming.rounds.reduce((a, b) => a + b, 0);
+
                 return (
-                    <Sequence from={currentTiming.intro + (rounds.length * currentTiming.round)} durationInFrames={currentTiming.final}>
+                    <Sequence from={finalStart} durationInFrames={currentTiming.final}>
                         <BattleWinner
                             winnerName={winnerName}
                             winnerColor={winnerColor}
@@ -140,7 +191,7 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({
             })()}
             {/* Progress Bar - Retention Hook */}
             {(() => {
-                const totalDuration = currentTiming.intro + (rounds.length * currentTiming.round) + currentTiming.final;
+                const totalDuration = currentTiming.totalFrames;
                 const progress = interpolate(frame, [0, totalDuration], [0, 100], { extrapolateRight: 'clamp' });
 
                 return (
