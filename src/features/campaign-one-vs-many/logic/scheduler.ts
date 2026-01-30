@@ -1,7 +1,7 @@
 import { CampaignOneVsManyInput } from "../types";
 import { CampaignState } from "../logic/state";
 import { orderBattlesForNarrative } from "../logic/narrative";
-import { beatsToFrames } from "../logic/beat";
+import { beatsToFrames, snapToBeat } from "../logic/beat";
 import { simulateMatch } from "../logic/utils";
 
 // Beats per Scene - Dynamic calculation based on number of battles
@@ -30,8 +30,8 @@ export function calculateCampaignSchedule(props: CampaignOneVsManyInput) {
     rounds,
   );
 
-  // 2. Calculate maximum allowed frames (3:18 = 198s = 5940 frames at 30fps)
-  const maxTotalFrames = Math.floor((3 * 60 + 18) * 30); // 5940 frames
+  // 2. Calculate maximum allowed frames (4:55 = 295s = 8850 frames at 30fps)
+  const maxTotalFrames = Math.floor((4 * 60 + 55) * 30); // 8850 frames
 
   // 3. Calculate fixed overhead
   const introFrames = beatsToFrames(BASE_BEATS.INTRO, bpm);
@@ -47,8 +47,12 @@ export function calculateCampaignSchedule(props: CampaignOneVsManyInput) {
   // 5. Distribute frames (battles get 75%, status gets 25%)
   const totalBattleFrames = Math.floor(availableFrames * 0.75);
   const totalStatusFrames = availableFrames - totalBattleFrames;
-  const framesPerBattle = Math.floor(totalBattleFrames / numBattles);
-  const framesPerStatus = numStatusScenes > 0 ? Math.floor(totalStatusFrames / numStatusScenes) : 0;
+
+  // Snap major units to beat
+  const framesPerBattle = snapToBeat(Math.floor(totalBattleFrames / numBattles), bpm);
+  const framesPerStatus = numStatusScenes > 0
+    ? snapToBeat(Math.floor(totalStatusFrames / numStatusScenes), bpm)
+    : 0;
 
   let currentFrame = 0;
   const steps: any[] = [];
@@ -81,11 +85,11 @@ export function calculateCampaignSchedule(props: CampaignOneVsManyInput) {
 
   // --- Battle Loop ---
   opponentCities.forEach((opponent, index) => {
-    // Distribute battle frames to sub-scenes
-    const battleIntroFrames = Math.floor(framesPerBattle * 0.15);
-    const battleWinnerFrames = Math.floor(framesPerBattle * 0.15);
+    // Distribute battle frames to sub-scenes and snap each to beat
+    const battleIntroFrames = snapToBeat(Math.floor(framesPerBattle * 0.15), bpm);
+    const battleWinnerFrames = snapToBeat(Math.floor(framesPerBattle * 0.15), bpm);
     const battleRoundsFrames = framesPerBattle - battleIntroFrames - battleWinnerFrames;
-    const battleRoundFrames = Math.floor(battleRoundsFrames / rounds.length);
+    const battleRoundFrames = snapToBeat(Math.floor(battleRoundsFrames / rounds.length), bpm);
 
     // Simulate result for state update
     const matchResult = simulateMatch(mainCity, opponent, rounds);

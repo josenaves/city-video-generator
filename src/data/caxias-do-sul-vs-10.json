@@ -1,0 +1,261 @@
+{
+    "feature": "campaign_one_vs_many",
+    "mainCity": {
+        "name": "Caxias do Sul",
+        "nickname": "Pérola das Colônias",
+        "data": {
+            "population": 503237,
+            "areaKm2": 1643.8,
+            "gdpPerCapita": 62610,
+            "hospitalBedsPerThousand": 2.4,
+            "idh": 0.782,
+            "higherEducationPct": 18.2
+        },
+        "visual": {
+            "primaryColor": "#8B0000",
+            "secondaryColor": "#FFD700",
+            "image": "caxias-do-sul.jpg"
+        }
+    },
+    "opponentCities": [
+        {
+            "name": "Bento Gonçalves",
+            "nickname": "Capital Brasileira do Vinho",
+            "data": {
+                "population": 127352,
+                "areaKm2": 274.3,
+                "gdpPerCapita": 62350,
+                "hospitalBedsPerThousand": 1.9,
+                "idh": 0.778,
+                "higherEducationPct": 21.5
+            },
+            "visual": {
+                "primaryColor": "#4B0082",
+                "secondaryColor": "#FFFFFF",
+                "image": "bento-goncalves.jpg"
+            }
+        },
+        {
+            "name": "Gramado",
+            "nickname": "Suíça Brasileira",
+            "data": {
+                "population": 38649,
+                "areaKm2": 237.7,
+                "gdpPerCapita": 72010,
+                "hospitalBedsPerThousand": 2.1,
+                "idh": 0.766,
+                "higherEducationPct": 24.8
+            },
+            "visual": {
+                "primaryColor": "#2E8B57",
+                "secondaryColor": "#F5F5DC",
+                "image": "gramado.jpg"
+            }
+        },
+        {
+            "name": "Passo Fundo",
+            "nickname": "Capital Nacional da Literatura",
+            "data": {
+                "population": 212049,
+                "areaKm2": 783.4,
+                "gdpPerCapita": 49970,
+                "hospitalBedsPerThousand": 4.5,
+                "idh": 0.776,
+                "higherEducationPct": 17.5
+            },
+            "visual": {
+                "primaryColor": "#006400",
+                "secondaryColor": "#FFFFFF",
+                "image": "passo-fundo.webp"
+            }
+        },
+        {
+            "name": "Pelotas",
+            "nickname": "Capital Nacional do Doce",
+            "data": {
+                "population": 332610,
+                "areaKm2": 1608.7,
+                "gdpPerCapita": 31440,
+                "hospitalBedsPerThousand": 2.2,
+                "idh": 0.739,
+                "higherEducationPct": 16.2
+            },
+            "visual": {
+                "primaryColor": "#00008B",
+                "secondaryColor": "#FFD700",
+                "image": "pelotas.png"
+            }
+        },
+        {
+            "name": "Lajeado",
+            "nickname": "Capital do Vale",
+            "data": {
+                "population": 97456,
+                "areaKm2": 90.0,
+                "gdpPerCapita": 55180,
+                "hospitalBedsPerThousand": 2.8,
+                "idh": 0.778,
+                "higherEducationPct": 19.4
+            },
+            "visual": {
+                "primaryColor": "#FF8C00",
+                "secondaryColor": "#FFFFFF",
+                "image": "lajeado.webp"
+            }
+        },
+        {
+            "name": "Farroupilha",
+            "nickname": "Berça da Imigração Italiana",
+            "data": {
+                "population": 72844,
+                "areaKm2": 430.6,
+                "gdpPerCapita": 60370,
+                "hospitalBedsPerThousand": 1.7,
+                "idh": 0.777,
+                "higherEducationPct": 15.8
+            },
+            "visual": {
+                "primaryColor": "#CE1126",
+                "secondaryColor": "#008C45",
+                "image": "farroupilha.jpg"
+            }
+        },
+        {
+            "name": "Vacaria",
+            "nickname": "Porteira do Rio Grande",
+            "data": {
+                "population": 66294,
+                "areaKm2": 2123.7,
+                "gdpPerCapita": 48340,
+                "hospitalBedsPerThousand": 1.5,
+                "idh": 0.715,
+                "higherEducationPct": 12.5
+            },
+            "visual": {
+                "primaryColor": "#8B4513",
+                "secondaryColor": "#FFFFFF",
+                "image": "vacaria.jpg"
+            }
+        },
+        {
+            "name": "Rio Grande",
+            "nickname": "Cidade Noiva do Mar",
+            "data": {
+                "population": 196862,
+                "areaKm2": 2709.5,
+                "gdpPerCapita": 46080,
+                "hospitalBedsPerThousand": 2.0,
+                "idh": 0.744,
+                "higherEducationPct": 14.1
+            },
+            "visual": {
+                "primaryColor": "#0000FF",
+                "secondaryColor": "#FFFFFF",
+                "image": "rio-grande.webp"
+            }
+        },
+        {
+            "name": "Santa Maria",
+            "nickname": "Cidade Cultura",
+            "data": {
+                "population": 280490,
+                "areaKm2": 1781.7,
+                "gdpPerCapita": 31650,
+                "hospitalBedsPerThousand": 3.8,
+                "idh": 0.784,
+                "higherEducationPct": 22.0
+            },
+            "visual": {
+                "primaryColor": "#B22222",
+                "secondaryColor": "#FFFFFF",
+                "image": "santa-maria.png"
+            }
+        },
+        {
+            "name": "Novo Hamburgo",
+            "nickname": "Capital Nacional do Calçado",
+            "data": {
+                "population": 231579,
+                "areaKm2": 223.8,
+                "gdpPerCapita": 44740,
+                "hospitalBedsPerThousand": 1.8,
+                "idh": 0.747,
+                "higherEducationPct": 16.5
+            },
+            "visual": {
+                "primaryColor": "#1E90FF",
+                "secondaryColor": "#FFFFFF",
+                "image": "novo-hamburgo.jpg"
+            }
+        }
+    ],
+    "rounds": [
+        {
+            "id": "population",
+            "title": "POPULAÇÃO",
+            "type": "bar",
+            "unit": "hab",
+            "field": "population",
+            "format": "compact"
+        },
+        {
+            "id": "area",
+            "title": "ÁREA",
+            "type": "pie",
+            "unit": "km²",
+            "field": "areaKm2",
+            "format": "number"
+        },
+        {
+            "id": "gdp",
+            "title": "PIB PER CAPITA",
+            "type": "line",
+            "unit": "R$",
+            "field": "gdpPerCapita",
+            "format": "currency"
+        },
+        {
+            "id": "beds",
+            "title": "LEITOS/1K",
+            "type": "column",
+            "unit": "",
+            "field": "hospitalBedsPerThousand",
+            "format": "decimal"
+        },
+        {
+            "id": "idh",
+            "title": "IDH",
+            "type": "radar",
+            "unit": "",
+            "field": "idh",
+            "format": "decimal3"
+        },
+        {
+            "id": "education",
+            "title": "ESCOLARIDADE",
+            "type": "donut",
+            "unit": "%",
+            "field": "higherEducationPct",
+            "format": "percent"
+        }
+    ],
+    "sponsorship": {
+        "enabled": false,
+        "title": "Um oferecimento",
+        "items": [
+            {
+                "type": "logo",
+                "src": "favicon.ico",
+                "label": "City Battles 2026"
+            }
+        ]
+    },
+    "video": {
+        "aspectRatio": "16:9",
+        "title": "Caxias do Sul vs 10 cidades",
+        "soundtrack": {
+            "src": "audio/Schizo - Anno Domini Beats.mp3",
+            "bpm": 140
+        }
+    }
+}

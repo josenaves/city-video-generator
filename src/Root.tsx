@@ -205,6 +205,9 @@ import tubaraoVs10Data from "./data/tubarao-vs-10.json";
 import caxiasDoSulPassoFundoData from "./data/caxias-do-sul-passo-fundo.json";
 
 // @ts-ignore
+import caxiasDoSulVs10Data from "./data/caxias-do-sul-vs-10.json";
+
+// @ts-ignore
 import tombosRessaquinhaData from "./data/tombos-ressaquinha.json";
 // @ts-ignore
 import mirassolVotuporangaData from "./data/mirassol-votuporanga.json";
@@ -323,6 +326,15 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={tubaraoVs10Data as any}
+      />
+      <Composition
+        id="CaxiasDoSulVs10Campaign"
+        component={CampaignVideo}
+        durationInFrames={calculateCampaignTotalDuration(caxiasDoSulVs10Data)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={caxiasDoSulVs10Data as any}
       />
 
       {championships.map((champ) => (
