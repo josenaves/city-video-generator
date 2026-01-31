@@ -1,95 +1,95 @@
 {
-    "matchId": "betim-vs-contagem-2026",
-    "title": "Betim vs Contagem",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3106705,
-            "name": "Betim",
-            "state": "MG",
-            "nickname": "Cidade do Automóvel",
-            "data": {
-                "population": 411846,
-                "areaKm2": 343.88,
-                "gdpPerCapita": 73624.78,
-                "hospitalBedsPerThousand": 1.1,
-                "idh": 0.749,
-                "higherEducationPct": 17.4
-            },
-            "visual": {
-                "primaryColor": "#008000",
-                "secondaryColor": "#0000FF",
-                "image": "betim.jpg"
-            }
-        },
-        {
-            "ibgeId": 3118601,
-            "name": "Contagem",
-            "state": "MG",
-            "nickname": "Cidade Industrial",
-            "data": {
-                "population": 621863,
-                "areaKm2": 194.73,
-                "gdpPerCapita": 54136.41,
-                "hospitalBedsPerThousand": 1.5,
-                "idh": 0.756,
-                "higherEducationPct": 18.2
-            },
-            "visual": {
-                "primaryColor": "#000080",
-                "secondaryColor": "#FFFFFF",
-                "image": "contagem.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "betim-vs-contagem-2026",
+  "title": "Betim vs Contagem",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3106705,
+      "name": "Betim",
+      "state": "MG",
+      "nickname": "Cidade do Automóvel",
+      "data": {
+        "population": 411846,
+        "areaKm2": 343.88,
+        "gdpPerCapita": 73624.78,
+        "hospitalBedsPerThousand": 1.1,
+        "idh": 0.749,
+        "higherEducationPct": 17.4
+      },
+      "visual": {
+        "primaryColor": "#008000",
+        "secondaryColor": "#0000FF",
+        "image": "images/cities/mg/b/betim.jpg"
+      }
+    },
+    {
+      "ibgeId": 3118601,
+      "name": "Contagem",
+      "state": "MG",
+      "nickname": "Cidade Industrial",
+      "data": {
+        "population": 621863,
+        "areaKm2": 194.73,
+        "gdpPerCapita": 54136.41,
+        "hospitalBedsPerThousand": 1.5,
+        "idh": 0.756,
+        "higherEducationPct": 18.2
+      },
+      "visual": {
+        "primaryColor": "#000080",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/mg/c/contagem.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

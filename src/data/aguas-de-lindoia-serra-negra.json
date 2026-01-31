@@ -1,89 +1,89 @@
 {
-    "matchId": "aguas-de-lindoia-serra-negra",
-    "title": "O Duelo do Circuito das Águas",
-    "theme": "Cidades do Interior de São Paulo",
-    "cities": [
-        {
-            "ibgeId": "3500501",
-            "name": "Águas de Lindóia",
-            "state": "SP",
-            "nickname": "Capital Termal do Brasil",
-            "data": {
-                "populacao": 17930,
-                "areaKm2": 60.13,
-                "pibPerCapita": 30971,
-                "leitos": 2.34,
-                "idh": 0.745,
-                "ensinoSuperior": 15.2
-            },
-            "visual": {
-                "primaryColor": "#004a99",
-                "secondaryColor": "#ffffff",
-                "image": "aguas-de-lindoia.jpg"
-            }
-        },
-        {
-            "ibgeId": "3551603",
-            "name": "Serra Negra",
-            "state": "SP",
-            "nickname": "Cidade da Saúde",
-            "data": {
-                "populacao": 29894,
-                "areaKm2": 203.73,
-                "pibPerCapita": 28485,
-                "leitos": 0.64,
-                "idh": 0.767,
-                "ensinoSuperior": 17.8
-            },
-            "visual": {
-                "primaryColor": "#e6b400",
-                "secondaryColor": "#ffffff",
-                "image": "serra-negra.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS/1K",
-            "field": "leitos",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal3",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "aguas-de-lindoia-serra-negra",
+  "title": "O Duelo do Circuito das Águas",
+  "theme": "Cidades do Interior de São Paulo",
+  "cities": [
+    {
+      "ibgeId": "3500501",
+      "name": "Águas de Lindóia",
+      "state": "SP",
+      "nickname": "Capital Termal do Brasil",
+      "data": {
+        "populacao": 17930,
+        "areaKm2": 60.13,
+        "pibPerCapita": 30971,
+        "leitos": 2.34,
+        "idh": 0.745,
+        "ensinoSuperior": 15.2
+      },
+      "visual": {
+        "primaryColor": "#004a99",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/a/aguas-de-lindoia.jpg"
+      }
+    },
+    {
+      "ibgeId": "3551603",
+      "name": "Serra Negra",
+      "state": "SP",
+      "nickname": "Cidade da Saúde",
+      "data": {
+        "populacao": 29894,
+        "areaKm2": 203.73,
+        "pibPerCapita": 28485,
+        "leitos": 0.64,
+        "idh": 0.767,
+        "ensinoSuperior": 17.8
+      },
+      "visual": {
+        "primaryColor": "#e6b400",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/s/serra-negra.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS/1K",
+      "field": "leitos",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal3",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

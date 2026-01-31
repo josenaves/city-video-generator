@@ -1,95 +1,95 @@
 {
-    "matchId": "barueri-vs-itapevi-2025",
-    "title": "Barueri vs Itapevi",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3505708,
-            "name": "Barueri",
-            "state": "SP",
-            "nickname": "Flor Vermelha",
-            "data": {
-                "population": 316473,
-                "areaKm2": 65.7,
-                "gdpPerCapita": 226391,
-                "hospitalBedsPerThousand": 2.38,
-                "idh": 0.786,
-                "higherEducationPct": 12.18
-            },
-            "visual": {
-                "primaryColor": "#FFD700",
-                "secondaryColor": "#B8860B",
-                "image": "barueri.jpg"
-            }
-        },
-        {
-            "ibgeId": 3522505,
-            "name": "Itapevi",
-            "state": "SP",
-            "nickname": "Cidade do Futuro",
-            "data": {
-                "population": 232513,
-                "areaKm2": 82.7,
-                "gdpPerCapita": 67220,
-                "hospitalBedsPerThousand": 1.02,
-                "idh": 0.735,
-                "higherEducationPct": 4.76
-            },
-            "visual": {
-                "primaryColor": "#003366",
-                "secondaryColor": "#002244",
-                "image": "itapevi.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "barueri-vs-itapevi-2025",
+  "title": "Barueri vs Itapevi",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3505708,
+      "name": "Barueri",
+      "state": "SP",
+      "nickname": "Flor Vermelha",
+      "data": {
+        "population": 316473,
+        "areaKm2": 65.7,
+        "gdpPerCapita": 226391,
+        "hospitalBedsPerThousand": 2.38,
+        "idh": 0.786,
+        "higherEducationPct": 12.18
+      },
+      "visual": {
+        "primaryColor": "#FFD700",
+        "secondaryColor": "#B8860B",
+        "image": "images/cities/sp/b/barueri.jpg"
+      }
+    },
+    {
+      "ibgeId": 3522505,
+      "name": "Itapevi",
+      "state": "SP",
+      "nickname": "Cidade do Futuro",
+      "data": {
+        "population": 232513,
+        "areaKm2": 82.7,
+        "gdpPerCapita": 67220,
+        "hospitalBedsPerThousand": 1.02,
+        "idh": 0.735,
+        "higherEducationPct": 4.76
+      },
+      "visual": {
+        "primaryColor": "#003366",
+        "secondaryColor": "#002244",
+        "image": "images/cities/sp/i/itapevi.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

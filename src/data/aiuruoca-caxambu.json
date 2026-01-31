@@ -1,95 +1,95 @@
 {
-    "matchId": "aiuruoca-vs-caxambu-2026",
-    "title": "Aiuruoca vs Caxambu",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3101102,
-            "name": "Aiuruoca",
-            "state": "MG",
-            "nickname": "Cidade das Cachoeiras",
-            "data": {
-                "population": 6233,
-                "areaKm2": 649.68,
-                "gdpPerCapita": 24774.89,
-                "hospitalBedsPerThousand": 5.5,
-                "idh": 0.668,
-                "higherEducationPct": 8.5
-            },
-            "visual": {
-                "primaryColor": "#228B22",
-                "secondaryColor": "#8B4513",
-                "image": "aiuruoca.jpg"
-            }
-        },
-        {
-            "ibgeId": 3115502,
-            "name": "Caxambu",
-            "state": "MG",
-            "nickname": "Cidade das Águas",
-            "data": {
-                "population": 21056,
-                "areaKm2": 100.48,
-                "gdpPerCapita": 22079.72,
-                "hospitalBedsPerThousand": 1.0,
-                "idh": 0.743,
-                "higherEducationPct": 14.2
-            },
-            "visual": {
-                "primaryColor": "#1E90FF",
-                "secondaryColor": "#FFFFFF",
-                "image": "caxambu.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "aiuruoca-vs-caxambu-2026",
+  "title": "Aiuruoca vs Caxambu",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3101102,
+      "name": "Aiuruoca",
+      "state": "MG",
+      "nickname": "Cidade das Cachoeiras",
+      "data": {
+        "population": 6233,
+        "areaKm2": 649.68,
+        "gdpPerCapita": 24774.89,
+        "hospitalBedsPerThousand": 5.5,
+        "idh": 0.668,
+        "higherEducationPct": 8.5
+      },
+      "visual": {
+        "primaryColor": "#228B22",
+        "secondaryColor": "#8B4513",
+        "image": "images/cities/mg/a/aiuruoca.jpg"
+      }
+    },
+    {
+      "ibgeId": 3115502,
+      "name": "Caxambu",
+      "state": "MG",
+      "nickname": "Cidade das Águas",
+      "data": {
+        "population": 21056,
+        "areaKm2": 100.48,
+        "gdpPerCapita": 22079.72,
+        "hospitalBedsPerThousand": 1,
+        "idh": 0.743,
+        "higherEducationPct": 14.2
+      },
+      "visual": {
+        "primaryColor": "#1E90FF",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/mg/c/caxambu.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

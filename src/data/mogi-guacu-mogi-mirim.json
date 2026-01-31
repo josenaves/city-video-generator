@@ -1,89 +1,89 @@
 {
-    "matchId": "mogi-guacu-mogi-mirim",
-    "title": "A Batalha Mogi",
-    "theme": "Cidades do Interior de São Paulo",
-    "cities": [
-        {
-            "ibgeId": "3530706",
-            "name": "Mogi Guaçu",
-            "state": "SP",
-            "nickname": "Cidade do Rio Grande",
-            "data": {
-                "populacao": 152895,
-                "areaKm2": 885,
-                "pibPerCapita": 45218,
-                "leitos": 285,
-                "idh": 0.786,
-                "ensinoSuperior": 24.3
-            },
-            "visual": {
-                "primaryColor": "#1565c0",
-                "secondaryColor": "#ffffff",
-                "image": "mogi-guacu.jpg"
-            }
-        },
-        {
-            "ibgeId": "3530805",
-            "name": "Mogi Mirim",
-            "state": "SP",
-            "nickname": "Cidade do Café",
-            "data": {
-                "populacao": 93245,
-                "areaKm2": 499,
-                "pibPerCapita": 38245,
-                "leitos": 185,
-                "idh": 0.774,
-                "ensinoSuperior": 22.7
-            },
-            "visual": {
-                "primaryColor": "#5d4037",
-                "secondaryColor": "#ffffff",
-                "image": "mogi-mirim.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS",
-            "field": "leitos",
-            "format": "number",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "mogi-guacu-mogi-mirim",
+  "title": "A Batalha Mogi",
+  "theme": "Cidades do Interior de São Paulo",
+  "cities": [
+    {
+      "ibgeId": "3530706",
+      "name": "Mogi Guaçu",
+      "state": "SP",
+      "nickname": "Cidade do Rio Grande",
+      "data": {
+        "populacao": 152895,
+        "areaKm2": 885,
+        "pibPerCapita": 45218,
+        "leitos": 285,
+        "idh": 0.786,
+        "ensinoSuperior": 24.3
+      },
+      "visual": {
+        "primaryColor": "#1565c0",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/m/mogi-guacu.jpg"
+      }
+    },
+    {
+      "ibgeId": "3530805",
+      "name": "Mogi Mirim",
+      "state": "SP",
+      "nickname": "Cidade do Café",
+      "data": {
+        "populacao": 93245,
+        "areaKm2": 499,
+        "pibPerCapita": 38245,
+        "leitos": 185,
+        "idh": 0.774,
+        "ensinoSuperior": 22.7
+      },
+      "visual": {
+        "primaryColor": "#5d4037",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/m/mogi-mirim.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS",
+      "field": "leitos",
+      "format": "number",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

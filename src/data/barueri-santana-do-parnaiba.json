@@ -1,95 +1,95 @@
 {
-    "matchId": "barueri-vs-santana-do-parnaiba-2025",
-    "title": "Barueri vs Santana do Parnaíba",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3505708,
-            "name": "Barueri",
-            "state": "SP",
-            "nickname": "Flor Vermelha",
-            "data": {
-                "population": 316473,
-                "areaKm2": 65.7,
-                "gdpPerCapita": 226391,
-                "hospitalBedsPerThousand": 2.38,
-                "idh": 0.786,
-                "higherEducationPct": 12.18
-            },
-            "visual": {
-                "primaryColor": "#FFD700",
-                "secondaryColor": "#B8860B",
-                "image": "barueri.jpg"
-            }
-        },
-        {
-            "ibgeId": 3550308,
-            "name": "Santana do Parnaíba",
-            "state": "SP",
-            "nickname": "Berço da Bandeira",
-            "data": {
-                "population": 154105,
-                "areaKm2": 179.95,
-                "gdpPerCapita": 92978,
-                "hospitalBedsPerThousand": 1.29,
-                "idh": 0.814,
-                "higherEducationPct": 30.24
-            },
-            "visual": {
-                "primaryColor": "#FFFFFF",
-                "secondaryColor": "#000080",
-                "image": "santana-do-parnaiba.webp"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "barueri-vs-santana-do-parnaiba-2025",
+  "title": "Barueri vs Santana do Parnaíba",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3505708,
+      "name": "Barueri",
+      "state": "SP",
+      "nickname": "Flor Vermelha",
+      "data": {
+        "population": 316473,
+        "areaKm2": 65.7,
+        "gdpPerCapita": 226391,
+        "hospitalBedsPerThousand": 2.38,
+        "idh": 0.786,
+        "higherEducationPct": 12.18
+      },
+      "visual": {
+        "primaryColor": "#FFD700",
+        "secondaryColor": "#B8860B",
+        "image": "images/cities/sp/b/barueri.jpg"
+      }
+    },
+    {
+      "ibgeId": 3550308,
+      "name": "Santana do Parnaíba",
+      "state": "SP",
+      "nickname": "Berço da Bandeira",
+      "data": {
+        "population": 154105,
+        "areaKm2": 179.95,
+        "gdpPerCapita": 92978,
+        "hospitalBedsPerThousand": 1.29,
+        "idh": 0.814,
+        "higherEducationPct": 30.24
+      },
+      "visual": {
+        "primaryColor": "#FFFFFF",
+        "secondaryColor": "#000080",
+        "image": "images/cities/sp/s/santana-do-parnaiba.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

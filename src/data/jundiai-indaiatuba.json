@@ -1,89 +1,89 @@
 {
-    "matchId": "jundiai-indaiatuba",
-    "title": "A Batalha das Gigantes da Região",
-    "theme": "Cidades do Interior de São Paulo",
-    "cities": [
-        {
-            "ibgeId": "3525904",
-            "name": "Jundiaí",
-            "state": "SP",
-            "nickname": "Terra da Uva",
-            "data": {
-                "populacao": 443221,
-                "areaKm2": 431.20,
-                "pibPerCapita": 135081,
-                "leitos": 1.70,
-                "idh": 0.822,
-                "ensinoSuperior": 23.5
-            },
-            "visual": {
-                "primaryColor": "#0056b3",
-                "secondaryColor": "#ffffff",
-                "image": "jundiai.jpg"
-            }
-        },
-        {
-            "ibgeId": "3520509",
-            "name": "Indaiatuba",
-            "state": "SP",
-            "nickname": "Cidade do Sol",
-            "data": {
-                "populacao": 255748,
-                "areaKm2": 311.55,
-                "pibPerCapita": 87525,
-                "leitos": 1.10,
-                "idh": 0.788,
-                "ensinoSuperior": 21.0
-            },
-            "visual": {
-                "primaryColor": "#008148",
-                "secondaryColor": "#ffffff",
-                "image": "indaiatuba.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS/1K",
-            "field": "leitos",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal3",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "jundiai-indaiatuba",
+  "title": "A Batalha das Gigantes da Região",
+  "theme": "Cidades do Interior de São Paulo",
+  "cities": [
+    {
+      "ibgeId": "3525904",
+      "name": "Jundiaí",
+      "state": "SP",
+      "nickname": "Terra da Uva",
+      "data": {
+        "populacao": 443221,
+        "areaKm2": 431.2,
+        "pibPerCapita": 135081,
+        "leitos": 1.7,
+        "idh": 0.822,
+        "ensinoSuperior": 23.5
+      },
+      "visual": {
+        "primaryColor": "#0056b3",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/j/jundiai.jpg"
+      }
+    },
+    {
+      "ibgeId": "3520509",
+      "name": "Indaiatuba",
+      "state": "SP",
+      "nickname": "Cidade do Sol",
+      "data": {
+        "populacao": 255748,
+        "areaKm2": 311.55,
+        "pibPerCapita": 87525,
+        "leitos": 1.1,
+        "idh": 0.788,
+        "ensinoSuperior": 21
+      },
+      "visual": {
+        "primaryColor": "#008148",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/i/indaiatuba.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS/1K",
+      "field": "leitos",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal3",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

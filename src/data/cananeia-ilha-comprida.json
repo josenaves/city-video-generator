@@ -1,95 +1,95 @@
 {
-    "matchId": "cananeia-vs-ilha-comprida-2025",
-    "title": "Cananéia vs Ilha Comprida",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3509908,
-            "name": "Cananéia",
-            "state": "SP",
-            "nickname": "Cidade Ilustre",
-            "data": {
-                "population": 12289,
-                "areaKm2": 1237.35,
-                "gdpPerCapita": 21082,
-                "hospitalBedsPerThousand": 0.5,
-                "idh": 0.720,
-                "higherEducationPct": 98.7
-            },
-            "visual": {
-                "primaryColor": "#006400",
-                "secondaryColor": "#FFFFFF",
-                "image": "cananeia.jpg"
-            }
-        },
-        {
-            "ibgeId": 3520426,
-            "name": "Ilha Comprida",
-            "state": "SP",
-            "nickname": "Duna Preservada",
-            "data": {
-                "population": 13419,
-                "areaKm2": 196.57,
-                "gdpPerCapita": 118036,
-                "hospitalBedsPerThousand": 0.0,
-                "idh": 0.725,
-                "higherEducationPct": 99.7
-            },
-            "visual": {
-                "primaryColor": "#00BFFF",
-                "secondaryColor": "#FFFFFF",
-                "image": "ilha-comprida.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "cananeia-vs-ilha-comprida-2025",
+  "title": "Cananéia vs Ilha Comprida",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3509908,
+      "name": "Cananéia",
+      "state": "SP",
+      "nickname": "Cidade Ilustre",
+      "data": {
+        "population": 12289,
+        "areaKm2": 1237.35,
+        "gdpPerCapita": 21082,
+        "hospitalBedsPerThousand": 0.5,
+        "idh": 0.72,
+        "higherEducationPct": 98.7
+      },
+      "visual": {
+        "primaryColor": "#006400",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/sp/c/cananeia.jpg"
+      }
+    },
+    {
+      "ibgeId": 3520426,
+      "name": "Ilha Comprida",
+      "state": "SP",
+      "nickname": "Duna Preservada",
+      "data": {
+        "population": 13419,
+        "areaKm2": 196.57,
+        "gdpPerCapita": 118036,
+        "hospitalBedsPerThousand": 0,
+        "idh": 0.725,
+        "higherEducationPct": 99.7
+      },
+      "visual": {
+        "primaryColor": "#00BFFF",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/sp/i/ilha-comprida.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

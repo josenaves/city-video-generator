@@ -1,89 +1,89 @@
 {
-    "matchId": "ribeirao-preto-sj-rio-preto",
-    "title": "Duelo do Interior Paulista",
-    "theme": "Cidades de São Paulo",
-    "cities": [
-        {
-            "ibgeId": "3543402",
-            "name": "Ribeirão Preto",
-            "state": "SP",
-            "nickname": "Califórnia Brasileira",
-            "data": {
-                "populacao": 731639,
-                "areaKm2": 651,
-                "pibPerCapita": 74869,
-                "leitos": 2500,
-                "idh": 0.800,
-                "ensinoSuperior": 20.6
-            },
-            "visual": {
-                "primaryColor": "#003399",
-                "secondaryColor": "#ffffff",
-                "image": "ribeirao-preto.jpg"
-            }
-        },
-        {
-            "ibgeId": "3549805",
-            "name": "S. José do Rio Preto",
-            "state": "SP",
-            "nickname": "Capital dos Grandes Lagos",
-            "data": {
-                "populacao": 504166,
-                "areaKm2": 432,
-                "pibPerCapita": 54934,
-                "leitos": 2169,
-                "idh": 0.797,
-                "ensinoSuperior": 25.2
-            },
-            "visual": {
-                "primaryColor": "#cc0000",
-                "secondaryColor": "#ffffff",
-                "image": "sao-jose-do-rio-preto.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS",
-            "field": "leitos",
-            "format": "number",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "ribeirao-preto-sj-rio-preto",
+  "title": "Duelo do Interior Paulista",
+  "theme": "Cidades de São Paulo",
+  "cities": [
+    {
+      "ibgeId": "3543402",
+      "name": "Ribeirão Preto",
+      "state": "SP",
+      "nickname": "Califórnia Brasileira",
+      "data": {
+        "populacao": 731639,
+        "areaKm2": 651,
+        "pibPerCapita": 74869,
+        "leitos": 2500,
+        "idh": 0.8,
+        "ensinoSuperior": 20.6
+      },
+      "visual": {
+        "primaryColor": "#003399",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/r/ribeirao-preto.jpg"
+      }
+    },
+    {
+      "ibgeId": "3549805",
+      "name": "S. José do Rio Preto",
+      "state": "SP",
+      "nickname": "Capital dos Grandes Lagos",
+      "data": {
+        "populacao": 504166,
+        "areaKm2": 432,
+        "pibPerCapita": 54934,
+        "leitos": 2169,
+        "idh": 0.797,
+        "ensinoSuperior": 25.2
+      },
+      "visual": {
+        "primaryColor": "#cc0000",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/s/sao-jose-do-rio-preto.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS",
+      "field": "leitos",
+      "format": "number",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

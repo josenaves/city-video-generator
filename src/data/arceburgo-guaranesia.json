@@ -1,95 +1,95 @@
 {
-    "matchId": "arceburgo-vs-guaranesia-2025",
-    "title": "Arceburgo vs Guaranésia",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3104007,
-            "name": "Arceburgo",
-            "state": "MG",
-            "nickname": "Cidade das Águas",
-            "data": {
-                "population": 10500,
-                "areaKm2": 164,
-                "gdpPerCapita": 22000,
-                "hospitalBedsPerThousand": 1.8,
-                "idh": 0.712,
-                "higherEducationPct": 8
-            },
-            "visual": {
-                "primaryColor": "#2E7D32",
-                "secondaryColor": "#1B5E20",
-                "image": "arceburgo.jpg"
-            }
-        },
-        {
-            "ibgeId": 3128501,
-            "name": "Guaranésia",
-            "state": "MG",
-            "nickname": "Terra do Café",
-            "data": {
-                "population": 19800,
-                "areaKm2": 294,
-                "gdpPerCapita": 24500,
-                "hospitalBedsPerThousand": 2.1,
-                "idh": 0.728,
-                "higherEducationPct": 10
-            },
-            "visual": {
-                "primaryColor": "#D32F2F",
-                "secondaryColor": "#B71C1C",
-                "image": "guaranesia.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "arceburgo-vs-guaranesia-2025",
+  "title": "Arceburgo vs Guaranésia",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3104007,
+      "name": "Arceburgo",
+      "state": "MG",
+      "nickname": "Cidade das Águas",
+      "data": {
+        "population": 10500,
+        "areaKm2": 164,
+        "gdpPerCapita": 22000,
+        "hospitalBedsPerThousand": 1.8,
+        "idh": 0.712,
+        "higherEducationPct": 8
+      },
+      "visual": {
+        "primaryColor": "#2E7D32",
+        "secondaryColor": "#1B5E20",
+        "image": "images/cities/mg/a/arceburgo.jpg"
+      }
+    },
+    {
+      "ibgeId": 3128501,
+      "name": "Guaranésia",
+      "state": "MG",
+      "nickname": "Terra do Café",
+      "data": {
+        "population": 19800,
+        "areaKm2": 294,
+        "gdpPerCapita": 24500,
+        "hospitalBedsPerThousand": 2.1,
+        "idh": 0.728,
+        "higherEducationPct": 10
+      },
+      "visual": {
+        "primaryColor": "#D32F2F",
+        "secondaryColor": "#B71C1C",
+        "image": "images/cities/mg/g/guaranesia.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

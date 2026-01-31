@@ -1,95 +1,95 @@
 {
-    "matchId": "marilia-vs-prudente-2025",
-    "title": "Marília vs Pres. Prudente",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3529005,
-            "name": "Marília",
-            "state": "SP",
-            "nickname": "Capital Nacional do Alimento",
-            "data": {
-                "population": 237629,
-                "areaKm2": 1170.05,
-                "gdpPerCapita": 52635,
-                "hospitalBedsPerThousand": 3.2,
-                "idh": 0.798,
-                "higherEducationPct": 23.0
-            },
-            "visual": {
-                "primaryColor": "#D32F2F",
-                "secondaryColor": "#B71C1C",
-                "image": "marilia.jpg"
-            }
-        },
-        {
-            "ibgeId": 3541406,
-            "name": "Pres. Prudente",
-            "state": "SP",
-            "nickname": "Capital do Oeste Paulista",
-            "data": {
-                "population": 225668,
-                "areaKm2": 560.64,
-                "gdpPerCapita": 51481,
-                "hospitalBedsPerThousand": 3.5,
-                "idh": 0.806,
-                "higherEducationPct": 24.0
-            },
-            "visual": {
-                "primaryColor": "#1976D2",
-                "secondaryColor": "#0D47A1",
-                "image": "presidente-prudente.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "marilia-vs-prudente-2025",
+  "title": "Marília vs Pres. Prudente",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3529005,
+      "name": "Marília",
+      "state": "SP",
+      "nickname": "Capital Nacional do Alimento",
+      "data": {
+        "population": 237629,
+        "areaKm2": 1170.05,
+        "gdpPerCapita": 52635,
+        "hospitalBedsPerThousand": 3.2,
+        "idh": 0.798,
+        "higherEducationPct": 23
+      },
+      "visual": {
+        "primaryColor": "#D32F2F",
+        "secondaryColor": "#B71C1C",
+        "image": "images/cities/sp/m/marilia.jpg"
+      }
+    },
+    {
+      "ibgeId": 3541406,
+      "name": "Pres. Prudente",
+      "state": "SP",
+      "nickname": "Capital do Oeste Paulista",
+      "data": {
+        "population": 225668,
+        "areaKm2": 560.64,
+        "gdpPerCapita": 51481,
+        "hospitalBedsPerThousand": 3.5,
+        "idh": 0.806,
+        "higherEducationPct": 24
+      },
+      "visual": {
+        "primaryColor": "#1976D2",
+        "secondaryColor": "#0D47A1",
+        "image": "images/cities/sp/p/presidente-prudente.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

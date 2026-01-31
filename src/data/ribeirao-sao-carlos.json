@@ -1,95 +1,95 @@
 {
-    "matchId": "ribeirao-vs-sao-carlos-2025",
-    "title": "Ribeirão Preto vs São Carlos",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3543402,
-            "name": "Ribeirão Preto",
-            "state": "SP",
-            "nickname": "A Califórnia Brasileira",
-            "data": {
-                "population": 698642,
-                "areaKm2": 650.92,
-                "gdpPerCapita": 74869,
-                "hospitalBedsPerThousand": 1.9,
-                "idh": 0.800,
-                "higherEducationPct": 25.87
-            },
-            "visual": {
-                "primaryColor": "#003399",
-                "secondaryColor": "#002277",
-                "image": "ribeirao-preto.jpg"
-            }
-        },
-        {
-            "ibgeId": 3548906,
-            "name": "São Carlos",
-            "state": "SP",
-            "nickname": "Capital da Tecnologia",
-            "data": {
-                "population": 254822,
-                "areaKm2": 1136.90,
-                "gdpPerCapita": 72146,
-                "hospitalBedsPerThousand": 2.2,
-                "idh": 0.805,
-                "higherEducationPct": 24.90
-            },
-            "visual": {
-                "primaryColor": "#FFCC00",
-                "secondaryColor": "#FFAA00",
-                "image": "sao-carlos.webp"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "ribeirao-vs-sao-carlos-2025",
+  "title": "Ribeirão Preto vs São Carlos",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3543402,
+      "name": "Ribeirão Preto",
+      "state": "SP",
+      "nickname": "A Califórnia Brasileira",
+      "data": {
+        "population": 698642,
+        "areaKm2": 650.92,
+        "gdpPerCapita": 74869,
+        "hospitalBedsPerThousand": 1.9,
+        "idh": 0.8,
+        "higherEducationPct": 25.87
+      },
+      "visual": {
+        "primaryColor": "#003399",
+        "secondaryColor": "#002277",
+        "image": "images/cities/sp/r/ribeirao-preto.jpg"
+      }
+    },
+    {
+      "ibgeId": 3548906,
+      "name": "São Carlos",
+      "state": "SP",
+      "nickname": "Capital da Tecnologia",
+      "data": {
+        "population": 254822,
+        "areaKm2": 1136.9,
+        "gdpPerCapita": 72146,
+        "hospitalBedsPerThousand": 2.2,
+        "idh": 0.805,
+        "higherEducationPct": 24.9
+      },
+      "visual": {
+        "primaryColor": "#FFCC00",
+        "secondaryColor": "#FFAA00",
+        "image": "images/cities/sp/s/sao-carlos.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

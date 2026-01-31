@@ -1,95 +1,95 @@
 {
-    "matchId": "bauru-vs-marilia-2025",
-    "title": "Bauru vs Marília",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3506003,
-            "name": "Bauru",
-            "state": "SP",
-            "nickname": "Cidade sem Limites",
-            "data": {
-                "population": 391740,
-                "areaKm2": 668,
-                "gdpPerCapita": 54477,
-                "hospitalBedsPerThousand": 3.5,
-                "idh": 0.801,
-                "higherEducationPct": 22
-            },
-            "visual": {
-                "primaryColor": "#1565C0",
-                "secondaryColor": "#0D47A1",
-                "image": "bauru.jpg"
-            }
-        },
-        {
-            "ibgeId": 3529005,
-            "name": "Marília",
-            "state": "SP",
-            "nickname": "Capital do Alimento",
-            "data": {
-                "population": 237627,
-                "areaKm2": 1170.5,
-                "gdpPerCapita": 40272,
-                "hospitalBedsPerThousand": 2.52,
-                "idh": 0.798,
-                "higherEducationPct": 18.29
-            },
-            "visual": {
-                "primaryColor": "#C62828",
-                "secondaryColor": "#B71C1C",
-                "image": "marilia.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "bauru-vs-marilia-2025",
+  "title": "Bauru vs Marília",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3506003,
+      "name": "Bauru",
+      "state": "SP",
+      "nickname": "Cidade sem Limites",
+      "data": {
+        "population": 391740,
+        "areaKm2": 668,
+        "gdpPerCapita": 54477,
+        "hospitalBedsPerThousand": 3.5,
+        "idh": 0.801,
+        "higherEducationPct": 22
+      },
+      "visual": {
+        "primaryColor": "#1565C0",
+        "secondaryColor": "#0D47A1",
+        "image": "images/cities/sp/b/bauru.jpg"
+      }
+    },
+    {
+      "ibgeId": 3529005,
+      "name": "Marília",
+      "state": "SP",
+      "nickname": "Capital do Alimento",
+      "data": {
+        "population": 237627,
+        "areaKm2": 1170.5,
+        "gdpPerCapita": 40272,
+        "hospitalBedsPerThousand": 2.52,
+        "idh": 0.798,
+        "higherEducationPct": 18.29
+      },
+      "visual": {
+        "primaryColor": "#C62828",
+        "secondaryColor": "#B71C1C",
+        "image": "images/cities/sp/m/marilia.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

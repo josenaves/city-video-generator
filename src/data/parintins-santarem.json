@@ -1,95 +1,95 @@
 {
-    "matchId": "parintins-vs-santarem-2025",
-    "title": "Parintins vs Santarém",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 1303403,
-            "name": "Parintins",
-            "state": "AM",
-            "nickname": "Ilha Tupinambarana",
-            "data": {
-                "population": 101956,
-                "areaKm2": 5956.048,
-                "gdpPerCapita": 12255,
-                "hospitalBedsPerThousand": 2.13,
-                "idh": 0.658,
-                "higherEducationPct": 12.0
-            },
-            "visual": {
-                "primaryColor": "#0033A0",
-                "secondaryColor": "#DC143C",
-                "image": "parintins.jpeg"
-            }
-        },
-        {
-            "ibgeId": 1506807,
-            "name": "Santarém",
-            "state": "PA",
-            "nickname": "Pérola do Tapajós",
-            "data": {
-                "population": 331942,
-                "areaKm2": 17899.238,
-                "gdpPerCapita": 26155,
-                "hospitalBedsPerThousand": 0.63,
-                "idh": 0.691,
-                "higherEducationPct": 12.57
-            },
-            "visual": {
-                "primaryColor": "#006B3F",
-                "secondaryColor": "#FFD700",
-                "image": "santarem.avif"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "parintins-vs-santarem-2025",
+  "title": "Parintins vs Santarém",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 1303403,
+      "name": "Parintins",
+      "state": "AM",
+      "nickname": "Ilha Tupinambarana",
+      "data": {
+        "population": 101956,
+        "areaKm2": 5956.048,
+        "gdpPerCapita": 12255,
+        "hospitalBedsPerThousand": 2.13,
+        "idh": 0.658,
+        "higherEducationPct": 12
+      },
+      "visual": {
+        "primaryColor": "#0033A0",
+        "secondaryColor": "#DC143C",
+        "image": "images/cities/am/p/parintins.jpeg"
+      }
+    },
+    {
+      "ibgeId": 1506807,
+      "name": "Santarém",
+      "state": "PA",
+      "nickname": "Pérola do Tapajós",
+      "data": {
+        "population": 331942,
+        "areaKm2": 17899.238,
+        "gdpPerCapita": 26155,
+        "hospitalBedsPerThousand": 0.63,
+        "idh": 0.691,
+        "higherEducationPct": 12.57
+      },
+      "visual": {
+        "primaryColor": "#006B3F",
+        "secondaryColor": "#FFD700",
+        "image": "images/cities/pa/s/santarem.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

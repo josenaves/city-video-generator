@@ -1,116 +1,116 @@
 {
-    "matchId": "leme-vs-araras-2025",
-    "title": "Leme vs Araras",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3526704,
-            "name": "Leme",
-            "state": "SP",
-            "nickname": "Cidade Manuel Leme",
-            "data": {
-                "population": 101537,
-                "areaKm2": 402,
-                "gdpPerCapita": 50310,
-                "hospitalBedsPerThousand": 0.6,
-                "idh": 0.744,
-                "higherEducationPct": 12,
-                "costOfLivingIndex": 92,
-                "companiesCount": 13991
-            },
-            "visual": {
-                "primaryColor": "#1B5E20",
-                "secondaryColor": "#2E7D32",
-                "image": "leme.jpeg"
-            }
-        },
-        {
-            "ibgeId": 3503307,
-            "name": "Araras",
-            "state": "SP",
-            "nickname": "Cidade das Árvores",
-            "data": {
-                "population": 135744,
-                "areaKm2": 644,
-                "gdpPerCapita": 76588,
-                "hospitalBedsPerThousand": 1.4,
-                "idh": 0.781,
-                "higherEducationPct": 16,
-                "costOfLivingIndex": 86,
-                "companiesCount": 21055
-            },
-            "visual": {
-                "primaryColor": "#01579B",
-                "secondaryColor": "#0277BD",
-                "image": "araras.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        },
-        {
-            "id": "cost-of-living",
-            "title": "CUSTO DE VIDA",
-            "type": "bar",
-            "unit": "pts",
-            "field": "costOfLivingIndex",
-            "format": "number",
-            "inverse": true
-        },
-        {
-            "id": "companies",
-            "title": "EMPRESAS",
-            "type": "column",
-            "unit": "",
-            "field": "companiesCount",
-            "format": "compact"
-        }
-    ]
+  "matchId": "leme-vs-araras-2025",
+  "title": "Leme vs Araras",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3526704,
+      "name": "Leme",
+      "state": "SP",
+      "nickname": "Cidade Manuel Leme",
+      "data": {
+        "population": 101537,
+        "areaKm2": 402,
+        "gdpPerCapita": 50310,
+        "hospitalBedsPerThousand": 0.6,
+        "idh": 0.744,
+        "higherEducationPct": 12,
+        "costOfLivingIndex": 92,
+        "companiesCount": 13991
+      },
+      "visual": {
+        "primaryColor": "#1B5E20",
+        "secondaryColor": "#2E7D32",
+        "image": "images/cities/sp/l/leme.jpeg"
+      }
+    },
+    {
+      "ibgeId": 3503307,
+      "name": "Araras",
+      "state": "SP",
+      "nickname": "Cidade das Árvores",
+      "data": {
+        "population": 135744,
+        "areaKm2": 644,
+        "gdpPerCapita": 76588,
+        "hospitalBedsPerThousand": 1.4,
+        "idh": 0.781,
+        "higherEducationPct": 16,
+        "costOfLivingIndex": 86,
+        "companiesCount": 21055
+      },
+      "visual": {
+        "primaryColor": "#01579B",
+        "secondaryColor": "#0277BD",
+        "image": "images/cities/sp/a/araras.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    },
+    {
+      "id": "cost-of-living",
+      "title": "CUSTO DE VIDA",
+      "type": "bar",
+      "unit": "pts",
+      "field": "costOfLivingIndex",
+      "format": "number",
+      "inverse": true
+    },
+    {
+      "id": "companies",
+      "title": "EMPRESAS",
+      "type": "column",
+      "unit": "",
+      "field": "companiesCount",
+      "format": "compact"
+    }
+  ]
 }

@@ -1,95 +1,95 @@
 {
-    "matchId": "tombos-vs-ressaquinha-2025",
-    "title": "Tombos vs Ressaquinha",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3169208,
-            "name": "Tombos",
-            "state": "MG",
-            "nickname": "Cidade Carinho",
-            "data": {
-                "population": 8609,
-                "areaKm2": 285.124,
-                "gdpPerCapita": 17047,
-                "hospitalBedsPerThousand": 4.8,
-                "idh": 0.718,
-                "higherEducationPct": 99.69
-            },
-            "visual": {
-                "primaryColor": "#D32F2F",
-                "secondaryColor": "#FAFAFA",
-                "image": "tombos.jpg"
-            }
-        },
-        {
-            "ibgeId": 3154408,
-            "name": "Ressaquinha",
-            "state": "MG",
-            "nickname": "Princesinha da Estrada",
-            "data": {
-                "population": 4548,
-                "areaKm2": 183.062,
-                "gdpPerCapita": 111484,
-                "hospitalBedsPerThousand": 0.0,
-                "idh": 0.683,
-                "higherEducationPct": 98.34
-            },
-            "visual": {
-                "primaryColor": "#1976D2",
-                "secondaryColor": "#FBC02D",
-                "image": "ressaquinha.jpeg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIZAÇÃO",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "tombos-vs-ressaquinha-2025",
+  "title": "Tombos vs Ressaquinha",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3169208,
+      "name": "Tombos",
+      "state": "MG",
+      "nickname": "Cidade Carinho",
+      "data": {
+        "population": 8609,
+        "areaKm2": 285.124,
+        "gdpPerCapita": 17047,
+        "hospitalBedsPerThousand": 4.8,
+        "idh": 0.718,
+        "higherEducationPct": 99.69
+      },
+      "visual": {
+        "primaryColor": "#D32F2F",
+        "secondaryColor": "#FAFAFA",
+        "image": "images/cities/mg/t/tombos.jpg"
+      }
+    },
+    {
+      "ibgeId": 3154408,
+      "name": "Ressaquinha",
+      "state": "MG",
+      "nickname": "Princesinha da Estrada",
+      "data": {
+        "population": 4548,
+        "areaKm2": 183.062,
+        "gdpPerCapita": 111484,
+        "hospitalBedsPerThousand": 0,
+        "idh": 0.683,
+        "higherEducationPct": 98.34
+      },
+      "visual": {
+        "primaryColor": "#1976D2",
+        "secondaryColor": "#FBC02D",
+        "image": "images/cities/mg/r/ressaquinha.jpeg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIZAÇÃO",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

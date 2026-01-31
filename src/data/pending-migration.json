@@ -1,0 +1,226 @@
+{
+  "description": "Lista de cidades não migradas para a nova estrutura",
+  "total": 75,
+  "migrationPriority": "high",
+  "cities": {
+    "SP": {
+      "count": 35,
+      "missing": [
+        "aguas-de-lindoia",
+        "aguas-de-santa-barbara",
+        "aiuruoca",
+        "alpinopolis",
+        "aracatuba",
+        "aral-moreira",
+        "araraquara",
+        "atibaia",
+        "baependi",
+        "birigui",
+        "braganca-paulista",
+        "caconde",
+        "caieiras",
+        "cambuquira",
+        "campina-grande-do-sul",
+        "cananeia",
+        "carapicuiba",
+        "franca",
+        "indaiatuba",
+        "itajuba",
+        "itamogi",
+        "itapevi",
+        "itapira",
+        "itatiba",
+        "itu",
+        "itupeva",
+        "jaragua-do-sul",
+        "jao",
+        "joanopolis",
+        "jundiai",
+        "leme",
+        "limeira",
+        "marilia",
+        "mirassol",
+        "mococa",
+        "mogi-guacu",
+        "mogi-mirim",
+        "monte-alegre-do-sul",
+        "osasco",
+        "ourinhos",
+        "piracaia",
+        "ribeirao-preto",
+        "salto",
+        "santana-do-parnaiba",
+        "sao-carlos",
+        "sao-jose-do-rio-pardo",
+        "sao-jose-dos-campos",
+        "sao-paulo",
+        "sao-sebastiao-do-paraiso",
+        "sao-vicente",
+        "serra-negra",
+        "sorocaba",
+        "tapiratiba",
+        "valinhos",
+        "vinhedo",
+        "votuporanga"
+      ]
+    },
+    "MG": {
+      "count": 24,
+      "missing": [
+        "araxa",
+        "barbacena",
+        "betim",
+        "belo-horizonte",
+        "conselheiro-lafaiete",
+        "contagem",
+        "divinopolis",
+        "extrema",
+        "guaranesia",
+        "guaxupe",
+        "juruaia",
+        "montes-claros",
+        "monte-belo",
+        "monte-santo-de-minas",
+        "muzambinho",
+        "nova-resende",
+        "patos-de-minas",
+        "pocos-de-caldas",
+        "pratapolis",
+        "ribeirao-das-neves",
+        "sacramento",
+        "tombos",
+        "uberaba",
+        "varginha"
+      ]
+    },
+    "SC": {
+      "count": 12,
+      "missing": [
+        "ararangua",
+        "araucaria",
+        "chapeco",
+        "criciuma",
+        "florianopolis",
+        "itajai",
+        "joinville",
+        "joinvile",
+        "laguna",
+        "lages",
+        "tubarao",
+        "uniao-da-vitoria"
+      ]
+    },
+    "RS": {
+      "count": 15,
+      "missing": [
+        "caxambu",
+        "caxias-do-sul",
+        "farroupilha",
+        "gramado",
+        "lajeado",
+        "lages",
+        "passo-fundo",
+        "pelotas",
+        "rio-grande",
+        "santa-cruz-do-sul",
+        "santa-maria",
+        "soledade",
+        "vacaria",
+        "novo-hamburgo",
+        "bento-goncalves"
+      ]
+    },
+    "PR": {
+      "count": 9,
+      "missing": [
+        "campo-grande",
+        "curitiba",
+        "londrina",
+        "maringa",
+        "ponta-grossa",
+        "ponte-pora",
+        "porto-uniao",
+        "presidente-prudente",
+        "sao-jose-dos-pinhais"
+      ]
+    },
+    "BA": {
+      "count": 4,
+      "missing": [
+        "aracaju",
+        "paulo-afonso",
+        "quatro-barras",
+        "nova-rodelas"
+      ]
+    },
+    "PE": {
+      "count": 5,
+      "missing": [
+        "gaviao-peixoto",
+        "joao-pessoa",
+        "olinda",
+        "parintins",
+        "recife"
+      ]
+    },
+    "RJ": {
+      "count": 3,
+      "missing": [
+        "juiz-de-fora",
+        "rio-de-janeiro",
+        "teresopolis"
+      ]
+    },
+    "GO": {
+      "count": 1,
+      "missing": [
+        "goiania"
+      ]
+    },
+    "MT": {
+      "count": 1,
+      "missing": [
+        "cuiaba"
+      ]
+    },
+    "MS": {
+      "count": 1,
+      "missing": [
+        "dourados"
+      ]
+    },
+    "ES": {
+      "count": 1,
+      "missing": [
+        "vitoria"
+      ]
+    },
+    "RN": {
+      "count": 1,
+      "missing": [
+        "natal"
+      ]
+    },
+    "CE": {
+      "count": 1,
+      "missing": [
+        "estiva-gerbi"
+      ]
+    },
+    "PA": {
+      "count": 1,
+      "missing": [
+        "santarem"
+      ]
+    },
+    "UNKNOWN": {
+      "count": 2,
+      "missing": [
+        "background.png",
+        "catedral.jpg"
+      ],
+      "note": "Não são imagens de cidades"
+    }
+  },
+  "lastMigration": "2026-01-31T13:33:44.400Z"
+}

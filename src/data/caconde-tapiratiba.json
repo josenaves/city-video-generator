@@ -1,95 +1,95 @@
 {
-    "matchId": "caconde-vs-tapiratiba-2025",
-    "title": "Caconde vs Tapiratiba",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3508405,
-            "name": "Caconde",
-            "state": "SP",
-            "nickname": "Terra do Café",
-            "data": {
-                "population": 17101,
-                "areaKm2": 468.2,
-                "gdpPerCapita": 32402,
-                "hospitalBedsPerThousand": 2.3,
-                "idh": 0.720,
-                "higherEducationPct": 11.2
-            },
-            "visual": {
-                "primaryColor": "#1E88E5",
-                "secondaryColor": "#FFFFFF",
-                "image": "caconde.jpg"
-            }
-        },
-        {
-            "ibgeId": 3553504,
-            "name": "Tapiratiba",
-            "state": "SP",
-            "nickname": "Cidade da Amizade",
-            "data": {
-                "population": 11816,
-                "areaKm2": 221.9,
-                "gdpPerCapita": 30353,
-                "hospitalBedsPerThousand": 2.5,
-                "idh": 0.751,
-                "higherEducationPct": 12.5
-            },
-            "visual": {
-                "primaryColor": "#008000",
-                "secondaryColor": "#FFFF00",
-                "image": "tapiratiba.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "caconde-vs-tapiratiba-2025",
+  "title": "Caconde vs Tapiratiba",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3508405,
+      "name": "Caconde",
+      "state": "SP",
+      "nickname": "Terra do Café",
+      "data": {
+        "population": 17101,
+        "areaKm2": 468.2,
+        "gdpPerCapita": 32402,
+        "hospitalBedsPerThousand": 2.3,
+        "idh": 0.72,
+        "higherEducationPct": 11.2
+      },
+      "visual": {
+        "primaryColor": "#1E88E5",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/sp/c/caconde.jpg"
+      }
+    },
+    {
+      "ibgeId": 3553504,
+      "name": "Tapiratiba",
+      "state": "SP",
+      "nickname": "Cidade da Amizade",
+      "data": {
+        "population": 11816,
+        "areaKm2": 221.9,
+        "gdpPerCapita": 30353,
+        "hospitalBedsPerThousand": 2.5,
+        "idh": 0.751,
+        "higherEducationPct": 12.5
+      },
+      "visual": {
+        "primaryColor": "#008000",
+        "secondaryColor": "#FFFF00",
+        "image": "images/cities/sp/t/tapiratiba.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

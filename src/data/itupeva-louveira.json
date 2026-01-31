@@ -1,89 +1,89 @@
 {
-    "matchId": "itupeva-louveira",
-    "title": "A Batalha Paulista",
-    "theme": "Cidades do Interior de São Paulo",
-    "cities": [
-        {
-            "ibgeId": "3523008",
-            "name": "Itupeva",
-            "state": "SP",
-            "nickname": "Cidade do Morango",
-            "data": {
-                "populacao": 63245,
-                "areaKm2": 201,
-                "pibPerCapita": 41230,
-                "leitos": 92,
-                "idh": 0.768,
-                "ensinoSuperior": 20.3
-            },
-            "visual": {
-                "primaryColor": "#e53935",
-                "secondaryColor": "#ffffff",
-                "image": "itupeva.jpg"
-            }
-        },
-        {
-            "ibgeId": "3527306",
-            "name": "Louveira",
-            "state": "SP",
-            "nickname": "Capital Nacional do Vinho",
-            "data": {
-                "populacao": 49876,
-                "areaKm2": 55,
-                "pibPerCapita": 52345,
-                "leitos": 78,
-                "idh": 0.785,
-                "ensinoSuperior": 22.7
-            },
-            "visual": {
-                "primaryColor": "#8e24aa",
-                "secondaryColor": "#ffffff",
-                "image": "louveira.webp"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS",
-            "field": "leitos",
-            "format": "number",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "itupeva-louveira",
+  "title": "A Batalha Paulista",
+  "theme": "Cidades do Interior de São Paulo",
+  "cities": [
+    {
+      "ibgeId": "3523008",
+      "name": "Itupeva",
+      "state": "SP",
+      "nickname": "Cidade do Morango",
+      "data": {
+        "populacao": 63245,
+        "areaKm2": 201,
+        "pibPerCapita": 41230,
+        "leitos": 92,
+        "idh": 0.768,
+        "ensinoSuperior": 20.3
+      },
+      "visual": {
+        "primaryColor": "#e53935",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/i/itupeva.jpg"
+      }
+    },
+    {
+      "ibgeId": "3527306",
+      "name": "Louveira",
+      "state": "SP",
+      "nickname": "Capital Nacional do Vinho",
+      "data": {
+        "populacao": 49876,
+        "areaKm2": 55,
+        "pibPerCapita": 52345,
+        "leitos": 78,
+        "idh": 0.785,
+        "ensinoSuperior": 22.7
+      },
+      "visual": {
+        "primaryColor": "#8e24aa",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/l/louveira.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS",
+      "field": "leitos",
+      "format": "number",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

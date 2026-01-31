@@ -1,89 +1,89 @@
 {
-    "matchId": "londrina-maringa",
-    "title": "A Batalha Paranaense",
-    "theme": "Cidades do Paraná",
-    "cities": [
-        {
-            "ibgeId": "4113700",
-            "name": "Londrina",
-            "state": "PR",
-            "nickname": "Pequena Londres",
-            "data": {
-                "populacao": 580870,
-                "areaKm2": 1653,
-                "pibPerCapita": 51234,
-                "leitos": 1450,
-                "idh": 0.778,
-                "ensinoSuperior": 27.5
-            },
-            "visual": {
-                "primaryColor": "#1a5fb4",
-                "secondaryColor": "#ffffff",
-                "image": "londrina.jpg"
-            }
-        },
-        {
-            "ibgeId": "4115200",
-            "name": "Maringá",
-            "state": "PR",
-            "nickname": "Cidade Canção",
-            "data": {
-                "populacao": 430157,
-                "areaKm2": 487,
-                "pibPerCapita": 49876,
-                "leitos": 980,
-                "idh": 0.808,
-                "ensinoSuperior": 29.2
-            },
-            "visual": {
-                "primaryColor": "#26a269",
-                "secondaryColor": "#ffffff",
-                "image": "maringa.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS",
-            "field": "leitos",
-            "format": "number",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "londrina-maringa",
+  "title": "A Batalha Paranaense",
+  "theme": "Cidades do Paraná",
+  "cities": [
+    {
+      "ibgeId": "4113700",
+      "name": "Londrina",
+      "state": "PR",
+      "nickname": "Pequena Londres",
+      "data": {
+        "populacao": 580870,
+        "areaKm2": 1653,
+        "pibPerCapita": 51234,
+        "leitos": 1450,
+        "idh": 0.778,
+        "ensinoSuperior": 27.5
+      },
+      "visual": {
+        "primaryColor": "#1a5fb4",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pr/l/londrina.jpg"
+      }
+    },
+    {
+      "ibgeId": "4115200",
+      "name": "Maringá",
+      "state": "PR",
+      "nickname": "Cidade Canção",
+      "data": {
+        "populacao": 430157,
+        "areaKm2": 487,
+        "pibPerCapita": 49876,
+        "leitos": 980,
+        "idh": 0.808,
+        "ensinoSuperior": 29.2
+      },
+      "visual": {
+        "primaryColor": "#26a269",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pr/m/maringa.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS",
+      "field": "leitos",
+      "format": "number",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

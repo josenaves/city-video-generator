@@ -1,89 +1,89 @@
 {
-    "matchId": "vinhedo-valinhos",
-    "title": "A Batalha Paulista",
-    "theme": "Cidades do Interior de São Paulo",
-    "cities": [
-        {
-            "ibgeId": "3556701",
-            "name": "Vinhedo",
-            "state": "SP",
-            "nickname": "Cidade das Frutas",
-            "data": {
-                "populacao": 78542,
-                "areaKm2": 82,
-                "pibPerCapita": 68215,
-                "leitos": 105,
-                "idh": 0.817,
-                "ensinoSuperior": 28.5
-            },
-            "visual": {
-                "primaryColor": "#43a047",
-                "secondaryColor": "#ffffff",
-                "image": "vinhedo.jpg"
-            }
-        },
-        {
-            "ibgeId": "3556206",
-            "name": "Valinhos",
-            "state": "SP",
-            "nickname": "Capital do Figo Roxo",
-            "data": {
-                "populacao": 129876,
-                "areaKm2": 149,
-                "pibPerCapita": 54218,
-                "leitos": 145,
-                "idh": 0.819,
-                "ensinoSuperior": 26.8
-            },
-            "visual": {
-                "primaryColor": "#7b1fa2",
-                "secondaryColor": "#ffffff",
-                "image": "valinhos.webp"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS",
-            "field": "leitos",
-            "format": "number",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "vinhedo-valinhos",
+  "title": "A Batalha Paulista",
+  "theme": "Cidades do Interior de São Paulo",
+  "cities": [
+    {
+      "ibgeId": "3556701",
+      "name": "Vinhedo",
+      "state": "SP",
+      "nickname": "Cidade das Frutas",
+      "data": {
+        "populacao": 78542,
+        "areaKm2": 82,
+        "pibPerCapita": 68215,
+        "leitos": 105,
+        "idh": 0.817,
+        "ensinoSuperior": 28.5
+      },
+      "visual": {
+        "primaryColor": "#43a047",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/v/vinhedo.jpg"
+      }
+    },
+    {
+      "ibgeId": "3556206",
+      "name": "Valinhos",
+      "state": "SP",
+      "nickname": "Capital do Figo Roxo",
+      "data": {
+        "populacao": 129876,
+        "areaKm2": 149,
+        "pibPerCapita": 54218,
+        "leitos": 145,
+        "idh": 0.819,
+        "ensinoSuperior": 26.8
+      },
+      "visual": {
+        "primaryColor": "#7b1fa2",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/v/valinhos.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS",
+      "field": "leitos",
+      "format": "number",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

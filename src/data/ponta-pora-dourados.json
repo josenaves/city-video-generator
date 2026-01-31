@@ -1,95 +1,95 @@
 {
-    "matchId": "ponta-pora-vs-dourados-2026",
-    "title": "Ponta Porã vs Dourados",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 5006606,
-            "name": "Ponta Porã",
-            "state": "MS",
-            "nickname": "Princesinha dos Ervais",
-            "data": {
-                "population": 92017,
-                "areaKm2": 5359.27,
-                "gdpPerCapita": 65963.79,
-                "hospitalBedsPerThousand": 1.53,
-                "idh": 0.701,
-                "higherEducationPct": 14.8
-            },
-            "visual": {
-                "primaryColor": "#008000",
-                "secondaryColor": "#FFFFFF",
-                "image": "ponta-pora.jpg"
-            }
-        },
-        {
-            "ibgeId": 5003702,
-            "name": "Dourados",
-            "state": "MS",
-            "nickname": "Portal do Mercosul",
-            "data": {
-                "population": 243367,
-                "areaKm2": 4062.89,
-                "gdpPerCapita": 83240.35,
-                "hospitalBedsPerThousand": 2.30,
-                "idh": 0.747,
-                "higherEducationPct": 24.31
-            },
-            "visual": {
-                "primaryColor": "#0000FF",
-                "secondaryColor": "#FFFFFF",
-                "image": "dourados.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "ponta-pora-vs-dourados-2026",
+  "title": "Ponta Porã vs Dourados",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 5006606,
+      "name": "Ponta Porã",
+      "state": "MS",
+      "nickname": "Princesinha dos Ervais",
+      "data": {
+        "population": 92017,
+        "areaKm2": 5359.27,
+        "gdpPerCapita": 65963.79,
+        "hospitalBedsPerThousand": 1.53,
+        "idh": 0.701,
+        "higherEducationPct": 14.8
+      },
+      "visual": {
+        "primaryColor": "#008000",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/ms/p/ponta-pora.jpg"
+      }
+    },
+    {
+      "ibgeId": 5003702,
+      "name": "Dourados",
+      "state": "MS",
+      "nickname": "Portal do Mercosul",
+      "data": {
+        "population": 243367,
+        "areaKm2": 4062.89,
+        "gdpPerCapita": 83240.35,
+        "hospitalBedsPerThousand": 2.3,
+        "idh": 0.747,
+        "higherEducationPct": 24.31
+      },
+      "visual": {
+        "primaryColor": "#0000FF",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/ms/d/dourados.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

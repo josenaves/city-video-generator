@@ -1,89 +1,89 @@
 {
-    "matchId": "joao-pessoa-recife",
-    "title": "A Batalha do Nordeste",
-    "theme": "Metrópoles Nordestinas",
-    "cities": [
-        {
-            "ibgeId": "2507507",
-            "name": "João Pessoa",
-            "state": "PB",
-            "nickname": "Porta do Sol",
-            "data": {
-                "populacao": 833932,
-                "areaKm2": 210,
-                "pibPerCapita": 34106,
-                "leitos": 3.8,
-                "idh": 0.763,
-                "ensinoSuperior": 13.2
-            },
-            "visual": {
-                "primaryColor": "#e63946",
-                "secondaryColor": "#ffffff",
-                "image": "joao-pessoa.jpg"
-            }
-        },
-        {
-            "ibgeId": "2611606",
-            "name": "Recife",
-            "state": "PE",
-            "nickname": "Veneza Brasileira",
-            "data": {
-                "populacao": 1488920,
-                "areaKm2": 218,
-                "pibPerCapita": 44563,
-                "leitos": 5.4,
-                "idh": 0.772,
-                "ensinoSuperior": 18.4
-            },
-            "visual": {
-                "primaryColor": "#0056b3",
-                "secondaryColor": "#ffffff",
-                "image": "recife.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS/1K",
-            "field": "leitos",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal3",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "joao-pessoa-recife",
+  "title": "A Batalha do Nordeste",
+  "theme": "Metrópoles Nordestinas",
+  "cities": [
+    {
+      "ibgeId": "2507507",
+      "name": "João Pessoa",
+      "state": "PB",
+      "nickname": "Porta do Sol",
+      "data": {
+        "populacao": 833932,
+        "areaKm2": 210,
+        "pibPerCapita": 34106,
+        "leitos": 3.8,
+        "idh": 0.763,
+        "ensinoSuperior": 13.2
+      },
+      "visual": {
+        "primaryColor": "#e63946",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pb/j/joao-pessoa.jpg"
+      }
+    },
+    {
+      "ibgeId": "2611606",
+      "name": "Recife",
+      "state": "PE",
+      "nickname": "Veneza Brasileira",
+      "data": {
+        "populacao": 1488920,
+        "areaKm2": 218,
+        "pibPerCapita": 44563,
+        "leitos": 5.4,
+        "idh": 0.772,
+        "ensinoSuperior": 18.4
+      },
+      "visual": {
+        "primaryColor": "#0056b3",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pe/r/recife.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS/1K",
+      "field": "leitos",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal3",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

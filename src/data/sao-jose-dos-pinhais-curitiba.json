@@ -1,89 +1,89 @@
 {
-    "matchId": "sao-jose-dos-pinhais-curitiba",
-    "title": "A Batalha Paranaense",
-    "theme": "Cidades do Paraná",
-    "cities": [
-        {
-            "ibgeId": "4125506",
-            "name": "São José dos Pinhais",
-            "state": "PR",
-            "nickname": "Cidade dos Pinheirais",
-            "data": {
-                "populacao": 329058,
-                "areaKm2": 946,
-                "pibPerCapita": 45218,
-                "leitos": 485,
-                "idh": 0.750,
-                "ensinoSuperior": 23.8
-            },
-            "visual": {
-                "primaryColor": "#2e7d32",
-                "secondaryColor": "#ffffff",
-                "image": "sao-jose-dos-pinhais.jpg"
-            }
-        },
-        {
-            "ibgeId": "4106902",
-            "name": "Curitiba",
-            "state": "PR",
-            "nickname": "Cidade Ecológica",
-            "data": {
-                "populacao": 1963726,
-                "areaKm2": 435,
-                "pibPerCapita": 68215,
-                "leitos": 2850,
-                "idh": 0.823,
-                "ensinoSuperior": 31.5
-            },
-            "visual": {
-                "primaryColor": "#0066cc",
-                "secondaryColor": "#ffffff",
-                "image": "curitiba.webp"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS",
-            "field": "leitos",
-            "format": "number",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "sao-jose-dos-pinhais-curitiba",
+  "title": "A Batalha Paranaense",
+  "theme": "Cidades do Paraná",
+  "cities": [
+    {
+      "ibgeId": "4125506",
+      "name": "São José dos Pinhais",
+      "state": "PR",
+      "nickname": "Cidade dos Pinheirais",
+      "data": {
+        "populacao": 329058,
+        "areaKm2": 946,
+        "pibPerCapita": 45218,
+        "leitos": 485,
+        "idh": 0.75,
+        "ensinoSuperior": 23.8
+      },
+      "visual": {
+        "primaryColor": "#2e7d32",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pr/s/sao-jose-dos-pinhais.jpg"
+      }
+    },
+    {
+      "ibgeId": "4106902",
+      "name": "Curitiba",
+      "state": "PR",
+      "nickname": "Cidade Ecológica",
+      "data": {
+        "populacao": 1963726,
+        "areaKm2": 435,
+        "pibPerCapita": 68215,
+        "leitos": 2850,
+        "idh": 0.823,
+        "ensinoSuperior": 31.5
+      },
+      "visual": {
+        "primaryColor": "#0066cc",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pr/c/curitiba.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS",
+      "field": "leitos",
+      "format": "number",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

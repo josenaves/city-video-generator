@@ -1,89 +1,89 @@
 {
-    "matchId": "joao-pessoa-natal",
-    "title": "A Batalha das Capitais",
-    "theme": "Cidades do Nordeste",
-    "cities": [
-        {
-            "ibgeId": "2507507",
-            "name": "João Pessoa",
-            "state": "PB",
-            "nickname": "Porta do Sol",
-            "data": {
-                "populacao": 833932,
-                "areaKm2": 210,
-                "pibPerCapita": 34106,
-                "leitos": 3.8,
-                "idh": 0.763,
-                "ensinoSuperior": 13.2
-            },
-            "visual": {
-                "primaryColor": "#e63946",
-                "secondaryColor": "#ffffff",
-                "image": "joao-pessoa.jpg"
-            }
-        },
-        {
-            "ibgeId": "2408102",
-            "name": "Natal",
-            "state": "RN",
-            "nickname": "Cidade do Sol",
-            "data": {
-                "populacao": 751300,
-                "areaKm2": 167,
-                "pibPerCapita": 41477,
-                "leitos": 4.4,
-                "idh": 0.763,
-                "ensinoSuperior": 22.45
-            },
-            "visual": {
-                "primaryColor": "#2a9d8f",
-                "secondaryColor": "#ffffff",
-                "image": "natal.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS/1K",
-            "field": "leitos",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal3",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "joao-pessoa-natal",
+  "title": "A Batalha das Capitais",
+  "theme": "Cidades do Nordeste",
+  "cities": [
+    {
+      "ibgeId": "2507507",
+      "name": "João Pessoa",
+      "state": "PB",
+      "nickname": "Porta do Sol",
+      "data": {
+        "populacao": 833932,
+        "areaKm2": 210,
+        "pibPerCapita": 34106,
+        "leitos": 3.8,
+        "idh": 0.763,
+        "ensinoSuperior": 13.2
+      },
+      "visual": {
+        "primaryColor": "#e63946",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pb/j/joao-pessoa.jpg"
+      }
+    },
+    {
+      "ibgeId": "2408102",
+      "name": "Natal",
+      "state": "RN",
+      "nickname": "Cidade do Sol",
+      "data": {
+        "populacao": 751300,
+        "areaKm2": 167,
+        "pibPerCapita": 41477,
+        "leitos": 4.4,
+        "idh": 0.763,
+        "ensinoSuperior": 22.45
+      },
+      "visual": {
+        "primaryColor": "#2a9d8f",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/rn/n/natal.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS/1K",
+      "field": "leitos",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal3",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

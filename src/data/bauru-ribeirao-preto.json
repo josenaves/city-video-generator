@@ -1,95 +1,95 @@
 {
-    "matchId": "bauru-vs-ribeirao-preto-2025",
-    "title": "Bauru vs Ribeirão Preto",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3506003,
-            "name": "Bauru",
-            "state": "SP",
-            "nickname": "Cidade sem Limites",
-            "data": {
-                "population": 391740,
-                "areaKm2": 668,
-                "gdpPerCapita": 54477,
-                "hospitalBedsPerThousand": 3.5,
-                "idh": 0.801,
-                "higherEducationPct": 22
-            },
-            "visual": {
-                "primaryColor": "#1565C0",
-                "secondaryColor": "#0D47A1",
-                "image": "bauru.jpg"
-            }
-        },
-        {
-            "ibgeId": 3543402,
-            "name": "Ribeirão Preto",
-            "state": "SP",
-            "nickname": "Capital do Agronegócio",
-            "data": {
-                "population": 728400,
-                "areaKm2": 651,
-                "gdpPerCapita": 74869,
-                "hospitalBedsPerThousand": 4.2,
-                "idh": 0.800,
-                "higherEducationPct": 25
-            },
-            "visual": {
-                "primaryColor": "#C62828",
-                "secondaryColor": "#B71C1C",
-                "image": "ribeirao-preto.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "bauru-vs-ribeirao-preto-2025",
+  "title": "Bauru vs Ribeirão Preto",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3506003,
+      "name": "Bauru",
+      "state": "SP",
+      "nickname": "Cidade sem Limites",
+      "data": {
+        "population": 391740,
+        "areaKm2": 668,
+        "gdpPerCapita": 54477,
+        "hospitalBedsPerThousand": 3.5,
+        "idh": 0.801,
+        "higherEducationPct": 22
+      },
+      "visual": {
+        "primaryColor": "#1565C0",
+        "secondaryColor": "#0D47A1",
+        "image": "images/cities/sp/b/bauru.jpg"
+      }
+    },
+    {
+      "ibgeId": 3543402,
+      "name": "Ribeirão Preto",
+      "state": "SP",
+      "nickname": "Capital do Agronegócio",
+      "data": {
+        "population": 728400,
+        "areaKm2": 651,
+        "gdpPerCapita": 74869,
+        "hospitalBedsPerThousand": 4.2,
+        "idh": 0.8,
+        "higherEducationPct": 25
+      },
+      "visual": {
+        "primaryColor": "#C62828",
+        "secondaryColor": "#B71C1C",
+        "image": "images/cities/sp/r/ribeirao-preto.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

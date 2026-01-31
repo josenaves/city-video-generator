@@ -1,116 +1,116 @@
 {
-    "matchId": "caxambu-sao-lourenco",
-    "title": "A Batalha das Águas Minerais",
-    "theme": "Cidades Termais de Minas Gerais",
-    "cities": [
-        {
-            "ibgeId": "3115508",
-            "name": "Caxambu",
-            "state": "MG",
-            "nickname": "Cidade das Águas Virtuosas",
-            "data": {
-                "populacao": 24256,
-                "areaKm2": 100,
-                "pibPerCapita": 28766,
-                "leitos": 85,
-                "idh": 0.745,
-                "ensinoSuperior": 22.8,
-                "fontesTermais": 12,
-                "hotéis": 45,
-                "turismoAnual": 185000
-            },
-            "visual": {
-                "primaryColor": "#1E88E5",
-                "secondaryColor": "#FFFFFF",
-                "image": "caxambu.jpg"
-            }
-        },
-        {
-            "ibgeId": "3169307",
-            "name": "São Lourenço",
-            "state": "MG",
-            "nickname": "Cidade Jardim",
-            "data": {
-                "populacao": 47652,
-                "areaKm2": 58,
-                "pibPerCapita": 32766,
-                "leitos": 120,
-                "idh": 0.772,
-                "ensinoSuperior": 28.5,
-                "fontesTermais": 8,
-                "hotéis": 65,
-                "turismoAnual": 320000
-            },
-            "visual": {
-                "primaryColor": "#4CAF50",
-                "secondaryColor": "#FFFFFF",
-                "image": "sao-lourenco.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS",
-            "field": "leitos",
-            "format": "number",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        },
-        {
-            "id": "fontesTermais",
-            "title": "FONTES TERMAIS",
-            "field": "fontesTermais",
-            "format": "number",
-            "unit": ""
-        },
-        {
-            "id": "hotéis",
-            "title": "HOTÉIS",
-            "field": "hotéis",
-            "format": "number",
-            "unit": ""
-        },
-        {
-            "id": "turismoAnual",
-            "title": "TURISMO ANUAL",
-            "field": "turismoAnual",
-            "format": "number",
-            "unit": "visitantes"
-        }
-    ]
+  "matchId": "caxambu-sao-lourenco",
+  "title": "A Batalha das Águas Minerais",
+  "theme": "Cidades Termais de Minas Gerais",
+  "cities": [
+    {
+      "ibgeId": "3115508",
+      "name": "Caxambu",
+      "state": "MG",
+      "nickname": "Cidade das Águas Virtuosas",
+      "data": {
+        "populacao": 24256,
+        "areaKm2": 100,
+        "pibPerCapita": 28766,
+        "leitos": 85,
+        "idh": 0.745,
+        "ensinoSuperior": 22.8,
+        "fontesTermais": 12,
+        "hotéis": 45,
+        "turismoAnual": 185000
+      },
+      "visual": {
+        "primaryColor": "#1E88E5",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/mg/c/caxambu.jpg"
+      }
+    },
+    {
+      "ibgeId": "3169307",
+      "name": "São Lourenço",
+      "state": "MG",
+      "nickname": "Cidade Jardim",
+      "data": {
+        "populacao": 47652,
+        "areaKm2": 58,
+        "pibPerCapita": 32766,
+        "leitos": 120,
+        "idh": 0.772,
+        "ensinoSuperior": 28.5,
+        "fontesTermais": 8,
+        "hotéis": 65,
+        "turismoAnual": 320000
+      },
+      "visual": {
+        "primaryColor": "#4CAF50",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/mg/s/sao-lourenco.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS",
+      "field": "leitos",
+      "format": "number",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    },
+    {
+      "id": "fontesTermais",
+      "title": "FONTES TERMAIS",
+      "field": "fontesTermais",
+      "format": "number",
+      "unit": ""
+    },
+    {
+      "id": "hotéis",
+      "title": "HOTÉIS",
+      "field": "hotéis",
+      "format": "number",
+      "unit": ""
+    },
+    {
+      "id": "turismoAnual",
+      "title": "TURISMO ANUAL",
+      "field": "turismoAnual",
+      "format": "number",
+      "unit": "visitantes"
+    }
+  ]
 }

@@ -1,0 +1,231 @@
+{
+  "date": "2026-01-31T13:29:08.171Z",
+  "migrated": 45,
+  "files": [
+    {
+      "from": "aguas-de-santa-barbara.jpg",
+      "to": "images\\cities\\ba\\a\\aguas-de-santa-barbara.jpg",
+      "state": "BA"
+    },
+    {
+      "from": "alfenas.jpg",
+      "to": "images\\cities\\mg\\a\\alfenas.jpg",
+      "state": "MG"
+    },
+    {
+      "from": "aracatuba.png",
+      "to": "images\\cities\\sp\\a\\aracatuba.png",
+      "state": "SP"
+    },
+    {
+      "from": "araras.jpg",
+      "to": "images\\cities\\sp\\a\\araras.jpg",
+      "state": "SP"
+    },
+    {
+      "from": "arceburgo.jpg",
+      "to": "images\\cities\\mg\\a\\arceburgo.jpg",
+      "state": "MG"
+    },
+    {
+      "from": "assis.jpg",
+      "to": "images\\cities\\sp\\a\\assis.jpg",
+      "state": "SP"
+    },
+    {
+      "from": "atibaia.jpg",
+      "to": "images\\cities\\sp\\a\\atibaia.jpg",
+      "state": "SP"
+    },
+    {
+      "from": "barueri.jpg",
+      "to": "images\\cities\\sp\\b\\barueri.jpg",
+      "state": "SP"
+    },
+    {
+      "from": "bauru.jpg",
+      "to": "images\\cities\\sp\\b\\bauru.jpg",
+      "state": "SP"
+    },
+    {
+      "from": "belo-horizonte.jpg",
+      "to": "images\\cities\\mg\\b\\belo-horizonte.jpg",
+      "state": "MG"
+    },
+    {
+      "from": "bento-goncalves.jpg",
+      "to": "images\\cities\\rs\\b\\bento-goncalves.jpg",
+      "state": "RS"
+    },
+    {
+      "from": "betim.jpg",
+      "to": "images\\cities\\mg\\b\\betim.jpg",
+      "state": "MG"
+    },
+    {
+      "from": "blumenau.jpg",
+      "to": "images\\cities\\sc\\b\\blumenau.jpg",
+      "state": "SC"
+    },
+    {
+      "from": "botucatu.jpg",
+      "to": "images\\cities\\sp\\b\\botucatu.jpg",
+      "state": "SP"
+    },
+    {
+      "from": "brusque.jpg",
+      "to": "images\\cities\\sc\\b\\brusque.jpg",
+      "state": "SC"
+    },
+    {
+      "from": "campinas.jpg",
+      "to": "images\\cities\\sp\\c\\campinas.jpg",
+      "state": "SP"
+    },
+    {
+      "from": "caxambu.jpg",
+      "to": "images\\cities\\rs\\c\\caxambu.jpg",
+      "state": "RS"
+    },
+    {
+      "from": "caxias-do-sul.jpg",
+      "to": "images\\cities\\rs\\c\\caxias-do-sul.jpg",
+      "state": "RS"
+    },
+    {
+      "from": "chapeco.jpg",
+      "to": "images\\cities\\sc\\c\\chapeco.jpg",
+      "state": "SC"
+    },
+    {
+      "from": "criciuma.webp",
+      "to": "images\\cities\\sc\\c\\criciuma.jpg",
+      "state": "SC"
+    },
+    {
+      "from": "extrema.jpg",
+      "to": "images\\cities\\mg\\e\\extrema.jpg",
+      "state": "MG"
+    },
+    {
+      "from": "gaviao-peixoto.jpg",
+      "to": "images\\cities\\pe\\g\\gaviao-peixoto.jpg",
+      "state": "PE"
+    },
+    {
+      "from": "gramado.jpg",
+      "to": "images\\cities\\rs\\g\\gramado.jpg",
+      "state": "RS"
+    },
+    {
+      "from": "guaranesia.jpg",
+      "to": "images\\cities\\mg\\g\\guaranesia.jpg",
+      "state": "MG"
+    },
+    {
+      "from": "guaxupe.jpeg",
+      "to": "images\\cities\\mg\\g\\guaxupe.jpeg",
+      "state": "MG"
+    },
+    {
+      "from": "guaxupe.jpg",
+      "to": "images\\cities\\mg\\g\\guaxupe.jpg",
+      "state": "MG"
+    },
+    {
+      "from": "itajai.jpg",
+      "to": "images\\cities\\sc\\i\\itajai.jpg",
+      "state": "SC"
+    },
+    {
+      "from": "joao-pessoa.jpg",
+      "to": "images\\cities\\pe\\j\\joao-pessoa.jpg",
+      "state": "PE"
+    },
+    {
+      "from": "jundiai.jpg",
+      "to": "images\\cities\\sp\\j\\jundiai.jpg",
+      "state": "SP"
+    },
+    {
+      "from": "laguna.jpg",
+      "to": "images\\cities\\sc\\l\\laguna.jpg",
+      "state": "SC"
+    },
+    {
+      "from": "lajeado.webp",
+      "to": "images\\cities\\rs\\l\\lajeado.jpg",
+      "state": "RS"
+    },
+    {
+      "from": "passo-fundo.webp",
+      "to": "images\\cities\\rs\\p\\passo-fundo.jpg",
+      "state": "RS"
+    },
+    {
+      "from": "pelotas.png",
+      "to": "images\\cities\\rs\\p\\pelotas.png",
+      "state": "RS"
+    },
+    {
+      "from": "pocos-de-caldas.jpg",
+      "to": "images\\cities\\mg\\p\\pocos-de-caldas.jpg",
+      "state": "MG"
+    },
+    {
+      "from": "presidente-prudente.jpg",
+      "to": "images\\cities\\pr\\p\\presidente-prudente.jpg",
+      "state": "PR"
+    },
+    {
+      "from": "quatro-barras.jpg",
+      "to": "images\\cities\\ba\\q\\quatro-barras.jpg",
+      "state": "BA"
+    },
+    {
+      "from": "ribeirao-preto.jpg",
+      "to": "images\\cities\\sp\\r\\ribeirao-preto.jpg",
+      "state": "SP"
+    },
+    {
+      "from": "rio-grande.webp",
+      "to": "images\\cities\\rs\\r\\rio-grande.jpg",
+      "state": "RS"
+    },
+    {
+      "from": "santa-maria.png",
+      "to": "images\\cities\\rs\\s\\santa-maria.png",
+      "state": "RS"
+    },
+    {
+      "from": "sao-jose-do-rio-preto.jpg",
+      "to": "images\\cities\\pr\\s\\sao-jose-do-rio-preto.jpg",
+      "state": "PR"
+    },
+    {
+      "from": "sao-paulo.jpg",
+      "to": "images\\cities\\sp\\s\\sao-paulo.jpg",
+      "state": "SP"
+    },
+    {
+      "from": "sao-pedro-da-uniao.jpg",
+      "to": "images\\cities\\pe\\s\\sao-pedro-da-uniao.jpg",
+      "state": "PE"
+    },
+    {
+      "from": "sorocaba.webp",
+      "to": "images\\cities\\sp\\s\\sorocaba.jpg",
+      "state": "SP"
+    },
+    {
+      "from": "tubarao.jpg",
+      "to": "images\\cities\\sc\\t\\tubarao.jpg",
+      "state": "SC"
+    },
+    {
+      "from": "varginha.jpg",
+      "to": "images\\cities\\mg\\v\\varginha.jpg",
+      "state": "MG"
+    }
+  ]
+}

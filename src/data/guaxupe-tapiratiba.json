@@ -1,95 +1,95 @@
 {
-    "matchId": "guaxupe-vs-tapiratiba-2025",
-    "title": "Guaxupé vs Tapiratiba",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3128709,
-            "name": "Guaxupé",
-            "state": "MG",
-            "nickname": "Cidade das Abelhas",
-            "data": {
-                "population": 50911,
-                "areaKm2": 286.4,
-                "gdpPerCapita": 47761,
-                "hospitalBedsPerThousand": 1.5,
-                "idh": 0.751,
-                "higherEducationPct": 18.4
-            },
-            "visual": {
-                "primaryColor": "#0047AB",
-                "secondaryColor": "#FFFFFF",
-                "image": "guaxupe.jpeg"
-            }
-        },
-        {
-            "ibgeId": 3553504,
-            "name": "Tapiratiba",
-            "state": "SP",
-            "nickname": "Cidade da Amizade",
-            "data": {
-                "population": 11816,
-                "areaKm2": 221.9,
-                "gdpPerCapita": 30353,
-                "hospitalBedsPerThousand": 2.5,
-                "idh": 0.751,
-                "higherEducationPct": 12.5
-            },
-            "visual": {
-                "primaryColor": "#008000",
-                "secondaryColor": "#FFFF00",
-                "image": "tapiratiba.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "guaxupe-vs-tapiratiba-2025",
+  "title": "Guaxupé vs Tapiratiba",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3128709,
+      "name": "Guaxupé",
+      "state": "MG",
+      "nickname": "Cidade das Abelhas",
+      "data": {
+        "population": 50911,
+        "areaKm2": 286.4,
+        "gdpPerCapita": 47761,
+        "hospitalBedsPerThousand": 1.5,
+        "idh": 0.751,
+        "higherEducationPct": 18.4
+      },
+      "visual": {
+        "primaryColor": "#0047AB",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/mg/g/guaxupe.jpeg"
+      }
+    },
+    {
+      "ibgeId": 3553504,
+      "name": "Tapiratiba",
+      "state": "SP",
+      "nickname": "Cidade da Amizade",
+      "data": {
+        "population": 11816,
+        "areaKm2": 221.9,
+        "gdpPerCapita": 30353,
+        "hospitalBedsPerThousand": 2.5,
+        "idh": 0.751,
+        "higherEducationPct": 12.5
+      },
+      "visual": {
+        "primaryColor": "#008000",
+        "secondaryColor": "#FFFF00",
+        "image": "images/cities/sp/t/tapiratiba.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

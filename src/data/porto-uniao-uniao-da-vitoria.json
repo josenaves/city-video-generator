@@ -1,95 +1,95 @@
 {
-    "matchId": "porto-uniao-vs-uniao-da-vitoria-2025",
-    "title": "Porto União vs União da Vitória",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 4213609,
-            "name": "Porto União",
-            "state": "SC",
-            "nickname": "Cidade Amiga",
-            "data": {
-                "population": 33727,
-                "areaKm2": 848.8,
-                "gdpPerCapita": 39883,
-                "hospitalBedsPerThousand": 2.34,
-                "idh": 0.786,
-                "higherEducationPct": 15.0
-            },
-            "visual": {
-                "primaryColor": "#FFD700",
-                "secondaryColor": "#B8860B",
-                "image": "porto-uniao.jpg"
-            }
-        },
-        {
-            "ibgeId": 4128005,
-            "name": "União da Vitória",
-            "state": "PR",
-            "nickname": "Cidade das Cachoeiras",
-            "data": {
-                "population": 56397,
-                "areaKm2": 720.0,
-                "gdpPerCapita": 40401,
-                "hospitalBedsPerThousand": 1.79,
-                "idh": 0.740,
-                "higherEducationPct": 12.54
-            },
-            "visual": {
-                "primaryColor": "#003366",
-                "secondaryColor": "#002244",
-                "image": "uniao-da-vitoria.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "porto-uniao-vs-uniao-da-vitoria-2025",
+  "title": "Porto União vs União da Vitória",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 4213609,
+      "name": "Porto União",
+      "state": "SC",
+      "nickname": "Cidade Amiga",
+      "data": {
+        "population": 33727,
+        "areaKm2": 848.8,
+        "gdpPerCapita": 39883,
+        "hospitalBedsPerThousand": 2.34,
+        "idh": 0.786,
+        "higherEducationPct": 15
+      },
+      "visual": {
+        "primaryColor": "#FFD700",
+        "secondaryColor": "#B8860B",
+        "image": "images/cities/sc/p/porto-uniao.jpg"
+      }
+    },
+    {
+      "ibgeId": 4128005,
+      "name": "União da Vitória",
+      "state": "PR",
+      "nickname": "Cidade das Cachoeiras",
+      "data": {
+        "population": 56397,
+        "areaKm2": 720,
+        "gdpPerCapita": 40401,
+        "hospitalBedsPerThousand": 1.79,
+        "idh": 0.74,
+        "higherEducationPct": 12.54
+      },
+      "visual": {
+        "primaryColor": "#003366",
+        "secondaryColor": "#002244",
+        "image": "images/cities/pr/u/uniao-da-vitoria.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

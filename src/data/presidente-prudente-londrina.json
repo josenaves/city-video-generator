@@ -1,89 +1,89 @@
 {
-    "matchId": "presidente-prudente-londrina",
-    "title": "A Batalha Regional",
-    "theme": "Oeste Paulista vs Norte do Paraná",
-    "cities": [
-        {
-            "ibgeId": "3541406",
-            "name": "Pres. Prudente",
-            "state": "SP",
-            "nickname": "Capital do Oeste Paulista",
-            "data": {
-                "populacao": 225668,
-                "areaKm2": 560,
-                "pibPerCapita": 51481,
-                "leitos": 3.5,
-                "idh": 0.806,
-                "ensinoSuperior": 24.0
-            },
-            "visual": {
-                "primaryColor": "#1976D2",
-                "secondaryColor": "#ffffff",
-                "image": "presidente-prudente.jpg"
-            }
-        },
-        {
-            "ibgeId": "4113700",
-            "name": "Londrina",
-            "state": "PR",
-            "nickname": "Pequena Londres",
-            "data": {
-                "populacao": 555965,
-                "areaKm2": 1653,
-                "pibPerCapita": 51234,
-                "leitos": 4.2,
-                "idh": 0.778,
-                "ensinoSuperior": 27.5
-            },
-            "visual": {
-                "primaryColor": "#1a5fb4",
-                "secondaryColor": "#ffffff",
-                "image": "londrina.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS/1K",
-            "field": "leitos",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal3",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "presidente-prudente-londrina",
+  "title": "A Batalha Regional",
+  "theme": "Oeste Paulista vs Norte do Paraná",
+  "cities": [
+    {
+      "ibgeId": "3541406",
+      "name": "Pres. Prudente",
+      "state": "SP",
+      "nickname": "Capital do Oeste Paulista",
+      "data": {
+        "populacao": 225668,
+        "areaKm2": 560,
+        "pibPerCapita": 51481,
+        "leitos": 3.5,
+        "idh": 0.806,
+        "ensinoSuperior": 24
+      },
+      "visual": {
+        "primaryColor": "#1976D2",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/p/presidente-prudente.jpg"
+      }
+    },
+    {
+      "ibgeId": "4113700",
+      "name": "Londrina",
+      "state": "PR",
+      "nickname": "Pequena Londres",
+      "data": {
+        "populacao": 555965,
+        "areaKm2": 1653,
+        "pibPerCapita": 51234,
+        "leitos": 4.2,
+        "idh": 0.778,
+        "ensinoSuperior": 27.5
+      },
+      "visual": {
+        "primaryColor": "#1a5fb4",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pr/l/londrina.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS/1K",
+      "field": "leitos",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal3",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

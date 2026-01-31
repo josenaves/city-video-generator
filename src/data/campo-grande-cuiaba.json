@@ -1,95 +1,95 @@
 {
-    "matchId": "campo-grande-vs-cuiaba-2025",
-    "title": "Campo Grande vs Cuiabá",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 5002704,
-            "name": "Campo Grande",
-            "state": "MS",
-            "nickname": "Cidade Morena",
-            "data": {
-                "population": 898100,
-                "areaKm2": 8082.3,
-                "gdpPerCapita": 47065,
-                "hospitalBedsPerThousand": 3.37,
-                "idh": 0.784,
-                "higherEducationPct": 26.67
-            },
-            "visual": {
-                "primaryColor": "#00AA00",
-                "secondaryColor": "#006600",
-                "image": "campo_grande.jpg"
-            }
-        },
-        {
-            "ibgeId": 5103403,
-            "name": "Cuiabá",
-            "state": "MT",
-            "nickname": "Cidade Verde",
-            "data": {
-                "population": 650877,
-                "areaKm2": 4327.2,
-                "gdpPerCapita": 59997,
-                "hospitalBedsPerThousand": 2.20,
-                "idh": 0.785,
-                "higherEducationPct": 27.33
-            },
-            "visual": {
-                "primaryColor": "#FFD700",
-                "secondaryColor": "#B8860B",
-                "image": "cuiaba.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "campo-grande-vs-cuiaba-2025",
+  "title": "Campo Grande vs Cuiabá",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 5002704,
+      "name": "Campo Grande",
+      "state": "MS",
+      "nickname": "Cidade Morena",
+      "data": {
+        "population": 898100,
+        "areaKm2": 8082.3,
+        "gdpPerCapita": 47065,
+        "hospitalBedsPerThousand": 3.37,
+        "idh": 0.784,
+        "higherEducationPct": 26.67
+      },
+      "visual": {
+        "primaryColor": "#00AA00",
+        "secondaryColor": "#006600",
+        "image": "images/cities/ms/c/campo_grande.jpg"
+      }
+    },
+    {
+      "ibgeId": 5103403,
+      "name": "Cuiabá",
+      "state": "MT",
+      "nickname": "Cidade Verde",
+      "data": {
+        "population": 650877,
+        "areaKm2": 4327.2,
+        "gdpPerCapita": 59997,
+        "hospitalBedsPerThousand": 2.2,
+        "idh": 0.785,
+        "higherEducationPct": 27.33
+      },
+      "visual": {
+        "primaryColor": "#FFD700",
+        "secondaryColor": "#B8860B",
+        "image": "images/cities/mt/c/cuiaba.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

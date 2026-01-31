@@ -1,95 +1,95 @@
 {
-    "matchId": "goiania-vs-campo-grande-2025",
-    "title": "Goiânia vs Campo Grande",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 5208707,
-            "name": "Goiânia",
-            "state": "GO",
-            "nickname": "Coração do Brasil",
-            "data": {
-                "population": 1437366,
-                "areaKm2": 729.3,
-                "gdpPerCapita": 52722,
-                "hospitalBedsPerThousand": 4.88,
-                "idh": 0.799,
-                "higherEducationPct": 27.65
-            },
-            "visual": {
-                "primaryColor": "#008037",
-                "secondaryColor": "#FDC33F",
-                "image": "goiania.jpg"
-            }
-        },
-        {
-            "ibgeId": 5002704,
-            "name": "Campo Grande",
-            "state": "MS",
-            "nickname": "Cidade Morena",
-            "data": {
-                "population": 898100,
-                "areaKm2": 8082.3,
-                "gdpPerCapita": 47065,
-                "hospitalBedsPerThousand": 3.37,
-                "idh": 0.784,
-                "higherEducationPct": 26.67
-            },
-            "visual": {
-                "primaryColor": "#00AA00",
-                "secondaryColor": "#006600",
-                "image": "campo-grande.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "goiania-vs-campo-grande-2025",
+  "title": "Goiânia vs Campo Grande",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 5208707,
+      "name": "Goiânia",
+      "state": "GO",
+      "nickname": "Coração do Brasil",
+      "data": {
+        "population": 1437366,
+        "areaKm2": 729.3,
+        "gdpPerCapita": 52722,
+        "hospitalBedsPerThousand": 4.88,
+        "idh": 0.799,
+        "higherEducationPct": 27.65
+      },
+      "visual": {
+        "primaryColor": "#008037",
+        "secondaryColor": "#FDC33F",
+        "image": "images/cities/go/g/goiania.jpg"
+      }
+    },
+    {
+      "ibgeId": 5002704,
+      "name": "Campo Grande",
+      "state": "MS",
+      "nickname": "Cidade Morena",
+      "data": {
+        "population": 898100,
+        "areaKm2": 8082.3,
+        "gdpPerCapita": 47065,
+        "hospitalBedsPerThousand": 3.37,
+        "idh": 0.784,
+        "higherEducationPct": 26.67
+      },
+      "visual": {
+        "primaryColor": "#00AA00",
+        "secondaryColor": "#006600",
+        "image": "images/cities/ms/c/campo-grande.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

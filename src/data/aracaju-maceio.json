@@ -1,95 +1,95 @@
 {
-    "matchId": "aracaju-vs-maceio-2025",
-    "title": "Aracaju vs Maceió",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 2800308,
-            "name": "Aracaju",
-            "state": "SE",
-            "nickname": "Cid. Qualidade de Vida",
-            "data": {
-                "population": 602757,
-                "areaKm2": 182.16,
-                "gdpPerCapita": 36983,
-                "hospitalBedsPerThousand": 3.0,
-                "idh": 0.770,
-                "higherEducationPct": 26.9
-            },
-            "visual": {
-                "primaryColor": "#2E7D32",
-                "secondaryColor": "#FDD835",
-                "image": "aracaju.jpg"
-            }
-        },
-        {
-            "ibgeId": 2704302,
-            "name": "Maceió",
-            "state": "AL",
-            "nickname": "Paraíso das Águas",
-            "data": {
-                "population": 957916,
-                "areaKm2": 509.3,
-                "gdpPerCapita": 35232,
-                "hospitalBedsPerThousand": 3.2,
-                "idh": 0.721,
-                "higherEducationPct": 20.3
-            },
-            "visual": {
-                "primaryColor": "#0277BD",
-                "secondaryColor": "#26C6DA",
-                "image": "maceio.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "aracaju-vs-maceio-2025",
+  "title": "Aracaju vs Maceió",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 2800308,
+      "name": "Aracaju",
+      "state": "SE",
+      "nickname": "Cid. Qualidade de Vida",
+      "data": {
+        "population": 602757,
+        "areaKm2": 182.16,
+        "gdpPerCapita": 36983,
+        "hospitalBedsPerThousand": 3,
+        "idh": 0.77,
+        "higherEducationPct": 26.9
+      },
+      "visual": {
+        "primaryColor": "#2E7D32",
+        "secondaryColor": "#FDD835",
+        "image": "images/cities/se/a/aracaju.jpg"
+      }
+    },
+    {
+      "ibgeId": 2704302,
+      "name": "Maceió",
+      "state": "AL",
+      "nickname": "Paraíso das Águas",
+      "data": {
+        "population": 957916,
+        "areaKm2": 509.3,
+        "gdpPerCapita": 35232,
+        "hospitalBedsPerThousand": 3.2,
+        "idh": 0.721,
+        "higherEducationPct": 20.3
+      },
+      "visual": {
+        "primaryColor": "#0277BD",
+        "secondaryColor": "#26C6DA",
+        "image": "images/cities/al/m/maceio.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

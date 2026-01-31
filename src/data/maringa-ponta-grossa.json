@@ -1,89 +1,89 @@
 {
-    "matchId": "maringa-ponta-grossa",
-    "title": "A Batalha do Interior Paranaense",
-    "theme": "Cidades do Paraná",
-    "cities": [
-        {
-            "ibgeId": "4115200",
-            "name": "Maringá",
-            "state": "PR",
-            "nickname": "Cidade Canção",
-            "data": {
-                "populacao": 409657,
-                "areaKm2": 487,
-                "pibPerCapita": 67903,
-                "leitos": 980,
-                "idh": 0.808,
-                "ensinoSuperior": 30.56
-            },
-            "visual": {
-                "primaryColor": "#26a269",
-                "secondaryColor": "#ffffff",
-                "image": "maringa.jpg"
-            }
-        },
-        {
-            "ibgeId": "4119905",
-            "name": "Ponta Grossa",
-            "state": "PR",
-            "nickname": "Princesa dos Campos",
-            "data": {
-                "populacao": 358367,
-                "areaKm2": 2053,
-                "pibPerCapita": 71387,
-                "leitos": 840,
-                "idh": 0.763,
-                "ensinoSuperior": 21.3
-            },
-            "visual": {
-                "primaryColor": "#0d47a1",
-                "secondaryColor": "#ffffff",
-                "image": "ponta-grossa.jpeg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS",
-            "field": "leitos",
-            "format": "number",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "maringa-ponta-grossa",
+  "title": "A Batalha do Interior Paranaense",
+  "theme": "Cidades do Paraná",
+  "cities": [
+    {
+      "ibgeId": "4115200",
+      "name": "Maringá",
+      "state": "PR",
+      "nickname": "Cidade Canção",
+      "data": {
+        "populacao": 409657,
+        "areaKm2": 487,
+        "pibPerCapita": 67903,
+        "leitos": 980,
+        "idh": 0.808,
+        "ensinoSuperior": 30.56
+      },
+      "visual": {
+        "primaryColor": "#26a269",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pr/m/maringa.jpg"
+      }
+    },
+    {
+      "ibgeId": "4119905",
+      "name": "Ponta Grossa",
+      "state": "PR",
+      "nickname": "Princesa dos Campos",
+      "data": {
+        "populacao": 358367,
+        "areaKm2": 2053,
+        "pibPerCapita": 71387,
+        "leitos": 840,
+        "idh": 0.763,
+        "ensinoSuperior": 21.3
+      },
+      "visual": {
+        "primaryColor": "#0d47a1",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pr/p/ponta-grossa.jpeg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS",
+      "field": "leitos",
+      "format": "number",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

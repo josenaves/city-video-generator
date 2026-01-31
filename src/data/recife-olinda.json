@@ -1,111 +1,111 @@
 {
-    "matchId": "recife-olinda",
-    "title": "Batalha de Pernambuco",
-    "theme": "Rivais Históricas",
-    "timing": {
-        "beatsPerTransition": 5
+  "matchId": "recife-olinda",
+  "title": "Batalha de Pernambuco",
+  "theme": "Rivais Históricas",
+  "timing": {
+    "beatsPerTransition": 5
+  },
+  "cities": [
+    {
+      "ibgeId": "2611606",
+      "name": "Recife",
+      "state": "PE",
+      "nickname": "Veneza Brasileira",
+      "data": {
+        "populacao": 1488920,
+        "areaKm2": 218.8,
+        "pibPerCapita": 44563,
+        "leitos": 5.4,
+        "idh": 0.772,
+        "ensinoSuperior": 18.4,
+        "fundacao": 1537,
+        "frota": 724015
+      },
+      "visual": {
+        "primaryColor": "#0056b3",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pe/r/recife.jpg"
+      }
     },
-    "cities": [
-        {
-            "ibgeId": "2611606",
-            "name": "Recife",
-            "state": "PE",
-            "nickname": "Veneza Brasileira",
-            "data": {
-                "populacao": 1488920,
-                "areaKm2": 218.8,
-                "pibPerCapita": 44563,
-                "leitos": 5.4,
-                "idh": 0.772,
-                "ensinoSuperior": 18.4,
-                "fundacao": 1537,
-                "frota": 724015
-            },
-            "visual": {
-                "primaryColor": "#0056b3",
-                "secondaryColor": "#ffffff",
-                "image": "recife.jpg"
-            }
-        },
-        {
-            "ibgeId": "2609600",
-            "name": "Olinda",
-            "state": "PE",
-            "nickname": "Cidade Sorriso",
-            "data": {
-                "populacao": 349976,
-                "areaKm2": 41.6,
-                "pibPerCapita": 17632,
-                "leitos": 2.1,
-                "idh": 0.735,
-                "ensinoSuperior": 13.5,
-                "fundacao": 1535,
-                "frota": 118525
-            },
-            "visual": {
-                "primaryColor": "#f1c40f",
-                "secondaryColor": "#ffffff",
-                "image": "olinda.webp"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS/1K",
-            "field": "leitos",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal3",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        },
-        {
-            "id": "fundacao",
-            "title": "FUNDAÇÃO (ANO)",
-            "field": "fundacao",
-            "format": "number",
-            "unit": "",
-            "inverse": true
-        },
-        {
-            "id": "frota",
-            "title": "FROTA VEÍCULOS",
-            "field": "frota",
-            "format": "number",
-            "unit": ""
-        }
-    ]
+    {
+      "ibgeId": "2609600",
+      "name": "Olinda",
+      "state": "PE",
+      "nickname": "Cidade Sorriso",
+      "data": {
+        "populacao": 349976,
+        "areaKm2": 41.6,
+        "pibPerCapita": 17632,
+        "leitos": 2.1,
+        "idh": 0.735,
+        "ensinoSuperior": 13.5,
+        "fundacao": 1535,
+        "frota": 118525
+      },
+      "visual": {
+        "primaryColor": "#f1c40f",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pe/o/olinda.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS/1K",
+      "field": "leitos",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal3",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    },
+    {
+      "id": "fundacao",
+      "title": "FUNDAÇÃO (ANO)",
+      "field": "fundacao",
+      "format": "number",
+      "unit": "",
+      "inverse": true
+    },
+    {
+      "id": "frota",
+      "title": "FROTA VEÍCULOS",
+      "field": "frota",
+      "format": "number",
+      "unit": ""
+    }
+  ]
 }

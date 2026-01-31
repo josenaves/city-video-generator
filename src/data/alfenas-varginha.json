@@ -1,89 +1,89 @@
 {
-    "matchId": "alfenas-varginha",
-    "title": "Alfenas vs Varginha",
-    "theme": "Duelo do Sul de Minas",
-    "cities": [
-        {
-            "ibgeId": "3101607",
-            "name": "Alfenas",
-            "state": "MG",
-            "nickname": "Cidade Universitária",
-            "data": {
-                "populacao": 82303,
-                "areaKm2": 850,
-                "pibPerCapita": 46472,
-                "leitos": 2.5,
-                "idh": 0.761,
-                "ensinoSuperior": 20
-            },
-            "visual": {
-                "primaryColor": "#1565C0",
-                "secondaryColor": "#0D47A1",
-                "image": "alfenas.jpg"
-            }
-        },
-        {
-            "ibgeId": "3170701",
-            "name": "Varginha",
-            "state": "MG",
-            "nickname": "Cidade do ET",
-            "data": {
-                "populacao": 136467,
-                "areaKm2": 395.4,
-                "pibPerCapita": 73780.24,
-                "leitos": 1.8,
-                "idh": 0.778,
-                "ensinoSuperior": 18.5
-            },
-            "visual": {
-                "primaryColor": "#228b22",
-                "secondaryColor": "#ffffff",
-                "image": "varginha.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS/1K",
-            "field": "leitos",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal3",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "alfenas-varginha",
+  "title": "Alfenas vs Varginha",
+  "theme": "Duelo do Sul de Minas",
+  "cities": [
+    {
+      "ibgeId": "3101607",
+      "name": "Alfenas",
+      "state": "MG",
+      "nickname": "Cidade Universitária",
+      "data": {
+        "populacao": 82303,
+        "areaKm2": 850,
+        "pibPerCapita": 46472,
+        "leitos": 2.5,
+        "idh": 0.761,
+        "ensinoSuperior": 20
+      },
+      "visual": {
+        "primaryColor": "#1565C0",
+        "secondaryColor": "#0D47A1",
+        "image": "images/cities/mg/a/alfenas.jpg"
+      }
+    },
+    {
+      "ibgeId": "3170701",
+      "name": "Varginha",
+      "state": "MG",
+      "nickname": "Cidade do ET",
+      "data": {
+        "populacao": 136467,
+        "areaKm2": 395.4,
+        "pibPerCapita": 73780.24,
+        "leitos": 1.8,
+        "idh": 0.778,
+        "ensinoSuperior": 18.5
+      },
+      "visual": {
+        "primaryColor": "#228b22",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/mg/v/varginha.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS/1K",
+      "field": "leitos",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal3",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

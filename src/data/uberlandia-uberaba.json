@@ -1,95 +1,95 @@
 {
-    "matchId": "uberlandia-vs-uberaba-2025",
-    "title": "Uberlândia vs Uberaba",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3170206,
-            "name": "Uberlândia",
-            "state": "MG",
-            "nickname": "Capital da Logística",
-            "data": {
-                "population": 720000,
-                "areaKm2": 4785,
-                "gdpPerCapita": 45000,
-                "hospitalBedsPerThousand": 2.8,
-                "idh": 0.778,
-                "higherEducationPct": 18
-            },
-            "visual": {
-                "primaryColor": "#00FF00",
-                "secondaryColor": "#008800",
-                "image": "uberlandia-skyline.jpg"
-            }
-        },
-        {
-            "ibgeId": 3170107,
-            "name": "Uberaba",
-            "state": "MG",
-            "nickname": "Terra do Zebu",
-            "data": {
-                "population": 340000,
-                "areaKm2": 2855,
-                "gdpPerCapita": 38000,
-                "hospitalBedsPerThousand": 2.2,
-                "idh": 0.768,
-                "higherEducationPct": 15
-            },
-            "visual": {
-                "primaryColor": "#FFD700",
-                "secondaryColor": "#B8860B",
-                "image": "uberaba-historic.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "uberlandia-vs-uberaba-2025",
+  "title": "Uberlândia vs Uberaba",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3170206,
+      "name": "Uberlândia",
+      "state": "MG",
+      "nickname": "Capital da Logística",
+      "data": {
+        "population": 720000,
+        "areaKm2": 4785,
+        "gdpPerCapita": 45000,
+        "hospitalBedsPerThousand": 2.8,
+        "idh": 0.778,
+        "higherEducationPct": 18
+      },
+      "visual": {
+        "primaryColor": "#00FF00",
+        "secondaryColor": "#008800",
+        "image": "images/cities/mg/u/uberlandia-skyline.jpg"
+      }
+    },
+    {
+      "ibgeId": 3170107,
+      "name": "Uberaba",
+      "state": "MG",
+      "nickname": "Terra do Zebu",
+      "data": {
+        "population": 340000,
+        "areaKm2": 2855,
+        "gdpPerCapita": 38000,
+        "hospitalBedsPerThousand": 2.2,
+        "idh": 0.768,
+        "higherEducationPct": 15
+      },
+      "visual": {
+        "primaryColor": "#FFD700",
+        "secondaryColor": "#B8860B",
+        "image": "images/cities/mg/u/uberaba-historic.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

@@ -1,95 +1,95 @@
 {
-    "matchId": "guaranesia-vs-juruaia-2025",
-    "title": "Guaranésia vs Juruaia",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 3128303,
-            "name": "Guaranésia",
-            "state": "MG",
-            "nickname": "Cidade das Flores",
-            "data": {
-                "population": 19150,
-                "areaKm2": 294.8,
-                "gdpPerCapita": 28891,
-                "hospitalBedsPerThousand": 1.4,
-                "idh": 0.701,
-                "higherEducationPct": 8.5
-            },
-            "visual": {
-                "primaryColor": "#008000",
-                "secondaryColor": "#FFFFFF",
-                "image": "guaranesia.jpg"
-            }
-        },
-        {
-            "ibgeId": 3136900,
-            "name": "Juruaia",
-            "state": "MG",
-            "nickname": "Capital da Lingerie",
-            "data": {
-                "population": 11084,
-                "areaKm2": 220.4,
-                "gdpPerCapita": 25394,
-                "hospitalBedsPerThousand": 0.7,
-                "idh": 0.723,
-                "higherEducationPct": 9.5
-            },
-            "visual": {
-                "primaryColor": "#FF69B4",
-                "secondaryColor": "#FFFFFF",
-                "image": "juruaia.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "guaranesia-vs-juruaia-2025",
+  "title": "Guaranésia vs Juruaia",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 3128303,
+      "name": "Guaranésia",
+      "state": "MG",
+      "nickname": "Cidade das Flores",
+      "data": {
+        "population": 19150,
+        "areaKm2": 294.8,
+        "gdpPerCapita": 28891,
+        "hospitalBedsPerThousand": 1.4,
+        "idh": 0.701,
+        "higherEducationPct": 8.5
+      },
+      "visual": {
+        "primaryColor": "#008000",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/mg/g/guaranesia.jpg"
+      }
+    },
+    {
+      "ibgeId": 3136900,
+      "name": "Juruaia",
+      "state": "MG",
+      "nickname": "Capital da Lingerie",
+      "data": {
+        "population": 11084,
+        "areaKm2": 220.4,
+        "gdpPerCapita": 25394,
+        "hospitalBedsPerThousand": 0.7,
+        "idh": 0.723,
+        "higherEducationPct": 9.5
+      },
+      "visual": {
+        "primaryColor": "#FF69B4",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/mg/j/juruaia.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

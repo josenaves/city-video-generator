@@ -1,95 +1,95 @@
 {
-    "matchId": "pelotas-vs-bage-2026",
-    "title": "Pelotas vs Bagé",
-    "theme": "epic-battle",
-    "cities": [
-        {
-            "ibgeId": 4314407,
-            "name": "Pelotas",
-            "state": "RS",
-            "nickname": "Princesa do Sul",
-            "data": {
-                "population": 325685,
-                "areaKm2": 1608.78,
-                "gdpPerCapita": 38322.06,
-                "hospitalBedsPerThousand": 2.51,
-                "idh": 0.739,
-                "higherEducationPct": 22.01
-            },
-            "visual": {
-                "primaryColor": "#0000FF",
-                "secondaryColor": "#FFFFFF",
-                "image": "pelotas.png"
-            }
-        },
-        {
-            "ibgeId": 4301602,
-            "name": "Bagé",
-            "state": "RS",
-            "nickname": "Rainha da Fronteira",
-            "data": {
-                "population": 117938,
-                "areaKm2": 4090.36,
-                "gdpPerCapita": 37432.95,
-                "hospitalBedsPerThousand": 3.09,
-                "idh": 0.740,
-                "higherEducationPct": 11.81
-            },
-            "visual": {
-                "primaryColor": "#FFD700",
-                "secondaryColor": "#000000",
-                "image": "bage.webp"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "population",
-            "title": "POPULAÇÃO",
-            "type": "bar",
-            "unit": "hab",
-            "field": "population",
-            "format": "compact"
-        },
-        {
-            "id": "area",
-            "title": "ÁREA",
-            "type": "pie",
-            "unit": "km²",
-            "field": "areaKm2",
-            "format": "number"
-        },
-        {
-            "id": "gdp",
-            "title": "PIB/CAPITA",
-            "type": "line",
-            "unit": "R$",
-            "field": "gdpPerCapita",
-            "format": "currency"
-        },
-        {
-            "id": "beds",
-            "title": "LEITOS/1K",
-            "type": "column",
-            "unit": "",
-            "field": "hospitalBedsPerThousand",
-            "format": "decimal"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "type": "radar",
-            "unit": "",
-            "field": "idh",
-            "format": "decimal3"
-        },
-        {
-            "id": "education",
-            "title": "ESCOLARIDADE",
-            "type": "donut",
-            "unit": "%",
-            "field": "higherEducationPct",
-            "format": "percent"
-        }
-    ]
+  "matchId": "pelotas-vs-bage-2026",
+  "title": "Pelotas vs Bagé",
+  "theme": "epic-battle",
+  "cities": [
+    {
+      "ibgeId": 4314407,
+      "name": "Pelotas",
+      "state": "RS",
+      "nickname": "Princesa do Sul",
+      "data": {
+        "population": 325685,
+        "areaKm2": 1608.78,
+        "gdpPerCapita": 38322.06,
+        "hospitalBedsPerThousand": 2.51,
+        "idh": 0.739,
+        "higherEducationPct": 22.01
+      },
+      "visual": {
+        "primaryColor": "#0000FF",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/rs/p/pelotas.png"
+      }
+    },
+    {
+      "ibgeId": 4301602,
+      "name": "Bagé",
+      "state": "RS",
+      "nickname": "Rainha da Fronteira",
+      "data": {
+        "population": 117938,
+        "areaKm2": 4090.36,
+        "gdpPerCapita": 37432.95,
+        "hospitalBedsPerThousand": 3.09,
+        "idh": 0.74,
+        "higherEducationPct": 11.81
+      },
+      "visual": {
+        "primaryColor": "#FFD700",
+        "secondaryColor": "#000000",
+        "image": "images/cities/rs/b/bage.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "population",
+      "title": "POPULAÇÃO",
+      "type": "bar",
+      "unit": "hab",
+      "field": "population",
+      "format": "compact"
+    },
+    {
+      "id": "area",
+      "title": "ÁREA",
+      "type": "pie",
+      "unit": "km²",
+      "field": "areaKm2",
+      "format": "number"
+    },
+    {
+      "id": "gdp",
+      "title": "PIB/CAPITA",
+      "type": "line",
+      "unit": "R$",
+      "field": "gdpPerCapita",
+      "format": "currency"
+    },
+    {
+      "id": "beds",
+      "title": "LEITOS/1K",
+      "type": "column",
+      "unit": "",
+      "field": "hospitalBedsPerThousand",
+      "format": "decimal"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "type": "radar",
+      "unit": "",
+      "field": "idh",
+      "format": "decimal3"
+    },
+    {
+      "id": "education",
+      "title": "ESCOLARIDADE",
+      "type": "donut",
+      "unit": "%",
+      "field": "higherEducationPct",
+      "format": "percent"
+    }
+  ]
 }

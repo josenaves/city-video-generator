@@ -1,89 +1,89 @@
 {
-    "matchId": "ponta-grossa-londrina",
-    "title": "A Batalha do Interior Paranaense",
-    "theme": "Cidades do Paraná",
-    "cities": [
-        {
-            "ibgeId": "4119905",
-            "name": "Ponta Grossa",
-            "state": "PR",
-            "nickname": "Princesa dos Campos",
-            "data": {
-                "populacao": 358367,
-                "areaKm2": 2053,
-                "pibPerCapita": 71387,
-                "leitos": 840,
-                "idh": 0.763,
-                "ensinoSuperior": 21.3
-            },
-            "visual": {
-                "primaryColor": "#0d47a1",
-                "secondaryColor": "#ffffff",
-                "image": "ponta-grossa.jpeg"
-            }
-        },
-        {
-            "ibgeId": "4113700",
-            "name": "Londrina",
-            "state": "PR",
-            "nickname": "Pequena Londres",
-            "data": {
-                "populacao": 580870,
-                "areaKm2": 1653,
-                "pibPerCapita": 51234,
-                "leitos": 1450,
-                "idh": 0.778,
-                "ensinoSuperior": 27.5
-            },
-            "visual": {
-                "primaryColor": "#1a5fb4",
-                "secondaryColor": "#ffffff",
-                "image": "londrina.jpg"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS",
-            "field": "leitos",
-            "format": "number",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal3",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "ponta-grossa-londrina",
+  "title": "A Batalha do Interior Paranaense",
+  "theme": "Cidades do Paraná",
+  "cities": [
+    {
+      "ibgeId": "4119905",
+      "name": "Ponta Grossa",
+      "state": "PR",
+      "nickname": "Princesa dos Campos",
+      "data": {
+        "populacao": 358367,
+        "areaKm2": 2053,
+        "pibPerCapita": 71387,
+        "leitos": 840,
+        "idh": 0.763,
+        "ensinoSuperior": 21.3
+      },
+      "visual": {
+        "primaryColor": "#0d47a1",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pr/p/ponta-grossa.jpeg"
+      }
+    },
+    {
+      "ibgeId": "4113700",
+      "name": "Londrina",
+      "state": "PR",
+      "nickname": "Pequena Londres",
+      "data": {
+        "populacao": 580870,
+        "areaKm2": 1653,
+        "pibPerCapita": 51234,
+        "leitos": 1450,
+        "idh": 0.778,
+        "ensinoSuperior": 27.5
+      },
+      "visual": {
+        "primaryColor": "#1a5fb4",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/pr/l/londrina.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS",
+      "field": "leitos",
+      "format": "number",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal3",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

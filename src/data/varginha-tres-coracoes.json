@@ -1,89 +1,89 @@
 {
-    "matchId": "varginha-tres-coracoes",
-    "title": "Varginha vs Três Corações",
-    "theme": "Duelo de Gigantes do Sul de Minas",
-    "cities": [
-        {
-            "ibgeId": "3170701",
-            "name": "Varginha",
-            "state": "MG",
-            "nickname": "Cidade do ET",
-            "data": {
-                "populacao": 136467,
-                "areaKm2": 395.4,
-                "pibPerCapita": 73780.24,
-                "leitos": 1.8,
-                "idh": 0.778,
-                "ensinoSuperior": 18.5
-            },
-            "visual": {
-                "primaryColor": "#228b22",
-                "secondaryColor": "#ffffff",
-                "image": "varginha.jpg"
-            }
-        },
-        {
-            "ibgeId": "3169307",
-            "name": "Três Corações",
-            "state": "MG",
-            "nickname": "Terra do Rei Pelé",
-            "data": {
-                "populacao": 75485,
-                "areaKm2": 828.038,
-                "pibPerCapita": 47277.07,
-                "leitos": 2.62,
-                "idh": 0.744,
-                "ensinoSuperior": 14.8
-            },
-            "visual": {
-                "primaryColor": "#D32F2F",
-                "secondaryColor": "#1976D2",
-                "image": "tres-coracoes.webp"
-            }
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS/1K",
-            "field": "leitos",
-            "format": "decimal",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal3",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "unit": "%"
-        }
-    ]
+  "matchId": "varginha-tres-coracoes",
+  "title": "Varginha vs Três Corações",
+  "theme": "Duelo de Gigantes do Sul de Minas",
+  "cities": [
+    {
+      "ibgeId": "3170701",
+      "name": "Varginha",
+      "state": "MG",
+      "nickname": "Cidade do ET",
+      "data": {
+        "populacao": 136467,
+        "areaKm2": 395.4,
+        "pibPerCapita": 73780.24,
+        "leitos": 1.8,
+        "idh": 0.778,
+        "ensinoSuperior": 18.5
+      },
+      "visual": {
+        "primaryColor": "#228b22",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/mg/v/varginha.jpg"
+      }
+    },
+    {
+      "ibgeId": "3169307",
+      "name": "Três Corações",
+      "state": "MG",
+      "nickname": "Terra do Rei Pelé",
+      "data": {
+        "populacao": 75485,
+        "areaKm2": 828.038,
+        "pibPerCapita": 47277.07,
+        "leitos": 2.62,
+        "idh": 0.744,
+        "ensinoSuperior": 14.8
+      },
+      "visual": {
+        "primaryColor": "#D32F2F",
+        "secondaryColor": "#1976D2",
+        "image": "images/cities/mg/t/tres-coracoes.jpg"
+      }
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS/1K",
+      "field": "leitos",
+      "format": "decimal",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal3",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "unit": "%"
+    }
+  ]
 }

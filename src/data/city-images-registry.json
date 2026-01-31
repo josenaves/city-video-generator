@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "description": "Registro centralizado de imagens de cidades brasileiras",
+  "structure": {
+    "base": "public/images/cities",
+    "organization": "{estado}/{letra}/{nome-cidade}.{extensao}",
+    "aliases": {
+      "cities": "images/cities",
+      "public/cities": "images/cities"
+    }
+  },
+  "cities": {
+    "SC": {
+      "a": ["aracatuba", "ararangua", "aurora"],
+      "b": ["blumenau", "brusque", "bento-goncalves"]
+    },
+    "MG": {
+      "a": ["arceburgo", "araxa", "alfenas"],
+      "b": ["belo-horizonte", "betim", "barbacena"]
+    },
+    "SP": {
+      "a": ["atibaia", "assis", "araras"],
+      "b": ["bauru", "barueri", "botucatu"]
+    },
+    "RS": {
+      "c": ["caxambu", "caxias-do-sul"],
+      "p": ["passo-fundo", "pelotas"]
+    }
+  },
+  "deprecated_paths": ["public/*.jpg", "public/*.jpeg", "public/*.webp"]
+}
