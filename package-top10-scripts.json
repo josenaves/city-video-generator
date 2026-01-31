@@ -1,0 +1,10 @@
+{
+  "name": "city-video-generator",
+  "version": "1.0.0",
+  "scripts": {
+    "generate:top10": "tsx scripts/generate-top10.ts",
+    "generate:top10:pobres:minas": "tsx scripts/generate-top10.ts --state=MG --metric=incomePerCapita --order=asc --title='As 10 CIDADES MAIS POBRES de Minas Gerais' --output=cidades-mais-pobres-minas.json",
+    "generate:top10:ricas:minas": "tsx scripts/generate-top10.ts --state=MG --metric=incomePerCapita --order=desc --title='As 10 CIDADES MAIS RICAS de Minas Gerais' --output=cidades-mais-ricas-minas.json",
+    "generate:top10:idh:brasil": "tsx scripts/generate-top10.ts --state=BR --metric=idh --order=desc --title='As 10 CIDADES com MELHOR IDH do Brasil' --output=cidades-melhor-idh-brasil.json"
+  }
+}

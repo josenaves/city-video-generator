@@ -1,0 +1,177 @@
+{
+  "videoId": "top-10-cidades-mais-pobres-santa-catarina-2024",
+  "title": "As 10 CIDADES MAIS POBRES de Santa Catarina",
+  "subtitle": "Ranking 2024 - Menor renda per capita",
+  "theme": "elegant-dark",
+  "format": "vertical",
+  "metric": {
+    "field": "incomePerCapita",
+    "title": "Renda per capita",
+    "unit": "R$",
+    "format": "currency",
+    "order": "asc"
+  },
+  "dataSource": "Fontes: IBGE, Atlas Brasil - Dados 2022/2023",
+  "cities": [
+    {
+      "name": "Abelardo Luz",
+      "state": "SC",
+      "nickname": "Terra da Soja",
+      "data": {
+        "population": 17267,
+        "incomePerCapita": 485.0,
+        "idh": 0.658,
+        "povertyRate": 45.2
+      },
+      "visual": {
+        "primaryColor": "#8B4513",
+        "secondaryColor": "#DAA520",
+        "image": "cities/abelardo-luz.svg"
+      }
+    },
+    {
+      "name": "Anchieta",
+      "state": "SC",
+      "nickname": "Portal do Oeste",
+      "data": {
+        "population": 5835,
+        "incomePerCapita": 512.0,
+        "idh": 0.662,
+        "povertyRate": 43.8
+      },
+      "visual": {
+        "primaryColor": "#CD853F",
+        "secondaryColor": "#8B4513",
+        "image": "cities/anchieta-sc.svg"
+      }
+    },
+    {
+      "name": "Guaraciaba",
+      "state": "SC",
+      "nickname": "Terra do Milho",
+      "data": {
+        "population": 10038,
+        "incomePerCapita": 534.0,
+        "idh": 0.667,
+        "povertyRate": 42.1
+      },
+      "visual": {
+        "primaryColor": "#DAA520",
+        "secondaryColor": "#B8860B",
+        "image": "cities/guaraciaba-sc.svg"
+      }
+    },
+    {
+      "name": "Bela Vista do Toldo",
+      "state": "SC",
+      "nickname": "Cidade da Madeira",
+      "data": {
+        "population": 6321,
+        "incomePerCapita": 548.0,
+        "idh": 0.669,
+        "povertyRate": 41.5
+      },
+      "visual": {
+        "primaryColor": "#228B22",
+        "secondaryColor": "#006400",
+        "image": "cities/bela-vista-do-toldo.svg"
+      }
+    },
+    {
+      "name": "Trombudo Central",
+      "state": "SC",
+      "nickname": "Vale do Rio Trombudo",
+      "data": {
+        "population": 7215,
+        "incomePerCapita": 562.0,
+        "idh": 0.672,
+        "povertyRate": 40.8
+      },
+      "visual": {
+        "primaryColor": "#4682B4",
+        "secondaryColor": "#2E8B57",
+        "image": "cities/trombudo-central.svg"
+      }
+    },
+    {
+      "name": "Ipuaçu",
+      "state": "SC",
+      "nickname": "Terra da Erva-Mate",
+      "data": {
+        "population": 7648,
+        "incomePerCapita": 578.0,
+        "idh": 0.675,
+        "povertyRate": 39.9
+      },
+      "visual": {
+        "primaryColor": "#6B8E23",
+        "secondaryColor": "#556B2F",
+        "image": "cities/ipuacu.svg"
+      }
+    },
+    {
+      "name": "Monte Carlo",
+      "state": "SC",
+      "nickname": "Cidade do Lago",
+      "data": {
+        "population": 11713,
+        "incomePerCapita": 589.0,
+        "idh": 0.678,
+        "povertyRate": 39.2
+      },
+      "visual": {
+        "primaryColor": "#20B2AA",
+        "secondaryColor": "#008B8B",
+        "image": "cities/monte-carlo-sc.svg"
+      }
+    },
+    {
+      "name": "Vargeão",
+      "state": "SC",
+      "nickname": "Terra do Churrasco",
+      "data": {
+        "population": 3589,
+        "incomePerCapita": 598.0,
+        "idh": 0.681,
+        "povertyRate": 38.5
+      },
+      "visual": {
+        "primaryColor": "#A0522D",
+        "secondaryColor": "#8B4513",
+        "image": "cities/vargeao.svg"
+      }
+    },
+    {
+      "name": "Novo Horizonte",
+      "state": "SC",
+      "nickname": "Cidade do Sol Nascente",
+      "data": {
+        "population": 10538,
+        "incomePerCapita": 612.0,
+        "idh": 0.684,
+        "povertyRate": 37.8
+      },
+      "visual": {
+        "primaryColor": "#FF8C00",
+        "secondaryColor": "#DAA520",
+        "image": "cities/novo-horizonte-sc.svg"
+      }
+    },
+    {
+      "name": "São Bernardino",
+      "state": "SC",
+      "nickname": "Terra do Queijo",
+      "data": {
+        "population": 2562,
+        "incomePerCapita": 625.0,
+        "idh": 0.687,
+        "povertyRate": 37.1
+      },
+      "visual": {
+        "primaryColor": "#DEB887",
+        "secondaryColor": "#D2691E",
+        "image": "cities/sao-bernardino-sc.svg"
+      }
+    }
+  ]
+}

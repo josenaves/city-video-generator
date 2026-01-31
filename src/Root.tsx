@@ -1,10 +1,6 @@
 import "./index.css";
 import { Composition } from "remotion";
-import {
-  BattleVideo,
-  getDynamicTiming,
-  getTiming,
-} from "./BattleVideo";
+import { BattleVideo, getDynamicTiming, getTiming } from "./BattleVideo";
 import {
   ChampionshipVideo,
   CHAMP_INTRO_DURATION,
@@ -22,6 +18,7 @@ import {
   CampaignVideo,
   calculateCampaignTotalDuration,
 } from "./features/campaign-one-vs-many";
+import { Top10CidadesVideo } from "./features/top-10-cidades/Top10CidadesVideo";
 
 // @ts-ignore
 import campaignTestData from "./data/campaign-test.json";
@@ -223,6 +220,18 @@ import recifeOlindaData from "./data/recife-olinda.json";
 // @ts-ignore
 import juruaiaGuaxupeData from "./data/juruaia-guaxupe.json";
 
+// @ts-expect-error JSON import without type definitions
+import top10PopulosasData from "./data/top-10/cidades-mais-populosas.json";
+
+// @ts-expect-error JSON import without type definitions
+import top10PobresMinhasData from "./data/top-10/cidades-mais-pobres-minas.json";
+
+// @ts-expect-error JSON import without type definitions
+import top10RicasSCData from "./data/top-10/cidades-mais-ricas-santa-catarina.json";
+
+// @ts-expect-error JSON import without type definitions
+import top10PobresSCData from "./data/top-10/cidades-mais-pobres-santa-catarina.json";
+
 // Championships
 // @ts-ignore
 import mogiChampionshipData from "./data/championships/mogi.json";
@@ -235,12 +244,21 @@ import capitaisSudesteData from "./data/championships/capitais-sudeste.json";
 
 // Each <Composition> is an entry in the sidebar!
 
-const calculateDuration = (data: any, beatsOverride?: number, bpm = 128, useDynamicTiming = false, isLong = false) => {
+const calculateDuration = (
+  data: any,
+  beatsOverride?: number,
+  bpm = 128,
+  useDynamicTiming = false,
+  isLong = false,
+) => {
   if (useDynamicTiming) {
     const timing = getDynamicTiming(data.rounds.length, bpm, isLong);
     return timing.totalFrames;
   }
-  const timing = getTiming(beatsOverride || data.timing?.beatsPerTransition || 3, bpm);
+  const timing = getTiming(
+    beatsOverride || data.timing?.beatsPerTransition || 3,
+    bpm,
+  );
   return timing.intro + data.rounds.length * timing.round + timing.final;
 };
 
@@ -347,7 +365,8 @@ export const RemotionRoot: React.FC = () => {
       />
 
       {championships.map((champ) => {
-        if (!champ.data || !champ.data.cities || !champ.data.rounds) return null;
+        if (!champ.data || !champ.data.cities || !champ.data.rounds)
+          return null;
         return (
           <Composition
             key={champ.id}
@@ -1603,17 +1622,36 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleJuruaiaGuaxupe"
         component={BattleVideo}
-        durationInFrames={calculateDuration({
-          ...juruaiaGuaxupeData,
-          rounds: juruaiaGuaxupeData.rounds.filter((r: any) => ['populacao', 'areaKm2', 'pibPerCapita', 'idh', 'esgotamentoSanitario'].includes(r.id))
-        }, 3)}
+        durationInFrames={calculateDuration(
+          {
+            ...juruaiaGuaxupeData,
+            rounds: juruaiaGuaxupeData.rounds.filter((r: any) =>
+              [
+                "populacao",
+                "areaKm2",
+                "pibPerCapita",
+                "idh",
+                "esgotamentoSanitario",
+              ].includes(r.id),
+            ),
+          },
+          3,
+        )}
         fps={30}
         width={1080}
         height={1920}
         defaultProps={{
           battleData: {
             ...juruaiaGuaxupeData,
-            rounds: juruaiaGuaxupeData.rounds.filter((r: any) => ['populacao', 'areaKm2', 'pibPerCapita', 'idh', 'esgotamentoSanitario'].includes(r.id))
+            rounds: juruaiaGuaxupeData.rounds.filter((r: any) =>
+              [
+                "populacao",
+                "areaKm2",
+                "pibPerCapita",
+                "idh",
+                "esgotamentoSanitario",
+              ].includes(r.id),
+            ),
           },
           image1: "juruaia.jpg",
           image2: "guaxupe.jpeg",
@@ -1623,7 +1661,13 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BattleJuruaiaGuaxupeHorizontal"
         component={BattleVideo}
-        durationInFrames={calculateDuration(juruaiaGuaxupeData, 3, 85, true, true)}
+        durationInFrames={calculateDuration(
+          juruaiaGuaxupeData,
+          3,
+          85,
+          true,
+          true,
+        )}
         fps={30}
         width={1920}
         height={1080}
@@ -1635,6 +1679,118 @@ export const RemotionRoot: React.FC = () => {
           bpm: 85,
           useDynamicTiming: true,
           isLong: true,
+        }}
+      />
+
+      {/* Top 10 Cidades Videos */}
+      <Composition
+        id="Top10CidadesMaisPopulosas"
+        component={Top10CidadesVideo}
+        durationInFrames={1260} // 42 seconds for vertical format
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: top10PopulosasData,
+        }}
+      />
+      <Composition
+        id="Top10CidadesMaisPopulosasHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={1950} // 65 seconds for horizontal format
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10PopulosasData,
+            format: "horizontal",
+            videoId: "top-10-cidades-mais-populosas-brasil-horizontal",
+          },
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Pobres de Minas */}
+      <Composition
+        id="Top10CidadesMaisPobresMinas"
+        component={Top10CidadesVideo}
+        durationInFrames={1260}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: top10PobresMinhasData,
+        }}
+      />
+      <Composition
+        id="Top10CidadesMaisPobresMinasHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={1950}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10PobresMinhasData,
+            format: "horizontal",
+            videoId: "top-10-cidades-mais-pobres-minas-horizontal",
+          },
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Ricas de Santa Catarina */}
+      <Composition
+        id="Top10CidadesMaisRicasSC"
+        component={Top10CidadesVideo}
+        durationInFrames={1260}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: top10RicasSCData,
+        }}
+      />
+      <Composition
+        id="Top10CidadesMaisRicasSCHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={1950}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10RicasSCData,
+            format: "horizontal",
+            videoId: "top-10-cidades-mais-ricas-santa-catarina-horizontal",
+          },
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Pobre de Santa Catarina */}
+      <Composition
+        id="Top10CidadesMaisPobresSC"
+        component={Top10CidadesVideo}
+        durationInFrames={1260}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: top10PobresSCData,
+        }}
+      />
+      <Composition
+        id="Top10CidadesMaisPobresSCHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={1950}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10PobresSCData,
+            format: "horizontal",
+            videoId: "top-10-cidades-mais-pobres-santa-catarina-horizontal",
+          },
         }}
       />
     </>

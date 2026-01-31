@@ -1,0 +1,196 @@
+{
+  "videoId": "top-10-cidades-mais-populosas-brasil",
+  "title": "As 10 CIDADES MAIS POPULOSAS do Brasil",
+  "subtitle": "Ranking 2024 - População em habitantes",
+  "theme": "elegant-dark",
+  "format": "vertical",
+  "metric": {
+    "field": "population",
+    "title": "População",
+    "unit": "hab",
+    "format": "compact",
+    "order": "desc"
+  },
+  "cities": [
+    {
+      "name": "São Paulo",
+      "state": "SP",
+      "nickname": "Terra da Garoa",
+      "data": {
+        "population": 12325000,
+        "areaKm2": 1521,
+        "gdpPerCapita": 45000,
+        "idh": 0.805,
+        "violentCrimeRate": 12.3,
+        "touristVisits": 15000000
+      },
+      "visual": {
+        "primaryColor": "#FF0000",
+        "secondaryColor": "#FFFFFF",
+        "image": "cities/sao-paulo.jpg"
+      }
+    },
+    {
+      "name": "Rio de Janeiro",
+      "state": "RJ",
+      "nickname": "Cidade Maravilhosa",
+      "data": {
+        "population": 6748000,
+        "areaKm2": 1200,
+        "gdpPerCapita": 38000,
+        "idh": 0.796,
+        "violentCrimeRate": 18.7,
+        "touristVisits": 22000000
+      },
+      "visual": {
+        "primaryColor": "#00FF00",
+        "secondaryColor": "#FFD700",
+        "image": "cities/rio-de-janeiro.jpg"
+      }
+    },
+    {
+      "name": "Brasília",
+      "state": "DF",
+      "nickname": "Capital Federal",
+      "data": {
+        "population": 3055000,
+        "areaKm2": 5802,
+        "gdpPerCapita": 52000,
+        "idh": 0.85,
+        "violentCrimeRate": 15.2,
+        "touristVisits": 3000000
+      },
+      "visual": {
+        "primaryColor": "#0066CC",
+        "secondaryColor": "#FFFFFF",
+        "image": "cities/brasilia.jpg"
+      }
+    },
+    {
+      "name": "Salvador",
+      "state": "BA",
+      "nickname": "Roma Negra",
+      "data": {
+        "population": 2887000,
+        "areaKm2": 693,
+        "gdpPerCapita": 28000,
+        "idh": 0.759,
+        "violentCrimeRate": 22.4,
+        "touristVisits": 6000000
+      },
+      "visual": {
+        "primaryColor": "#FFD700",
+        "secondaryColor": "#0066CC",
+        "image": "cities/salvador.jpg"
+      }
+    },
+    {
+      "name": "Fortaleza",
+      "state": "CE",
+      "nickname": "Terra da Luz",
+      "data": {
+        "population": 2687000,
+        "areaKm2": 313,
+        "gdpPerCapita": 25000,
+        "idh": 0.754,
+        "violentCrimeRate": 19.8,
+        "touristVisits": 2500000
+      },
+      "visual": {
+        "primaryColor": "#FF6600",
+        "secondaryColor": "#FFFF00",
+        "image": "cities/fortaleza.jpg"
+      }
+    },
+    {
+      "name": "Belo Horizonte",
+      "state": "MG",
+      "nickname": "BH",
+      "data": {
+        "population": 2527000,
+        "areaKm2": 331,
+        "gdpPerCapita": 32000,
+        "idh": 0.81,
+        "violentCrimeRate": 16.5,
+        "touristVisits": 2800000
+      },
+      "visual": {
+        "primaryColor": "#FF0000",
+        "secondaryColor": "#000000",
+        "image": "cities/belo-horizonte.jpg"
+      }
+    },
+    {
+      "name": "Manaus",
+      "state": "AM",
+      "nickname": "Coração da Amazônia",
+      "data": {
+        "population": 2230000,
+        "areaKm2": 11000,
+        "gdpPerCapita": 30000,
+        "idh": 0.737,
+        "violentCrimeRate": 25.3,
+        "touristVisits": 1200000
+      },
+      "visual": {
+        "primaryColor": "#00FF00",
+        "secondaryColor": "#FFFF00",
+        "image": "cities/manaus.jpg"
+      }
+    },
+    {
+      "name": "Curitiba",
+      "state": "PR",
+      "nickname": "Cidade Modelo",
+      "data": {
+        "population": 1963000,
+        "areaKm2": 435,
+        "gdpPerCapita": 35000,
+        "idh": 0.823,
+        "violentCrimeRate": 11.2,
+        "touristVisits": 2000000
+      },
+      "visual": {
+        "primaryColor": "#800080",
+        "secondaryColor": "#FFFFFF",
+        "image": "cities/curitiba.jpg"
+      }
+    },
+    {
+      "name": "Recife",
+      "state": "PE",
+      "nickname": "Veneza Brasileira",
+      "data": {
+        "population": 1661000,
+        "areaKm2": 217,
+        "gdpPerCapita": 27000,
+        "idh": 0.772,
+        "violentCrimeRate": 20.1,
+        "touristVisits": 2200000
+      },
+      "visual": {
+        "primaryColor": "#0066CC",
+        "secondaryColor": "#FFD700",
+        "image": "cities/recife.jpg"
+      }
+    },
+    {
+      "name": "Porto Alegre",
+      "state": "RS",
+      "nickname": "Poa",
+      "data": {
+        "population": 1493000,
+        "areaKm2": 496,
+        "gdpPerCapita": 34000,
+        "idh": 0.805,
+        "violentCrimeRate": 14.7,
+        "touristVisits": 1800000
+      },
+      "visual": {
+        "primaryColor": "#0000FF",
+        "secondaryColor": "#FFFFFF",
+        "image": "cities/porto-alegre.jpg"
+      }
+    }
+  ]
+}

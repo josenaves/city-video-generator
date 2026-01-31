@@ -1,0 +1,177 @@
+{
+  "videoId": "top-10-cidades-mais-ricas-santa-catarina-2024",
+  "title": "As 10 CIDADES MAIS RICAS de Santa Catarina",
+  "subtitle": "Ranking 2024 - Maior PIB per capita",
+  "theme": "elegant-dark",
+  "format": "vertical",
+  "metric": {
+    "field": "gdpPerCapita",
+    "title": "PIB per capita",
+    "unit": "R$",
+    "format": "currency",
+    "order": "desc"
+  },
+  "dataSource": "Fontes: IBGE, Portal da Transparência - Dados 2023",
+  "cities": [
+    {
+      "name": "Balneário Camboriú",
+      "state": "SC",
+      "nickname": "Capital do Turismo",
+      "data": {
+        "population": 145348,
+        "gdpPerCapita": 78542,
+        "idh": 0.845,
+        "incomePerCapita": 3800
+      },
+      "visual": {
+        "primaryColor": "#00BFFF",
+        "secondaryColor": "#1E90FF",
+        "image": "cities/balneario-camboriu.svg"
+      }
+    },
+    {
+      "name": "Florianópolis",
+      "state": "SC",
+      "nickname": "Ilha da Magia",
+      "data": {
+        "population": 537213,
+        "gdpPerCapita": 72356,
+        "idh": 0.855,
+        "incomePerCapita": 4200
+      },
+      "visual": {
+        "primaryColor": "#4169E1",
+        "secondaryColor": "#87CEEB",
+        "image": "cities/florianopolis.svg"
+      }
+    },
+    {
+      "name": "Joinville",
+      "state": "SC",
+      "nickname": "Cidade das Flores",
+      "data": {
+        "population": 604708,
+        "gdpPerCapita": 68421,
+        "idh": 0.809,
+        "incomePerCapita": 3500
+      },
+      "visual": {
+        "primaryColor": "#228B22",
+        "secondaryColor": "#32CD32",
+        "image": "cities/joinville.svg"
+      }
+    },
+    {
+      "name": "Blumenau",
+      "state": "SC",
+      "nickname": "Cidade da Cerveja",
+      "data": {
+        "population": 386213,
+        "gdpPerCapita": 61234,
+        "idh": 0.823,
+        "incomePerCapita": 3200
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFD700",
+        "image": "cities/blumenau.svg"
+      }
+    },
+    {
+      "name": "Itajaí",
+      "state": "SC",
+      "nickname": "Porto Seguro",
+      "data": {
+        "population": 223652,
+        "gdpPerCapita": 58976,
+        "idh": 0.798,
+        "incomePerCapita": 2900
+      },
+      "visual": {
+        "primaryColor": "#006994",
+        "secondaryColor": "#40E0D0",
+        "image": "cities/itajai.svg"
+      }
+    },
+    {
+      "name": "Chapecó",
+      "state": "SC",
+      "nickname": "Capital do Oeste",
+      "data": {
+        "population": 224013,
+        "gdpPerCapita": 54234,
+        "idh": 0.781,
+        "incomePerCapita": 2700
+      },
+      "visual": {
+        "primaryColor": "#2E8B57",
+        "secondaryColor": "#90EE90",
+        "image": "cities/chapeco.svg"
+      }
+    },
+    {
+      "name": "Criciúma",
+      "state": "SC",
+      "nickname": "Capital do Carvão",
+      "data": {
+        "population": 222561,
+        "gdpPerCapita": 51234,
+        "idh": 0.778,
+        "incomePerCapita": 2500
+      },
+      "visual": {
+        "primaryColor": "#2F4F4F",
+        "secondaryColor": "#708090",
+        "image": "cities/criciuma.svg"
+      }
+    },
+    {
+      "name": "Tubarão",
+      "state": "SC",
+      "nickname": "Cidade Universitária",
+      "data": {
+        "population": 112291,
+        "gdpPerCapita": 48321,
+        "idh": 0.772,
+        "incomePerCapita": 2400
+      },
+      "visual": {
+        "primaryColor": "#4682B4",
+        "secondaryColor": "#87CEFA",
+        "image": "cities/tubarao.svg"
+      }
+    },
+    {
+      "name": "Lages",
+      "state": "SC",
+      "nickname": "Capital dos Campos",
+      "data": {
+        "population": 157743,
+        "gdpPerCapita": 45678,
+        "idh": 0.765,
+        "incomePerCapita": 2300
+      },
+      "visual": {
+        "primaryColor": "#8B4513",
+        "secondaryColor": "#D2691E",
+        "image": "cities/lages.svg"
+      }
+    },
+    {
+      "name": "São José",
+      "state": "SC",
+      "nickname": "Cidade dos Imigrantes",
+      "data": {
+        "population": 254661,
+        "gdpPerCapita": 43210,
+        "idh": 0.758,
+        "incomePerCapita": 2200
+      },
+      "visual": {
+        "primaryColor": "#4B0082",
+        "secondaryColor": "#9370DB",
+        "image": "cities/sao-jose-sc.svg"
+      }
+    }
+  ]
+}

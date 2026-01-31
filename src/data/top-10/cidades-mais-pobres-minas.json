@@ -1,0 +1,187 @@
+{
+  "videoId": "top-10-cidades-mais-pobres-minas-2024",
+  "title": "As 10 CIDADES MAIS POBRES de Minas Gerais",
+  "subtitle": "Ranking 2024 - Menor renda per capita",
+  "theme": "elegant-dark",
+  "format": "vertical",
+  "metric": {
+    "field": "incomePerCapita",
+    "title": "Renda per capita",
+    "unit": "R$",
+    "format": "currency",
+    "order": "asc"
+  },
+  "dataSource": "Fontes: IBGE, Atlas Brasil, Portal da Transparência - Dados 2022/2023",
+  "cities": [
+    {
+      "name": "Serra da Saudade",
+      "state": "MG",
+      "nickname": "A Menor Cidade de MG",
+      "data": {
+        "population": 781,
+        "incomePerCapita": 285.0,
+        "idh": 0.529,
+        "povertyRate": 72.3,
+        "areaKm2": 302
+      },
+      "visual": {
+        "primaryColor": "#8B4513",
+        "secondaryColor": "#D2691E",
+        "image": "cities/serra-da-saudade.jpg"
+      }
+    },
+    {
+      "name": "Morro da Garça",
+      "state": "MG",
+      "nickname": "Terra da Serra",
+      "data": {
+        "population": 2145,
+        "incomePerCapita": 312.0,
+        "idh": 0.545,
+        "povertyRate": 65.8,
+        "areaKm2": 484
+      },
+      "visual": {
+        "primaryColor": "#CD853F",
+        "secondaryColor": "#8B4513",
+        "image": "cities/morro-da-garca.jpg"
+      }
+    },
+    {
+      "name": "Lassance",
+      "state": "MG",
+      "nickname": "Cidade do Ouro",
+      "data": {
+        "population": 6372,
+        "incomePerCapita": 358.0,
+        "idh": 0.558,
+        "povertyRate": 61.2,
+        "areaKm2": 1846
+      },
+      "visual": {
+        "primaryColor": "#FFD700",
+        "secondaryColor": "#B8860B",
+        "image": "cities/lassance.jpg"
+      }
+    },
+    {
+      "name": "Cônego Marinho",
+      "state": "MG",
+      "nickname": "Terra de São João",
+      "data": {
+        "population": 7208,
+        "incomePerCapita": 378.0,
+        "idh": 0.551,
+        "povertyRate": 59.5,
+        "areaKm2": 1089
+      },
+      "visual": {
+        "primaryColor": "#DEB887",
+        "secondaryColor": "#8B4513",
+        "image": "cities/conego-marinho.jpg"
+      }
+    },
+    {
+      "name": "Dom Bosco",
+      "state": "MG",
+      "nickname": "Portal do Jequitinhonha",
+      "data": {
+        "population": 3754,
+        "incomePerCapita": 395.0,
+        "idh": 0.547,
+        "povertyRate": 57.8,
+        "areaKm2": 1178
+      },
+      "visual": {
+        "primaryColor": "#F4A460",
+        "secondaryColor": "#8B4513",
+        "image": "cities/dom-bosco.jpg"
+      }
+    },
+    {
+      "name": "Guaraciama",
+      "state": "MG",
+      "nickname": "Terra da Cachoeira",
+      "data": {
+        "population": 5036,
+        "incomePerCapita": 418.0,
+        "idh": 0.56,
+        "povertyRate": 55.2,
+        "areaKm2": 573
+      },
+      "visual": {
+        "primaryColor": "#20B2AA",
+        "secondaryColor": "#008B8B",
+        "image": "cities/guaraciama.jpg"
+      }
+    },
+    {
+      "name": "Senador Modestino Gonçalves",
+      "state": "MG",
+      "nickname": "Serra do Cabral",
+      "data": {
+        "population": 4169,
+        "incomePerCapita": 435.0,
+        "idh": 0.555,
+        "povertyRate": 54.1,
+        "areaKm2": 1184
+      },
+      "visual": {
+        "primaryColor": "#696969",
+        "secondaryColor": "#A9A9A9",
+        "image": "cities/senador-modestino.jpg"
+      }
+    },
+    {
+      "name": "Cabeceira Grande",
+      "state": "MG",
+      "nickname": "Nascente do São Francisco",
+      "data": {
+        "population": 6722,
+        "incomePerCapita": 452.0,
+        "idh": 0.563,
+        "povertyRate": 52.8,
+        "areaKm2": 1234
+      },
+      "visual": {
+        "primaryColor": "#4682B4",
+        "secondaryColor": "#2E8B57",
+        "image": "cities/cabeceira-grande.jpg"
+      }
+    },
+    {
+      "name": "Montezuma",
+      "state": "MG",
+      "nickname": "Vale do Rio Pardo",
+      "data": {
+        "population": 7862,
+        "incomePerCapita": 468.0,
+        "idh": 0.565,
+        "povertyRate": 51.5,
+        "areaKm2": 956
+      },
+      "visual": {
+        "primaryColor": "#6B8E23",
+        "secondaryColor": "#556B2F",
+        "image": "cities/montezuma.jpg"
+      }
+    },
+    {
+      "name": "José Gonçalves de Minas",
+      "state": "MG",
+      "nickname": "Terra da Cana",
+      "data": {
+        "population": 4621,
+        "incomePerCapita": 485.0,
+        "idh": 0.568,
+        "povertyRate": 50.2,
+        "areaKm2": 567
+      },
+      "visual": {
+        "primaryColor": "#DAA520",
+        "secondaryColor": "#B8860B",
+        "image": "cities/jose-goncalves-minas.jpg"
+      }
+    }
+  ]
+}
