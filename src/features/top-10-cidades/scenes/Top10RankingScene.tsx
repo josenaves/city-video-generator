@@ -11,6 +11,16 @@ import {
 import { Top10SceneProps } from "../types";
 import { getThemeColors, formatNumber } from "../utils";
 
+/**
+ * Top10RankingItem - Apresentação de cada cidade no ranking
+ *
+ * Remotion Best Practices References:
+ * - images.md: Carregamento de imagens (Img component)
+ * - animations.md: Animações de entrada (spring)
+ * - timing.md: Interpolação de valores
+ * - sequencing.md: Sequenciamento de elementos
+ */
+
 export const Top10RankingItem: React.FC<Top10SceneProps> = ({
   durationInFrames,
   cidade,

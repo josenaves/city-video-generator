@@ -6,6 +6,29 @@ import { Top10Intro } from "./scenes/Top10IntroScene";
 import { Top10RankingItem } from "./scenes/Top10RankingScene";
 import { Top10Outro } from "./scenes/Top10OutroScene";
 
+/**
+ * Top10CidadesVideo - Componente principal para vídeos de ranking Top 10
+ *
+ * Referências do Remotion Best Practices:
+ * - compositions.md: Definição de composições
+ * - calculate-metadata.md: Cálculo dinâmico de duração
+ * - sequencing.md: Padrões de sequenciamento
+ * - audio.md: Uso de áudio
+ */
+
+// Helper para calcular duração total baseado no formato
+// See: rules/calculate-metadata.md
+// Exported for use in Root.tsx when registering compositions
+export const calculateTop10Duration = (
+  format: "vertical" | "horizontal",
+): number => {
+  const fps = 30;
+  if (format === "vertical") {
+    return 3 * fps + 7 * 3 * fps + 3 * 4 * fps + 4 * fps + 2 * fps; // 42s total
+  }
+  return 5 * fps + 3 * 4 * fps + 4 * 4 * fps + 3 * 6 * fps + 8 * fps + 6 * fps; // 65s total
+};
+
 export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
   videoData,
   audioTrack = "epic-ranking.mp3",

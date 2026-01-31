@@ -1,5 +1,17 @@
 import { Top10CidadesData, Top10Cidade } from "../types";
 
+/**
+ * Utilitários para Top 10 Cidades Video
+ *
+ * Remotion Best Practices References:
+ * - calculate-metadata.md: Cálculo de duração e metadados
+ * - charts.md: Formatação de dados estatísticos
+ */
+
+/**
+ * Formata números según o formato especificado
+ * See: rules/charts.md para padrões de visualização de dados
+ */
 export const formatNumber = (
   value: number,
   format: string,

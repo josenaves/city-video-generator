@@ -9,6 +9,15 @@ import {
 import { Top10OutroProps } from "../types";
 import { getThemeColors } from "../utils";
 
+/**
+ * Top10Outro - Cena de encerramento do vídeo
+ *
+ * Remotion Best Practices References:
+ * - text-animations.md: Animações de CTA e textos finais
+ * - animations.md: Fade in/out animations
+ * - timing.md: Smooth interpolation curves
+ */
+
 export const Top10Outro: React.FC<Top10OutroProps> = ({
   durationInFrames,
   title,

@@ -18,7 +18,10 @@ import {
   CampaignVideo,
   calculateCampaignTotalDuration,
 } from "./features/campaign-one-vs-many";
-import { Top10CidadesVideo } from "./features/top-10-cidades/Top10CidadesVideo";
+import {
+  Top10CidadesVideo,
+  calculateTop10Duration,
+} from "./features/top-10-cidades/Top10CidadesVideo";
 
 // @ts-ignore
 import campaignTestData from "./data/campaign-test.json";

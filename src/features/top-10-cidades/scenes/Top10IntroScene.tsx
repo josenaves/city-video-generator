@@ -9,6 +9,15 @@ import {
 import { Top10IntroProps } from "../types";
 import { getThemeColors } from "../utils";
 
+/**
+ * Top10Intro - Cena de introdução do vídeo Top 10
+ *
+ * Remotion Best Practices References:
+ * - text-animations.md: Animações de texto e títulos
+ * - timing.md: Curvas de interpolação (spring, interpolate)
+ * - animations.md: Animações fundamentais
+ */
+
 export const Top10Intro: React.FC<Top10IntroProps> = ({
   durationInFrames,
   title,

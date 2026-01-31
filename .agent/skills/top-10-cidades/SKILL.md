@@ -9,6 +9,26 @@ description: Gera vídeos de ranking "Top 10 Cidades" para qualquer tema ou mét
 
 Esta skill permite criar vídeos de ranking "As 10 cidades mais XXXX" para qualquer tema ou métrica específica, usando dados locais das cidades com imagens.
 
+## Integração com Remotion Best Practices
+
+⚠️ **Importante**: Antes de trabalhar com esta skill, consulte as regras oficiais do Remotion em `.agent/skills/remotion-best-practices/rules/`:
+
+### Regras Relevantes para Top 10 Cidades
+
+| Regra                                                                                        | Aplicação                               |
+| -------------------------------------------------------------------------------------------- | --------------------------------------- |
+| [`animations.md`](.agent/skills/remotion-best-practices/rules/animations.md)                 | Animações de entrada/saída dos rankings |
+| [`text-animations.md`](.agent/skills/remotion-best-practices/rules/text-animations.md)       | Animações de títulos e textos           |
+| [`timing.md`](.agent/skills/remotion-best-practices/rules/timing.md)                         | Curvas de interpolação e timing         |
+| [`transitions.md`](.agent/skills/remotion-best-practices/rules/transitions.md)               | Transições entre cenas                  |
+| [`images.md`](.agent/skills/remotion-best-practices/rules/images.md)                         | Carregamento de imagens de cidades      |
+| [`audio.md`](.agent/skills/remotion-best-practices/rules/audio.md)                           | Trilha sonora e efeitos                 |
+| [`charts.md`](.agent/skills/remotion-best-practices/rules/charts.md)                         | Visualização de dados estatísticos      |
+| [`tailwind.md`](.agent/skills/remotion-best-practices/rules/tailwind.md)                     | Estilização com TailwindCSS             |
+| [`compositions.md`](.agent/skills/remotion-best-practices/rules/compositions.md)             | Registro de composições                 |
+| [`calculate-metadata.md`](.agent/skills/remotion-best-practices/rules/calculate-metadata.md) | Cálculo dinâmico de duração             |
+| [`sequencing.md`](.agent/skills/remotion-best-practices/rules/sequencing.md)                 | Sequenciamento de cenas                 |
+
 ## Funcionalidades
 
 ### 🎥 Formatos de Vídeo Suportados
@@ -46,10 +66,16 @@ Cada cidade deve conter:
   "visual": {
     "primaryColor": "#FF0000",
     "secondaryColor": "#FFFFFF",
-    "image": "sao-paulo.jpg"
+    "image": "images/cities/sp/s/sao-paulo.jpg"
   }
 }
 ```
+
+### Imagens de Cidades
+
+As imagens devem seguir a estrutura unificada em `public/images/cities/{estado}/{letra}/{cidade}.jpg`.
+
+Consulte [`images.md`](.agent/skills/remotion-best-practices/rules/images.md) para boas práticas de carregamento de imagens.
 
 ## Configuração do Vídeo
 
@@ -123,10 +149,17 @@ src/data/top-10/cidades-mais-ricas.json
 
 ### 2. Adicionar Imagens
 
-Coloque imagens das cidades em:
+Imagens devem ser salvas em:
 
 ```bash
-public/cities/nome-da-cidade.jpg
+public/images/cities/{estado}/{letra}/{cidade}.jpg
+```
+
+Exemplo:
+
+```bash
+public/images/cities/sp/s/sao-paulo.jpg
+public/images/cities/mg/b/belo-horizonte.jpg
 ```
 
 ### 3. Registrar Composição
@@ -149,6 +182,8 @@ import top10Data from "./data/top-10/cidades-mais-ricas.json";
 />;
 ```
 
+Para informações sobre composições, consulte [`compositions.md`](.agent/skills/remotion-best-practices/rules/compositions.md) e [`calculate-metadata.md`](.agent/skills/remotion-best-practices/rules/calculate-metadata.md).
+
 ### 4. Renderizar Vídeo
 
 ```bash
@@ -159,6 +194,50 @@ npm run build:video Top10CidadesMaisRicas
 npm run build:video:youtube Top10CidadesMaisRicas
 ```
 
+## Implementação Técnica
+
+### Estrutura de Componentes
+
+```
+src/features/top-10-cidades/
+├── Top10CidadesVideo.tsx    # Componente principal
+├── types.ts                  # TypeScript interfaces
+├── utils/
+│   ├── index.ts             # Funções utilitárias
+│   ├── city-image-path.ts   # Resolução de caminhos de imagens
+│   └── real-data-generator.ts # Integração com IBGE
+└── scenes/
+    ├── Top10IntroScene.tsx      # Cena de introdução
+    ├── Top10RankingScene.tsx    # Apresentação do ranking
+    └── Top10OutroScene.tsx      # Encerramento
+```
+
+### Animações e Timing
+
+Para animações suaves, utilize:
+
+- **spring()** para movimentos naturais (entrada de elementos)
+- **interpolate()** para transições controladas
+- **Easing functions** para movimentos previsíveis
+
+Consulte [`animations.md`](.agent/skills/remotion-best-practices/rules/animations.md) e [`timing.md`](.agent/skills/remotion-best-practices/rules/timing.md).
+
+### Sequenciamento de Cenas
+
+O sequenciamento usa `<Sequence>` do Remotion. Cada cidade é uma sequência separada.
+
+Consulte [`sequencing.md`](.agent/skills/remotion-best-practices/rules/sequencing.md) para padrões de sequenciamento.
+
+### Áudio
+
+O componente suporta:
+
+- Trilha sonora de fundo
+- Efeitos sonoros para transições
+- Narração opcional
+
+Consulte [`audio.md`](.agent/skills/remotion-best-practices/rules/audio.md).
+
 ## Personalização
 
 ### Temas Visuais
@@ -168,19 +247,14 @@ npm run build:video:youtube Top10CidadesMaisRicas
 - `gradient-burst`: Gradientes coloridos e energéticos
 - `data-focused`: Visual limpo focado nos dados
 
+A estilização usa TailwindCSS. Consulte [`tailwind.md`](.agent/skills/remotion-best-practices/rules/tailwind.md).
+
 ### Animações
 
 - Transições suaves entre posições
 - Efeitos de podium para top 3
 - Confete para primeira colocada
 - Chart animations para dados
-
-### Áudio
-
-- Música épica para introdução
-- Sound effects para transições
-- Narration overlay opcional
-- Sound design específico por tema
 
 ## Casos de Uso
 
@@ -209,20 +283,10 @@ A skill pode ser acionada via AI Agent com prompts como:
 - "Faça vídeo top 10 cidades mais seguras de São Paulo"
 - "Mostre as 10 cidades turísticas do Nordeste"
 
-## Requisitos Técnicos
+## Referências Adicionais
 
-### Dependências
+- **Documentação Remotion**: https://www.remotion.dev/docs
+- **Regras Oficiais**: `.agent/skills/remotion-best-practices/rules/`
+- **Source Code**: `src/features/top-10-cidades/`
 
-- React + Remotion framework
-- TypeScript para type safety
-- Tailwind CSS para estilização
-- Chart.js ou similar para visualizações
-
-### Performance
-
-- Suporta até 60fps para animações suaves
-- Lazy loading de imagens grandes
-- Progressive enhancement para diferentes dispositivos
-- Otimização automática para exportação
-
-Esta skill oferece uma solução completa e flexível para criar conteúdo de ranking de cidades em formato de vídeo profissional.
+Esta skill oferece uma solução completa e flexível para criar conteúdo de ranking de cidades em formato de vídeo profissional, seguindo as melhores práticas do ecossistema Remotion.
