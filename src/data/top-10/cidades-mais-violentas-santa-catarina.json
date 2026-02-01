@@ -1,0 +1,177 @@
+{
+  "videoId": "top-10-cidades-mais-violentas-santa-catarina-2024",
+  "title": "As 10 CIDADES MAIS VIOLENTAS de Santa Catarina",
+  "subtitle": "Ranking 2024 - Taxa de criminalidade violenta por 100 mil habitantes",
+  "theme": "elegant-dark",
+  "format": "vertical",
+  "metric": {
+    "field": "violentCrimeRate",
+    "title": "Taxa de criminalidade",
+    "unit": "por 100 mil hab.",
+    "format": "decimal",
+    "order": "desc"
+  },
+  "dataSource": "Fontes: SSP-SC, IBGE, Ministério da Justiça - Dados 2023",
+  "cities": [
+    {
+      "name": "São Miguel do Oeste",
+      "state": "SC",
+      "nickname": "Portal do Oeste",
+      "data": {
+        "population": 49327,
+        "violentCrimeRate": 89.5,
+        "propertyCrimeRate": 145.2,
+        "homicideRate": 12.3
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#DC143C",
+        "image": "images/cities/sc/s/sao-miguel-do-oeste.svg"
+      }
+    },
+    {
+      "name": "Chapecó",
+      "state": "SC",
+      "nickname": "Capital do Oeste",
+      "data": {
+        "population": 224013,
+        "violentCrimeRate": 78.3,
+        "propertyCrimeRate": 132.5,
+        "homicideRate": 9.8
+      },
+      "visual": {
+        "primaryColor": "#B22222",
+        "secondaryColor": "#CD5C5C",
+        "image": "images/cities/sc/c/chapeco.svg"
+      }
+    },
+    {
+      "name": "Criciúma",
+      "state": "SC",
+      "nickname": "Capital do Carvão",
+      "data": {
+        "population": 222561,
+        "violentCrimeRate": 72.1,
+        "propertyCrimeRate": 125.8,
+        "homicideRate": 8.5
+      },
+      "visual": {
+        "primaryColor": "#2F4F4F",
+        "secondaryColor": "#708090",
+        "image": "images/cities/sc/c/criciuma.svg"
+      }
+    },
+    {
+      "name": "Tubarão",
+      "state": "SC",
+      "nickname": "Cidade Universitária",
+      "data": {
+        "population": 112291,
+        "violentCrimeRate": 68.4,
+        "propertyCrimeRate": 118.3,
+        "homicideRate": 7.9
+      },
+      "visual": {
+        "primaryColor": "#800000",
+        "secondaryColor": "#A52A2A",
+        "image": "images/cities/sc/t/tubarao.svg"
+      }
+    },
+    {
+      "name": "Lages",
+      "state": "SC",
+      "nickname": "Capital dos Campos",
+      "data": {
+        "population": 157743,
+        "violentCrimeRate": 65.2,
+        "propertyCrimeRate": 112.4,
+        "homicideRate": 7.2
+      },
+      "visual": {
+        "primaryColor": "#8B4513",
+        "secondaryColor": "#A0522D",
+        "image": "images/cities/sc/l/lages.svg"
+      }
+    },
+    {
+      "name": "Itajaí",
+      "state": "SC",
+      "nickname": "Porto Seguro",
+      "data": {
+        "population": 223652,
+        "violentCrimeRate": 62.8,
+        "propertyCrimeRate": 108.9,
+        "homicideRate": 6.8
+      },
+      "visual": {
+        "primaryColor": "#006994",
+        "secondaryColor": "#4682B4",
+        "image": "images/cities/sc/i/itajai.svg"
+      }
+    },
+    {
+      "name": "Caçador",
+      "state": "SC",
+      "nickname": "Capital do Meio-Oeste",
+      "data": {
+        "population": 78524,
+        "violentCrimeRate": 58.5,
+        "propertyCrimeRate": 98.3,
+        "homicideRate": 6.1
+      },
+      "visual": {
+        "primaryColor": "#556B2F",
+        "secondaryColor": "#6B8E23",
+        "image": "images/cities/sc/c/cacador.svg"
+      }
+    },
+    {
+      "name": "Concórdia",
+      "state": "SC",
+      "nickname": "Terra do Chapéu",
+      "data": {
+        "population": 73593,
+        "violentCrimeRate": 54.2,
+        "propertyCrimeRate": 92.1,
+        "homicideRate": 5.5
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#CD853F",
+        "image": "images/cities/sc/c/concordia.svg"
+      }
+    },
+    {
+      "name": "São José",
+      "state": "SC",
+      "nickname": "Cidade dos Imigrantes",
+      "data": {
+        "population": 254661,
+        "violentCrimeRate": 51.8,
+        "propertyCrimeRate": 88.4,
+        "homicideRate": 5.1
+      },
+      "visual": {
+        "primaryColor": "#4B0082",
+        "secondaryColor": "#6A5ACD",
+        "image": "images/cities/sc/s/sao-jose-sc.svg"
+      }
+    },
+    {
+      "name": "Videira",
+      "state": "SC",
+      "nickname": "Terra da Uva",
+      "data": {
+        "population": 52287,
+        "violentCrimeRate": 48.5,
+        "propertyCrimeRate": 85.2,
+        "homicideRate": 4.8
+      },
+      "visual": {
+        "primaryColor": "#800080",
+        "secondaryColor": "#9932CC",
+        "image": "images/cities/sc/v/videira.svg"
+      }
+    }
+  ]
+}

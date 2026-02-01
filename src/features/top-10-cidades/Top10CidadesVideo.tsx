@@ -31,7 +31,7 @@ export const calculateTop10Duration = (
 
 export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
   videoData,
-  audioTrack = "epic-ranking.mp3",
+  audioTrack = "audio/Beat Your Competition - Vibe Tracks.mp3",
   bpm = 128,
 }) => {
   // Sort cities by the specified metric

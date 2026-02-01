@@ -233,6 +233,9 @@ import top10PobresMinhasData from "./data/top-10/cidades-mais-pobres-minas.json"
 import top10RicasSCData from "./data/top-10/cidades-mais-ricas-santa-catarina.json";
 
 // @ts-expect-error JSON import without type definitions
+import top10ViolentasSCData from "./data/top-10/cidades-mais-violentas-santa-catarina.json";
+
+// @ts-expect-error JSON import without type definitions
 import top10PobresSCData from "./data/top-10/cidades-mais-pobres-santa-catarina.json";
 
 // Championships
@@ -1793,6 +1796,33 @@ export const RemotionRoot: React.FC = () => {
             ...top10PobresSCData,
             format: "horizontal",
             videoId: "top-10-cidades-mais-pobres-santa-catarina-horizontal",
+          },
+        }}
+      />
+      {/* Top 10 Cidades Mais Violentas de Santa Catarina */}
+      <Composition
+        id="Top10CidadesMaisViolentasSC"
+        component={Top10CidadesVideo}
+        durationInFrames={1260}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: top10ViolentasSCData,
+        }}
+      />
+      <Composition
+        id="Top10CidadesMaisViolentasSCHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={1950}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10ViolentasSCData,
+            format: "horizontal",
+            videoId: "top-10-cidades-mais-violentas-santa-catarina-horizontal",
           },
         }}
       />
