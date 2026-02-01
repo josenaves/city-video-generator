@@ -18,10 +18,8 @@ import {
   CampaignVideo,
   calculateCampaignTotalDuration,
 } from "./features/campaign-one-vs-many";
-import {
-  Top10CidadesVideo,
-  calculateTop10Duration,
-} from "./features/top-10-cidades/Top10CidadesVideo";
+import { Top10CidadesVideo } from "./features/top-10-cidades/Top10CidadesVideo";
+import { calculateTop10Duration } from "./features/top-10-cidades/utils";
 
 // @ts-ignore
 import campaignTestData from "./data/campaign-test.json";
@@ -1692,7 +1690,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Top10CidadesMaisPopulosas"
         component={Top10CidadesVideo}
-        durationInFrames={1260} // 42 seconds for vertical format
+        durationInFrames={calculateTop10Duration("vertical")} // 38 seconds for vertical format
         fps={30}
         width={1080}
         height={1920}
@@ -1703,7 +1701,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Top10CidadesMaisPopulosasHorizontal"
         component={Top10CidadesVideo}
-        durationInFrames={1950} // 65 seconds for horizontal format
+        durationInFrames={calculateTop10Duration("horizontal")} // 59 seconds for horizontal format
         fps={30}
         width={1920}
         height={1080}
@@ -1720,7 +1718,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Top10CidadesMaisPobresMinas"
         component={Top10CidadesVideo}
-        durationInFrames={1260}
+        durationInFrames={calculateTop10Duration("vertical")}
         fps={30}
         width={1080}
         height={1920}
@@ -1731,7 +1729,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Top10CidadesMaisPobresMinasHorizontal"
         component={Top10CidadesVideo}
-        durationInFrames={1950}
+        durationInFrames={calculateTop10Duration("horizontal")}
         fps={30}
         width={1920}
         height={1080}
@@ -1748,7 +1746,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Top10CidadesMaisRicasSC"
         component={Top10CidadesVideo}
-        durationInFrames={1260}
+        durationInFrames={calculateTop10Duration("vertical")}
         fps={30}
         width={1080}
         height={1920}
@@ -1759,7 +1757,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Top10CidadesMaisRicasSCHorizontal"
         component={Top10CidadesVideo}
-        durationInFrames={1950}
+        durationInFrames={calculateTop10Duration("horizontal")}
         fps={30}
         width={1920}
         height={1080}
@@ -1776,7 +1774,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Top10CidadesMaisPobresSC"
         component={Top10CidadesVideo}
-        durationInFrames={1260}
+        durationInFrames={calculateTop10Duration("vertical")}
         fps={30}
         width={1080}
         height={1920}
@@ -1787,7 +1785,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Top10CidadesMaisPobresSCHorizontal"
         component={Top10CidadesVideo}
-        durationInFrames={1950}
+        durationInFrames={calculateTop10Duration("horizontal")}
         fps={30}
         width={1920}
         height={1080}
@@ -1803,7 +1801,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Top10CidadesMaisViolentasSC"
         component={Top10CidadesVideo}
-        durationInFrames={1260}
+        durationInFrames={calculateTop10Duration("vertical")}
         fps={30}
         width={1080}
         height={1920}
@@ -1814,7 +1812,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Top10CidadesMaisViolentasSCHorizontal"
         component={Top10CidadesVideo}
-        durationInFrames={1950}
+        durationInFrames={calculateTop10Duration("horizontal")}
         fps={30}
         width={1920}
         height={1080}

@@ -26,7 +26,7 @@
       "visual": {
         "primaryColor": "#00BFFF",
         "secondaryColor": "#1E90FF",
-        "image": "cities/balneario-camboriu.svg"
+        "image": "images/cities/sc/b/balneario-camboriu.jpeg"
       }
     },
     {
@@ -42,7 +42,7 @@
       "visual": {
         "primaryColor": "#4169E1",
         "secondaryColor": "#87CEEB",
-        "image": "cities/florianopolis.svg"
+        "image": "images/cities/sc/f/florianopolis.jpg"
       }
     },
     {
@@ -58,7 +58,7 @@
       "visual": {
         "primaryColor": "#228B22",
         "secondaryColor": "#32CD32",
-        "image": "cities/joinville.svg"
+        "image": "images/cities/sc/j/joinvile.jpg"
       }
     },
     {
@@ -74,7 +74,7 @@
       "visual": {
         "primaryColor": "#8B0000",
         "secondaryColor": "#FFD700",
-        "image": "cities/blumenau.svg"
+        "image": "images/cities/sc/b/blumenau.jpg"
       }
     },
     {
@@ -90,7 +90,7 @@
       "visual": {
         "primaryColor": "#006994",
         "secondaryColor": "#40E0D0",
-        "image": "cities/itajai.svg"
+        "image": "images/cities/sc/i/itajai.jpg"
       }
     },
     {
@@ -106,7 +106,7 @@
       "visual": {
         "primaryColor": "#2E8B57",
         "secondaryColor": "#90EE90",
-        "image": "cities/chapeco.svg"
+        "image": "images/cities/sc/c/chapeco.jpg"
       }
     },
     {
@@ -122,7 +122,7 @@
       "visual": {
         "primaryColor": "#2F4F4F",
         "secondaryColor": "#708090",
-        "image": "cities/criciuma.svg"
+        "image": "images/cities/sc/c/criciuma.jpg"
       }
     },
     {
@@ -138,7 +138,7 @@
       "visual": {
         "primaryColor": "#4682B4",
         "secondaryColor": "#87CEFA",
-        "image": "cities/tubarao.svg"
+        "image": "images/cities/sc/t/tubarao.jpg"
       }
     },
     {
@@ -154,7 +154,7 @@
       "visual": {
         "primaryColor": "#8B4513",
         "secondaryColor": "#D2691E",
-        "image": "cities/lages.svg"
+        "image": "images/cities/sc/l/lages.jpg"
       }
     },
     {
@@ -170,7 +170,7 @@
       "visual": {
         "primaryColor": "#4B0082",
         "secondaryColor": "#9370DB",
-        "image": "cities/sao-jose-sc.svg"
+        "image": "images/cities/sc/s/sao-jose.png"
       }
     }
   ]

@@ -59,29 +59,43 @@ export const sortCitiesByMetric = (
   });
 };
 
-export const calculateTop10Duration = (videoData: Top10CidadesData): number => {
+/**
+ * Converte batidas (beats) para frames baseado no BPM e FPS
+ */
+export const beatsToFrames = (beats: number, bpm: number, fps: number = 30): number => {
+  return Math.round((beats * 60 * fps) / bpm);
+};
+
+export const calculateTop10Duration = (
+  videoData: Top10CidadesData | "vertical" | "horizontal",
+  bpm: number = 128
+): number => {
   const fps = 30;
-  const isVertical = videoData.format === "vertical";
+  const isVertical =
+    typeof videoData === "string"
+      ? videoData === "vertical"
+      : videoData.format === "vertical";
 
   if (isVertical) {
-    // Vertical format (42s total)
-    const intro = 3 * fps; // 3s
-    const regular = 7 * 3 * fps; // #10-#4: 7 cities × 3s
-    const top3 = 3 * 4 * fps; // Top 3: 3 cities × 4s
-    const champion = 4 * fps; // #1 special: 4s
-    const outro = 2 * fps; // Outro: 2s
+    // Vertical sync (Fast Paced)
+    const intro = beatsToFrames(6, bpm, fps);     // ~2.8s
+    const regular = 7 * beatsToFrames(3, bpm, fps); // 7 cities x 3 beats (~1.4s each)
+    const top2 = 2 * beatsToFrames(4, bpm, fps);    // 2 cities x 4 beats (~1.8s each)
+    const champion = beatsToFrames(8, bpm, fps);    // #1: 8 beats (~3.7s)
+    const outro = beatsToFrames(8, bpm, fps);       // CTA: 8 beats (~3.7s)
 
-    return intro + regular + top3 + champion + outro;
+    return intro + regular + top2 + champion + outro;
   } else {
-    // Horizontal format (65s total)
-    const intro = 5 * fps; // Intro: 5s
-    const first8 = 3 * 4 * fps; // #10-#8: 3 cities × 4s
-    const middle = 4 * 4 * fps; // #7-#4: 4 cities × 4s
-    const top3 = 3 * 6 * fps; // Top 3: 3 cities × 6s
-    const champion = 8 * fps; // #1 special: 8s
-    const conclusion = 6 * fps; // Conclusion: 6s
+    // Horizontal sync (Slowed down for 80s target)
+    // 80s at 128bpm is ~170 beats.
+    const intro = beatsToFrames(16, bpm, fps);      // 16 beats (~7.5s)
+    const first8 = 3 * beatsToFrames(12, bpm, fps); // 3 cities x 12 beats (~5.6s each)
+    const middle = 4 * beatsToFrames(12, bpm, fps); // 4 cities x 12 beats (~5.6s each)
+    const top2 = 2 * beatsToFrames(16, bpm, fps);   // 2 cities x 16 beats (~7.5s each)
+    const champion = beatsToFrames(16, bpm, fps);   // #1: 16 beats (~7.5s)
+    const conclusion = beatsToFrames(12, bpm, fps); // End: 12 beats (~5.6s)
 
-    return intro + first8 + middle + top3 + champion + conclusion;
+    return intro + first8 + middle + top2 + champion + conclusion;
   }
 };
 

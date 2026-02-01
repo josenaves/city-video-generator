@@ -22,12 +22,12 @@ Esta skill permite criar vídeos de ranking "As 10 cidades mais XXXX" para qualq
 | [`timing.md`](.agent/skills/remotion-best-practices/rules/timing.md)                         | Curvas de interpolação e timing         |
 | [`transitions.md`](.agent/skills/remotion-best-practices/rules/transitions.md)               | Transições entre cenas                  |
 | [`images.md`](.agent/skills/remotion-best-practices/rules/images.md)                         | Carregamento de imagens de cidades      |
-| [`audio.md`](.agent/skills/remotion-best-practices/rules/audio.md)                           | Trilha sonora e efeitos                 |
+| [`audio.md`](.agent/skills/remotion-best-practices/rules/audio.md)                           | Trilha sonora e batidas (BPM)           |
 | [`charts.md`](.agent/skills/remotion-best-practices/rules/charts.md)                         | Visualização de dados estatísticos      |
 | [`tailwind.md`](.agent/skills/remotion-best-practices/rules/tailwind.md)                     | Estilização com TailwindCSS             |
 | [`compositions.md`](.agent/skills/remotion-best-practices/rules/compositions.md)             | Registro de composições                 |
-| [`calculate-metadata.md`](.agent/skills/remotion-best-practices/rules/calculate-metadata.md) | Cálculo dinâmico de duração             |
-| [`sequencing.md`](.agent/skills/remotion-best-practices/rules/sequencing.md)                 | Sequenciamento de cenas                 |
+| [`calculate-metadata.md`](.agent/skills/remotion-best-practices/rules/calculate-metadata.md) | Cálculo de duração baseado em BPM       |
+| [`sequencing.md`](.agent/skills/remotion-best-practices/rules/sequencing.md)                 | Sequenciamento sincronizado (Beats)     |
 
 ## Funcionalidades
 
@@ -117,25 +117,29 @@ Consulte [`images.md`](.agent/skills/remotion-best-practices/rules/images.md) pa
 - `decimal`: 1 casa decimal (12,3)
 - `percent`: Percentagem (75,5%)
 
-## Estrutura do Vídeo
+## 🥁 Sincronização por BPM (Mandatório)
 
-### Formato Vertical (Social Media)
+Para garantir um fluxo profissional e rítmico, **todas as transições de cena devem obrigatoriamente ser sincronizadas com as batidas por minuto (BPM) da trilha sonora.**
 
-1. **Intro (3s)**: Título animado com música impactante
-2. **Ranking #10-#4 (21s)**: Apresentação rápida (3s cada)
-3. **Top 3 Destaque (12s)**: Animação especial para top 3 (4s cada)
-4. **#1 Campeã (4s)**: Animação triunfal para primeira colocada
-5. **Outro (2s)**: Chamada para ação e inscrição
+### Fórmulas de Sincronia
+- **Beats to Frames**: `Math.round((beats * 60 * fps) / bpm)`
+- **Padrão**: Usar múltiplos de 4 beats (1 compasso) ou 2 beats para cortes rápidos.
 
-### Formato Horizontal (YouTube)
+### 🎥 Estrutura do Vídeo Sugerida (Ex: 128 BPM)
 
-1. **Intro (5s)**: Título e introdução do tema
-2. **#10-#8 (12s)**: Apresentação detalhada (4s cada)
-3. **#7-#4 (16s)**: Análise comparativa (4s cada)
-4. **Top 3 Podium (18s)**: Destaque especial para top 3
-5. **#1 Destaque (8s)**: Análise profunda da vencedora
-6. **Conclusão (6s)**: Resumo e insights
+#### Formato Vertical (Social Media - High Energy)
+1.  **Intro**: 6 beats (~2.8s) - Gancho visual rápido.
+2.  **Ranking #10-#4**: 3 beats cada (~1.4s) - Ritmo frenético para retenção.
+3.  **Top 2 Battle (#3, #2)**: 4 beats cada (~1.8s) - Pausa dramática.
+4.  **#1 Campeã**: 8 beats (~3.7s) - Momento de glória com animação.
+5.  **Outro**: 8 beats (~3.7s) - CTA claro.
 
+#### Formato Horizontal (YouTube - Cinematic)
+1.  **Intro**: 16 beats (~7.5s) - Introdução do tema.
+2.  **#10-#4**: 12 beats cada (~5.6s) - Tempo para leitura de estatísticas.
+3.  **Top 3 Podium**: 16 beats cada (~7.5s) - Destaque cinematográfico.
+4.  **#1 Campeã**: 16 beats (~7.5s) - Destaque profundo.
+5.  **Conclusão**: 12 beats (~5.6s) - Encerramento.
 ## Uso
 
 ### 1. Preparar Dados
@@ -214,20 +218,26 @@ src/features/top-10-cidades/
 
 ### Animações e Timing
 
-Para animações suaves, utilize:
+Para animações suaves e rítmicas:
 
-- **spring()** para movimentos naturais (entrada de elementos)
-- **interpolate()** para transições controladas
-- **Easing functions** para movimentos previsíveis
+- **beatsToFrames()**: Deve ser a função central para definir a duração de qualquer sequência.
+- **spring()**: Sincronize o `stiffness` e `damping` para que o pico da animação coincida com o beat.
+- **interpolate()**: Use para efeitos de pulsão baseados no beat atual.
 
 Consulte [`animations.md`](.agent/skills/remotion-best-practices/rules/animations.md) e [`timing.md`](.agent/skills/remotion-best-practices/rules/timing.md).
 
 ### Sequenciamento de Cenas
 
-O sequenciamento usa `<Sequence>` do Remotion. Cada cidade é uma sequência separada.
+O sequenciamento deve ser acumulativo, somando os frames calculados por beats.
 
-Consulte [`sequencing.md`](.agent/skills/remotion-best-practices/rules/sequencing.md) para padrões de sequenciamento.
+```tsx
+const introFrames = beatsToFrames(8, bpm, fps);
+const scene1Frames = beatsToFrames(4, bpm, fps);
 
+// Sequenciamento
+<Sequence from={0} durationInFrames={introFrames}>...</Sequence>
+<Sequence from={introFrames} durationInFrames={scene1Frames}>...</Sequence>
+```
 ### Áudio
 
 O componente suporta:

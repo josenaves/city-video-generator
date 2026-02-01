@@ -27,7 +27,7 @@ export interface Top10Cidade {
 }
 
 export interface Top10VideoInput {
-  videoData: Top10CidadesData;
+  videoData?: Top10CidadesData;
   overrideBeatsPerTransition?: number;
   audioTrack?: string;
   bpm?: number;
@@ -55,4 +55,5 @@ export interface Top10OutroProps {
   title: string;
   theme: Top10CidadesData["theme"];
   format: Top10CidadesData["format"];
+  cities: Top10Cidade[];
 }

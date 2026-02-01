@@ -1,95 +1,121 @@
 import React, { useMemo } from "react";
-import { AbsoluteFill, Sequence, Audio, staticFile } from "remotion";
+import { AbsoluteFill, Sequence, Audio, staticFile, interpolate, useCurrentFrame } from "remotion";
 import { Top10VideoInput } from "./types";
-import { sortCitiesByMetric } from "./utils";
+import { sortCitiesByMetric, beatsToFrames } from "./utils";
 import { Top10Intro } from "./scenes/Top10IntroScene";
 import { Top10RankingItem } from "./scenes/Top10RankingScene";
 import { Top10Outro } from "./scenes/Top10OutroScene";
 
-/**
- * Top10CidadesVideo - Componente principal para vídeos de ranking Top 10
- *
- * Referências do Remotion Best Practices:
- * - compositions.md: Definição de composições
- * - calculate-metadata.md: Cálculo dinâmico de duração
- * - sequencing.md: Padrões de sequenciamento
- * - audio.md: Uso de áudio
- */
 
-// Helper para calcular duração total baseado no formato
-// See: rules/calculate-metadata.md
-// Exported for use in Root.tsx when registering compositions
-export const calculateTop10Duration = (
-  format: "vertical" | "horizontal",
-): number => {
-  const fps = 30;
-  if (format === "vertical") {
-    return 3 * fps + 7 * 3 * fps + 3 * 4 * fps + 4 * fps + 2 * fps; // 42s total
-  }
-  return 5 * fps + 3 * 4 * fps + 4 * 4 * fps + 3 * 6 * fps + 8 * fps + 6 * fps; // 65s total
-};
 
 export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
   videoData,
   audioTrack = "audio/Beat Your Competition - Vibe Tracks.mp3",
   bpm = 128,
 }) => {
+  if (!videoData) return null;
+
+  const frame = useCurrentFrame();
+
   // Sort cities by the specified metric
   const sortedCities = useMemo(() => {
     return sortCitiesByMetric(videoData.cities, videoData.metric);
   }, [videoData.cities, videoData.metric]);
 
-  // Calculate timeline based on format
+  // Calculate timeline based on format and BPM
   const timeline = useMemo(() => {
     const fps = 30;
     const isVertical = videoData.format === "vertical";
 
     if (isVertical) {
-      // Vertical format timing
+      // Vertical timeline based on beats (128 BPM default)
+      const introDk = beatsToFrames(6, bpm, fps);
+      const regDk = beatsToFrames(3, bpm, fps);
+      const top2Dk = beatsToFrames(4, bpm, fps);
+      const champDk = beatsToFrames(8, bpm, fps);
+      const outroDk = beatsToFrames(8, bpm, fps);
+
       return {
-        intro: { from: 0, duration: 3 * fps }, // 3s
+        intro: { from: 0, duration: introDk },
         regular: Array.from({ length: 7 }, (_, i) => ({
-          from: (3 + i * 3) * fps,
-          duration: 3 * fps,
-          city: sortedCities[9 - i], // #10 to #4
+          from: introDk + i * regDk,
+          duration: regDk,
+          city: sortedCities[9 - i],
         })),
-        top3: Array.from({ length: 3 }, (_, i) => ({
-          from: (24 + i * 4) * fps,
-          duration: 4 * fps,
-          city: sortedCities[2 - i], // #3 to #1
+        top3: Array.from({ length: 2 }, (_, i) => ({
+          from: (introDk + 7 * regDk) + i * top2Dk,
+          duration: top2Dk,
+          city: sortedCities[2 - i],
         })),
-        champion: { from: 36 * fps, duration: 4 * fps, city: sortedCities[0] }, // #1 special
-        outro: { from: 40 * fps, duration: 2 * fps },
+        champion: {
+          from: introDk + 7 * regDk + 2 * top2Dk,
+          duration: champDk,
+          city: sortedCities[0]
+        },
+        outro: {
+          from: introDk + 7 * regDk + 2 * top2Dk + champDk,
+          duration: outroDk
+        },
       };
     } else {
-      // Horizontal format timing
+      // Horizontal timeline based on beats
+      const introDk = beatsToFrames(16, bpm, fps);
+      const regDk = beatsToFrames(12, bpm, fps);
+      const top2Dk = beatsToFrames(16, bpm, fps);
+      const champDk = beatsToFrames(16, bpm, fps);
+      const concDk = beatsToFrames(12, bpm, fps);
+
       return {
-        intro: { from: 0, duration: 5 * fps }, // 5s
+        intro: { from: 0, duration: introDk },
         first8: Array.from({ length: 3 }, (_, i) => ({
-          from: (5 + i * 4) * fps,
-          duration: 4 * fps,
-          city: sortedCities[9 - i], // #10 to #8
+          from: introDk + i * regDk,
+          duration: regDk,
+          city: sortedCities[9 - i],
         })),
         middle: Array.from({ length: 4 }, (_, i) => ({
-          from: (17 + i * 4) * fps,
-          duration: 4 * fps,
-          city: sortedCities[6 - i], // #7 to #4
+          from: introDk + 3 * regDk + i * regDk,
+          duration: regDk,
+          city: sortedCities[6 - i],
         })),
-        top3: Array.from({ length: 3 }, (_, i) => ({
-          from: (33 + i * 6) * fps,
-          duration: 6 * fps,
-          city: sortedCities[2 - i], // #3 to #1
+        top3: Array.from({ length: 2 }, (_, i) => ({
+          from: introDk + 7 * regDk + i * top2Dk,
+          duration: top2Dk,
+          city: sortedCities[2 - i],
         })),
-        champion: { from: 51 * fps, duration: 8 * fps, city: sortedCities[0] }, // #1 special
-        conclusion: { from: 59 * fps, duration: 6 * fps },
+        champion: {
+          from: introDk + 7 * regDk + 2 * top2Dk,
+          duration: champDk,
+          city: sortedCities[0]
+        },
+        conclusion: {
+          from: introDk + 7 * regDk + 2 * top2Dk + champDk,
+          duration: concDk
+        },
       };
     }
-  }, [videoData.format, sortedCities]);
+  }, [videoData.format, sortedCities, bpm]);
+
+  const isVertical = videoData.format === "vertical";
+
+  // Calculate total duration from timeline for accurate audio
+  const totalDuration = isVertical
+    ? (timeline.outro?.from || 0) + (timeline.outro?.duration || 0)
+    : (timeline.conclusion?.from || 0) + (timeline.conclusion?.duration || 0);
+
+  // Audio Fade Out Logic
+  const audioVolume = interpolate(
+    frame,
+    [totalDuration - 60, totalDuration - 15],
+    [0.8, 0],
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+  );
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
-      {/* Background Audio */}
-      <Audio src={staticFile(audioTrack)} volume={0.8} />
+      {/* Background Audio with Fade Out */}
+      <Sequence from={0} durationInFrames={totalDuration}>
+        <Audio src={staticFile(audioTrack)} volume={audioVolume} />
+      </Sequence>
 
       {/* Intro Scene */}
       <Sequence
@@ -224,6 +250,7 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
           title={videoData.title}
           theme={videoData.theme}
           format={videoData.format}
+          cities={sortedCities}
         />
       </Sequence>
     </AbsoluteFill>
