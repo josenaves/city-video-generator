@@ -5,7 +5,7 @@ import path from 'path';
 const STATES_URL = 'https://raw.githubusercontent.com/kelvins/municipios-brasileiros/main/json/estados.json';
 const CITIES_URL = 'https://raw.githubusercontent.com/kelvins/municipios-brasileiros/main/json/municipios.json';
 
-const OUTPUT_DIR = path.join(process.cwd(), '.agent/skills/BrazilianCitiesKnowledge/resources');
+const OUTPUT_DIR = path.join(process.cwd(), '.agent/skills/brazilian_knowledge/resources');
 const OUTPUT_FILE = path.join(OUTPUT_DIR, 'brazilian-cities-data.json');
 
 // Normalization function

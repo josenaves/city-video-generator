@@ -1,5 +1,5 @@
 ---
-name: BrazilianCitiesKnowledge
+name: brazilian_knowledge
 description: The single source of truth for Brazilian geographic knowledge inside Antigravity agents.
 ---
 
