@@ -1774,18 +1774,20 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Top10CidadesMaisPobresSC"
         component={Top10CidadesVideo}
-        durationInFrames={calculateTop10Duration("vertical")}
+        durationInFrames={calculateTop10Duration("vertical", 140)}
         fps={30}
         width={1080}
         height={1920}
         defaultProps={{
           videoData: top10PobresSCData,
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
         }}
       />
       <Composition
         id="Top10CidadesMaisPobresSCHorizontal"
         component={Top10CidadesVideo}
-        durationInFrames={calculateTop10Duration("horizontal")}
+        durationInFrames={calculateTop10Duration("horizontal", 140)}
         fps={30}
         width={1920}
         height={1080}
@@ -1795,6 +1797,8 @@ export const RemotionRoot: React.FC = () => {
             format: "horizontal",
             videoId: "top-10-cidades-mais-pobres-santa-catarina-horizontal",
           },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
         }}
       />
       {/* Top 10 Cidades Mais Violentas de Santa Catarina */}

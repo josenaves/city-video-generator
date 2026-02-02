@@ -11,7 +11,11 @@
       "genre": "Electronic/Instrumental",
       "mood": "Competitive/Energetic",
       "added": "2025-12-21",
-      "recommended_for": ["battle_videos", "campaign_videos", "championships"]
+      "recommended_for": [
+        "battle_videos",
+        "campaign_videos",
+        "championships"
+      ]
     },
     {
       "id": "come-with-us",
@@ -46,14 +50,36 @@
         "championships",
         "competitive_content"
       ]
+    },
+    {
+      "id": "missing-persons",
+      "title": "Missing Persons - Jeremy Blake",
+      "filename": "Missing Persons - Jeremy Blake.mp3",
+      "path": "audio/Missing Persons - Jeremy Blake.mp3",
+      "bpm": 140,
+      "duration": "4:41",
+      "size": "6.6 MB",
+      "genre": "Ambient/Electronic",
+      "mood": "Melancholy",
+      "added": "2026-02-02",
+      "recommended_for": [
+        "top_10_videos",
+        "cinematic_narratives",
+        "dramatic_content"
+      ]
     }
   ],
   "metadata": {
-    "total_tracks": 3,
-    "last_updated": "2026-01-25",
+    "total_tracks": 4,
+    "last_updated": "2026-02-02",
     "folder_path": "public/audio/",
-    "supported_formats": ["mp3"],
-    "default_bpm_range": [85, 140],
-    "total_size": "26.70 MB"
+    "supported_formats": [
+      "mp3"
+    ],
+    "default_bpm_range": [
+      85,
+      140
+    ],
+    "total_size": "33.30 MB"
   }
 }

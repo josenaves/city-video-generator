@@ -1,176 +1,176 @@
 {
   "videoId": "top-10-cidades-mais-pobres-santa-catarina-2024",
   "title": "As 10 CIDADES MAIS POBRES de Santa Catarina",
-  "subtitle": "Ranking 2024 - Menor renda per capita",
+  "subtitle": "Ranking 2024 - Menor PIB per capita",
   "theme": "elegant-dark",
-  "format": "vertical",
+  "format": "horizontal",
   "metric": {
-    "field": "incomePerCapita",
-    "title": "Renda per capita",
+    "field": "gdpPerCapita",
+    "title": "PIB per capita",
     "unit": "R$",
     "format": "currency",
     "order": "asc"
   },
-  "dataSource": "Fontes: IBGE, Atlas Brasil - Dados 2022/2023",
+  "dataSource": "Fontes: IBGE (Dados 2022/2023), NSC Total",
   "cities": [
     {
-      "name": "Abelardo Luz",
+      "name": "Paial",
       "state": "SC",
-      "nickname": "Terra da Soja",
+      "nickname": "Cidade do Oeste Catarinense",
       "data": {
-        "population": 17267,
-        "incomePerCapita": 485.0,
-        "idh": 0.658,
-        "povertyRate": 45.2
+        "population": 1472,
+        "areaKm2": 85,
+        "gdpPerCapita": 19382,
+        "idh": 0.686
       },
       "visual": {
         "primaryColor": "#8B4513",
-        "secondaryColor": "#DAA520",
-        "image": "cities/abelardo-luz.svg"
+        "secondaryColor": "#F5F5DC",
+        "image": "images/cities/sc/p/paial.jpg"
       }
     },
     {
-      "name": "Anchieta",
+      "name": "Tigrinhos",
       "state": "SC",
-      "nickname": "Portal do Oeste",
+      "nickname": "Cidade das Pequenas Propriedades",
       "data": {
-        "population": 5835,
-        "incomePerCapita": 512.0,
-        "idh": 0.662,
-        "povertyRate": 43.8
+        "population": 1261,
+        "areaKm2": 57,
+        "gdpPerCapita": 21450,
+        "idh": 0.701
       },
       "visual": {
-        "primaryColor": "#CD853F",
-        "secondaryColor": "#8B4513",
-        "image": "cities/anchieta-sc.svg"
+        "primaryColor": "#2E8B57",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/sc/t/tigrinhos.jpg"
       }
     },
     {
-      "name": "Guaraciaba",
+      "name": "Santa Terezinha",
       "state": "SC",
-      "nickname": "Terra do Milho",
+      "nickname": "Natureza e Cachoeiras",
       "data": {
-        "population": 10038,
-        "incomePerCapita": 534.0,
-        "idh": 0.667,
-        "povertyRate": 42.1
-      },
-      "visual": {
-        "primaryColor": "#DAA520",
-        "secondaryColor": "#B8860B",
-        "image": "cities/guaraciaba-sc.svg"
-      }
-    },
-    {
-      "name": "Bela Vista do Toldo",
-      "state": "SC",
-      "nickname": "Cidade da Madeira",
-      "data": {
-        "population": 6321,
-        "incomePerCapita": 548.0,
-        "idh": 0.669,
-        "povertyRate": 41.5
-      },
-      "visual": {
-        "primaryColor": "#228B22",
-        "secondaryColor": "#006400",
-        "image": "cities/bela-vista-do-toldo.svg"
-      }
-    },
-    {
-      "name": "Trombudo Central",
-      "state": "SC",
-      "nickname": "Vale do Rio Trombudo",
-      "data": {
-        "population": 7215,
-        "incomePerCapita": 562.0,
-        "idh": 0.672,
-        "povertyRate": 40.8
+        "population": 8066,
+        "areaKm2": 573,
+        "gdpPerCapita": 22120,
+        "idh": 0.654
       },
       "visual": {
         "primaryColor": "#4682B4",
-        "secondaryColor": "#2E8B57",
-        "image": "cities/trombudo-central.svg"
+        "secondaryColor": "#E6E6FA",
+        "image": "images/cities/sc/s/santa-terezinha.jpg"
       }
     },
     {
-      "name": "Ipuaçu",
+      "name": "Cerro Negro",
       "state": "SC",
-      "nickname": "Terra da Erva-Mate",
+      "nickname": "Região da Serra Catarinense",
       "data": {
-        "population": 7648,
-        "incomePerCapita": 578.0,
-        "idh": 0.675,
-        "povertyRate": 39.9
+        "population": 3317,
+        "areaKm2": 405,
+        "gdpPerCapita": 23410,
+        "idh": 0.648
       },
       "visual": {
-        "primaryColor": "#6B8E23",
-        "secondaryColor": "#556B2F",
-        "image": "cities/ipuacu.svg"
+        "primaryColor": "#556B2F",
+        "secondaryColor": "#FFFACD",
+        "image": "images/cities/sc/c/cerro-negro.jpg"
       }
     },
     {
-      "name": "Monte Carlo",
+      "name": "Entre Rios",
       "state": "SC",
-      "nickname": "Cidade do Lago",
+      "nickname": "Terra de Culturas Diversas",
       "data": {
-        "population": 11713,
-        "incomePerCapita": 589.0,
-        "idh": 0.678,
-        "povertyRate": 39.2
+        "population": 3192,
+        "areaKm2": 105,
+        "gdpPerCapita": 24320,
+        "idh": 0.697
       },
       "visual": {
-        "primaryColor": "#20B2AA",
-        "secondaryColor": "#008B8B",
-        "image": "cities/monte-carlo-sc.svg"
+        "primaryColor": "#B22222",
+        "secondaryColor": "#FFDAB9",
+        "image": "images/cities/sc/e/entre-rios.png"
       }
     },
     {
-      "name": "Vargeão",
+      "name": "Presidente Nereu",
       "state": "SC",
-      "nickname": "Terra do Churrasco",
+      "nickname": "Cidade das Flores",
       "data": {
-        "population": 3589,
-        "incomePerCapita": 598.0,
-        "idh": 0.681,
-        "povertyRate": 38.5
+        "population": 2246,
+        "areaKm2": 224,
+        "gdpPerCapita": 25100,
+        "idh": 0.689
       },
       "visual": {
-        "primaryColor": "#A0522D",
-        "secondaryColor": "#8B4513",
-        "image": "cities/vargeao.svg"
-      }
-    },
-    {
-      "name": "Novo Horizonte",
-      "state": "SC",
-      "nickname": "Cidade do Sol Nascente",
-      "data": {
-        "population": 10538,
-        "incomePerCapita": 612.0,
-        "idh": 0.684,
-        "povertyRate": 37.8
-      },
-      "visual": {
-        "primaryColor": "#FF8C00",
-        "secondaryColor": "#DAA520",
-        "image": "cities/novo-horizonte-sc.svg"
+        "primaryColor": "#FF69B4",
+        "secondaryColor": "#FDF5E6",
+        "image": "images/cities/sc/p/presidente-nereu.webp"
       }
     },
     {
       "name": "São Bernardino",
       "state": "SC",
-      "nickname": "Terra do Queijo",
+      "nickname": "Tradição e Trabalho",
       "data": {
-        "population": 2562,
-        "incomePerCapita": 625.0,
-        "idh": 0.687,
-        "povertyRate": 37.1
+        "population": 2404,
+        "areaKm2": 144,
+        "gdpPerCapita": 26340,
+        "idh": 0.705
       },
       "visual": {
-        "primaryColor": "#DEB887",
-        "secondaryColor": "#D2691E",
-        "image": "cities/sao-bernardino-sc.svg"
+        "primaryColor": "#000080",
+        "secondaryColor": "#B0C4DE",
+        "image": "images/cities/sc/s/sao-bernardino.jpg"
+      }
+    },
+    {
+      "name": "Macieira",
+      "state": "SC",
+      "nickname": "Destaque na Fruticultura",
+      "data": {
+        "population": 1785,
+        "areaKm2": 260,
+        "gdpPerCapita": 27550,
+        "idh": 0.692
+      },
+      "visual": {
+        "primaryColor": "#CD5C5C",
+        "secondaryColor": "#F5FFFA",
+        "image": "images/cities/sc/m/macieira.jpg"
+      }
+    },
+    {
+      "name": "Lajeado Grande",
+      "state": "SC",
+      "nickname": "Pequena e Acolhedora",
+      "data": {
+        "population": 1675,
+        "areaKm2": 118,
+        "gdpPerCapita": 28120,
+        "idh": 0.730
+      },
+      "visual": {
+        "primaryColor": "#6B8E23",
+        "secondaryColor": "#F0FFF0",
+        "image": "images/cities/sc/l/lajeado-grande.jpg"
+      }
+    },
+    {
+      "name": "José Boiteux",
+      "state": "SC",
+      "nickname": "Terra da Barragem Norte",
+      "data": {
+        "population": 5971,
+        "areaKm2": 405,
+        "gdpPerCapita": 29450,
+        "idh": 0.672
+      },
+      "visual": {
+        "primaryColor": "#D2691E",
+        "secondaryColor": "#FAF0E6",
+        "image": "images/cities/sc/j/jose-boiteux.jpg"
       }
     }
   ]
