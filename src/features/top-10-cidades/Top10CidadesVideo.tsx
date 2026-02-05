@@ -33,29 +33,30 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
     const isVertical = videoData.format === "vertical";
 
     if (isVertical) {
-      // Vertical timeline based on beats (128 BPM default)
-      const introDk = beatsToFrames(6, bpm, fps);
-      const regDk = beatsToFrames(3, bpm, fps);
-      const top2Dk = beatsToFrames(4, bpm, fps);
-      const champDk = beatsToFrames(8, bpm, fps);
-      const outroDk = beatsToFrames(8, bpm, fps);
+      // Vertical timeline based on beats (128 BPM default) -> ACCELERATED FOR SHORTS
+      const introDk = beatsToFrames(4, bpm, fps); // Faster Intro (4 beats)
+      const regDk = beatsToFrames(2, bpm, fps);   // Super Fast Pacing for 10-4 (2 beats)
+      const top2Dk = beatsToFrames(4, bpm, fps);  // Top 3/2 get attention
+      const champDk = beatsToFrames(8, bpm, fps); // #1 gets glory
+      const outroDk = beatsToFrames(4, bpm, fps); // Quick CTA
 
+      // Ensure we cover all positions 10 to 4 (7 items)
       return {
         intro: { from: 0, duration: introDk },
         regular: Array.from({ length: 7 }, (_, i) => ({
           from: introDk + i * regDk,
           duration: regDk,
-          city: sortedCities[9 - i],
+          city: sortedCities[9 - i], // 10th to 4th
         })),
         top3: Array.from({ length: 2 }, (_, i) => ({
           from: introDk + 7 * regDk + i * top2Dk,
           duration: top2Dk,
-          city: sortedCities[2 - i],
+          city: sortedCities[2 - i], // 3rd to 2nd
         })),
         champion: {
           from: introDk + 7 * regDk + 2 * top2Dk,
           duration: champDk,
-          city: sortedCities[0],
+          city: sortedCities[0], // 1st
         },
         outro: {
           from: introDk + 7 * regDk + 2 * top2Dk + champDk,

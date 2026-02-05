@@ -127,7 +127,9 @@ Para garantir um fluxo profissional e rítmico, **todas as transições de cena 
 
 ### 🎥 Estrutura do Vídeo Sugerida (Ex: 128 BPM)
 
+
 #### Formato Vertical (Social Media - High Energy)
+- **Visual Impact**: Layout **Split-Screen**. A metade superior (50%) é dedicada à imagem da cidade (formato quadrado ou quase quadrado), garantindo destaque visual claro. A metade inferior (50%) contém a tipografia e métricas.
 1.  **Intro**: 6 beats (~2.8s) - Gancho visual rápido.
 2.  **Ranking #10-#4**: 3 beats cada (~1.4s) - Ritmo frenético para retenção.
 3.  **Top 2 Battle (#3, #2)**: 4 beats cada (~1.8s) - Pausa dramática.

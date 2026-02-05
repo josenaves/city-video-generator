@@ -29,9 +29,10 @@ export const Top10Intro: React.FC<Top10IntroProps> = ({
   format,
 }) => {
   const frame = useCurrentFrame();
-  const { fps, width } = useVideoConfig();
+  const { fps, width, height } = useVideoConfig();
   const colors = getThemeColors(theme);
-  const isVertical = format === "vertical";
+  // Robust Vertical Detection
+  const isVertical = format === "vertical" || height > width;
 
   // --- Motion Physics ---
 
@@ -66,9 +67,9 @@ export const Top10Intro: React.FC<Top10IntroProps> = ({
   const bgScale = interpolate(frame, [0, durationInFrames], [1, 1.1]);
 
   // --- Design Tokens ---
-  const badgeSize = isVertical ? 120 : 160;
-  const titleSize = isVertical ? 56 : 96;
-  const subSize = isVertical ? 24 : 32;
+  const badgeSize = isVertical ? 140 : 160; // Larger Badge
+  const titleSize = isVertical ? 90 : 96;   // Massive Title
+  const subSize = isVertical ? 48 : 32;     // Readable Subtitle
   const glassBackground = "rgba(255, 255, 255, 0.05)";
   const glassBorder = "1px solid rgba(255, 255, 255, 0.1)";
 
@@ -128,7 +129,7 @@ export const Top10Intro: React.FC<Top10IntroProps> = ({
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        width: isVertical ? '85%' : '70%',
+        width: isVertical ? '90%' : '70%',
         gap: isVertical ? '32px' : '48px'
       }}>
 
@@ -155,17 +156,41 @@ export const Top10Intro: React.FC<Top10IntroProps> = ({
         {/* MAIN TITLE (Kinetic) */}
         <h1 style={{
           margin: 0,
-          fontSize: `${titleSize}px`,
-          fontWeight: 800,
           color: colors.primary,
           lineHeight: 1.1,
           letterSpacing: "-0.03em",
           textTransform: "uppercase",
           transform: `translateY(${titleY}px)`,
           opacity: titleOpacity,
-          textShadow: "0 10px 30px rgba(0,0,0,0.5)"
+          textShadow: "0 10px 30px rgba(0,0,0,0.5)",
+          display: "flex",
+          flexDirection: "column",
+          gap: "8px",
+          alignItems: "center"
         }}>
-          {title}
+          {(() => {
+            // Smart Split for "Topic" vs "Location"
+            // Look for " do ", " da ", " de ", " em " (case insensitive)
+            const splitMatch = title.match(/^(.*?)\s+(do|da|de|em)\s+(.*)$/i);
+
+            if (splitMatch) {
+              // [full, Part1, preposition, Part2]
+              const [_, part1, preposition, part2] = splitMatch;
+              return (
+                <>
+                  <span style={{ fontSize: `${titleSize * 0.7}px` }}>{part1}</span>
+                  <span style={{
+                    fontSize: `${titleSize}px`,
+                    color: colors.accent,
+                    marginTop: "8px"
+                  }}>
+                    {part2}
+                  </span>
+                </>
+              );
+            }
+            return <span style={{ fontSize: `${titleSize}px` }}>{title}</span>;
+          })()}
         </h1>
 
         {/* SUBTITLE */}
@@ -179,9 +204,24 @@ export const Top10Intro: React.FC<Top10IntroProps> = ({
           padding: "16px 32px",
           borderRadius: "16px",
           border: glassBorder,
-          backdropFilter: "blur(8px)"
+          backdropFilter: "blur(8px)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "8px"
         }}>
-          {subtitle}
+          {subtitle.includes(" - ") ? (
+            subtitle.split(" - ").map((part, i) => (
+              <span key={i} style={{
+                fontWeight: i === 1 ? 800 : 500, // Emphasize the second line (Ranking Year)
+                color: i === 1 ? colors.accent : "inherit" // Highlight the year
+              }}>
+                {part}
+              </span>
+            ))
+          ) : (
+            subtitle
+          )}
         </div>
 
       </div>

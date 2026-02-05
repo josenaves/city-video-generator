@@ -1782,7 +1782,10 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
         defaultProps={{
-          videoData: top10PobresRSData,
+          videoData: {
+            ...top10PobresRSData,
+            format: "vertical",
+          },
           audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
           bpm: 140,
         }}

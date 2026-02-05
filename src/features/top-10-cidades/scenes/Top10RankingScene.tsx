@@ -37,7 +37,9 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
   const colors = getThemeColors(theme);
   const [backgroundError, setBackgroundError] = React.useState(false);
   const [cardError, setCardError] = React.useState(false);
-  const isVertical = format === "vertical";
+
+  // Auto-detect vertical mode from canvas dimensions if prop is mismatching
+  const isVertical = format === "vertical" || height > width;
 
   // --- Motion Physics (Optimized for Shorts if Vertical) ---
   const isShortDuration = isVertical && durationInFrames < 60; // Logic for fast-paced vertical video
@@ -171,35 +173,39 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
           zIndex: 10,
           display: "flex",
           flexDirection: isVertical ? "column" : "row",
-          padding: isVertical ? `${SPACER * 3}px` : `${SPACER * 6}px`,
-          gap: `${SPACER * 2}px`,
+          // Removed top/bottom padding for vertical to use full height split
+          padding: isVertical ? "0" : `${SPACER * 6}px`,
+          gap: isVertical ? "0" : `${SPACER * 2}px`,
           alignItems: "center",
           justifyContent: "center",
         }}
       >
-        {/* === Visual Component (Image Card) === */}
+        {/* === Visual Component (Image Card) - Top 50% === */}
         <div
           style={{
-            flex: isVertical ? "0 0 auto" : 1,
-            width: isVertical ? "100%" : "auto",
-            height: isVertical ? "35%" : "70%",
+            flex: isVertical ? "0 0 50%" : 1, // Strictly Top Half
+            width: "100%", // Full Width
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
+            alignItems: "flex-end", // Align image to bottom of its container (closer to text)
+            paddingBottom: 0,
             opacity: opacity,
             transform: `translateX(${slideFromLeft}px)`,
             position: "relative",
+            overflow: "hidden", // Ensure no spill
           }}
         >
           <div
             style={{
-              width: "100%",
-              height: "100%",
+              width: isVertical ? "100%" : "100%", // Full width for vertical now
+              height: isVertical ? "100%" : "100%",
+              // In vertical, we want the image to fill the top half fully.
+              // We remove aspect ratio constraint on container and let object-fit cover handle it.
               maxWidth: isVertical ? "100%" : "800px",
-              borderRadius: "24px",
+              borderRadius: isVertical ? "0 0 32px 32px" : "24px", // Rounded only at bottom for vertical
               overflow: "hidden",
               boxShadow: shadowElevation,
-              border: glassBorder,
+              borderBottom: glassBorder, // Only border bottom/sides relevant
               position: "relative",
               transform: `perspective(1000px) rotateY(${interpolate(entranceSpring, [0, 1], [15, 0])}deg)`,
             }}
@@ -227,7 +233,7 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
                 style={{
                   width: "100%",
                   height: "100%",
-                  objectFit: "cover",
+                  objectFit: "cover", // Crucial for filling the 50% height fully
                   transform: "scale(1.02)",
                 }}
               />
@@ -239,13 +245,16 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
                 position: "absolute",
                 bottom: 0,
                 left: 0,
-                backgroundColor: colors.accent,
-                padding: `${SPACER}px ${SPACER * 3}px`,
+                backgroundColor: colors.accent, // High contrast background
+                padding: isVertical
+                  ? `${SPACER * 1.5}px ${SPACER * 3}px`
+                  : `${SPACER}px ${SPACER * 3}px`,
                 borderTopRightRadius: "24px",
                 boxShadow: "4px -4px 20px rgba(0,0,0,0.2)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                zIndex: 2,
               }}
             >
               <span
@@ -263,14 +272,15 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
           </div>
         </div>
 
-        {/* === Information Component (Typography & Data) === */}
+        {/* === Information Component (Typography & Data) - Bottom 50% === */}
         <div
           style={{
-            flex: 1,
+            flex: isVertical ? "0 0 50%" : 1,
             width: "100%",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
+            justifyContent: "center", // Vertically Center content in the bottom half
+            paddingTop: 0,
             alignItems: isVertical ? "center" : "flex-start",
             textAlign: isVertical ? "center" : "left",
             zIndex: 20,
@@ -279,16 +289,28 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
           }}
         >
           {/* City & State */}
-          <div style={{ marginBottom: `${SPACER * 3}px` }}>
+          <div
+            style={{
+              marginBottom: `${SPACER * 3}px`,
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: isVertical ? "center" : "flex-start", // Strong Center
+              textAlign: isVertical ? "center" : "left",
+            }}
+          >
             <h1
               style={{
+                width: "100%", // Type container full width
                 margin: 0,
                 color: colors.primary,
-                fontSize: `${titleSize}px`,
+                // Larger font size for readability
+                fontSize: isVertical ? "80px" : `${titleSize}px`, // BIGGER
                 fontWeight: 800,
                 lineHeight: 1.1,
                 letterSpacing: "-0.02em",
                 textShadow: "0 4px 20px rgba(0,0,0,0.5)",
+                textAlign: isVertical ? "center" : "left",
               }}
             >
               {cidade.name}
@@ -296,26 +318,35 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
             <h2
               style={{
                 margin: `${SPACER}px 0 0 0`,
-                color: colors.secondary, // Or semi-transparent white
-                fontSize: `${subtitleSize}px`,
+                color: colors.secondary,
+                fontSize: isVertical ? "42px" : `${subtitleSize}px`, // BIGGER
                 fontWeight: 500,
                 textTransform: "uppercase",
                 letterSpacing: "0.15em",
                 display: "flex",
                 alignItems: "center",
-                gap: "12px",
                 justifyContent: isVertical ? "center" : "flex-start",
+                gap: "12px",
+                width: "100%",
               }}
             >
               <span
                 style={{
                   display: "inline-block",
-                  width: "40px",
-                  height: "2px",
+                  width: "60px", // Longer Lines
+                  height: "3px", // Thicker Lines
                   backgroundColor: colors.accent,
                 }}
               />
               {cidade.state}
+              <span
+                style={{
+                  display: isVertical ? "inline-block" : "none",
+                  width: "60px",
+                  height: "3px",
+                  backgroundColor: colors.accent,
+                }}
+              />
             </h2>
           </div>
 
@@ -327,8 +358,12 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
               border: glassBorder,
               borderRadius: "20px",
               padding: `${SPACER * 2}px ${SPACER * 3}px`,
-              minWidth: isVertical ? "80%" : "400px",
+              minWidth: isVertical ? "90%" : "400px", // Wider card on mobile
+              width: isVertical ? "90%" : "auto", // Explicit width
               boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.2)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: isVertical ? "center" : "flex-start",
               transform: isChampion
                 ? `scale(${interpolate(valueProgress, [0, 1], [0.95, 1.05])})`
                 : "none",
@@ -336,12 +371,14 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
           >
             <div
               style={{
-                fontSize: `${metricLabelSize}px`,
-                color: "rgba(255, 255, 255, 0.8)",
+                fontSize: isVertical ? "32px" : `${metricLabelSize}px`,
+                textAlign: isVertical ? "center" : "left",
+                color: "rgba(255, 255, 255, 0.9)", // Higher contrast
                 fontWeight: 600,
                 textTransform: "uppercase",
                 letterSpacing: "0.05em",
                 marginBottom: `${SPACER}px`,
+                width: "100%",
               }}
             >
               {metric.title}
@@ -349,7 +386,7 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
 
             <div
               style={{
-                fontSize: `${metricValueSize}px`,
+                fontSize: isVertical ? "110px" : `${metricValueSize}px`, // HUGE
                 color: colors.accent,
                 fontWeight: 900,
                 letterSpacing: "-0.03em",
@@ -358,9 +395,11 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
                 alignItems: "baseline",
                 justifyContent: isVertical ? "center" : "flex-start",
                 gap: "8px",
+                textShadow: "0 4px 30px rgba(0,0,0,0.3)",
+                width: "100%",
+                flexWrap: "wrap", // Allow wrapping if number is massive
               }}
             >
-              {/* Animated Number effect could be added here if we parsed the number */}
               {formattedValue}
             </div>
 
@@ -368,9 +407,11 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
               <div
                 style={{
                   marginTop: `${SPACER}px`,
-                  fontSize: "16px",
+                  fontSize: isVertical ? "32px" : "16px", // Much larger nickname
                   fontStyle: "italic",
-                  color: "rgba(255,255,255,0.5)",
+                  color: "rgba(255,255,255,0.7)", // Higher contrast
+                  textAlign: isVertical ? "center" : "left",
+                  width: "100%",
                 }}
               >
                 "{cidade.nickname}"

@@ -77,12 +77,12 @@ export const calculateTop10Duration = (
       : videoData.format === "vertical";
 
   if (isVertical) {
-    // Vertical sync (Fast Paced)
-    const intro = beatsToFrames(6, bpm, fps);     // ~2.8s
-    const regular = 7 * beatsToFrames(3, bpm, fps); // 7 cities x 3 beats (~1.4s each)
+    // Vertical sync (Fast Paced - Accelerated)
+    const intro = beatsToFrames(4, bpm, fps);     // ~1.8s
+    const regular = 7 * beatsToFrames(2, bpm, fps); // 7 cities x 2 beats (~0.9s each) - VERY FAST
     const top2 = 2 * beatsToFrames(4, bpm, fps);    // 2 cities x 4 beats (~1.8s each)
     const champion = beatsToFrames(8, bpm, fps);    // #1: 8 beats (~3.7s)
-    const outro = beatsToFrames(8, bpm, fps);       // CTA: 8 beats (~3.7s)
+    const outro = beatsToFrames(4, bpm, fps);       // CTA: 4 beats (~1.8s)
 
     return intro + regular + top2 + champion + outro;
   } else {
