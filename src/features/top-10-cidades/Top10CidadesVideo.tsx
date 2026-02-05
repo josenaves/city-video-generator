@@ -1,29 +1,34 @@
 import React, { useMemo } from "react";
-import { AbsoluteFill, Sequence, Audio, staticFile, interpolate, useCurrentFrame } from "remotion";
+import {
+  AbsoluteFill,
+  Sequence,
+  Audio,
+  staticFile,
+  interpolate,
+  useCurrentFrame,
+} from "remotion";
 import { Top10VideoInput } from "./types";
 import { sortCitiesByMetric, beatsToFrames } from "./utils";
 import { Top10Intro } from "./scenes/Top10IntroScene";
 import { Top10RankingItem } from "./scenes/Top10RankingScene";
 import { Top10Outro } from "./scenes/Top10OutroScene";
 
-
-
 export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
   videoData,
   audioTrack = "audio/Beat Your Competition - Vibe Tracks.mp3",
   bpm = 128,
 }) => {
-  if (!videoData) return null;
-
   const frame = useCurrentFrame();
 
   // Sort cities by the specified metric
   const sortedCities = useMemo(() => {
+    if (!videoData) return [];
     return sortCitiesByMetric(videoData.cities, videoData.metric);
-  }, [videoData.cities, videoData.metric]);
+  }, [videoData]);
 
   // Calculate timeline based on format and BPM
   const timeline = useMemo(() => {
+    if (!videoData) return null;
     const fps = 30;
     const isVertical = videoData.format === "vertical";
 
@@ -43,18 +48,18 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
           city: sortedCities[9 - i],
         })),
         top3: Array.from({ length: 2 }, (_, i) => ({
-          from: (introDk + 7 * regDk) + i * top2Dk,
+          from: introDk + 7 * regDk + i * top2Dk,
           duration: top2Dk,
           city: sortedCities[2 - i],
         })),
         champion: {
           from: introDk + 7 * regDk + 2 * top2Dk,
           duration: champDk,
-          city: sortedCities[0]
+          city: sortedCities[0],
         },
         outro: {
           from: introDk + 7 * regDk + 2 * top2Dk + champDk,
-          duration: outroDk
+          duration: outroDk,
         },
       };
     } else {
@@ -85,15 +90,17 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
         champion: {
           from: introDk + 7 * regDk + 2 * top2Dk,
           duration: champDk,
-          city: sortedCities[0]
+          city: sortedCities[0],
         },
         conclusion: {
           from: introDk + 7 * regDk + 2 * top2Dk + champDk,
-          duration: concDk
+          duration: concDk,
         },
       };
     }
-  }, [videoData.format, sortedCities, bpm]);
+  }, [videoData, sortedCities, bpm]);
+
+  if (!videoData || !timeline) return null;
 
   const isVertical = videoData.format === "vertical";
 
@@ -107,7 +114,7 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
     frame,
     [totalDuration - 60, totalDuration - 15],
     [0.8, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" }
+    { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
   );
 
   return (

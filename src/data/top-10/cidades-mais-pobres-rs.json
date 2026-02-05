@@ -1,0 +1,197 @@
+{
+  "videoId": "top-10-cidades-mais-pobres-rs-2024",
+  "title": "As 10 CIDADES MAIS POBRES do Rio Grande do Sul",
+  "subtitle": "Menor renda per capita - Ranking 2024",
+  "theme": "elegant-dark",
+  "format": "horizontal",
+  "bpm": 140,
+  "metric": {
+    "field": "gdpPerCapita",
+    "title": "Renda per capita",
+    "unit": "R$",
+    "format": "currency",
+    "order": "asc"
+  },
+  "cities": [
+    {
+      "name": "Tunas",
+      "state": "RS",
+      "nickname": "Pequena Notável",
+      "data": {
+        "population": 4500,
+        "areaKm2": 218,
+        "gdpPerCapita": 176.73,
+        "idh": 0.615,
+        "violentCrimeRate": 6.2,
+        "touristVisits": 5000
+      },
+      "visual": {
+        "primaryColor": "#1e40af",
+        "secondaryColor": "#dbeafe",
+        "image": "images/cities/rs/t/tunas.jpg"
+      }
+    },
+    {
+      "name": "Monte Alegre dos Campos",
+      "state": "RS",
+      "nickname": "Terra das Colinas",
+      "data": {
+        "population": 3100,
+        "areaKm2": 305,
+        "gdpPerCapita": 207.62,
+        "idh": 0.623,
+        "violentCrimeRate": 5.8,
+        "touristVisits": 4200
+      },
+      "visual": {
+        "primaryColor": "#dc2626",
+        "secondaryColor": "#fee2e2",
+        "image": "images/cities/rs/m/monte-alegre-dos-campos.jpg"
+      }
+    },
+    {
+      "name": "Chuvisca",
+      "state": "RS",
+      "nickname": "Cidade da Chuva",
+      "data": {
+        "population": 5200,
+        "areaKm2": 147,
+        "gdpPerCapita": 232.34,
+        "idh": 0.628,
+        "violentCrimeRate": 7.1,
+        "touristVisits": 3800
+      },
+      "visual": {
+        "primaryColor": "#059669",
+        "secondaryColor": "#d1fae5",
+        "image": "images/cities/rs/c/chuvisca.jpg"
+      }
+    },
+    {
+      "name": "Barão do Triunfo",
+      "state": "RS",
+      "nickname": "Pequena Grande",
+      "data": {
+        "population": 7500,
+        "areaKm2": 436,
+        "gdpPerCapita": 233.76,
+        "idh": 0.632,
+        "violentCrimeRate": 8.2,
+        "touristVisits": 6200
+      },
+      "visual": {
+        "primaryColor": "#ea580c",
+        "secondaryColor": "#fed7aa",
+        "image": "images/cities/rs/b/barao-do-triunfo.jpg"
+      }
+    },
+    {
+      "name": "Amaral Ferrador",
+      "state": "RS",
+      "nickname": "Terra do Ferreiro",
+      "data": {
+        "population": 2800,
+        "areaKm2": 192,
+        "gdpPerCapita": 234.41,
+        "idh": 0.635,
+        "violentCrimeRate": 4.9,
+        "touristVisits": 3100
+      },
+      "visual": {
+        "primaryColor": "#7c3aed",
+        "secondaryColor": "#ede9fe",
+        "image": "images/cities/rs/a/amaral-ferrador.jpg"
+      }
+    },
+    {
+      "name": "Mampituba",
+      "state": "RS",
+      "nickname": "Portal da Serra",
+      "data": {
+        "population": 3200,
+        "areaKm2": 156,
+        "gdpPerCapita": 247.26,
+        "idh": 0.641,
+        "violentCrimeRate": 5.3,
+        "touristVisits": 4500
+      },
+      "visual": {
+        "primaryColor": "#0891b2",
+        "secondaryColor": "#cffafe",
+        "image": "images/cities/rs/m/mampituba.jpg"
+      }
+    },
+    {
+      "name": "Passa Sete",
+      "state": "RS",
+      "nickname": "Cidade dos Sete",
+      "data": {
+        "population": 4100,
+        "areaKm2": 213,
+        "gdpPerCapita": 248.21,
+        "idh": 0.645,
+        "violentCrimeRate": 6.7,
+        "touristVisits": 3900
+      },
+      "visual": {
+        "primaryColor": "#be123c",
+        "secondaryColor": "#ffe4e6",
+        "image": "images/cities/rs/p/passa-sete.jpg"
+      }
+    },
+    {
+      "name": "Lagoão",
+      "state": "RS",
+      "nickname": "Terra dos Lagos",
+      "data": {
+        "population": 6200,
+        "areaKm2": 324,
+        "gdpPerCapita": 264.05,
+        "idh": 0.652,
+        "violentCrimeRate": 7.8,
+        "touristVisits": 5800
+      },
+      "visual": {
+        "primaryColor": "#0d9488",
+        "secondaryColor": "#ccfbf1",
+        "image": "images/cities/rs/l/lagoao.jpg"
+      }
+    },
+    {
+      "name": "Redentora",
+      "state": "RS",
+      "nickname": "Cidade da Redenção",
+      "data": {
+        "population": 11200,
+        "areaKm2": 287,
+        "gdpPerCapita": 265.38,
+        "idh": 0.658,
+        "violentCrimeRate": 9.1,
+        "touristVisits": 7200
+      },
+      "visual": {
+        "primaryColor": "#b91c1c",
+        "secondaryColor": "#fee2e2",
+        "image": "images/cities/rs/r/redentora.jpg"
+      }
+    },
+    {
+      "name": "Dom Feliciano",
+      "state": "RS",
+      "nickname": "Terra da Fé",
+      "data": {
+        "population": 15800,
+        "areaKm2": 419,
+        "gdpPerCapita": 266.38,
+        "idh": 0.662,
+        "violentCrimeRate": 8.5,
+        "touristVisits": 9100
+      },
+      "visual": {
+        "primaryColor": "#1e40af",
+        "secondaryColor": "#dbeafe",
+        "image": "images/cities/rs/d/dom-feliciano.jpg"
+      }
+    }
+  ]
+}

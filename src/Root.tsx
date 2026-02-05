@@ -236,6 +236,9 @@ import top10ViolentasSCData from "./data/top-10/cidades-mais-violentas-santa-cat
 // @ts-expect-error JSON import without type definitions
 import top10PobresSCData from "./data/top-10/cidades-mais-pobres-santa-catarina.json";
 
+// @ts-expect-error JSON import without type definitions
+import top10PobresRSData from "./data/top-10/cidades-mais-pobres-rs.json";
+
 // Championships
 // @ts-ignore
 import mogiChampionshipData from "./data/championships/mogi.json";
@@ -1755,39 +1758,9 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
       <Composition
-        id="Top10CidadesMaisRicasSCHorizontal"
-        component={Top10CidadesVideo}
-        durationInFrames={calculateTop10Duration("horizontal")}
-        fps={30}
-        width={1920}
-        height={1080}
-        defaultProps={{
-          videoData: {
-            ...top10RicasSCData,
-            format: "horizontal",
-            videoId: "top-10-cidades-mais-ricas-santa-catarina-horizontal",
-          },
-        }}
-      />
-
-      {/* Top 10 Cidades Mais Pobre de Santa Catarina */}
-      <Composition
-        id="Top10CidadesMaisPobresSC"
-        component={Top10CidadesVideo}
-        durationInFrames={calculateTop10Duration("vertical", 140)}
-        fps={30}
-        width={1080}
-        height={1920}
-        defaultProps={{
-          videoData: top10PobresSCData,
-          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
-          bpm: 140,
-        }}
-      />
-      <Composition
         id="Top10CidadesMaisPobresSCHorizontal"
         component={Top10CidadesVideo}
-        durationInFrames={calculateTop10Duration("horizontal", 140)}
+        durationInFrames={calculateTop10Duration("horizontal")}
         fps={30}
         width={1920}
         height={1080}
@@ -1797,10 +1770,41 @@ export const RemotionRoot: React.FC = () => {
             format: "horizontal",
             videoId: "top-10-cidades-mais-pobres-santa-catarina-horizontal",
           },
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Pobres do Rio Grande do Sul */}
+      <Composition
+        id="Top10CidadesMaisPobresRS"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("vertical", 140)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: top10PobresRSData,
           audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
           bpm: 140,
         }}
       />
+      <Composition
+        id="Top10CidadesMaisPobresRSHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("horizontal", 140)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10PobresRSData,
+            format: "horizontal",
+            videoId: "top-10-cidades-mais-pobres-rs-horizontal",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+
       {/* Top 10 Cidades Mais Violentas de Santa Catarina */}
       <Composition
         id="Top10CidadesMaisViolentasSC"

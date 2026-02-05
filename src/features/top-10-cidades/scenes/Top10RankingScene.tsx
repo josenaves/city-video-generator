@@ -35,6 +35,8 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const colors = getThemeColors(theme);
+  const [backgroundError, setBackgroundError] = React.useState(false);
+  const [cardError, setCardError] = React.useState(false);
   const isVertical = format === "vertical";
 
   // --- Motion Physics (Optimized for Shorts if Vertical) ---
@@ -110,39 +112,58 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
     >
       {/* 1. Immersive Background Layer */}
       <AbsoluteFill style={{ zIndex: 0 }}>
-        <Img
-          src={staticFile(cidade.visual.image)}
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            transform: `scale(${bgScale})`,
-            filter: `blur(${blurRadius}px) brightness(0.5)`, // Dimmed for readability
-          }}
-        />
+        {backgroundError ? (
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              backgroundColor: cidade.visual.primaryColor,
+              transform: `scale(${bgScale})`,
+              filter: `blur(${blurRadius}px) brightness(0.5)`,
+            }}
+          />
+        ) : (
+          <Img
+            src={staticFile(cidade.visual.image)}
+            onError={() => setBackgroundError(true)}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              transform: `scale(${bgScale})`,
+              filter: `blur(${blurRadius}px) brightness(0.5)`, // Dimmed for readability
+            }}
+          />
+        )}
         <AbsoluteFill style={{ background: overlayColor }} />
       </AbsoluteFill>
 
       {/* 2. Abstract Geometric Accents (Motion Background) */}
-      <div style={{
-        position: 'absolute',
-        top: 0, right: 0, bottom: 0, left: 0,
-        overflow: 'hidden',
-        zIndex: 1
-      }}>
-        <div style={{
-          position: 'absolute',
-          top: isVertical ? '10%' : '-10%',
-          right: isVertical ? '-20%' : '-5%',
-          width: isVertical ? width * 0.8 : height * 0.6,
-          height: isVertical ? width * 0.8 : height * 0.6,
-          background: `radial-gradient(circle, ${cidade.visual.primaryColor}40 0%, transparent 70%)`,
-          borderRadius: '50%',
-          filter: 'blur(60px)',
-          opacity: 0.6
-        }} />
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+          overflow: "hidden",
+          zIndex: 1,
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: isVertical ? "10%" : "-10%",
+            right: isVertical ? "-20%" : "-5%",
+            width: isVertical ? width * 0.8 : height * 0.6,
+            height: isVertical ? width * 0.8 : height * 0.6,
+            background: `radial-gradient(circle, ${cidade.visual.primaryColor}40 0%, transparent 70%)`,
+            borderRadius: "50%",
+            filter: "blur(60px)",
+            opacity: 0.6,
+          }}
+        />
       </div>
-
 
       {/* 3. Layout Grid */}
       <AbsoluteFill
@@ -156,68 +177,91 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
           justifyContent: "center",
         }}
       >
-
         {/* === Visual Component (Image Card) === */}
         <div
           style={{
             flex: isVertical ? "0 0 auto" : 1,
             width: isVertical ? "100%" : "auto",
             height: isVertical ? "35%" : "70%",
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             opacity: opacity,
             transform: `translateX(${slideFromLeft}px)`,
-            position: 'relative'
+            position: "relative",
           }}
         >
-          <div style={{
-            width: '100%',
-            height: '100%',
-            maxWidth: isVertical ? '100%' : '800px',
-            borderRadius: '24px',
-            overflow: 'hidden',
-            boxShadow: shadowElevation,
-            border: glassBorder,
-            position: 'relative',
-            transform: `perspective(1000px) rotateY(${interpolate(entranceSpring, [0, 1], [15, 0])}deg)`
-          }}>
-            <Img
-              src={staticFile(cidade.visual.image)}
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                transform: 'scale(1.02)'
-              }}
-            />
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              maxWidth: isVertical ? "100%" : "800px",
+              borderRadius: "24px",
+              overflow: "hidden",
+              boxShadow: shadowElevation,
+              border: glassBorder,
+              position: "relative",
+              transform: `perspective(1000px) rotateY(${interpolate(entranceSpring, [0, 1], [15, 0])}deg)`,
+            }}
+          >
+            {cardError ? (
+              <div
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  backgroundColor: cidade.visual.primaryColor,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  color: "white",
+                  fontSize: "24px",
+                  fontWeight: "bold",
+                }}
+              >
+                {cidade.name}
+              </div>
+            ) : (
+              <Img
+                src={staticFile(cidade.visual.image)}
+                onError={() => setCardError(true)}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  transform: "scale(1.02)",
+                }}
+              />
+            )}
 
             {/* Ranking Badge Applied to Image */}
-            <div style={{
-              position: 'absolute',
-              bottom: 0,
-              left: 0,
-              backgroundColor: colors.accent,
-              padding: `${SPACER}px ${SPACER * 3}px`,
-              borderTopRightRadius: '24px',
-              boxShadow: '4px -4px 20px rgba(0,0,0,0.2)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center'
-            }}>
-              <span style={{
-                color: colors.primary, // Often black on yellow/accent
-                fontSize: isVertical ? '64px' : '82px',
-                fontWeight: 900,
-                lineHeight: 1,
-                letterSpacing: '-0.05em'
-              }}>
+            <div
+              style={{
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                backgroundColor: colors.accent,
+                padding: `${SPACER}px ${SPACER * 3}px`,
+                borderTopRightRadius: "24px",
+                boxShadow: "4px -4px 20px rgba(0,0,0,0.2)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <span
+                style={{
+                  color: colors.primary, // Often black on yellow/accent
+                  fontSize: isVertical ? "64px" : "82px",
+                  fontWeight: 900,
+                  lineHeight: 1,
+                  letterSpacing: "-0.05em",
+                }}
+              >
                 #{position}
               </span>
             </div>
           </div>
         </div>
-
 
         {/* === Information Component (Typography & Data) === */}
         <div
@@ -231,7 +275,7 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
             textAlign: isVertical ? "center" : "left",
             zIndex: 20,
             opacity: contentOpacity,
-            transform: `translate(${isVertical ? `0, ${slideFromBottom}px` : `${slideFromRight}px, 0`})`
+            transform: `translate(${isVertical ? `0, ${slideFromBottom}px` : `${slideFromRight}px, 0`})`,
           }}
         >
           {/* City & State */}
@@ -257,15 +301,20 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
                 fontWeight: 500,
                 textTransform: "uppercase",
                 letterSpacing: "0.15em",
-                display: 'flex',
-                alignItems: 'center',
-                gap: '12px',
-                justifyContent: isVertical ? 'center' : 'flex-start'
+                display: "flex",
+                alignItems: "center",
+                gap: "12px",
+                justifyContent: isVertical ? "center" : "flex-start",
               }}
             >
-              <span style={{
-                display: 'inline-block', width: '40px', height: '2px', backgroundColor: colors.accent
-              }} />
+              <span
+                style={{
+                  display: "inline-block",
+                  width: "40px",
+                  height: "2px",
+                  backgroundColor: colors.accent,
+                }}
+              />
               {cidade.state}
             </h2>
           </div>
@@ -280,7 +329,9 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
               padding: `${SPACER * 2}px ${SPACER * 3}px`,
               minWidth: isVertical ? "80%" : "400px",
               boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.2)",
-              transform: isChampion ? `scale(${interpolate(valueProgress, [0, 1], [0.95, 1.05])})` : 'none'
+              transform: isChampion
+                ? `scale(${interpolate(valueProgress, [0, 1], [0.95, 1.05])})`
+                : "none",
             }}
           >
             <div
@@ -306,7 +357,7 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
                 display: "flex",
                 alignItems: "baseline",
                 justifyContent: isVertical ? "center" : "flex-start",
-                gap: "8px"
+                gap: "8px",
               }}
             >
               {/* Animated Number effect could be added here if we parsed the number */}
@@ -314,12 +365,14 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
             </div>
 
             {cidade.nickname && (
-              <div style={{
-                marginTop: `${SPACER}px`,
-                fontSize: '16px',
-                fontStyle: 'italic',
-                color: 'rgba(255,255,255,0.5)'
-              }}>
+              <div
+                style={{
+                  marginTop: `${SPACER}px`,
+                  fontSize: "16px",
+                  fontStyle: "italic",
+                  color: "rgba(255,255,255,0.5)",
+                }}
+              >
                 "{cidade.nickname}"
               </div>
             )}
