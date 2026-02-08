@@ -1,48 +1,72 @@
 {
   "videoId": "top-10-cidades-mais-violentas-santa-catarina-2024",
   "title": "As 10 CIDADES MAIS VIOLENTAS de Santa Catarina",
-  "subtitle": "Ranking 2024 - Taxa de criminalidade violenta por 100 mil habitantes",
+  "subtitle": "Ranking 2024 - Mortes Violentas Intencionais",
   "theme": "elegant-dark",
-  "format": "vertical",
+  "format": "horizontal",
   "metric": {
     "field": "violentCrimeRate",
-    "title": "Taxa de criminalidade",
-    "unit": "por 100 mil hab.",
+    "title": "Mortes Violentas",
+    "unit": "",
     "format": "decimal",
     "order": "desc"
   },
-  "dataSource": "Fontes: SSP-SC, IBGE, Ministério da Justiça - Dados 2023",
+  "dataSource": "Fontes: SSP-SC, IBGE - Dados 2023/2024",
   "cities": [
     {
-      "name": "São Miguel do Oeste",
+      "name": "Florianópolis",
       "state": "SC",
-      "nickname": "Portal do Oeste",
+      "nickname": "Ilha da Magia",
       "data": {
-        "population": 49327,
-        "violentCrimeRate": 89.5,
-        "propertyCrimeRate": 145.2,
-        "homicideRate": 12.3
+        "population": 537213,
+        "violentCrimeRate": 10.7
       },
       "visual": {
-        "primaryColor": "#8B0000",
-        "secondaryColor": "#DC143C",
-        "image": "images/cities/sc/s/sao-miguel-do-oeste.svg"
+        "primaryColor": "#0056b3",
+        "secondaryColor": "#e0f7fa",
+        "image": "images/cities/sc/f/florianopolis.jpg"
       }
     },
     {
-      "name": "Chapecó",
+      "name": "Lages",
       "state": "SC",
-      "nickname": "Capital do Oeste",
+      "nickname": "Princesa da Serra",
       "data": {
-        "population": 224013,
-        "violentCrimeRate": 78.3,
-        "propertyCrimeRate": 132.5,
-        "homicideRate": 9.8
+        "population": 164981,
+        "violentCrimeRate": 10.2
       },
       "visual": {
-        "primaryColor": "#B22222",
-        "secondaryColor": "#CD5C5C",
-        "image": "images/cities/sc/c/chapeco.svg"
+        "primaryColor": "#8B4513",
+        "secondaryColor": "#DEB887",
+        "image": "images/cities/sc/l/lages.jpg"
+      }
+    },
+    {
+      "name": "Joinville",
+      "state": "SC",
+      "nickname": "Cidade dos Príncipes",
+      "data": {
+        "population": 616323,
+        "violentCrimeRate": 8.0
+      },
+      "visual": {
+        "primaryColor": "#C71585",
+        "secondaryColor": "#FFC0CB",
+        "image": "images/cities/sc/j/joinvile.jpg"
+      }
+    },
+    {
+      "name": "Camboriú",
+      "state": "SC",
+      "nickname": "Capital do Mármore",
+      "data": {
+        "population": 103074,
+        "violentCrimeRate": 7.8
+      },
+      "visual": {
+        "primaryColor": "#2E8B57",
+        "secondaryColor": "#98FB98",
+        "image": "images/cities/sc/b/balneario-camboriu.jpeg"
       }
     },
     {
@@ -50,127 +74,83 @@
       "state": "SC",
       "nickname": "Capital do Carvão",
       "data": {
-        "population": 222561,
-        "violentCrimeRate": 72.1,
-        "propertyCrimeRate": 125.8,
-        "homicideRate": 8.5
+        "population": 240599,
+        "violentCrimeRate": 7.3
       },
       "visual": {
-        "primaryColor": "#2F4F4F",
-        "secondaryColor": "#708090",
-        "image": "images/cities/sc/c/criciuma.svg"
+        "primaryColor": "#36454F",
+        "secondaryColor": "#D3D3D3",
+        "image": "images/cities/sc/c/criciuma.jpg"
+      }
+    },
+    {
+      "name": "Palhoça",
+      "state": "SC",
+      "nickname": "Terra do Surf",
+      "data": {
+        "population": 222598,
+        "violentCrimeRate": 6.3
+      },
+      "visual": {
+        "primaryColor": "#FF4500",
+        "secondaryColor": "#FFA07A",
+        "image": "images/cities/sc/f/florianopolis.jpg"
+      }
+    },
+    {
+      "name": "Blumenau",
+      "state": "SC",
+      "nickname": "Capital da Cerveja",
+      "data": {
+        "population": 361855,
+        "violentCrimeRate": 5.0
+      },
+      "visual": {
+        "primaryColor": "#DAA520",
+        "secondaryColor": "#FFF8DC",
+        "image": "images/cities/sc/b/blumenau.jpg"
       }
     },
     {
       "name": "Tubarão",
       "state": "SC",
-      "nickname": "Cidade Universitária",
+      "nickname": "Cidade Azul",
       "data": {
-        "population": 112291,
-        "violentCrimeRate": 68.4,
-        "propertyCrimeRate": 118.3,
-        "homicideRate": 7.9
+        "population": 110088,
+        "violentCrimeRate": 2.8
       },
       "visual": {
-        "primaryColor": "#800000",
-        "secondaryColor": "#A52A2A",
-        "image": "images/cities/sc/t/tubarao.svg"
+        "primaryColor": "#000080",
+        "secondaryColor": "#ADD8E6",
+        "image": "images/cities/sc/t/tubarao.jpg"
       }
     },
     {
-      "name": "Lages",
+      "name": "Jaraguá do Sul",
       "state": "SC",
-      "nickname": "Capital dos Campos",
+      "nickname": "Cidade das Fábricas",
       "data": {
-        "population": 157743,
-        "violentCrimeRate": 65.2,
-        "propertyCrimeRate": 112.4,
-        "homicideRate": 7.2
-      },
-      "visual": {
-        "primaryColor": "#8B4513",
-        "secondaryColor": "#A0522D",
-        "image": "images/cities/sc/l/lages.svg"
-      }
-    },
-    {
-      "name": "Itajaí",
-      "state": "SC",
-      "nickname": "Porto Seguro",
-      "data": {
-        "population": 223652,
-        "violentCrimeRate": 62.8,
-        "propertyCrimeRate": 108.9,
-        "homicideRate": 6.8
-      },
-      "visual": {
-        "primaryColor": "#006994",
-        "secondaryColor": "#4682B4",
-        "image": "images/cities/sc/i/itajai.svg"
-      }
-    },
-    {
-      "name": "Caçador",
-      "state": "SC",
-      "nickname": "Capital do Meio-Oeste",
-      "data": {
-        "population": 78524,
-        "violentCrimeRate": 58.5,
-        "propertyCrimeRate": 98.3,
-        "homicideRate": 6.1
-      },
-      "visual": {
-        "primaryColor": "#556B2F",
-        "secondaryColor": "#6B8E23",
-        "image": "images/cities/sc/c/cacador.svg"
-      }
-    },
-    {
-      "name": "Concórdia",
-      "state": "SC",
-      "nickname": "Terra do Chapéu",
-      "data": {
-        "population": 73593,
-        "violentCrimeRate": 54.2,
-        "propertyCrimeRate": 92.1,
-        "homicideRate": 5.5
-      },
-      "visual": {
-        "primaryColor": "#8B0000",
-        "secondaryColor": "#CD853F",
-        "image": "images/cities/sc/c/concordia.svg"
-      }
-    },
-    {
-      "name": "São José",
-      "state": "SC",
-      "nickname": "Cidade dos Imigrantes",
-      "data": {
-        "population": 254661,
-        "violentCrimeRate": 51.8,
-        "propertyCrimeRate": 88.4,
-        "homicideRate": 5.1
+        "population": 184579,
+        "violentCrimeRate": 2.2
       },
       "visual": {
         "primaryColor": "#4B0082",
-        "secondaryColor": "#6A5ACD",
-        "image": "images/cities/sc/s/sao-jose-sc.svg"
+        "secondaryColor": "#E6E6FA",
+        "image": "images/cities/sc/j/jaragua-do-sul.jpeg"
       }
     },
     {
-      "name": "Videira",
+      "name": "Brusque",
       "state": "SC",
-      "nickname": "Terra da Uva",
+      "nickname": "Berço da Fiação",
       "data": {
-        "population": 52287,
-        "violentCrimeRate": 48.5,
-        "propertyCrimeRate": 85.2,
-        "homicideRate": 4.8
+        "population": 141385,
+        "violentCrimeRate": 1.4
       },
       "visual": {
-        "primaryColor": "#800080",
-        "secondaryColor": "#9932CC",
-        "image": "images/cities/sc/v/videira.svg"
+        "primaryColor": "#2F4F4F",
+        "secondaryColor": "#F0FFF0",
+        "image": "images/cities/sc/b/brusque.jpg"
       }
     }
   ]
