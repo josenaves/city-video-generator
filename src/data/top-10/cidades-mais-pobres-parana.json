@@ -1,0 +1,157 @@
+{
+    "videoId": "top-10-cidades-mais-pobres-parana-2026",
+    "title": "As 10 CIDADES MAIS POBRES do Paraná",
+    "subtitle": "Ranking 2026 - Índice de Progresso Social",
+    "theme": "elegant-dark",
+    "format": "horizontal",
+    "metric": {
+        "field": "score",
+        "title": "Pontuação IPS",
+        "unit": "pts",
+        "format": "decimal",
+        "order": "asc"
+    },
+    "dataSource": "Fonte: IPS Brasil 2024/2025",
+    "cities": [
+        {
+            "name": "Nova Laranjeiras",
+            "state": "PR",
+            "nickname": "",
+            "data": {
+                "population": 12074,
+                "score": 49.67
+            },
+            "visual": {
+                "primaryColor": "#8B0000",
+                "secondaryColor": "#FA8072",
+                "image": "images/cities/pr/n/nova-laranjeiras.jpg"
+            }
+        },
+        {
+            "name": "Coronel Domingos Soares",
+            "state": "PR",
+            "nickname": "",
+            "data": {
+                "population": 5649,
+                "score": 51.88
+            },
+            "visual": {
+                "primaryColor": "#A52A2A",
+                "secondaryColor": "#FFA07A",
+                "image": "images/cities/pr/c/coronel-domingos-soares.webp"
+            }
+        },
+        {
+            "name": "Rio Bonito do Iguaçu",
+            "state": "PR",
+            "nickname": "",
+            "data": {
+                "population": 13929,
+                "score": 52.75
+            },
+            "visual": {
+                "primaryColor": "#B22222",
+                "secondaryColor": "#CD5C5C",
+                "image": "images/cities/pr/r/rio-bonito-do-iguacu.avif"
+            }
+        },
+        {
+            "name": "Inácio Martins",
+            "state": "PR",
+            "nickname": "",
+            "data": {
+                "population": 9670,
+                "score": 52.75
+            },
+            "visual": {
+                "primaryColor": "#DC143C",
+                "secondaryColor": "#FF6347",
+                "image": "images/cities/pr/i/inacio-martins.jpg"
+            }
+        },
+        {
+            "name": "Espigão Alto do Iguaçu",
+            "state": "PR",
+            "nickname": "",
+            "data": {
+                "population": 4797,
+                "score": 53.33
+            },
+            "visual": {
+                "primaryColor": "#FF4500",
+                "secondaryColor": "#FF8C00",
+                "image": "images/cities/pr/e/espigao-alto-do-iguacu.jpg"
+            }
+        },
+        {
+            "name": "Laranjal",
+            "state": "PR",
+            "nickname": "",
+            "data": {
+                "population": 5600,
+                "score": 53.43
+            },
+            "visual": {
+                "primaryColor": "#800000",
+                "secondaryColor": "#D2691E",
+                "image": "images/cities/pr/l/laranjal.webp"
+            }
+        },
+        {
+            "name": "Tunas do Paraná",
+            "state": "PR",
+            "nickname": "",
+            "data": {
+                "population": 6219,
+                "score": 53.61
+            },
+            "visual": {
+                "primaryColor": "#8B4513",
+                "secondaryColor": "#F4A460",
+                "image": "images/cities/pr/t/tunas-do-parana.jpg"
+            }
+        },
+        {
+            "name": "Goioxim",
+            "state": "PR",
+            "nickname": "",
+            "data": {
+                "population": 6566,
+                "score": 53.74
+            },
+            "visual": {
+                "primaryColor": "#2F4F4F",
+                "secondaryColor": "#778899",
+                "image": "images/cities/pr/g/goioxim.avif"
+            }
+        },
+        {
+            "name": "Tamarana",
+            "state": "PR",
+            "nickname": "",
+            "data": {
+                "population": 10707,
+                "score": 54.18
+            },
+            "visual": {
+                "primaryColor": "#556B2F",
+                "secondaryColor": "#8FBC8F",
+                "image": "images/cities/pr/t/tamarana.jpg"
+            }
+        },
+        {
+            "name": "Campina do Simão",
+            "state": "PR",
+            "nickname": "",
+            "data": {
+                "population": 3936,
+                "score": 54.47
+            },
+            "visual": {
+                "primaryColor": "#696969",
+                "secondaryColor": "#D3D3D3",
+                "image": "images/cities/pr/c/campina-do-simao.jpg"
+            }
+        }
+    ]
+}

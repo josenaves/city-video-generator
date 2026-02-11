@@ -239,6 +239,9 @@ import top10PobresSCData from "./data/top-10/cidades-mais-pobres-santa-catarina.
 // @ts-expect-error JSON import without type definitions
 import top10PobresRSData from "./data/top-10/cidades-mais-pobres-rs.json";
 
+// @ts-expect-error JSON import without type definitions
+import top10PobresParanaData from "./data/top-10/cidades-mais-pobres-parana.json";
+
 // Championships
 // @ts-ignore
 import mogiChampionshipData from "./data/championships/mogi.json";
@@ -1851,6 +1854,24 @@ export const RemotionRoot: React.FC = () => {
             ...top10ViolentasSCData,
             format: "horizontal",
             videoId: "top-10-cidades-mais-violentas-santa-catarina-horizontal",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Pobres do Paraná */}
+      <Composition
+        id="Top10CidadesMaisPobresParanaHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("horizontal", 140)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10PobresParanaData,
+            format: "horizontal",
           },
           audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
           bpm: 140,
