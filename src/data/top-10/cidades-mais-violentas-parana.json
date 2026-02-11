@@ -1,0 +1,166 @@
+{
+    "videoId": "top-10-cidades-mais-violentas-parana",
+    "title": "As 10 CIDADES MAIS VIOLENTAS do Paraná",
+    "subtitle": "Taxa de Homicídios (por 100k hab.) - Atlas da Violência 2024",
+    "theme": "elegant-dark",
+    "format": "horizontal",
+    "metric": {
+        "field": "homicideRate",
+        "title": "Taxa de Homicídios",
+        "unit": " / 100k",
+        "format": "decimal",
+        "order": "desc"
+    },
+    "cities": [
+        {
+            "name": "Paranaguá",
+            "state": "PR",
+            "nickname": "Cidade Mãe do Paraná",
+            "data": {
+                "homicideRate": 52.8,
+                "population": 157378,
+                "info": "Maior taxa do estado (Atlas 2024)"
+            },
+            "visual": {
+                "primaryColor": "#8B0000",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/pr/p/paranagua.jpg"
+            }
+        },
+        {
+            "name": "Almirante Tamandaré",
+            "state": "PR",
+            "nickname": "Cidade das Águas Minerais",
+            "data": {
+                "homicideRate": 44.2,
+                "population": 120041,
+                "info": "RMC - Altos índices históricos"
+            },
+            "visual": {
+                "primaryColor": "#FF4500",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/pr/a/almirante-tamandare.jpg"
+            }
+        },
+        {
+            "name": "Piraquara",
+            "state": "PR",
+            "nickname": "Capital das Águas",
+            "data": {
+                "homicideRate": 42.1,
+                "population": 118730,
+                "info": "RMC - Presídios impactam dados"
+            },
+            "visual": {
+                "primaryColor": "#DC143C",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/pr/p/piraquara.jpeg"
+            }
+        },
+        {
+            "name": "Campo Largo",
+            "state": "PR",
+            "nickname": "Capital da Louça",
+            "data": {
+                "homicideRate": 38.9,
+                "population": 136176,
+                "info": "RMC - Aumento recente"
+            },
+            "visual": {
+                "primaryColor": "#B22222",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/pr/c/campo-largo.jpg"
+            }
+        },
+        {
+            "name": "Foz do Iguaçu",
+            "state": "PR",
+            "nickname": "Terra das Cataratas",
+            "data": {
+                "homicideRate": 38.9,
+                "population": 258248,
+                "info": "Fronteira tripla"
+            },
+            "visual": {
+                "primaryColor": "#FF6347",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/pr/f/foz-do-iguacu.jpg"
+            }
+        },
+        {
+            "name": "Colombo",
+            "state": "PR",
+            "nickname": "Cidade dos Italianos",
+            "data": {
+                "homicideRate": 35.5,
+                "population": 234819,
+                "info": "RMC - Entre as mais violentas"
+            },
+            "visual": {
+                "primaryColor": "#CD5C5C",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/pr/c/colombo.jpg"
+            }
+        },
+        {
+            "name": "São José dos Pinhais",
+            "state": "PR",
+            "nickname": "Metrópole Industrial",
+            "data": {
+                "homicideRate": 34.2,
+                "population": 329628,
+                "info": "RMC - Polo automotivo e aeroporto"
+            },
+            "visual": {
+                "primaryColor": "#800000",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/pr/s/sao-jose-dos-pinhais.jpg"
+            }
+        },
+        {
+            "name": "Pinhais",
+            "state": "PR",
+            "nickname": "A Menor das Grandes",
+            "data": {
+                "homicideRate": 32.8,
+                "population": 127019,
+                "info": "RMC - Alta densidade demográfica"
+            },
+            "visual": {
+                "primaryColor": "#A52A2A",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/pr/p/pinhais.jpg"
+            }
+        },
+        {
+            "name": "Fazenda Rio Grande",
+            "state": "PR",
+            "nickname": "Cidade que mais cresce",
+            "data": {
+                "homicideRate": 31.5,
+                "population": 148873,
+                "info": "RMC - Expansão urbana rápida"
+            },
+            "visual": {
+                "primaryColor": "#8B4513",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/pr/f/fazenda-rio-grande.jpg"
+            }
+        },
+        {
+            "name": "Ponta Grossa",
+            "state": "PR",
+            "nickname": "Princesa dos Campos",
+            "data": {
+                "homicideRate": 20.6,
+                "population": 358367,
+                "info": "Importante entroncamento rodoferroviário"
+            },
+            "visual": {
+                "primaryColor": "#D2691E",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/pr/p/ponta-grossa.jpeg"
+            }
+        }
+    ]
+}
