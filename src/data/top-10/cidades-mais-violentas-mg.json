@@ -1,0 +1,166 @@
+{
+    "videoId": "top-10-cidades-mais-violentas-mg",
+    "title": "As 10 CIDADES MAIS VIOLENTAS de Minas Gerais",
+    "subtitle": "Taxa de Homicídios (por 100k hab.) - Atlas da Violência 2024",
+    "theme": "elegant-dark",
+    "format": "horizontal",
+    "metric": {
+        "field": "homicideRate",
+        "title": "Taxa de Homicídios",
+        "unit": " / 100k",
+        "format": "decimal",
+        "order": "desc"
+    },
+    "cities": [
+        {
+            "name": "Governador Valadares",
+            "state": "MG",
+            "nickname": "Capital Mundial do Voo Livre",
+            "data": {
+                "homicideRate": 34.6,
+                "population": 257172,
+                "info": "Lidera o ranking estadual em 2024"
+            },
+            "visual": {
+                "primaryColor": "#8B0000",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/mg/g/governador-valadares.jpg"
+            }
+        },
+        {
+            "name": "Nova Serrana",
+            "state": "MG",
+            "nickname": "Capital Nacional do Calçado",
+            "data": {
+                "homicideRate": 29.4,
+                "population": 105552,
+                "info": "Importante polo industrial do Centro-Oeste"
+            },
+            "visual": {
+                "primaryColor": "#A52A2A",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/mg/n/nova-serrana.webp"
+            }
+        },
+        {
+            "name": "Itabira",
+            "state": "MG",
+            "nickname": "Cidade de Drummond",
+            "data": {
+                "homicideRate": 27.4,
+                "population": 113343,
+                "info": "Cidade natal de Carlos Drummond de Andrade"
+            },
+            "visual": {
+                "primaryColor": "#B22222",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/mg/i/itabira.jpg"
+            }
+        },
+        {
+            "name": "Betim",
+            "state": "MG",
+            "nickname": "Polo Automotivo de Minas",
+            "data": {
+                "homicideRate": 24.8,
+                "population": 411393,
+                "info": "Grande centro industrial da Grande BH"
+            },
+            "visual": {
+                "primaryColor": "#DC143C",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/mg/b/betim.jpg"
+            }
+        },
+        {
+            "name": "Sabará",
+            "state": "MG",
+            "nickname": "Cidade Imperial de Minas",
+            "data": {
+                "homicideRate": 24.7,
+                "population": 129372,
+                "info": "Cidade histórica da Região Metropolitana"
+            },
+            "visual": {
+                "primaryColor": "#FF0000",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/mg/s/sabara.avif"
+            }
+        },
+        {
+            "name": "Ribeirão das Neves",
+            "state": "MG",
+            "nickname": "Cidade das Neves",
+            "data": {
+                "homicideRate": 24.0,
+                "population": 329794,
+                "info": "Setor de serviços em expansão na Grande BH"
+            },
+            "visual": {
+                "primaryColor": "#FF4500",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/mg/r/ribeirao-das-neves.png"
+            }
+        },
+        {
+            "name": "Vespasiano",
+            "state": "MG",
+            "nickname": "Vetor Norte de BH",
+            "data": {
+                "homicideRate": 22.4,
+                "population": 129246,
+                "info": "Proximidade estratégica com o Aeroporto de Confins"
+            },
+            "visual": {
+                "primaryColor": "#FF6347",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/mg/v/vespasiano.jpg"
+            }
+        },
+        {
+            "name": "Ibirité",
+            "state": "MG",
+            "nickname": "Vale do Paraopeba",
+            "data": {
+                "homicideRate": 22.3,
+                "population": 170387,
+                "info": "Cidade dormitório com crescente polo industrial"
+            },
+            "visual": {
+                "primaryColor": "#CD5C5C",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/mg/i/ibirite.jpg"
+            }
+        },
+        {
+            "name": "Ubá",
+            "state": "MG",
+            "nickname": "Cidade Carinho",
+            "data": {
+                "homicideRate": 21.3,
+                "population": 103365,
+                "info": "Polo moveleiro de destaque nacional"
+            },
+            "visual": {
+                "primaryColor": "#E9967A",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/mg/u/uba.webp"
+            }
+        },
+        {
+            "name": "Coronel Fabriciano",
+            "state": "MG",
+            "nickname": "Mãe do Vale do Aço",
+            "data": {
+                "homicideRate": 19.1,
+                "population": 104736,
+                "info": "Berço histórico do Vale do Aço"
+            },
+            "visual": {
+                "primaryColor": "#FA8072",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/mg/c/coronel-fabriciano.jpeg"
+            }
+        }
+    ]
+}

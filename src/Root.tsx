@@ -245,6 +245,9 @@ import top10PobresParanaData from "./data/top-10/cidades-mais-pobres-parana.json
 // @ts-expect-error JSON import without type definitions
 import top10ViolentasParanaData from "./data/top-10/cidades-mais-violentas-parana.json";
 
+// @ts-expect-error JSON import without type definitions
+import top10ViolentasMGData from "./data/top-10/cidades-mais-violentas-mg.json";
+
 // Championships
 // @ts-ignore
 import mogiChampionshipData from "./data/championships/mogi.json";
@@ -1892,6 +1895,24 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           videoData: {
             ...top10ViolentasParanaData,
+            format: "horizontal",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Violentas de Minas Gerais */}
+      <Composition
+        id="Top10CidadesMaisViolentasMGHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("horizontal", 140)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10ViolentasMGData,
             format: "horizontal",
           },
           audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
