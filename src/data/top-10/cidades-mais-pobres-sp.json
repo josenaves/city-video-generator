@@ -1,0 +1,187 @@
+{
+  "videoId": "top-10-cidades-mais-pobres-sp-2026",
+  "title": "As 10 CIDADES MAIS POBRES de São Paulo",
+  "subtitle": "Ranking 2026 - Índice de Desenvolvimento Humano (IDH)",
+  "theme": "elegant-dark",
+  "format": "horizontal",
+  "metric": {
+    "field": "idh",
+    "title": "IDH",
+    "unit": "",
+    "format": "decimal",
+    "order": "asc"
+  },
+  "dataSource": "Fonte: PNUD/IBGE 2010",
+  "cities": [
+    {
+      "name": "Ribeirão Branco",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 18627,
+        "idh": 0.639,
+        "incomeIndex": 0.592,
+        "lifeExpectancyIndex": 0.797,
+        "educationIndex": 0.553
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#CD5C5C",
+        "image": "images/cities/sp/r/ribeirao-branco.jpg"
+      }
+    },
+    {
+      "name": "Barra do Turvo",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 6876,
+        "idh": 0.641,
+        "incomeIndex": 0.625,
+        "lifeExpectancyIndex": 0.792,
+        "educationIndex": 0.532
+      },
+      "visual": {
+        "primaryColor": "#A52A2A",
+        "secondaryColor": "#F08080",
+        "image": "images/cities/sp/b/barra-do-turvo.webp"
+      }
+    },
+    {
+      "name": "Nova Campina",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 8934,
+        "idh": 0.651,
+        "incomeIndex": 0.598,
+        "lifeExpectancyIndex": 0.799,
+        "educationIndex": 0.577
+      },
+      "visual": {
+        "primaryColor": "#B22222",
+        "secondaryColor": "#FA8072",
+        "image": "images/cities/sp/n/nova-campina.webp"
+      }
+    },
+    {
+      "name": "Natividade da Serra",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 6999,
+        "idh": 0.655,
+        "incomeIndex": 0.664,
+        "lifeExpectancyIndex": 0.814,
+        "educationIndex": 0.52
+      },
+      "visual": {
+        "primaryColor": "#DC143C",
+        "secondaryColor": "#E9967A",
+        "image": "images/cities/sp/n/natividade-da-serra.jpg"
+      }
+    },
+    {
+      "name": "Redenção da Serra",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 3839,
+        "idh": 0.657,
+        "incomeIndex": 0.633,
+        "lifeExpectancyIndex": 0.799,
+        "educationIndex": 0.56
+      },
+      "visual": {
+        "primaryColor": "#FF4500",
+        "secondaryColor": "#FFA07A",
+        "image": "images/cities/sp/r/redencao-da-serra.jpg"
+      }
+    },
+    {
+      "name": "Barra do Chapéu",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 5420,
+        "idh": 0.66,
+        "incomeIndex": 0.617,
+        "lifeExpectancyIndex": 0.779,
+        "educationIndex": 0.599
+      },
+      "visual": {
+        "primaryColor": "#800000",
+        "secondaryColor": "#D2691E",
+        "image": "images/cities/sp/b/barra-do-chapeu.jpg"
+      }
+    },
+    {
+      "name": "Bom Sucesso de Itararé",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 3530,
+        "idh": 0.66,
+        "incomeIndex": 0.605,
+        "lifeExpectancyIndex": 0.775,
+        "educationIndex": 0.613
+      },
+      "visual": {
+        "primaryColor": "#8B4513",
+        "secondaryColor": "#F4A460",
+        "image": "images/cities/sp/b/bom-sucesso-de-itarare.jpg"
+      }
+    },
+    {
+      "name": "Itapirapuã Paulista",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 4215,
+        "idh": 0.661,
+        "incomeIndex": 0.595,
+        "lifeExpectancyIndex": 0.816,
+        "educationIndex": 0.594
+      },
+      "visual": {
+        "primaryColor": "#2F4F4F",
+        "secondaryColor": "#778899",
+        "image": "images/cities/sp/i/itapirapua-paulista.jpg"
+      }
+    },
+    {
+      "name": "Riversul",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 6432,
+        "idh": 0.664,
+        "incomeIndex": 0.634,
+        "lifeExpectancyIndex": 0.799,
+        "educationIndex": 0.577
+      },
+      "visual": {
+        "primaryColor": "#556B2F",
+        "secondaryColor": "#8FBC8F",
+        "image": "images/cities/sp/r/riversul.jpg"
+      }
+    },
+    {
+      "name": "Buri",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 18706,
+        "idh": 0.667,
+        "incomeIndex": 0.642,
+        "lifeExpectancyIndex": 0.799,
+        "educationIndex": 0.578
+      },
+      "visual": {
+        "primaryColor": "#696969",
+        "secondaryColor": "#D3D3D3",
+        "image": "images/cities/sp/b/buri.jpg"
+      }
+    }
+  ]
+}

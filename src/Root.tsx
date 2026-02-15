@@ -248,6 +248,9 @@ import top10ViolentasParanaData from "./data/top-10/cidades-mais-violentas-paran
 // @ts-expect-error JSON import without type definitions
 import top10ViolentasMGData from "./data/top-10/cidades-mais-violentas-mg.json";
 
+// @ts-expect-error JSON import without type definitions
+import top10PobresSPData from "./data/top-10/cidades-mais-pobres-sp.json";
+
 // Championships
 // @ts-ignore
 import mogiChampionshipData from "./data/championships/mogi.json";
@@ -1913,6 +1916,40 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           videoData: {
             ...top10ViolentasMGData,
+            format: "horizontal",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Pobres de São Paulo */}
+      <Composition
+        id="Top10CidadesMaisPobresSP"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("vertical", 140)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: {
+            ...top10PobresSPData,
+            format: "vertical",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+      <Composition
+        id="Top10CidadesMaisPobresSPHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("horizontal", 140)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10PobresSPData,
             format: "horizontal",
           },
           audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
