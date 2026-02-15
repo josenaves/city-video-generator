@@ -1,0 +1,177 @@
+{
+  "videoId": "top-10-cidades-mais-violentas-sp-2026",
+  "title": "As 10 CIDADES MAIS VIOLENTAS de São Paulo",
+  "subtitle": "Ranking 2026 - Taxa de Homicídios por 100 mil habitantes",
+  "theme": "elegant-dark",
+  "format": "horizontal",
+  "metric": {
+    "field": "homicideRate",
+    "title": "Taxa de Homicídios",
+    "unit": "",
+    "format": "decimal",
+    "order": "desc"
+  },
+  "dataSource": "Fonte: SSP/SP 2025 - Secretaria da Segurança Pública",
+  "cities": [
+    {
+      "name": "Lorena",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 84855,
+        "homicideRate": 31.82,
+        "homicides": 27,
+        "region": "Vale do Paraíba"
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#CD5C5C",
+        "image": "images/cities/sp/l/lorena.jpg"
+      }
+    },
+    {
+      "name": "Ubatuba",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 92940,
+        "homicideRate": 26.89,
+        "homicides": 25,
+        "region": "Litoral Norte"
+      },
+      "visual": {
+        "primaryColor": "#A52A2A",
+        "secondaryColor": "#F08080",
+        "image": "images/cities/sp/u/ubatuba.jpg"
+      }
+    },
+    {
+      "name": "Cruzeiro",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 74961,
+        "homicideRate": 24.01,
+        "homicides": 18,
+        "region": "Vale do Paraíba"
+      },
+      "visual": {
+        "primaryColor": "#B22222",
+        "secondaryColor": "#FA8072",
+        "image": "images/cities/sp/c/cruzeiro.jpg"
+      }
+    },
+    {
+      "name": "Pindamonhangaba",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 165428,
+        "homicideRate": 15.72,
+        "homicides": 26,
+        "region": "Vale do Paraíba"
+      },
+      "visual": {
+        "primaryColor": "#DC143C",
+        "secondaryColor": "#E9967A",
+        "image": "images/cities/sp/p/pindamonhangaba.jpg"
+      }
+    },
+    {
+      "name": "Ibiúna",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 80092,
+        "homicideRate": 14.99,
+        "homicides": 12,
+        "region": "Região de Sorocaba"
+      },
+      "visual": {
+        "primaryColor": "#FF4500",
+        "secondaryColor": "#FFA07A",
+        "image": "images/cities/sp/i/ibiuna.jpg"
+      }
+    },
+    {
+      "name": "Caraguatatuba",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 134873,
+        "homicideRate": 14.09,
+        "homicides": 19,
+        "region": "Litoral Norte"
+      },
+      "visual": {
+        "primaryColor": "#800000",
+        "secondaryColor": "#D2691E",
+        "image": "images/cities/sp/c/caraguatatuba.jpg"
+      }
+    },
+    {
+      "name": "Araçatuba",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 196022,
+        "homicideRate": 13.78,
+        "homicides": 27,
+        "region": "Região de Araçatuba"
+      },
+      "visual": {
+        "primaryColor": "#8B4513",
+        "secondaryColor": "#F4A460",
+        "image": "images/cities/sp/a/aracatuba.jpg"
+      }
+    },
+    {
+      "name": "Rio Claro",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 204859,
+        "homicideRate": 13.67,
+        "homicides": 28,
+        "region": "Região de Piracicaba"
+      },
+      "visual": {
+        "primaryColor": "#2F4F4F",
+        "secondaryColor": "#778899",
+        "image": "images/cities/sp/r/rio-claro.jpg"
+      }
+    },
+    {
+      "name": "São Sebastião",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 90585,
+        "homicideRate": 13.49,
+        "homicides": 11,
+        "region": "Litoral Norte"
+      },
+      "visual": {
+        "primaryColor": "#556B2F",
+        "secondaryColor": "#8FBC8F",
+        "image": "images/cities/sp/s/sao-sebastiao.png"
+      }
+    },
+    {
+      "name": "Votuporanga",
+      "state": "SP",
+      "nickname": "",
+      "data": {
+        "population": 96125,
+        "homicideRate": 10.41,
+        "homicides": 10,
+        "region": "Região de São José do Rio Preto"
+      },
+      "visual": {
+        "primaryColor": "#696969",
+        "secondaryColor": "#D3D3D3",
+        "image": "images/cities/sp/v/votuporanga.jpg"
+      }
+    }
+  ]
+}
