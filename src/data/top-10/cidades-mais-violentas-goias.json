@@ -1,0 +1,166 @@
+{
+    "videoId": "top-10-cidades-mais-violentas-goias",
+    "title": "As 10 CIDADES MAIS VIOLENTAS de Goiás",
+    "subtitle": "Taxa de Homicídios (por 100k hab.) - Atlas da Violência 2024",
+    "theme": "elegant-dark",
+    "format": "horizontal",
+    "metric": {
+        "field": "homicideRate",
+        "title": "Taxa de Homicídios",
+        "unit": " / 100k",
+        "format": "decimal",
+        "order": "desc"
+    },
+    "cities": [
+        {
+            "name": "Cristalina",
+            "state": "GO",
+            "nickname": "Capital do Alho",
+            "data": {
+                "homicideRate": 46.5,
+                "population": 62249,
+                "info": "Maior taxa de homicídios do estado em 2024"
+            },
+            "visual": {
+                "primaryColor": "#8B0000",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/go/c/cristalina.png"
+            }
+        },
+        {
+            "name": "Jaraguá",
+            "state": "GO",
+            "nickname": "Capital da Moda",
+            "data": {
+                "homicideRate": 44.2,
+                "population": 52352,
+                "info": "Importante polo de confecções em Goiás"
+            },
+            "visual": {
+                "primaryColor": "#A52A2A",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/go/j/jaragua.jpg"
+            }
+        },
+        {
+            "name": "Quirinópolis",
+            "state": "GO",
+            "nickname": "Mar de Canaviais",
+            "data": {
+                "homicideRate": 43.3,
+                "population": 52621,
+                "info": "Destaque na produção de açúcar e álcool"
+            },
+            "visual": {
+                "primaryColor": "#B22222",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/go/q/quirinopolis.jpg"
+            }
+        },
+        {
+            "name": "Luziânia",
+            "state": "GO",
+            "nickname": "Capital do Entorno",
+            "data": {
+                "homicideRate": 39.2,
+                "population": 208753,
+                "info": "Mais populosa cidade do Entorno do DF"
+            },
+            "visual": {
+                "primaryColor": "#DC143C",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/go/l/luziania.jpg"
+            }
+        },
+        {
+            "name": "Senador Canedo",
+            "state": "GO",
+            "nickname": "Capital do Petróleo",
+            "data": {
+                "homicideRate": 34.7,
+                "population": 155615,
+                "info": "Importante polo petroquímico e logístico"
+            },
+            "visual": {
+                "primaryColor": "#FF0000",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/go/s/senador-canedo.jpeg"
+            }
+        },
+        {
+            "name": "Trindade",
+            "state": "GO",
+            "nickname": "Capital da Fé",
+            "data": {
+                "homicideRate": 34.4,
+                "population": 142263,
+                "info": "Famosa pela Romaria do Divino Pai Eterno"
+            },
+            "visual": {
+                "primaryColor": "#FF4500",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/go/t/trindade.jpg"
+            }
+        },
+        {
+            "name": "Aparecida de Goiânia",
+            "state": "GO",
+            "nickname": "Cidade Industrial",
+            "data": {
+                "homicideRate": 32.4,
+                "population": 527796,
+                "info": "Segundo maior município do estado"
+            },
+            "visual": {
+                "primaryColor": "#FF6347",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/go/a/aparecida-de-goiania.jpg"
+            }
+        },
+        {
+            "name": "Formosa",
+            "state": "GO",
+            "nickname": "Berço das Águas",
+            "data": {
+                "homicideRate": 31.9,
+                "population": 115901,
+                "info": "Conhecida pelo Salto do Itiquira"
+            },
+            "visual": {
+                "primaryColor": "#CD5C5C",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/go/f/formosa.jpg"
+            }
+        },
+        {
+            "name": "Valparaíso de Goiás",
+            "state": "GO",
+            "nickname": "Valparaíso",
+            "data": {
+                "homicideRate": 27.2,
+                "population": 198861,
+                "info": "Importante polo comercial no Entorno"
+            },
+            "visual": {
+                "primaryColor": "#E9967A",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/go/v/valparaiso-de-goias.webp"
+            }
+        },
+        {
+            "name": "Águas Lindas de Goiás",
+            "state": "GO",
+            "nickname": "Águas Lindas",
+            "data": {
+                "homicideRate": 27.0,
+                "population": 225671,
+                "info": "Rápido crescimento populacional no Entorno"
+            },
+            "visual": {
+                "primaryColor": "#FA8072",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/go/a/aguas-lindas-de-goias.jpg"
+            }
+        }
+    ]
+}
