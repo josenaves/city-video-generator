@@ -254,6 +254,9 @@ import top10PobresSPData from "./data/top-10/cidades-mais-pobres-sp.json";
 // @ts-expect-error JSON import without type definitions
 import top10ViolentasSPData from "./data/top-10/cidades-mais-violentas-sp.json";
 
+// @ts-expect-error JSON import without type definitions
+import top10PobresGoiasData from "./data/top-10/goias-poorest-cities.json";
+
 // Championships
 // @ts-ignore
 import mogiChampionshipData from "./data/championships/mogi.json";
@@ -1987,6 +1990,24 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           videoData: {
             ...top10ViolentasSPData,
+            format: "horizontal",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Pobres de Goiás */}
+      <Composition
+        id="Top10CidadesMaisPobresGoiasHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("horizontal", 140)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10PobresGoiasData,
             format: "horizontal",
           },
           audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",

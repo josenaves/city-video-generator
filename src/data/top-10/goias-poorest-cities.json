@@ -1,0 +1,146 @@
+{
+  "videoId": "top-10-cidades-mais-pobres-goias",
+  "title": "As 10 CIDADES MAIS POBRES de Goiás",
+  "subtitle": "PIB per capita - Ranking 2023",
+  "theme": "elegant-dark",
+  "format": "horizontal",
+  "metric": {
+    "field": "gdpPerCapita",
+    "title": "PIB per capita",
+    "unit": "R$",
+    "format": "currency",
+    "order": "asc"
+  },
+  "cities": [
+    {
+      "name": "Anhanguera",
+      "state": "GO",
+      "nickname": "Anhanguera",
+      "data": {
+        "gdpPerCapita": 26700
+      },
+      "visual": {
+        "primaryColor": "#FF0000",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/go/a/anhanguera.jpg"
+      }
+    },
+    {
+      "name": "Cachoeira de Goiás",
+      "state": "GO",
+      "nickname": "Terra da Água Santa",
+      "data": {
+        "gdpPerCapita": 45500
+      },
+      "visual": {
+        "primaryColor": "#00FF00",
+        "secondaryColor": "#000000",
+        "image": "images/cities/go/c/cachoeira-de-goias.jpg"
+      }
+    },
+    {
+      "name": "Teresina de Goiás",
+      "state": "GO",
+      "nickname": "Teresina de Goiás",
+      "data": {
+        "gdpPerCapita": 48300
+      },
+      "visual": {
+        "primaryColor": "#0000FF",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/go/t/teresina-de-goias.jpg"
+      }
+    },
+    {
+      "name": "Damianópolis",
+      "state": "GO",
+      "nickname": "Damianópolis",
+      "data": {
+        "gdpPerCapita": 51200
+      },
+      "visual": {
+        "primaryColor": "#FFFF00",
+        "secondaryColor": "#000000",
+        "image": "images/cities/go/d/damianopolis.jpg"
+      }
+    },
+    {
+      "name": "Adelândia",
+      "state": "GO",
+      "nickname": "A capital da Oração",
+      "data": {
+        "gdpPerCapita": 53800
+      },
+      "visual": {
+        "primaryColor": "#FF00FF",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/go/a/adelandia.jpg"
+      }
+    },
+    {
+      "name": "Jesúpolis",
+      "state": "GO",
+      "nickname": "Jesúpolis",
+      "data": {
+        "gdpPerCapita": 55100
+      },
+      "visual": {
+        "primaryColor": "#00FFFF",
+        "secondaryColor": "#000000",
+        "image": "images/cities/go/j/jesupolis.png"
+      }
+    },
+    {
+      "name": "Nova América",
+      "state": "GO",
+      "nickname": "Nova América",
+      "data": {
+        "gdpPerCapita": 56400
+      },
+      "visual": {
+        "primaryColor": "#FFA500",
+        "secondaryColor": "#000000",
+        "image": "images/cities/go/n/nova-america.png"
+      }
+    },
+    {
+      "name": "Guaraíta",
+      "state": "GO",
+      "nickname": "Guaraíta",
+      "data": {
+        "gdpPerCapita": 58900
+      },
+      "visual": {
+        "primaryColor": "#800080",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/go/g/guaraita.jpeg"
+      }
+    },
+    {
+      "name": "Nova Aurora",
+      "state": "GO",
+      "nickname": "Princesinha do Sul",
+      "data": {
+        "gdpPerCapita": 61300
+      },
+      "visual": {
+        "primaryColor": "#008000",
+        "secondaryColor": "#FFFFFF",
+        "image": "images/cities/go/n/nova-aurora.jpg"
+      }
+    },
+    {
+      "name": "Córrego do Ouro",
+      "state": "GO",
+      "nickname": "Córrego do Ouro",
+      "data": {
+        "gdpPerCapita": 63700
+      },
+      "visual": {
+        "primaryColor": "#FFC0CB",
+        "secondaryColor": "#000000",
+        "image": "images/cities/go/c/corrego-do-ouro.jpg"
+      }
+    }
+  ]
+}
