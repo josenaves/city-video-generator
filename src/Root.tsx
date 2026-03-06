@@ -260,6 +260,9 @@ import top10PobresGoiasData from "./data/top-10/goias-poorest-cities.json";
 // @ts-expect-error JSON import without type definitions
 import top10ViolentasGoiasData from "./data/top-10/cidades-mais-violentas-goias.json";
 
+// @ts-expect-error JSON import without type definitions
+import top10EnchentesData from "./data/top-10/piores-enchentes-brasil-30-anos.json";
+
 
 // Championships
 // @ts-ignore
@@ -2029,6 +2032,24 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={{
           videoData: {
             ...top10ViolentasGoiasData,
+            format: "horizontal",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+
+      {/* Top 10 Piores Enchentes do Brasil */}
+      <Composition
+        id="Top10PioresEnchentesHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("horizontal", 140)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10EnchentesData,
             format: "horizontal",
           },
           audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",

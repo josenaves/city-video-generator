@@ -9,17 +9,7 @@ import {
 import { Top10OutroProps } from "../types";
 import { getThemeColors } from "../utils";
 
-/**
- * Top10Outro - High-Conversion End Screen
- *
- * Implements:
- * - .agent/skills/ui_ux_master: Advanced UI/UX Design Engine
- * - Magnetic Spring Animations
- * - Glassmorphism & Elevation
- * - Gradient Typography
- */
-
-const FONT_FAMILY = "Inter, Roboto, sans-serif";
+const FONT_FAMILY = "'Outfit', Inter, sans-serif";
 
 export const Top10Outro: React.FC<Top10OutroProps> = ({
   durationInFrames,
@@ -29,39 +19,41 @@ export const Top10Outro: React.FC<Top10OutroProps> = ({
   cities,
 }) => {
   const frame = useCurrentFrame();
-  const { fps, width } = useVideoConfig();
+  const { fps } = useVideoConfig();
   const colors = getThemeColors(theme);
   const isVertical = format === "vertical";
 
-  // --- Motion Physics (Magnetic Entrance) ---
-  const entranceSpring = spring({ frame, fps, config: { damping: 12, mass: 0.8, stiffness: 100 } });
-  const contentDelay = spring({ frame: frame - 10, fps, config: { damping: 15 } });
-  const listDelay = spring({ frame: frame - 20, fps, config: { damping: 15 } });
+  // --- Motion Physics ---
+  const entranceSpring = spring({
+    frame,
+    fps,
+    config: { damping: 14, mass: 1, stiffness: 80 },
+  });
+
+  const contentSpring = spring({
+    frame: frame - 15,
+    fps,
+    config: { damping: 16, mass: 1, stiffness: 100 },
+  });
 
   // Pulse effect for CTA
-  const pulse = Math.sin(frame / 5) * 0.05 + 1;
+  const pulse = 1 + Math.sin(frame / 15) * 0.04;
 
   // --- Interpolations ---
-  const scale = interpolate(entranceSpring, [0, 1], [0.8, 1]);
   const opacity = interpolate(entranceSpring, [0, 1], [0, 1]);
-  const slideUp = interpolate(contentDelay, [0, 1], [50, 0]);
-  const listOpacity = interpolate(listDelay, [0, 1], [0, 1]);
+  const slideY = interpolate(contentSpring, [0, 1], [50, 0]);
+  const bgScale = interpolate(frame, [0, durationInFrames], [1, 1.1]);
 
-  // --- Design Tokens ---
-  const titleSize = isVertical ? 72 : 82; // MASSIVE for visibility
-  const subtitleSize = isVertical ? 32 : 36;
-  const ctaSize = isVertical ? 48 : 42;
-  const glassBackground = "rgba(255, 255, 255, 0.05)";
-  const glassBorder = "1px solid rgba(255, 255, 255, 0.1)";
+  // Design Tokens
+  const glassBg = "rgba(10, 10, 10, 0.45)";
+  const glassBorder = "1px solid rgba(255, 255, 255, 0.12)";
 
-  // Recap List Logic
-  // Show only Top 3 (Winners Podium) for maximum visibility in both formats
-  const recapList = cities.slice(0, 3);
+  const top3 = cities.slice(0, 3);
 
   return (
     <AbsoluteFill
       style={{
-        background: colors.background,
+        backgroundColor: colors.background,
         fontFamily: FONT_FAMILY,
         display: "flex",
         justifyContent: "center",
@@ -69,171 +61,120 @@ export const Top10Outro: React.FC<Top10OutroProps> = ({
         overflow: "hidden",
       }}
     >
-      {/* 1. Animated Gradient Background */}
+      {/* 1. Background Layer */}
       <AbsoluteFill style={{ zIndex: 0 }}>
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: `radial-gradient(circle at center, ${colors.gradient[0]} 0%, transparent 80%)`,
-            opacity: 0.3,
-            transform: `scale(${interpolate(frame, [0, durationInFrames], [1, 1.2])})`,
-          }}
-        />
-        {/* Abstract Shapes */}
         <div style={{
           position: "absolute",
-          top: isVertical ? "20%" : "10%",
-          left: isVertical ? "-10%" : "20%",
-          width: width * 0.6,
-          height: width * 0.6,
-          background: colors.secondary,
-          borderRadius: "50%",
-          filter: "blur(100px)",
-          opacity: 0.1
+          top: '50%',
+          left: '50%',
+          width: '150%',
+          height: '150%',
+          transform: `translate(-50%, -50%) scale(${bgScale})`,
+          background: `radial-gradient(circle at center, ${colors.accent}11 0%, transparent 70%)`,
+          filter: 'blur(100px)',
         }} />
       </AbsoluteFill>
 
-      {/* 2. Layout Container (Adaptive: Full Screen Mobile vs Card Desktop) */}
-      <div
-        style={{
-          position: 'relative',
-          zIndex: 10,
-          width: isVertical ? '100%' : '85%',
-          height: isVertical ? '100%' : 'auto', // Full screen on mobile
-          padding: isVertical ? '80px 24px' : '60px', // Slightly less side padding for BIG text
-          background: isVertical ? 'transparent' : glassBackground, // Cleaner mobile look
-          backdropFilter: isVertical ? 'none' : 'blur(16px)',
-          borderRadius: isVertical ? '0' : '32px',
-          border: isVertical ? 'none' : glassBorder,
-          boxShadow: isVertical ? 'none' : '0 24px 48px rgba(0,0,0,0.2)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: isVertical ? 'space-between' : 'center', // Spread content on mobile
-          textAlign: 'center',
-          opacity,
-          transform: isVertical ? 'none' : `scale(${scale}) translateY(${slideUp}px)` // Disable container scale on mobile
-        }}
-      >
-        {/* Header Section */}
-        <div>
-          <h1 style={{
-            margin: 0,
-            fontSize: `${titleSize}px`,
+      {/* 2. Content */}
+      <div style={{
+        position: 'relative',
+        zIndex: 10,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        textAlign: 'center',
+        width: isVertical ? '90%' : '80%',
+        opacity: opacity,
+        transform: `translateY(${slideY}px)`,
+      }}>
+
+        <h2 style={{
+          fontSize: isVertical ? "32px" : "40px",
+          color: colors.secondary,
+          fontWeight: 600,
+          letterSpacing: "0.2em",
+          textTransform: "uppercase",
+          marginBottom: "20px",
+        }}>
+          Obrigado por assistir
+        </h2>
+
+        <h1 style={{
+          fontSize: isVertical ? "70px" : "100px",
+          fontWeight: 900,
+          color: "white",
+          margin: 0,
+          lineHeight: 1,
+          letterSpacing: "-0.04em",
+          textShadow: "0 20px 50px rgba(0,0,0,0.5)",
+          textTransform: "uppercase"
+        }}>
+          {title}
+        </h1>
+
+        {/* Winner Podium Recap */}
+        <div style={{
+          marginTop: "60px",
+          display: "flex",
+          flexDirection: isVertical ? "column" : "row",
+          gap: "24px",
+          justifyContent: "center",
+          width: "100%",
+        }}>
+          {top3.map((city, i) => (
+            <div key={city.name} style={{
+              background: glassBg,
+              backdropFilter: "blur(20px)",
+              border: i === 0 ? `2px solid ${colors.accent}` : glassBorder,
+              padding: "24px 40px",
+              borderRadius: "24px",
+              flex: 1,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              transform: i === 0 ? 'scale(1.1)' : 'scale(1)',
+              boxShadow: i === 0 ? `0 20px 40px ${colors.accent}33` : 'none',
+            }}>
+              <span style={{ fontSize: "24px", fontWeight: 900, color: colors.accent, marginBottom: "8px" }}>#{i + 1}</span>
+              <span style={{ fontSize: "32px", fontWeight: 800, color: "white" }}>{city.name}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div style={{
+          marginTop: "80px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}>
+          <div style={{
+            background: colors.accent,
+            color: "white",
+            padding: "24px 64px",
+            borderRadius: "100px",
+            fontSize: "42px",
             fontWeight: 900,
-            background: `linear-gradient(to right, ${colors.primary}, ${colors.accent})`,
-            WebkitBackgroundClip: "text",
-            WebkitTextFillColor: "transparent",
-            letterSpacing: "-0.02em",
-            marginBottom: "16px",
-            lineHeight: 1.1
+            letterSpacing: "0.1em",
+            boxShadow: `0 20px 60px ${colors.accent}66`,
+            cursor: "pointer",
+            transform: `scale(${pulse})`,
           }}>
-            Obrigado por assistir!
-          </h1>
+            INSCREVA-SE
+          </div>
 
           <p style={{
-            margin: "0 auto",
-            fontSize: `${subtitleSize}px`,
-            color: "rgba(255,255,255,0.7)",
-            fontWeight: 500,
-            maxWidth: "90%"
+            marginTop: "40px",
+            fontSize: "24px",
+            color: "rgba(255,255,255,0.4)",
+            fontWeight: 800,
+            textTransform: "uppercase",
+            letterSpacing: "0.3em",
           }}>
-            {title}
+            Curta • Comente • Compartilhe
           </p>
         </div>
 
-        {/* Quick Recap (Top 3 for Mobile, Top 5 for Desktop) */}
-        <div style={{
-          display: 'flex',
-          flexDirection: isVertical ? 'column' : 'row',
-          flexWrap: isVertical ? 'nowrap' : 'wrap',
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: isVertical ? '24px' : '16px',
-          margin: isVertical ? '40px 0' : '32px 0 32px',
-          opacity: listOpacity,
-          width: '100%'
-        }}>
-          {recapList.map((city, index) => {
-            const isWinner = index === 0;
-            return (
-              <div key={city.name} style={{
-                background: isVertical && isWinner
-                  ? `linear-gradient(90deg, ${colors.accent}20, transparent)`
-                  : 'rgba(255,255,255,0.05)',
-                padding: isVertical ? '12px 24px' : '16px 24px',
-                borderRadius: '16px',
-                border: isVertical && isWinner
-                  ? `1px solid ${colors.accent}`
-                  : '1px solid rgba(255,255,255,0.1)',
-                fontSize: isVertical ? (isWinner ? '64px' : '48px') : (isWinner ? '34px' : '28px'), // MASSIVE TYPOGRAPHY
-                color: isWinner ? colors.accent : colors.primary,
-                fontWeight: isWinner ? 900 : 700,
-                display: 'flex',
-                alignItems: 'center',
-                width: isVertical ? '100%' : 'auto',
-                gap: '16px',
-                transform: isVertical && isWinner ? 'scale(1.05)' : 'none',
-                boxShadow: isVertical && isWinner ? `0 10px 40px ${colors.accent}30` : 'none'
-              }}>
-                <span style={{
-                  color: colors.accent,
-                  fontWeight: 900,
-                  fontSize: isVertical ? '1em' : '1em',
-                  minWidth: isVertical ? '60px' : 'auto', // Wider for big numbers
-                  textAlign: 'left'
-                }}>
-                  #{index + 1}
-                </span>
-                <span style={{
-                  whiteSpace: 'nowrap',
-                  overflow: 'hidden',
-                  textOverflow: 'ellipsis'
-                }}>
-                  {city.name}
-                </span>
-                {isWinner && isVertical && (
-                  <span style={{ marginLeft: 'auto', fontSize: '0.6em', opacity: 0.8 }}>👑</span>
-                )}
-              </div>
-            );
-          })}
-        </div>
-
-        {/* CTA Button */}
-        <div style={{
-          background: colors.accent,
-          padding: isVertical ? "32px 48px" : "20px 48px",
-          borderRadius: "100px",
-          color: colors.primary === "#ffffff" ? "#000" : "#fff",
-          fontSize: `${ctaSize}px`,
-          fontWeight: 800,
-          letterSpacing: "0.05em",
-          textTransform: "uppercase",
-          boxShadow: `0 8px 30px ${colors.accent}60`,
-          transform: `scale(${pulse})`,
-          cursor: 'pointer',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '12px',
-          width: isVertical ? '100%' : 'auto'
-        }}>
-          INSCREVA-SE
-        </div>
-
-        {/* Engagement Hint */}
-        <div style={{
-          marginTop: "40px",
-          fontSize: isVertical ? "16px" : "24px",
-          color: "rgba(255,255,255,0.5)",
-          fontWeight: 500,
-          textTransform: "uppercase",
-          letterSpacing: "0.2em"
-        }}>
-          Curta • Comente • Compartilhe
-        </div>
       </div>
     </AbsoluteFill>
   );

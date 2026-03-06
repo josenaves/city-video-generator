@@ -13,16 +13,14 @@ import { getThemeColors, formatNumber } from "../utils";
 
 /**
  * Top10RankingItem - High-Conversion UI/UX Redesign
- *
- * Implements:
- * - .agent/skills/ui_ux_master: Advanced UI/UX Design Engine
- * - 60-30-10 Color Logic
- * - Spatial Persistence Motion
- * - Glassmorphism & Elevation
- * - Fluid Typography
+ * 
+ * DESIGN SYSTEM: Obsidian Documentary
+ * - Obsidian Depth & Cinematic Lighting
+ * - Outfit Typography (Negative Tracking)
+ * - Glassmorphism Layering
  */
 
-const FONT_FAMILY = "Inter, Roboto, sans-serif";
+const FONT_FAMILY = "'Outfit', Inter, sans-serif";
 
 export const Top10RankingItem: React.FC<Top10SceneProps> = ({
   durationInFrames,
@@ -36,70 +34,36 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
   const { fps, width, height } = useVideoConfig();
   const colors = getThemeColors(theme);
   const [backgroundError, setBackgroundError] = React.useState(false);
-  const [cardError, setCardError] = React.useState(false);
 
-  // Auto-detect vertical mode from canvas dimensions if prop is mismatching
+  // Auto-detect orientation
   const isVertical = format === "vertical" || height > width;
 
-  // --- Motion Physics (Optimized for Shorts if Vertical) ---
-  const isShortDuration = isVertical && durationInFrames < 60; // Logic for fast-paced vertical video
-
-  // Clean entrance spring (Spatial Persistence)
+  // --- Animation Hooks ---
   const entranceSpring = spring({
     frame,
     fps,
-    config: isShortDuration
-      ? { damping: 12, mass: 0.5, stiffness: 180 } // Snappy for Shorts
-      : { damping: 15, mass: 0.8, stiffness: 100 },
+    config: { damping: 14, mass: 1, stiffness: 80 },
   });
 
-  // Staggered delay for content
   const contentSpring = spring({
-    frame: frame - (isShortDuration ? 3 : 10), // Much shorter delay for Shorts
+    frame: frame - 15,
     fps,
-    config: isShortDuration
-      ? { damping: 12, mass: 0.5, stiffness: 150 }
-      : { damping: 18, mass: 1 },
+    config: { damping: 16, mass: 1.2, stiffness: 100 },
   });
 
-  // Metric value animation
-  const valueProgress = spring({
-    frame: frame - (isShortDuration ? 5 : 15),
-    fps,
-    config: { damping: 20 },
-  });
+  // Floating & Ken Burns
+  const floatingY = Math.sin(frame / 20) * 10;
+  const kenBurns = interpolate(frame, [0, durationInFrames], [1, 1.15]);
 
-  // --- Interpolations ---
-
-  // Background Blur Entrance
-  const blurRadius = interpolate(entranceSpring, [0, 1], [0, 20]);
-  const bgScale = interpolate(entranceSpring, [0, 1], [1.1, 1]);
-
-  // Content Slides
-  const slideFromLeft = interpolate(entranceSpring, [0, 1], [-100, 0]);
-  const slideFromRight = interpolate(contentSpring, [0, 1], [100, 0]);
-  const slideFromBottom = interpolate(contentSpring, [0, 1], [50, 0]);
-
-  // Opacity
+  // Interpolations
   const opacity = interpolate(entranceSpring, [0, 1], [0, 1]);
-  const contentOpacity = interpolate(contentSpring, [0, 1], [0, 1]);
+  const slideY = interpolate(contentSpring, [0, 1], [100, 0]);
+  const rotationY = interpolate(entranceSpring, [0, 1], [15, 0]);
 
-  // --- Design Tokens (Atomic) ---
-
-  const SPACER = 16; // 8pt Grid x 2
-  const isChampion = position === 1;
-
-  // Typography Scales
-  const titleSize = isVertical ? 64 : 96;
-  const subtitleSize = isVertical ? 32 : 40;
-  const metricLabelSize = isVertical ? 24 : 32;
-  const metricValueSize = isVertical ? 56 : 80;
-
-  // Colors & Surface
-  const overlayColor = "rgba(0, 0, 0, 0.65)"; // 60% dominant background
-  const glassBackground = "rgba(255, 255, 255, 0.1)"; // Glassmorphism
-  const glassBorder = "1px solid rgba(255, 255, 255, 0.15)";
-  const shadowElevation = "0 8px 32px 0 rgba(0, 0, 0, 0.37)";
+  // Design Tokens
+  const glassBg = "rgba(10, 10, 11, 0.65)";
+  const glassBorder = "1px solid rgba(255, 255, 255, 0.12)";
+  const accentColor = cidade.visual.primaryColor || colors.accent;
 
   const metricValue = cidade.data[metric.field];
   const formattedValue = formatNumber(metricValue, metric.format, metric.unit);
@@ -107,24 +71,14 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: colors.background,
+        backgroundColor: "#070708", // Deep obsidian
         fontFamily: FONT_FAMILY,
         overflow: "hidden",
       }}
     >
-      {/* 1. Immersive Background Layer */}
+      {/* 1. Cinematic Background Layer */}
       <AbsoluteFill style={{ zIndex: 0 }}>
-        {backgroundError ? (
-          <div
-            style={{
-              width: "100%",
-              height: "100%",
-              backgroundColor: cidade.visual.primaryColor,
-              transform: `scale(${bgScale})`,
-              filter: `blur(${blurRadius}px) brightness(0.5)`,
-            }}
-          />
-        ) : (
+        {!backgroundError && (
           <Img
             src={staticFile(cidade.visual.image)}
             onError={() => setBackgroundError(true)}
@@ -132,253 +86,174 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              transform: `scale(${bgScale})`,
-              filter: `blur(${blurRadius}px) brightness(0.5)`, // Dimmed for readability
+              transform: `scale(${kenBurns})`,
+              filter: `blur(80px) brightness(0.25)`,
+              opacity: 0.6,
             }}
           />
         )}
-        <AbsoluteFill style={{ background: overlayColor }} />
+
+        {/* Cinematic Parallax Glows */}
+        <div style={{
+          position: 'absolute',
+          top: '15%',
+          right: '5%',
+          width: '800px',
+          height: '800px',
+          background: `radial-gradient(circle, ${accentColor}11 0%, transparent 70%)`,
+          transform: `translate(${Math.sin(frame / 40) * 40}px, ${Math.cos(frame / 40) * 40}px)`,
+          filter: 'blur(100px)',
+        }} />
       </AbsoluteFill>
 
-      {/* 2. Abstract Geometric Accents (Motion Background) */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          right: 0,
-          bottom: 0,
-          left: 0,
-          overflow: "hidden",
-          zIndex: 1,
-        }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            top: isVertical ? "10%" : "-10%",
-            right: isVertical ? "-20%" : "-5%",
-            width: isVertical ? width * 0.8 : height * 0.6,
-            height: isVertical ? width * 0.8 : height * 0.6,
-            background: `radial-gradient(circle, ${cidade.visual.primaryColor}40 0%, transparent 70%)`,
-            borderRadius: "50%",
-            filter: "blur(60px)",
-            opacity: 0.6,
-          }}
-        />
-      </div>
-
-      {/* 3. Layout Grid */}
+      {/* 2. Content Layout */}
       <AbsoluteFill
         style={{
           zIndex: 10,
           display: "flex",
           flexDirection: isVertical ? "column" : "row",
-          // Removed top/bottom padding for vertical to use full height split
-          padding: isVertical ? "0" : `${SPACER * 6}px`,
-          gap: isVertical ? "0" : `${SPACER * 2}px`,
+          padding: isVertical ? "0" : `0 120px`,
           alignItems: "center",
           justifyContent: "center",
+          gap: isVertical ? "0" : "100px",
         }}
       >
-        {/* === Visual Component (Image Card) - Top 50% === */}
+        {/* Cinematic Portrait Card */}
         <div
           style={{
-            flex: isVertical ? "0 0 50%" : 1, // Strictly Top Half
-            width: "100%", // Full Width
+            flex: isVertical ? "0 0 55%" : "0 0 480px",
+            width: isVertical ? "100%" : "480px",
+            height: isVertical ? "auto" : "700px",
             display: "flex",
             justifyContent: "center",
-            alignItems: "flex-end", // Align image to bottom of its container (closer to text)
-            paddingBottom: 0,
+            alignItems: "center",
             opacity: opacity,
-            transform: `translateX(${slideFromLeft}px)`,
-            position: "relative",
-            overflow: "hidden", // Ensure no spill
+            transform: `perspective(1200px) rotateY(${rotationY}deg) translateY(${floatingY}px)`,
           }}
         >
           <div
             style={{
-              width: isVertical ? "100%" : "100%", // Full width for vertical now
-              height: isVertical ? "100%" : "100%",
-              // In vertical, we want the image to fill the top half fully.
-              // We remove aspect ratio constraint on container and let object-fit cover handle it.
-              maxWidth: isVertical ? "100%" : "800px",
-              borderRadius: isVertical ? "0 0 32px 32px" : "24px", // Rounded only at bottom for vertical
+              width: "100%",
+              height: "100%",
+              borderRadius: isVertical ? "0 0 48px 48px" : "32px",
               overflow: "hidden",
-              boxShadow: shadowElevation,
-              borderBottom: glassBorder, // Only border bottom/sides relevant
               position: "relative",
-              transform: `perspective(1000px) rotateY(${interpolate(entranceSpring, [0, 1], [15, 0])}deg)`,
+              boxShadow: "0 60px 120px -20px rgba(0,0,0,0.95)",
+              border: glassBorder,
             }}
           >
-            {cardError ? (
-              <div
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundColor: cidade.visual.primaryColor,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "white",
-                  fontSize: "24px",
-                  fontWeight: "bold",
-                }}
-              >
-                {cidade.name}
-              </div>
-            ) : (
-              <Img
-                src={staticFile(cidade.visual.image)}
-                onError={() => setCardError(true)}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover", // Crucial for filling the 50% height fully
-                  transform: "scale(1.02)",
-                }}
-              />
-            )}
+            <Img
+              src={staticFile(cidade.visual.image)}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                transform: `scale(${kenBurns})`,
+              }}
+            />
 
-            {/* Ranking Badge Applied to Image */}
+            {/* Split Gradient Overlay */}
+            <AbsoluteFill
+              style={{
+                background: 'linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 40%, rgba(0,0,0,0.4) 100%)'
+              }}
+            />
+
+            {/* Floating Rank Plate */}
             <div
               style={{
                 position: "absolute",
-                bottom: 0,
-                left: 0,
-                backgroundColor: colors.accent, // High contrast background
-                padding: isVertical
-                  ? `${SPACER * 1.5}px ${SPACER * 3}px`
-                  : `${SPACER}px ${SPACER * 3}px`,
-                borderTopRightRadius: "24px",
-                boxShadow: "4px -4px 20px rgba(0,0,0,0.2)",
+                top: isVertical ? 60 : 40,
+                left: isVertical ? 60 : 40,
+                background: `linear-gradient(135deg, ${accentColor}, ${cidade.visual.secondaryColor || '#666'})`,
+                padding: "14px 32px",
+                borderRadius: "16px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                zIndex: 2,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.6)",
+                border: "1px solid rgba(255,255,255,0.3)",
               }}
             >
-              <span
-                style={{
-                  color: colors.primary, // Often black on yellow/accent
-                  fontSize: isVertical ? "64px" : "82px",
-                  fontWeight: 900,
-                  lineHeight: 1,
-                  letterSpacing: "-0.05em",
-                }}
-              >
+              <span style={{
+                color: "white",
+                fontSize: "52px",
+                fontWeight: 900,
+                textShadow: "0 4px 12px rgba(0,0,0,0.5)",
+              }}>
                 #{position}
               </span>
             </div>
           </div>
         </div>
 
-        {/* === Information Component (Typography & Data) - Bottom 50% === */}
+        {/* Cinematic Typography Panel */}
         <div
           style={{
-            flex: isVertical ? "0 0 50%" : 1,
+            flex: 1,
             width: "100%",
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center", // Vertically Center content in the bottom half
-            paddingTop: 0,
+            justifyContent: "center",
             alignItems: isVertical ? "center" : "flex-start",
             textAlign: isVertical ? "center" : "left",
-            zIndex: 20,
-            opacity: contentOpacity,
-            transform: `translate(${isVertical ? `0, ${slideFromBottom}px` : `${slideFromRight}px, 0`})`,
+            padding: isVertical ? "40px" : "0",
+            opacity: interpolate(contentSpring, [0, 1], [0, 1]),
+            transform: `translateY(${slideY}px)`,
           }}
         >
-          {/* City & State */}
-          <div
-            style={{
-              marginBottom: `${SPACER * 3}px`,
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: isVertical ? "center" : "flex-start", // Strong Center
-              textAlign: isVertical ? "center" : "left",
-            }}
-          >
+          <div style={{ position: 'relative', width: '100%' }}>
             <h1
               style={{
-                width: "100%", // Type container full width
+                fontSize: isVertical ? "95px" : "120px",
+                fontWeight: 900,
+                color: "white",
                 margin: 0,
-                color: colors.primary,
-                // Larger font size for readability
-                fontSize: isVertical ? "80px" : `${titleSize}px`, // BIGGER
-                fontWeight: 800,
-                lineHeight: 1.1,
-                letterSpacing: "-0.02em",
-                textShadow: "0 4px 20px rgba(0,0,0,0.5)",
-                textAlign: isVertical ? "center" : "left",
+                lineHeight: 0.85,
+                letterSpacing: "-0.06em", // Tight punchy tracking
+                textShadow: "0 20px 60px rgba(0,0,0,0.6)",
+                textTransform: "uppercase"
               }}
             >
               {cidade.name}
             </h1>
-            <h2
-              style={{
-                margin: `${SPACER}px 0 0 0`,
-                color: colors.secondary,
-                fontSize: isVertical ? "42px" : `${subtitleSize}px`, // BIGGER
-                fontWeight: 500,
-                textTransform: "uppercase",
-                letterSpacing: "0.15em",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: isVertical ? "center" : "flex-start",
-                gap: "12px",
-                width: "100%",
-              }}
-            >
-              <span
-                style={{
-                  display: "inline-block",
-                  width: "60px", // Longer Lines
-                  height: "3px", // Thicker Lines
-                  backgroundColor: colors.accent,
-                }}
-              />
+
+            <p style={{
+              fontSize: "42px",
+              color: colors.secondary,
+              fontWeight: 600,
+              margin: "12px 0 0 0",
+              letterSpacing: "0.25em",
+              opacity: 0.8,
+              textTransform: "uppercase"
+            }}>
               {cidade.state}
-              <span
-                style={{
-                  display: isVertical ? "inline-block" : "none",
-                  width: "60px",
-                  height: "3px",
-                  backgroundColor: colors.accent,
-                }}
-              />
-            </h2>
+            </p>
           </div>
 
-          {/* Metric Card */}
+          {/* Obsidian Data Panel */}
           <div
             style={{
-              background: glassBackground,
-              backdropFilter: "blur(12px)",
+              marginTop: "50px",
+              background: glassBg,
+              backdropFilter: "blur(50px)",
               border: glassBorder,
-              borderRadius: "20px",
-              padding: `${SPACER * 2}px ${SPACER * 3}px`,
-              minWidth: isVertical ? "90%" : "400px", // Wider card on mobile
-              width: isVertical ? "90%" : "auto", // Explicit width
-              boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.2)",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: isVertical ? "center" : "flex-start",
-              transform: isChampion
-                ? `scale(${interpolate(valueProgress, [0, 1], [0.95, 1.05])})`
-                : "none",
+              borderRadius: "40px",
+              padding: "48px 60px",
+              width: "100%",
+              maxWidth: isVertical ? "none" : "620px",
+              position: "relative",
+              boxShadow: "0 40px 80px rgba(0,0,0,0.7)",
             }}
           >
             <div
               style={{
-                fontSize: isVertical ? "32px" : `${metricLabelSize}px`,
-                textAlign: isVertical ? "center" : "left",
-                color: "rgba(255, 255, 255, 0.9)", // Higher contrast
-                fontWeight: 600,
+                fontSize: "20px",
+                color: "rgba(255,255,255,0.4)",
+                fontWeight: 800,
                 textTransform: "uppercase",
-                letterSpacing: "0.05em",
-                marginBottom: `${SPACER}px`,
-                width: "100%",
+                letterSpacing: "0.3em",
+                marginBottom: "8px",
               }}
             >
               {metric.title}
@@ -386,37 +261,55 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
 
             <div
               style={{
-                fontSize: isVertical ? "110px" : `${metricValueSize}px`, // HUGE
-                color: colors.accent,
+                fontSize: isVertical ? "130px" : "160px",
+                color: "white",
                 fontWeight: 900,
-                letterSpacing: "-0.03em",
-                lineHeight: 1,
-                display: "flex",
-                alignItems: "baseline",
-                justifyContent: isVertical ? "center" : "flex-start",
-                gap: "8px",
-                textShadow: "0 4px 30px rgba(0,0,0,0.3)",
-                width: "100%",
-                flexWrap: "wrap", // Allow wrapping if number is massive
+                lineHeight: 0.85,
+                letterSpacing: "-0.05em",
+                filter: "drop-shadow(0 0 20px rgba(255, 255, 255, 0.1))",
               }}
             >
               {formattedValue}
             </div>
 
-            {cidade.nickname && (
-              <div
-                style={{
-                  marginTop: `${SPACER}px`,
-                  fontSize: isVertical ? "32px" : "16px", // Much larger nickname
+            {/* Metadata Badges */}
+            <div style={{
+              display: 'flex',
+              gap: '20px',
+              marginTop: '40px',
+              flexWrap: 'wrap',
+              justifyContent: isVertical ? 'center' : 'flex-start'
+            }}>
+              {cidade.data.dateLabel && (
+                <div
+                  style={{
+                    background: "rgba(255,255,255,0.08)",
+                    padding: "12px 28px",
+                    borderRadius: "100px",
+                    border: "1px solid rgba(255,255,255,0.1)",
+                    color: colors.secondary,
+                    fontSize: "22px",
+                    fontWeight: 800,
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {cidade.data.dateLabel}
+                </div>
+              )}
+
+              {cidade.nickname && (
+                <div style={{
+                  padding: "12px 0",
+                  color: "rgba(255,255,255,0.3)",
+                  fontSize: "24px",
                   fontStyle: "italic",
-                  color: "rgba(255,255,255,0.7)", // Higher contrast
-                  textAlign: isVertical ? "center" : "left",
-                  width: "100%",
-                }}
-              >
-                "{cidade.nickname}"
-              </div>
-            )}
+                  fontWeight: 500,
+                  maxWidth: '300px'
+                }}>
+                  "{cidade.nickname}"
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </AbsoluteFill>

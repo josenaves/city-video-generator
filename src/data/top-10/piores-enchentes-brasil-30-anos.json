@@ -1,0 +1,176 @@
+{
+    "videoId": "piores-enchentes-brasil-30-anos",
+    "title": "As 10 PIORES ENCHENTES do Brasil",
+    "subtitle": "Últimos 30 Anos - Ranking por Número de Vítimas",
+    "theme": "elegant-dark",
+    "format": "horizontal",
+    "metric": {
+        "field": "deaths",
+        "title": "Vítimas fatais",
+        "unit": " mortes",
+        "format": "number",
+        "order": "desc"
+    },
+    "cities": [
+        {
+            "name": "Nova Friburgo",
+            "state": "RJ",
+            "nickname": "Suíça Brasileira",
+            "data": {
+                "deaths": 445,
+                "year": 2011,
+                "dateLabel": "Janeiro de 2011",
+                "info": "Região Serrana; o maior desastre natural do Brasil."
+            },
+            "visual": {
+                "primaryColor": "#002366",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/rj/n/nova-friburgo.png"
+            }
+        },
+        {
+            "name": "Teresópolis",
+            "state": "RJ",
+            "nickname": "Capital do Montanhismo",
+            "data": {
+                "deaths": 392,
+                "year": 2011,
+                "dateLabel": "Janeiro de 2011",
+                "info": "Pior enchente da história local; centenas de afetados."
+            },
+            "visual": {
+                "primaryColor": "#1B4D3E",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/rj/t/teresopolis.jpg"
+            }
+        },
+        {
+            "name": "Petrópolis",
+            "state": "RJ",
+            "nickname": "Cidade Imperial",
+            "data": {
+                "deaths": 241,
+                "year": 2022,
+                "dateLabel": "Fevereiro de 2022",
+                "info": "Chuvas recordes em 2022 superaram média histórica."
+            },
+            "visual": {
+                "primaryColor": "#8B4513",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/rj/p/petropolis.png"
+            }
+        },
+        {
+            "name": "Rio de Janeiro",
+            "state": "RJ",
+            "nickname": "Cidade Maravilhosa",
+            "data": {
+                "deaths": 250,
+                "year": 2010,
+                "dateLabel": "Abril de 2010",
+                "info": "Inundações urbanas severas e deslizamentos em encostas."
+            },
+            "visual": {
+                "primaryColor": "#000080",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/rj/r/rio-de-janeiro.png"
+            }
+        },
+        {
+            "name": "Porto Alegre",
+            "state": "RS",
+            "nickname": "Capital dos Gaúchos",
+            "data": {
+                "deaths": 183,
+                "year": 2024,
+                "dateLabel": "Maio de 2024",
+                "info": "Lago Guaíba transbordou 5m; mais de 2 milhões afetados."
+            },
+            "visual": {
+                "primaryColor": "#006400",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/rs/p/porto-alegre.png"
+            }
+        },
+        {
+            "name": "Niterói",
+            "state": "RJ",
+            "nickname": "Cidade Sorriso",
+            "data": {
+                "deaths": 167,
+                "year": 2010,
+                "dateLabel": "Abril de 2010",
+                "info": "Deslizamento trágico no Morro do Bumba."
+            },
+            "visual": {
+                "primaryColor": "#4B0082",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/rj/n/niteroi.png"
+            }
+        },
+        {
+            "name": "Blumenau",
+            "state": "SC",
+            "nickname": "Cidade da Cerveja",
+            "data": {
+                "deaths": 135,
+                "year": 2008,
+                "dateLabel": "Novembro de 2008",
+                "info": "Enchentes regionais massivas no Vale do Itajaí."
+            },
+            "visual": {
+                "primaryColor": "#D2691E",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/sc/b/blumenau.jpg"
+            }
+        },
+        {
+            "name": "Recife",
+            "state": "PE",
+            "nickname": "Veneza Brasileira",
+            "data": {
+                "deaths": 133,
+                "year": 2022,
+                "dateLabel": "Maio de 2022",
+                "info": "Fortes chuvas causaram inundações em toda a capital."
+            },
+            "visual": {
+                "primaryColor": "#B22222",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/pe/r/recife.jpg"
+            }
+        },
+        {
+            "name": "Juiz de Fora",
+            "state": "MG",
+            "nickname": "Princesa de Minas",
+            "data": {
+                "deaths": 70,
+                "year": 2026,
+                "dateLabel": "Fevereiro de 2026",
+                "info": "Desastre histórico em fevereiro de 2026; terceira cidade com mais áreas de risco do Brasil."
+            },
+            "visual": {
+                "primaryColor": "#A0522D",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/mg/j/juiz-de-fora.png"
+            }
+        },
+        {
+            "name": "Belo Horizonte",
+            "state": "MG",
+            "nickname": "Cidade das Alterosas",
+            "data": {
+                "deaths": 56,
+                "year": 2020,
+                "dateLabel": "Janeiro de 2020",
+                "info": "Chuvas generalizadas e transbordamento de córregos."
+            },
+            "visual": {
+                "primaryColor": "#2F4F4F",
+                "secondaryColor": "#FFFFFF",
+                "image": "images/cities/mg/b/belo-horizonte.jpg"
+            }
+        }
+    ]
+}
