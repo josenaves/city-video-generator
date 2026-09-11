@@ -27,7 +27,7 @@
       "visual": {
         "primaryColor": "#FF0000",
         "secondaryColor": "#FFFFFF",
-        "image": "cities/sao-paulo.jpg"
+        "image": "images/cities/sp/s/sao-paulo.jpg"
       }
     },
     {
@@ -45,7 +45,7 @@
       "visual": {
         "primaryColor": "#00FF00",
         "secondaryColor": "#FFD700",
-        "image": "cities/rio-de-janeiro.jpg"
+        "image": "images/cities/rj/r/rio-de-janeiro.jpg"
       }
     },
     {
@@ -63,7 +63,7 @@
       "visual": {
         "primaryColor": "#0066CC",
         "secondaryColor": "#FFFFFF",
-        "image": "cities/brasilia.jpg"
+        "image": "images/cities/df/b/brasilia.jpg"
       }
     },
     {
@@ -81,7 +81,7 @@
       "visual": {
         "primaryColor": "#FFD700",
         "secondaryColor": "#0066CC",
-        "image": "cities/salvador.jpg"
+        "image": "images/cities/ba/s/salvador.jpg"
       }
     },
     {
@@ -99,7 +99,7 @@
       "visual": {
         "primaryColor": "#FF6600",
         "secondaryColor": "#FFFF00",
-        "image": "cities/fortaleza.jpg"
+        "image": "images/cities/ce/f/fortaleza.jpg"
       }
     },
     {
@@ -117,7 +117,7 @@
       "visual": {
         "primaryColor": "#FF0000",
         "secondaryColor": "#000000",
-        "image": "cities/belo-horizonte.jpg"
+        "image": "images/cities/mg/b/belo-horizonte.jpg"
       }
     },
     {
@@ -135,7 +135,7 @@
       "visual": {
         "primaryColor": "#00FF00",
         "secondaryColor": "#FFFF00",
-        "image": "cities/manaus.jpg"
+        "image": "images/cities/am/m/manaus.jpg"
       }
     },
     {
@@ -153,7 +153,7 @@
       "visual": {
         "primaryColor": "#800080",
         "secondaryColor": "#FFFFFF",
-        "image": "cities/curitiba.jpg"
+        "image": "images/cities/pr/c/curitiba.jpg"
       }
     },
     {
@@ -171,7 +171,7 @@
       "visual": {
         "primaryColor": "#0066CC",
         "secondaryColor": "#FFD700",
-        "image": "cities/recife.jpg"
+        "image": "images/cities/pe/r/recife.jpg"
       }
     },
     {
@@ -189,7 +189,7 @@
       "visual": {
         "primaryColor": "#0000FF",
         "secondaryColor": "#FFFFFF",
-        "image": "cities/porto-alegre.jpg"
+        "image": "images/cities/rs/p/porto-alegre.jpg"
       }
     }
   ]

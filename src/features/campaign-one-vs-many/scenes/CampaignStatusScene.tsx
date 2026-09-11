@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, interpolate, useCurrentFrame, staticFile } from 'remotion';
+import { AbsoluteFill, Img, interpolate, useCurrentFrame, staticFile } from 'remotion';
 import { CampaignState } from '../logic/state';
 import { City } from '../../../utils/ChampionshipManager';
 
@@ -95,7 +95,7 @@ export const CampaignStatusScene: React.FC<CampaignStatusSceneProps> = ({
                                         overflow: 'hidden',
                                         backgroundColor: '#111'
                                     }}>
-                                        <img src={staticFile(battle.opponent.visual.image)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                        <Img src={staticFile(battle.opponent.visual.image)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                     </div>
                                     {battle.opponent.name}
                                 </td>

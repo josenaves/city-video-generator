@@ -1,135 +1,135 @@
 {
-    "name": "Fronteira Sul-Mato-Grossense",
-    "cities": [
-        {
-            "ibgeId": "5006606",
-            "name": "Ponta Porã",
-            "state": "MS",
-            "nickname": "Princesinha dos Ervais",
-            "data": {
-                "populacao": 92017,
-                "areaKm2": 5359,
-                "pibPerCapita": 65963,
-                "leitos": 150,
-                "idh": 0.701,
-                "ensinoSuperior": 25.0
-            },
-            "visual": {
-                "primaryColor": "#1a237e",
-                "secondaryColor": "#ffffff",
-                "image": "ponta-pora.jpeg"
-            },
-            "image": "ponta-pora.jpeg"
-        },
-        {
-            "ibgeId": "5000906",
-            "name": "Antônio João",
-            "state": "MS",
-            "nickname": "Terra de Heróis",
-            "data": {
-                "populacao": 9303,
-                "areaKm2": 1095,
-                "pibPerCapita": 91559,
-                "leitos": 10,
-                "idh": 0.643,
-                "ensinoSuperior": 12.0
-            },
-            "visual": {
-                "primaryColor": "#2e7d32",
-                "secondaryColor": "#ffffff",
-                "image": "antonio-joao.webp"
-            },
-            "image": "antonio-joao.webp"
-        },
-        {
-            "ibgeId": "5001102",
-            "name": "Aral Moreira",
-            "state": "MS",
-            "nickname": "Capital do Agronegócio",
-            "data": {
-                "populacao": 10748,
-                "areaKm2": 1653,
-                "pibPerCapita": 125488,
-                "leitos": 12,
-                "idh": 0.633,
-                "ensinoSuperior": 14.0
-            },
-            "visual": {
-                "primaryColor": "#fbc02d",
-                "secondaryColor": "#000000",
-                "image": "aral-moreira.jpg"
-            },
-            "image": "aral-moreira.jpg"
-        },
-        {
-            "ibgeId": "5007935",
-            "name": "Tacuru",
-            "state": "MS",
-            "nickname": "Aconchego da Fronteira",
-            "data": {
-                "populacao": 10808,
-                "areaKm2": 1784,
-                "pibPerCapita": 34988,
-                "leitos": 23,
-                "idh": 0.593,
-                "ensinoSuperior": 15.0
-            },
-            "visual": {
-                "primaryColor": "#c62828",
-                "secondaryColor": "#ffffff",
-                "image": "tacuru.jpeg"
-            },
-            "image": "tacuru.jpeg"
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "type": "bar",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "type": "pie",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "type": "line",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS",
-            "field": "leitos",
-            "format": "number",
-            "type": "column",
-            "unit": ""
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal",
-            "type": "radar",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "type": "donut",
-            "unit": "%"
-        }
-    ]
+  "name": "Fronteira Sul-Mato-Grossense",
+  "cities": [
+    {
+      "ibgeId": "5006606",
+      "name": "Ponta Porã",
+      "state": "MS",
+      "nickname": "Princesinha dos Ervais",
+      "data": {
+        "populacao": 92017,
+        "areaKm2": 5359,
+        "pibPerCapita": 65963,
+        "leitos": 150,
+        "idh": 0.701,
+        "ensinoSuperior": 25.0
+      },
+      "visual": {
+        "primaryColor": "#1a237e",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/ms/p/ponta-pora.jpeg"
+      },
+      "image": "images/cities/ms/p/ponta-pora.jpeg"
+    },
+    {
+      "ibgeId": "5000906",
+      "name": "Antônio João",
+      "state": "MS",
+      "nickname": "Terra de Heróis",
+      "data": {
+        "populacao": 9303,
+        "areaKm2": 1095,
+        "pibPerCapita": 91559,
+        "leitos": 10,
+        "idh": 0.643,
+        "ensinoSuperior": 12.0
+      },
+      "visual": {
+        "primaryColor": "#2e7d32",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/ms/a/antonio-joao.jpg"
+      },
+      "image": "images/cities/ms/a/antonio-joao.jpg"
+    },
+    {
+      "ibgeId": "5001102",
+      "name": "Aral Moreira",
+      "state": "MS",
+      "nickname": "Capital do Agronegócio",
+      "data": {
+        "populacao": 10748,
+        "areaKm2": 1653,
+        "pibPerCapita": 125488,
+        "leitos": 12,
+        "idh": 0.633,
+        "ensinoSuperior": 14.0
+      },
+      "visual": {
+        "primaryColor": "#fbc02d",
+        "secondaryColor": "#000000",
+        "image": "images/cities/ms/a/aral-moreira.jpg"
+      },
+      "image": "images/cities/ms/a/aral-moreira.jpg"
+    },
+    {
+      "ibgeId": "5007935",
+      "name": "Tacuru",
+      "state": "MS",
+      "nickname": "Aconchego da Fronteira",
+      "data": {
+        "populacao": 10808,
+        "areaKm2": 1784,
+        "pibPerCapita": 34988,
+        "leitos": 23,
+        "idh": 0.593,
+        "ensinoSuperior": 15.0
+      },
+      "visual": {
+        "primaryColor": "#c62828",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/ms/t/tacuru.jpeg"
+      },
+      "image": "images/cities/ms/t/tacuru.jpeg"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "type": "bar",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "type": "pie",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "type": "line",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS",
+      "field": "leitos",
+      "format": "number",
+      "type": "column",
+      "unit": ""
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal",
+      "type": "radar",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "type": "donut",
+      "unit": "%"
+    }
+  ]
 }

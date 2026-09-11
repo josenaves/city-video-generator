@@ -1,0 +1,108 @@
+{
+  "project": "cidades-mais-verdes-sp",
+  "generatedAt": "2026-09-10",
+  "sources": [
+    {
+      "id": "ibge_censo_2022_caracteristicas_urbanisticas",
+      "title": "IBGE — Censo Demográfico 2022: Características Urbanísticas do Entorno dos Domicílios",
+      "url": "https://www.ibge.gov.br/geociencias/organizacao-do-territorio/tipologias-do-territorio/24702-caracteristicas-urbanisticas-do-entorno-dos-domicilios.html",
+      "accessDate": "2026-09-10",
+      "supports": "Metodologia da Pesquisa Urbanística do Entorno dos Domicílios (340k setores censitários), quesito arborização = existência de árvore com ≥1 árvore no entorno; base para ranking de arborização",
+      "claims": ["Metodologia do ranking de arborização", "Definição de 'via arborizada'"],
+      "reliability": "primary — IBGE oficial"
+    },
+    {
+      "id": "ibge_censo_2022_resultados_gerais",
+      "title": "IBGE — Censo 2022 Resultados (Panorama)",
+      "url": "https://www.ibge.gov.br/estatisticas/sociais/populacao/22827-censo-demografico-2022.html?edicao=43160&t=resultados",
+      "accessDate": "2026-09-10",
+      "supports": "Contexto geral do Censo 2022 e divulgação das características urbanísticas em 17/04/2025",
+      "claims": ["Data de divulgação 17/04/2025"],
+      "reliability": "primary"
+    },
+    {
+      "id": "estadao_ranking_mais_arborizadas_20250417",
+      "title": "Estadão — Quais são as cidades mais arborizadas do Brasil; veja ranking e mapa interativo (17/04/2025)",
+      "url": "https://www.estadao.com.br/brasil/quais-sao-as-cidades-mais-arborizadas-do-brasil-veja-ranking-e-mapa-interativo/",
+      "accessDate": "2026-09-10",
+      "supports": "Ranking nacional: Birigui 98.4%, Sertãozinho 97.5%, São José do Rio Preto 97.3% como top 3; 74% em SP; 66% nacional vivem em vias arborizadas",
+      "claims": ["Birigui 98.4% — 1º lugar", "Sertãozinho 97.5% — 2º", "São José do Rio Preto 97.3% — 3º", "Top 3 são de SP", "Média SP 74% vs Brasil 66%"],
+      "reliability": "secondary — reportagem sobre IBGE"
+    },
+    {
+      "id": "g1_34pct_sem_arvores_20250417",
+      "title": "G1 — 34% dos brasileiros vivem em trechos de ruas sem nenhuma árvore, aponta IBGE (17/04/2025)",
+      "url": "https://g1.globo.com/economia/censo/noticia/2025/04/17/censo-2022-arborizacao-vias-moradores.ghtml",
+      "accessDate": "2026-09-10",
+      "supports": "34% (59 mi) vivem em vias sem árvore; 66% (115 mi) em vias arborizadas; MS 92.5%, DF 84.2%, PR 82.6% como mais arborizados; Sergipe 38.5% menos; tabela concentrações urbanas com Birigui 98.4 / Sertãozinho 97.5 / SJRP 97.3",
+      "claims": ["34% sem árvore", "59 mi pessoas", "115 mi com árvore", "Ranking concentrações urbanas validado"],
+      "reliability": "secondary — reportagem sobre IBGE"
+    },
+    {
+      "id": "diario_regiao_top3_interior_sp_20260227",
+      "title": "Diário da Região — Três cidades mais arborizadas do Brasil ficam no interior de SP (27/02/2026)",
+      "url": "https://diariodaregiao.com.br/variedades/tres-cidades-mais-arborizadas-do-brasil-ficam-no-interior-de-sao-paulo/",
+      "accessDate": "2026-09-10",
+      "supports": "Confirma top 3 integralmente paulista; reforça Birigui 98.4 / Sertãozinho 97.5 / SJRP 97.3",
+      "claims": ["Top 3 paulista confirmado"],
+      "reliability": "secondary"
+    },
+    {
+      "id": "terra_cidades_mais_arborizadas_20250818",
+      "title": "Terra — Cidades mais arborizadas do Brasil: Birigui lidera e São Paulo se destaca (18/08/2025)",
+      "url": "https://www.terra.com.br/planeta/futuro-vivo/quais-cidades-e-estados-brasileiros-tem-os-maiores-indices-de-arborizacao-urbana-voce-vai-se-surpreender,74a7666028084a2922074c8a20d09316yezarfsp.html",
+      "accessDate": "2026-09-10",
+      "supports": "Detalhe Birigui: 118.979 hab, 79.6% domicílios com 5+ árvores, 1.2% sem árvore; SP acima da média nacional (38.4% com 5+ vs 32.1% Brasil)",
+      "claims": ["Birigui 79.6% com 5+ árvores", "SP 38.4% densidade 5+ vs Brasil 32.1%"],
+      "reliability": "secondary"
+    },
+    {
+      "id": "g1_riopreto_90pct_20250518",
+      "title": "G1 Rio Preto — Pesquisa mostra que mais de 90% dos moradores de Rio Preto moram em vias com árvores (18/05/2025)",
+      "url": "https://g1.globo.com/sp/sao-jose-do-rio-preto-aracatuba/noticia/2025/05/18/pesquisa-mostra-que-mais-de-90percent-dos-moradores-de-rio-preto-moram-em-vias-com-arvores.ghtml",
+      "accessDate": "2026-09-10",
+      "supports": "SJRP 97.78% (variação de arredondamento vs 97.3% em concentrações urbanas); definição IBGE de via arborizada ≥1 árvore ≥1.70m",
+      "claims": ["SJRP 97.78% — variação metodológica município vs concentração urbana", "Definição árvore ≥1.70m"],
+      "reliability": "secondary"
+    },
+    {
+      "id": "agencia_sp_20250422",
+      "title": "Agência SP — Estado de São Paulo tem as cidades mais arborizadas do país (22/04/2025)",
+      "url": "https://www.agenciasp.sp.gov.br/estado-de-sao-paulo-tem-as-cidades-mais-arborizadas-do-pais-veja-quais/",
+      "accessDate": "2026-09-10",
+      "supports": "12 das 15 mais arborizadas são de SP; lista completa de Araçatuba 96.1, Ourinhos 95.9 etc.",
+      "claims": ["12/15 top são de SP"],
+      "reliability": "secondary — governo SP"
+    }
+  ],
+  "needsVerification": [
+    {
+      "claim": "Birigui/Sertãozinho/SJRP realizaram 'planejamento urbano + regras municipais + manutenção por décadas' como causa específica da alta arborização",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "IBGE mede o resultado (percentual), não a causa. Relação causal com políticas municipais específicas precisa de fonte primária (Plano Diretor de Arborização Urbana de cada prefeitura). Não afirmar como fato sem citar PDAU.",
+      "proposedWording": "Usar no vídeo: 'Arborização urbana não acontece por acaso — depende de planejamento e manutenção ao longo de décadas' (genérico, sem atribuir política específica a cada cidade). Evitar 'Birigui criou lei X em ano Y' sem fonte.",
+      "suggestedSources": ["Site Prefeitura Birigui — Plano Diretor Arborização", "Prefeitura Sertãozinho — Código Ambiental", "Prefeitura SJRP — PDAU"]
+    },
+    {
+      "claim": "Árvores reduzem temperatura em X°C, reduzem calor em Y%, interceptam Z% da chuva — números específicos",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Estudos mostram correlação (ex: asfalto sombreado até 15°C menor em Cuiabá, com 1/3 de cobertura arbórea reduz ~1°C no ar), mas valores variam por clima/espécie/morfologia. Não usar número único sem citar estudo local para SP interior.",
+      "proposedWording": "No vídeo: apresentar como conceitos visuais (sombra, conforto, infiltração) sem quantificar. Se quantificar, citar: 'Estudos em cidades tropicais mostram que sombreamento pode reduzir temperatura superficial do asfalto em até 15°C (Cuiabá, g1/scielo)' com rodapé da fonte.",
+      "suggestedSources": ["doi:10.55905/revconv.19n.1-219 (Mogi das Cruzes, r≈-0.86 arborização vs temperatura)", "scielo.br/j/sn/a/BkbmjzkVtcZcr6rkTpF6Lzf (Cuiabá asfalto 15°C)"]
+    },
+    {
+      "claim": "São Paulo capital — mapa de desigualdade verde por região (zona sul mais verde vs leste menos)",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Heatmap desigualdade no storyboard é ilustrativo/conceitual, não dado granular por distrito. Para mapa preciso, precisa SIDRA IBGE por setor censitário da capital (disponível mas não extraído neste projeto).",
+      "proposedWording": "Manter mapa como 'ilustrativo' com label 'Distribuição desigual (ilustrativo)' e não afirmar percentuais por bairro. Fonte geral: IBGE SIDRA — Características Urbanísticas, tabela por município (São Paulo).",
+      "suggestedSources": ["SIDRA IBGE — Censo 2022 Características Urbanísticas — Município São Paulo/SP"]
+    },
+    {
+      "claim": "Populações exatas de Birigui 118.979, Sertãozinho 131k, SJRP 480k usadas no mapa",
+      "status": "NEEDS_VERIFICATION",
+      "reason": "Números no mapa são ilustrativos para contexto; população oficial deve ser Censo 2022 IBGE (ver cidades.ibge.gov.br).",
+      "suggestedSources": ["https://cidades.ibge.gov.br/brasil/sp/birigui/panorama", "https://cidades.ibge.gov.br/brasil/sp/sertaozinho/panorama", "https://cidades.ibge.gov.br/brasil/sp/sao-jose-do-rio-preto/panorama"]
+    }
+  ],
+  "usageNotes": "Toda afirmação de percentual (98.4/97.5/97.3) deve ter rodapé 'Fonte: IBGE — Censo 2022, Características Urbanísticas do Entorno dos Domicílios (divulgado 17/04/2025)'. Concentração urbana (>100k hab) ≠ município — usar nota de rodapé se precisar precisão."
+}

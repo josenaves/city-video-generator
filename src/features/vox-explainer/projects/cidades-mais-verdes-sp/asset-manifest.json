@@ -1,0 +1,314 @@
+{
+  "project": "cidades-mais-verdes-sp",
+  "totalAssets": 30,
+  "generatedAt": "2026-09-10",
+  "assets": [
+    {
+      "id": "asset_001",
+      "type": "video",
+      "description": "Aerial drone São Paulo capital — trânsito e prédios (Marginal/Paulista)",
+      "filename": "sp_aerial_concreto.mp4",
+      "source": "stock_or_generated",
+      "ai_generated": false,
+      "required": true,
+      "duration": "18s",
+      "scene": "01_abertura_sp_concreto"
+    },
+    {
+      "id": "asset_002",
+      "type": "video",
+      "description": "Residential tree-lined street interior SP — late afternoon, real footage",
+      "filename": "rua_arborizada_interior.mp4",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": true,
+      "duration": "14s",
+      "scene": "02_curiosidade_interior",
+      "prompt": "Cinematic ground-level view of a tree-lined residential street in a medium Brazilian city, late afternoon, long shadows, realistic documentary photography, natural lighting, no text, no logos, houses with small front yards, asphalt street"
+    },
+    {
+      "id": "asset_003",
+      "type": "map",
+      "description": "Mapa simplificado Estado de SP — flat Vox style (contorno branco, fundo #0A0A0A)",
+      "filename": "map_sp_estado.svg",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "02_curiosidade_interior"
+    },
+    {
+      "id": "asset_004",
+      "type": "image",
+      "description": "Close-up copa de árvore sobre rua",
+      "filename": "copa_arvore_close.jpg",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": false,
+      "scene": "02_curiosidade_interior"
+    },
+    {
+      "id": "asset_005",
+      "type": "chart",
+      "description": "Horizontal bar chart — 3 cidades mais arborizadas (Birigui 98.4, Sertãozinho 97.5, Rio Preto 97.3)",
+      "filename": "chart_top3_arborizacao.svg",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "03_ranking_barras"
+    },
+    {
+      "id": "asset_006",
+      "type": "map",
+      "description": "Mapa SP com 3 cidades destacadas — sequência com dot pulsante",
+      "filename": "map_sp_tres_cidades.svg",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "04_mapa_tres_cidades"
+    },
+    {
+      "id": "asset_007",
+      "type": "icon",
+      "description": "Dot pulsante amarelo Vox (#FFF200)",
+      "filename": "dot_pulse.svg",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "04_mapa_tres_cidades"
+    },
+    {
+      "id": "asset_008",
+      "type": "image",
+      "description": "Viveiro de mudas — viveiro municipal com mudas em sacos",
+      "filename": "viveiro_mudas.jpg",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "05_porque_planejamento",
+      "prompt": "Documentary photo of a municipal nursery with rows of young tree seedlings in black bags, Brazilian city, natural daylight, organized, no text"
+    },
+    {
+      "id": "asset_009",
+      "type": "image",
+      "description": "Equipe de poda/manutenção urbana trabalhando",
+      "filename": "equipe_manutencao.jpg",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "05_porque_planejamento"
+    },
+    {
+      "id": "asset_010",
+      "type": "image",
+      "description": "Rua com árvores de idades mistas (jovens + adultas)",
+      "filename": "rua_arvores_jovens_adultas.jpg",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "05_porque_planejamento"
+    },
+    {
+      "id": "asset_011",
+      "type": "icon",
+      "description": "Ícones lineares: planejamento/plantio/regras/manutenção (stroke)",
+      "filename": "icons_planejamento.svg",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "05_porque_planejamento"
+    },
+    {
+      "id": "asset_012",
+      "type": "chart",
+      "description": "Timeline 4 etapas — plantio → crescimento → manutenção → cidade arborizada",
+      "filename": "timeline_plantio.svg",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "06_timeline_crescimento"
+    },
+    {
+      "id": "asset_013",
+      "type": "image",
+      "description": "Evolução muda jovem vs árvore adulta (2 fotos para crossfade)",
+      "filename": "evolucao_muda_adulta.jpg",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "06_timeline_crescimento"
+    },
+    {
+      "id": "asset_014",
+      "type": "image",
+      "description": "Rua com sombra densa — calçada sombreada, tarde",
+      "filename": "rua_sombra_densa.jpg",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "07_impacto_sombra_calor",
+      "prompt": "Realistic documentary photo of a residential street in Brazil with dense tree canopy casting long shadows on sidewalk and asphalt, late afternoon sun, people walking comfortably, natural colors, no text"
+    },
+    {
+      "id": "asset_015",
+      "type": "icon",
+      "description": "Ícones sol/sombra/pedestre (line icons)",
+      "filename": "icons_sombra.svg",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "07_impacto_sombra_calor"
+    },
+    {
+      "id": "asset_016",
+      "type": "image",
+      "description": "Rua sem árvores — asfalto exposto, sol forte, sem sombra",
+      "filename": "rua_sem_arvores.jpg",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "08_split_rua_comparacao",
+      "prompt": "Realistic documentary photo of a bare urban street in Brazil with no trees, exposed asphalt, harsh sun, no shadows, same framing as tree-lined street for direct comparison, no text"
+    },
+    {
+      "id": "asset_017",
+      "type": "image",
+      "description": "Rua arborizada — sombra densa (par do split)",
+      "filename": "rua_com_arvores.jpg",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "08_split_rua_comparacao"
+    },
+    {
+      "id": "asset_018",
+      "type": "icon",
+      "description": "Ilustração chuva → copa → solo (infiltração)",
+      "filename": "ilustra_chuva_infiltracao.svg",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "09_impacto_chuva"
+    },
+    {
+      "id": "asset_019",
+      "type": "map",
+      "description": "Mapa São Paulo capital — heatmap desigualdade verde (ilustrativo, não granular por bairro)",
+      "filename": "map_sp_capital_desigual.svg",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "10_e_a_capital"
+    },
+    {
+      "id": "asset_020",
+      "type": "image",
+      "description": "Aerial Birigui arborizada — vista aérea com copa densa",
+      "filename": "aerial_birigui.jpg",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "11_conclusao_planejamento",
+      "prompt": "Cinematic aerial view of Birigui, São Paulo, Brazil — medium city with dense tree canopy covering residential streets, late afternoon, realistic documentary photography, natural lighting, no text, no logos"
+    },
+    {
+      "id": "asset_021",
+      "type": "image",
+      "description": "Aerial Sertãozinho arborizada",
+      "filename": "aerial_sertaozinho.jpg",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "11_conclusao_planejamento"
+    },
+    {
+      "id": "asset_022",
+      "type": "image",
+      "description": "Aerial São José do Rio Preto arborizada",
+      "filename": "aerial_sjrp.jpg",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "11_conclusao_planejamento"
+    },
+    {
+      "id": "asset_023",
+      "type": "audio",
+      "description": "Narração TTS pt-BR completa (gerada de narration.ssml)",
+      "filename": "vox-cidades-verdes-ptbr.mp3",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "all"
+    },
+    {
+      "id": "asset_024",
+      "type": "audio",
+      "description": "Trilha instrumental leve — editorial documentary (bed baixo, não competir com voz)",
+      "filename": "vox_bed_instrumental.mp3",
+      "source": "stock_or_generated",
+      "ai_generated": false,
+      "required": false,
+      "scene": "all"
+    },
+    {
+      "id": "asset_025",
+      "type": "text",
+      "description": "Título SÃO PAULO editorial (01)",
+      "filename": "title_sp_concreto",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "01_abertura_sp_concreto"
+    },
+    {
+      "id": "asset_026",
+      "type": "text",
+      "description": "Rodapé fonte IBGE 2022 (03)",
+      "filename": "fonte_ibge_2022",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "03_ranking_barras"
+    },
+    {
+      "id": "asset_027",
+      "type": "text",
+      "description": "Texto ONDE editorial (10)",
+      "filename": "texto_onde",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "10_e_a_capital"
+    },
+    {
+      "id": "asset_028",
+      "type": "text",
+      "description": "Texto pergunta final (12)",
+      "filename": "texto_pergunta_final",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "12_pergunta_final"
+    },
+    {
+      "id": "asset_029",
+      "type": "text",
+      "description": "CTA comentários (13)",
+      "filename": "cta_comentarios",
+      "source": "generated",
+      "ai_generated": true,
+      "required": true,
+      "scene": "13_cta_comentarios"
+    },
+    {
+      "id": "asset_030",
+      "type": "image",
+      "description": "Fallback: rua arborizada genérica para B-roll extra",
+      "filename": "broll_rua_generica.jpg",
+      "source": "stock_or_generated",
+      "ai_generated": true,
+      "required": false,
+      "scene": "all"
+    }
+  ]
+}

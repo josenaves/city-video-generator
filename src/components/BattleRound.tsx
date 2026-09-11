@@ -15,7 +15,7 @@ type BattleRoundProps = {
     inverse?: boolean;
     backgroundImage1: string;
     backgroundImage2: string;
-    durationInFrames: number;
+    durationInFrames?: number;
 };
 
 export const BattleRound: React.FC<BattleRoundProps> = ({
@@ -32,8 +32,8 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
     inverse = false,
     backgroundImage1,
     backgroundImage2,
-    durationInFrames
-}) => {
+    durationInFrames = 90,
+}: BattleRoundProps) => {
     const frame = useCurrentFrame();
     const { fps } = useVideoConfig();
 
@@ -71,10 +71,18 @@ export const BattleRound: React.FC<BattleRoundProps> = ({
     const scale = interpolate(frame, [0, durationInFrames], [1, 1.2]);
     const winnerImageWithFade = interpolate(frame, [durationInFrames * 0.6, durationInFrames * 0.8], [0, 1], { extrapolateRight: 'clamp' });
 
-    // Improved tie detection to match the scoreboard logic
-    const formattedVal1 = formatValue(city1Value);
-    const formattedVal2 = formatValue(city2Value);
-    const isTie = formattedVal1 === formattedVal2;
+    // Numeric tie detection: avoids false ties from 0.950 vs 0.95 formatting
+    const isTie = (() => {
+        if (format === 'year' || format === 'integer') return Math.round(city1Value) === Math.round(city2Value);
+        if (format === 'decimal3') return Math.abs(city1Value - city2Value) < 0.0005;
+        if (format === 'percent' || format === 'decimal' || format === 'number') return Math.abs(city1Value - city2Value) < 0.05;
+        const fmt = (v: number) => {
+            if (format === 'compact') return new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(v);
+            if (format === 'currency') return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumSignificantDigits: 3 }).format(v);
+            return String(v);
+        };
+        return fmt(city1Value) === fmt(city2Value);
+    })();
 
     const currentBackgroundImage = isWinner1 ? backgroundImage1 : backgroundImage2;
 

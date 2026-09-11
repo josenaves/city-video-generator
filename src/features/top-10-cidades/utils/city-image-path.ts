@@ -1,4 +1,5 @@
 import path from "path";
+import fs from "fs";
 
 export interface CityImageInfo {
   cityName: string;
@@ -151,7 +152,6 @@ export function resolveCityImage(
       return { path: newPath, exists: false };
     }
     try {
-      const fs = require("fs");
       if (fs.existsSync(path.join(process.cwd(), "public", newPath))) {
         return { path: newPath, exists: true };
       }
@@ -175,8 +175,6 @@ export function buildImageRegistry(): ImageRegistry {
 }
 
 export function migrateImagesToNewStructure() {
-  const fs = require("fs");
-  const path = require("path");
 
   const publicDir = path.join(process.cwd(), "public");
   const newBaseDir = path.join(publicDir, "images/cities");

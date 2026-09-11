@@ -1,135 +1,135 @@
 {
-    "name": "Capitais do Sudeste",
-    "cities": [
-        {
-            "ibgeId": "3550308",
-            "name": "São Paulo",
-            "state": "SP",
-            "nickname": "Terra da Garoa",
-            "data": {
-                "populacao": 11451999,
-                "areaKm2": 1521,
-                "pibPerCapita": 68966,
-                "leitos": 2.42,
-                "idh": 0.805,
-                "ensinoSuperior": 38.0
-            },
-            "visual": {
-                "primaryColor": "#000000",
-                "secondaryColor": "#ffffff",
-                "image": "sao-paulo.jpg"
-            },
-            "image": "sao-paulo.jpg"
-        },
-        {
-            "ibgeId": "3304557",
-            "name": "Rio de Janeiro",
-            "state": "RJ",
-            "nickname": "Cidade Maravilhosa",
-            "data": {
-                "populacao": 6211223,
-                "areaKm2": 1200,
-                "pibPerCapita": 61161,
-                "leitos": 5.85,
-                "idh": 0.799,
-                "ensinoSuperior": 35.0
-            },
-            "visual": {
-                "primaryColor": "#00aeef",
-                "secondaryColor": "#ffffff",
-                "image": "rio-de-janeiro.jpg"
-            },
-            "image": "rio-de-janeiro.jpg"
-        },
-        {
-            "ibgeId": "3106200",
-            "name": "Belo Horizonte",
-            "state": "MG",
-            "nickname": "Cidade Jardim",
-            "data": {
-                "populacao": 2315560,
-                "areaKm2": 331,
-                "pibPerCapita": 41517,
-                "leitos": 4.59,
-                "idh": 0.810,
-                "ensinoSuperior": 32.0
-            },
-            "visual": {
-                "primaryColor": "#ff0000",
-                "secondaryColor": "#ffffff",
-                "image": "belo-horizonte.jpg"
-            },
-            "image": "belo-horizonte.jpg"
-        },
-        {
-            "ibgeId": "3205309",
-            "name": "Vitória",
-            "state": "ES",
-            "nickname": "Ilha do Mel",
-            "data": {
-                "populacao": 322869,
-                "areaKm2": 97,
-                "pibPerCapita": 104757,
-                "leitos": 6.44,
-                "idh": 0.845,
-                "ensinoSuperior": 43.0
-            },
-            "visual": {
-                "primaryColor": "#f8aac8",
-                "secondaryColor": "#009c3b",
-                "image": "vitoria.jpg"
-            },
-            "image": "vitoria.jpg"
-        }
-    ],
-    "rounds": [
-        {
-            "id": "populacao",
-            "title": "POPULAÇÃO",
-            "field": "populacao",
-            "format": "number",
-            "type": "bar",
-            "unit": "hab"
-        },
-        {
-            "id": "areaKm2",
-            "title": "ÁREA",
-            "field": "areaKm2",
-            "format": "number",
-            "type": "pie",
-            "unit": "km²"
-        },
-        {
-            "id": "pibPerCapita",
-            "title": "PIB/CAPITA",
-            "field": "pibPerCapita",
-            "format": "currency",
-            "type": "line",
-            "unit": "R$"
-        },
-        {
-            "id": "leitos",
-            "title": "LEITOS",
-            "field": "leitos",
-            "format": "decimal",
-            "type": "column",
-            "unit": "/1k"
-        },
-        {
-            "id": "idh",
-            "title": "IDH",
-            "field": "idh",
-            "format": "decimal",
-            "type": "radar",
-            "unit": ""
-        },
-        {
-            "id": "ensinoSuperior",
-            "title": "ENSINO SUPERIOR",
-            "field": "ensinoSuperior",
-            "format": "decimal",
-            "type": "donut",
-            "unit": "%"
-        }
-    ]
+  "name": "Capitais do Sudeste",
+  "cities": [
+    {
+      "ibgeId": "3550308",
+      "name": "São Paulo",
+      "state": "SP",
+      "nickname": "Terra da Garoa",
+      "data": {
+        "populacao": 11451999,
+        "areaKm2": 1521,
+        "pibPerCapita": 68966,
+        "leitos": 2.42,
+        "idh": 0.805,
+        "ensinoSuperior": 38.0
+      },
+      "visual": {
+        "primaryColor": "#000000",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/sp/s/sao-paulo.jpg"
+      },
+      "image": "images/cities/sp/s/sao-paulo.jpg"
+    },
+    {
+      "ibgeId": "3304557",
+      "name": "Rio de Janeiro",
+      "state": "RJ",
+      "nickname": "Cidade Maravilhosa",
+      "data": {
+        "populacao": 6211223,
+        "areaKm2": 1200,
+        "pibPerCapita": 61161,
+        "leitos": 5.85,
+        "idh": 0.799,
+        "ensinoSuperior": 35.0
+      },
+      "visual": {
+        "primaryColor": "#00aeef",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/rj/r/rio-de-janeiro.jpg"
+      },
+      "image": "images/cities/rj/r/rio-de-janeiro.jpg"
+    },
+    {
+      "ibgeId": "3106200",
+      "name": "Belo Horizonte",
+      "state": "MG",
+      "nickname": "Cidade Jardim",
+      "data": {
+        "populacao": 2315560,
+        "areaKm2": 331,
+        "pibPerCapita": 41517,
+        "leitos": 4.59,
+        "idh": 0.81,
+        "ensinoSuperior": 32.0
+      },
+      "visual": {
+        "primaryColor": "#ff0000",
+        "secondaryColor": "#ffffff",
+        "image": "images/cities/mg/b/belo-horizonte.jpg"
+      },
+      "image": "images/cities/mg/b/belo-horizonte.jpg"
+    },
+    {
+      "ibgeId": "3205309",
+      "name": "Vitória",
+      "state": "ES",
+      "nickname": "Ilha do Mel",
+      "data": {
+        "populacao": 322869,
+        "areaKm2": 97,
+        "pibPerCapita": 104757,
+        "leitos": 6.44,
+        "idh": 0.845,
+        "ensinoSuperior": 43.0
+      },
+      "visual": {
+        "primaryColor": "#f8aac8",
+        "secondaryColor": "#009c3b",
+        "image": "images/cities/es/v/vitoria.jpg"
+      },
+      "image": "images/cities/es/v/vitoria.jpg"
+    }
+  ],
+  "rounds": [
+    {
+      "id": "populacao",
+      "title": "POPULAÇÃO",
+      "field": "populacao",
+      "format": "number",
+      "type": "bar",
+      "unit": "hab"
+    },
+    {
+      "id": "areaKm2",
+      "title": "ÁREA",
+      "field": "areaKm2",
+      "format": "number",
+      "type": "pie",
+      "unit": "km²"
+    },
+    {
+      "id": "pibPerCapita",
+      "title": "PIB/CAPITA",
+      "field": "pibPerCapita",
+      "format": "currency",
+      "type": "line",
+      "unit": "R$"
+    },
+    {
+      "id": "leitos",
+      "title": "LEITOS",
+      "field": "leitos",
+      "format": "decimal",
+      "type": "column",
+      "unit": "/1k"
+    },
+    {
+      "id": "idh",
+      "title": "IDH",
+      "field": "idh",
+      "format": "decimal",
+      "type": "radar",
+      "unit": ""
+    },
+    {
+      "id": "ensinoSuperior",
+      "title": "ENSINO SUPERIOR",
+      "field": "ensinoSuperior",
+      "format": "decimal",
+      "type": "donut",
+      "unit": "%"
+    }
+  ]
 }

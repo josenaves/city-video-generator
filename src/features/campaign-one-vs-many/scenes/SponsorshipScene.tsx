@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, interpolate, useCurrentFrame, staticFile } from 'remotion';
+import { AbsoluteFill, Img, interpolate, useCurrentFrame, staticFile } from 'remotion';
 
 type SponsorshipSceneProps = {
     sponsorship: {
@@ -70,7 +70,7 @@ export const SponsorshipScene: React.FC<SponsorshipSceneProps> = ({
                             boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
                             transform: 'scale(1.1)'
                         }}>
-                            <img
+                            <Img
                                 src={staticFile(item.src)}
                                 style={{
                                     height: item.type === 'qrcode' ? '250px' : '150px',

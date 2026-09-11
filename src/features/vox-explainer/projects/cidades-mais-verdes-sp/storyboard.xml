@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<video>
+
+  <metadata>
+    <title>Por que essas 3 cidades do interior de SP têm mais árvores que a capital?</title>
+    <duration>3m45s</duration>
+    <durationInFrames>6750</durationInFrames>
+    <fps>30</fps>
+    <style>editorial documentary — Vox inspired — 1920x1080 horizontal YouTube</style>
+    <language>pt-BR</language>
+    <project>cidades-mais-verdes-sp</project>
+    <aspect>1920x1080</aspect>
+  </metadata>
+
+  <!-- ============================================================
+       SCENE 01 — ABERTURA: São Paulo concreto
+       ============================================================ -->
+  <scene id="01_abertura_sp_concreto" duration="12s" durationInFrames="360">
+    <voice>
+      São Paulo é a cidade do concreto, <break time="300ms"/> dos prédios <break time="200ms"/> e do trânsito. <break time="500ms"/>
+      Vista de cima, <break time="200ms"/> ela parece uma imensidão cinza.
+    </voice>
+    <visual>
+      Aerial drone footage de São Paulo capital — Marginal Tietê / Avenida Paulista, trânsito intenso, prédios. Corte para vista aérea cinza.
+      Overlay sutil: grade urbana em linhas finas (#333) — estética editorial Vox.
+    </visual>
+    <animation>
+      Entrada: fade in 12f + scale 1.05→1.0 com spring damping:200 (suave, não snappy). 
+      Ken Burns lento (zoom out 1.05→1.0 em 540f via interpolate).
+      Texto "SÃO PAULO" entra com TextReveal (slide up 16f + opacity).
+      Saída: fade out 12f.
+    </animation>
+    <onscreen>
+      <text position="center" style="big_title">SÃO PAULO</text>
+      <text position="bottom_left" style="caption">A cidade do concreto</text>
+    </onscreen>
+    <assets>
+      <asset type="VIDEO" description="Aerial drone São Paulo capital — trânsito e prédios" source="stock_or_generated" required="true" filename="sp_aerial_concreto.mp4" />
+      <asset type="TEXT" description="Título SÃO PAULO editorial" source="generated" required="true" filename="title_sp_concreto" />
+    </assets>
+    <transition>crossfade 12f</transition>
+  </scene>
+
+  <!-- ============================================================
+       SCENE 02 — ABERTURA: contraste / curiosidade interior
+       ============================================================ -->
+  <scene id="02_curiosidade_interior" duration="18s" durationInFrames="540">
+    <voice>
+      Mas existe um detalhe curioso. <break time="500ms"/>
+      Algumas cidades do interior do estado <break time="300ms"/> são muito mais arborizadas. <break time="400ms"/>
+      E algumas chegam perto de ter árvores em <emphasis level="strong">praticamente todas as ruas</emphasis>. <break time="500ms"/>
+      Hoje vamos descobrir quais são essas cidades <break time="300ms"/> — e o que elas fizeram diferente.
+    </voice>
+    <visual>
+      Corte rápido (smash cut) para rua arborizada no interior — copa fechada, sombra, casas baixas. Contraste visual cinza→verde.
+      Transição para mapa simplificado do estado de SP (flat, fundo #0A0A0A, contorno branco, interior em verde suave #2D7D46).
+      Mapa faz zoom out de SP capital para o estado todo.
+    </visual>
+    <animation>
+      Corte seco (hard cut) concreto→verde no beat da palavra "curioso" (interpolate frame 0→8 opacity 0→1).
+      Mapa entra com AnimatedMap: scale 1.3→1.0 (interpolate 0→840f), opacity 0→1 em 18f.
+      Texto "INTERIOR DE SP" com spring damping:200, delay 12f.
+      Saída: push left 16f.
+    </animation>
+    <onscreen>
+      <text position="center" style="big_number_sub">quase 100% das ruas com árvores</text>
+      <text position="bottom_center" style="label">Interior de São Paulo</text>
+    </onscreen>
+    <assets>
+      <asset type="VIDEO" description="Residential tree-lined street interior SP — late afternoon, real footage" source="stock_or_generated" required="true" filename="rua_arborizada_interior.mp4" />
+      <asset type="MAP" description="Mapa simplificado Estado de SP — flat Vox style" source="generated" required="true" filename="map_sp_estado.svg" />
+      <asset type="IMAGE" description="Close-up copa de árvore sobre rua" source="stock_or_generated" required="false" filename="copa_arvore_close.jpg" />
+      <prompt>Cinematic ground-level view of a tree-lined residential street in a medium Brazilian city, late afternoon, long shadows, realistic documentary photography, natural lighting, no text, no logos, houses with small front yards, asphalt street</prompt>
+    </assets>
+    <transition>push left 16f</transition>
+  </scene>
+
+  <!-- ============================================================
+       SCENE 03 — RANKING: gráfico de barras
+       ============================================================ -->
+  <scene id="03_ranking_barras" duration="21s" durationInFrames="630">
+    <voice>
+      Segundo o Censo de 2022 do IBGE, <break time="300ms"/> as três cidades mais arborizadas do Brasil ficam no interior de São Paulo. <break time="500ms"/>
+      <emphasis level="strong">Birigui</emphasis>, <break time="200ms"/> com <emphasis level="strong">98,4%</emphasis> das ruas com árvores. <break time="400ms"/>
+      <emphasis level="strong">Sertãozinho</emphasis>, <break time="200ms"/> com <emphasis level="strong">97,5%</emphasis>. <break time="400ms"/>
+      E <emphasis level="strong">São José do Rio Preto</emphasis>, <break time="200ms"/> com <emphasis level="strong">97,3%</emphasis>.
+    </voice>
+    <visual>
+      Fundo #0A0A0A. Gráfico de barras horizontais animado (BarChart) — 3 barras, ordem desc. Barra 1 (Birigui) em amarelo #FFF200, demais em verde #2D7D46.
+      Cada barra cresce da esquerda com spring damping:200, staggered 8f. Número grande aparece com BigNumber count-up.
+      Rodapé: "Fonte: IBGE — Censo 2022, Características Urbanísticas do Entorno dos Domicílios" em 14px #888.
+    </visual>
+    <animation>
+      Barra Birigui: width 0→98.4% em 28f (spring). Sertãozinho delay 10f, Rio Preto delay 20f.
+      Números fazem count-up 0→valor em 24f com interpolate.
+      Label de fonte fade in últimos 30f.
+      Saída: barras slide out left 16f staggered.
+    </animation>
+    <onscreen>
+      <text position="top_center" style="section_label">AS 3 MAIS ARBORIZADAS — BRASIL (IBGE 2022)</text>
+    </onscreen>
+    <chart type="horizontal_bar" unit="%">
+      <item label="Birigui" value="98.4" />
+      <item label="Sertãozinho" value="97.5" />
+      <item label="São José do Rio Preto" value="97.3" />
+    </chart>
+    <assets>
+      <asset type="CHART" description="Horizontal bar chart — 3 cidades mais arborizadas" source="generated" required="true" filename="chart_top3_arborizacao.svg" />
+      <asset type="TEXT" description="Fonte IBGE rodapé" source="generated" required="true" filename="fonte_ibge_2022" />
+    </assets>
+    <transition>slide left 16f</transition>
+  </scene>
+
+  <!-- ============================================================
+       SCENE 04 — RANKING: mapa localizando as 3
+       ============================================================ -->
+  <scene id="04_mapa_tres_cidades" duration="20s" durationInFrames="600">
+    <voice>
+      Todas no interior paulista. <break time="400ms"/>
+      Birigui, <break time="200ms"/> no noroeste. <break time="300ms"/>
+      Sertãozinho, <break time="200ms"/> perto de Ribeirão Preto. <break time="300ms"/>
+      E Rio Preto, <break time="200ms"/> o polo do noroeste. <break time="500ms"/>
+      Cidades médias, <break time="200ms"/> que cresceram de forma planejada.
+    </voice>
+    <visual>
+      Mapa do estado de SP (mesmo flat). Zoom sequencial: destaca Birigui (pulso amarelo #FFF200), depois Sertãozinho, depois Rio Preto.
+      Cada cidade recebe CityLabel + dot pulsante. Linhas finas conectam ao nome.
+      No canto, mini-cards com população IBGE: Birigui ~118k, Sertãozinho ~131k, Rio Preto ~480k (texto pequeno, não competir com mapa).
+    </visual>
+    <animation>
+      Mapa base opacity 0→1 em 12f. 
+      Birigui dot: scale 0→1 spring damping:15 em frame 60, pulso loop (scale 1→1.2→1 em 30f).
+      Sertãozinho delay 180f, Rio Preto delay 360f.
+      CityLabel slide up 10f cada.
+      Zoom sutil do mapa 1.0→1.08 via interpolate 0→900f.
+      Saída: fade out 14f.
+    </animation>
+    <onscreen>
+      <text position="top_left" style="city_label">Birigui — 98,4%</text>
+      <text position="center" style="city_label">Sertãozinho — 97,5%</text>
+      <text position="bottom_right" style="city_label">São José do Rio Preto — 97,3%</text>
+    </onscreen>
+    <assets>
+      <asset type="MAP" description="Mapa SP com 3 cidades destacadas — sequência" source="generated" required="true" filename="map_sp_tres_cidades.svg" />
+      <asset type="ICON" description="Dot pulsante amarelo Vox" source="generated" required="true" filename="dot_pulse.svg" />
+    </assets>
+    <transition>fade 14f</transition>
+  </scene>
+
+  <!-- ============================================================
+       SCENE 05 — POR QUE: planejamento
+       ============================================================ -->
+  <scene id="05_porque_planejamento" duration="21s" durationInFrames="630">
+    <voice>
+      Arborização urbana não acontece por acaso. <break time="500ms"/>
+      Ela depende de <emphasis level="strong">planejamento</emphasis>, <break time="200ms"/> plantio, <break time="200ms"/> regras municipais <break time="200ms"/> e manutenção <break time="300ms"/> ao longo de décadas. <break time="500ms"/>
+      Não basta plantar. <break time="300ms"/> É preciso cuidar.
+    </voice>
+    <visual>
+      Montagem editorial: 3 imagens em grid sutil (mudas em viveiro, equipe de poda, rua com árvores jovens + adultas).
+      Ícones lineares minimalistas aparecem: planejamento (prancheta) → plantio (muda) → regras (documento) → manutenção (pá).
+      Fundo permanece #0A0A0A, imagens com borda fina #333.
+    </visual>
+    <animation>
+      Imagens entram com stagger: image1 frame 0 slide up 14f, image2 delay 10f, image3 delay 20f. Opacity 0→1.
+      Ícones desenham com stroke-dashoffset (interpolate 0→1 em 20f cada, stagger 12f).
+      Texto "NÃO ACONTECE POR ACASO" com TextReveal (clip-path inset 0 100% 0 0 → 0 0 0 0 em 24f).
+      Saída: grid fade out 12f.
+    </animation>
+    <onscreen>
+      <text position="center" style="quote">Arborização não acontece por acaso.</text>
+      <text position="bottom_center" style="labels_row">planejamento · plantio · regras · manutenção</text>
+    </onscreen>
+    <assets>
+      <asset type="IMAGE" description="Viveiro de mudas — viveiro municipal" source="stock_or_generated" required="true" filename="viveiro_mudas.jpg" />
+      <asset type="IMAGE" description="Equipe de poda/manutenção urbana" source="stock_or_generated" required="true" filename="equipe_manutencao.jpg" />
+      <asset type="IMAGE" description="Rua com árvores de idades mistas" source="stock_or_generated" required="true" filename="rua_arvores_jovens_adultas.jpg" />
+      <asset type="ICON" description="Ícones lineares planejamento/plantio/regras/manutenção" source="generated" required="true" filename="icons_planejamento.svg" />
+      <prompt>Documentary photo of a municipal nursery with rows of young tree seedlings in black bags, Brazilian city, natural daylight, organized, no text</prompt>
+    </assets>
+    <transition>fade 12f</transition>
+  </scene>
+
+  <!-- ============================================================
+       SCENE 06 — TIMELINE: plantio → cidade arborizada
+       ============================================================ -->
+  <scene id="06_timeline_crescimento" duration="18s" durationInFrames="540">
+    <voice>
+      Pense assim: <break time="300ms"/> plantio, <break time="200ms"/> crescimento, <break time="200ms"/> manutenção <break time="300ms"/> e, <break time="200ms"/> só então, <break time="300ms"/> uma cidade arborizada. <break time="500ms"/>
+      É um processo de <emphasis level="strong">anos</emphasis>, <break time="200ms"/> não de meses.
+    </voice>
+    <visual>
+      Timeline horizontal (Timeline component) — 4 etapas com círculos conectados por linha. Cada etapa tem ícone + ano ilustrativo (ex: 1990 → 2005 → 2015 → 2025).
+      Linha desenha da esquerda para direita. Fundo #0A0A0A, linha #FFF200, círculos #2D7D46 com borda amarela no ativo.
+      Abaixo: foto que evolui de muda → árvore adulta (crossfade entre 2 imagens).
+    </visual>
+    <animation>
+      Linha: width 0→100% via interpolate 0→600f, ease InOut.
+      Círculos pop com spring damping:15 staggered: 0f, 180f, 360f, 540f.
+      Labels fade in após pop (8f).
+      Imagem muda→adulta crossfade em 30f no frame 400.
+      Saída: timeline slide up + fade 14f.
+    </animation>
+    <onscreen>
+      <text position="center" style="timeline_labels">plantio → crescimento → manutenção → cidade arborizada</text>
+    </onscreen>
+    <assets>
+      <asset type="CHART" description="Timeline 4 etapas — linha do tempo" source="generated" required="true" filename="timeline_plantio.svg" />
+      <asset type="IMAGE" description="Muda jovem vs árvore adulta — evolução" source="stock_or_generated" required="true" filename="evolucao_muda_adulta.jpg" />
+    </assets>
+    <transition>slide up 14f</transition>
+  </scene>
+
+  <!-- ============================================================
+       SCENE 07 — IMPACTO: sombra e calor
+       ============================================================ -->
+  <scene id="07_impacto_sombra_calor" duration="20s" durationInFrames="600">
+    <voice>
+      E por que isso importa? <break time="400ms"/>
+      Árvores dão <emphasis level="strong">sombra</emphasis>. <break time="300ms"/> Reduzem o calor. <break time="300ms"/> Deixam a rua mais confortável para quem caminha. <break time="400ms"/>
+      Em cidades quentes do interior, <break time="300ms"/> isso faz diferença todos os dias.
+    </voice>
+    <visual>
+      Imagem real de rua arborizada com sombra densa sobre calçada e asfalto. Overlay de termômetro ilustrativo (sem número inventado) — ícone de sol → sombra.
+      No canto: pequeno ícone de pedestre caminhando sob sombra.
+      Texto editorial: "SOMBRA · CONFORTO · AMBIENTE"
+    </visual>
+    <animation>
+      Imagem entra com scale 1.04→1.0 (ken burns) em 900f.
+      Overlay de sombra: shape preto 20% opacity que expande via interpolate 0→300f para simular cobertura.
+      Ícone pedestre slide in left 16f com spring.
+      Texto fade in staggered 10f.
+      Saída: fade 12f.
+    </animation>
+    <onscreen>
+      <text position="bottom_left" style="caption">Sombra que faz diferença</text>
+    </onscreen>
+    <assets>
+      <asset type="IMAGE" description="Rua com sombra densa — calçada sombreada" source="stock_or_generated" required="true" filename="rua_sombra_densa.jpg" />
+      <asset type="ICON" description="Ícones sol/sombra/pedestre" source="generated" required="true" filename="icons_sombra.svg" />
+      <prompt>Realistic documentary photo of a residential street in Brazil with dense tree canopy casting long shadows on sidewalk and asphalt, late afternoon sun, people walking comfortably, natural colors, no text</prompt>
+    </assets>
+    <transition>fade 12f</transition>
+  </scene>
+
+  <!-- ============================================================
+       SCENE 08 — SPLIT: rua sem × rua com árvores
+       ============================================================ -->
+  <scene id="08_split_rua_comparacao" duration="16s" durationInFrames="480">
+    <voice>
+      Compare: <break time="400ms"/> uma rua sem árvores <break time="300ms"/> e uma rua arborizada. <break time="500ms"/>
+      A diferença não é só visual. <break time="300ms"/> É térmica, <break time="200ms"/> é de conforto.
+    </voice>
+    <visual>
+      SplitComparison — esquerda: rua sem árvores, asfalto exposto, sol forte. Direita: rua arborizada, sombra, verde.
+      Divisor central amarelo #FFF200 com label "×". Cada lado com label inferior.
+      Sem números de temperatura inventados — apenas percepção visual + ícone de termômetro ilustrativo (sem valor).
+    </visual>
+    <animation>
+      Split entra com divider animado: width 0→4px em 12f, lados slide in (left -40→0, right 40→0) com spring damping:200.
+      Labels fade in delay 16f.
+      Hover sutil: lado arborizado brilha (opacity 1→0.95→1 em loop 40f).
+      Saída: split fecha ao centro (scaleX 1→0 em 14f).
+    </animation>
+    <onscreen>
+      <text position="center" style="vs_label">×</text>
+      <text position="bottom_left" style="split_label">Rua sem árvores</text>
+      <text position="bottom_right" style="split_label_highlight">Rua arborizada</text>
+    </onscreen>
+    <assets>
+      <asset type="IMAGE" description="Rua sem árvores — asfalto exposto, sem sombra" source="stock_or_generated" required="true" filename="rua_sem_arvores.jpg" />
+      <asset type="IMAGE" description="Rua arborizada — sombra densa" source="stock_or_generated" required="true" filename="rua_com_arvores.jpg" />
+      <prompt>Realistic documentary photo of a bare urban street in Brazil with no trees, exposed asphalt, harsh sun, no shadows, same framing as tree-lined street for direct comparison, no text</prompt>
+    </assets>
+    <transition>scaleX close 14f</transition>
+  </scene>
+
+  <!-- ============================================================
+       SCENE 09 — IMPACTO: chuva / infiltração (sem número inventado)
+       ============================================================ -->
+  <scene id="09_impacto_chuva" duration="15s" durationInFrames="450">
+    <voice>
+      As árvores também ajudam com a chuva. <break time="400ms"/>
+      Parte da água fica nas copas, <break time="300ms"/> parte infiltra no solo. <break time="400ms"/>
+      É um benefício silencioso, <break time="200ms"/> mas importante.
+    </voice>
+    <visual>
+      Ilustração editorial simples: chuva caindo sobre copa → setas para infiltração no solo. Ícones de gota + solo + copa.
+      Fundo #0A0A0A, gotas em azul claro #7FB8D4, copa em verde #2D7D46.
+      Sem percentuais — apenas conceito visual.
+    </visual>
+    <animation>
+      Gotas caem com interpolate y -20→40 em loop 20f (3 gotas staggered).
+      Copa pulsa levemente (scale 1→1.02→1 em 40f).
+      Setas de infiltração desenham com stroke-dashoffset 0→1 em 24f.
+      Texto fade in 12f.
+      Saída: fade 12f.
+    </animation>
+    <onscreen>
+      <text position="bottom_center" style="caption">Interceptação e infiltração</text>
+    </onscreen>
+    <assets>
+      <asset type="ICON" description="Ilustração chuva → copa → solo" source="generated" required="true" filename="ilustra_chuva_infiltracao.svg" />
+    </assets>
+    <transition>fade 12f</transition>
+  </scene>
+
+  <!-- ============================================================
+       SCENE 10 — E A CAPITAL: desigualdade da distribuição
+       ============================================================ -->
+  <scene id="10_e_a_capital" duration="21s" durationInFrames="630">
+    <voice>
+      E a capital? <break time="500ms"/>
+      São Paulo tem muitas áreas verdes, <break time="300ms"/> mas a distribuição é desigual. <break time="500ms"/>
+      Algumas regiões são bem arborizadas. <break time="300ms"/> Outras, <break time="200ms"/> quase nada. <break time="500ms"/>
+      Não basta saber <emphasis level="strong">quanto</emphasis> verde existe. <break time="300ms"/> Importa <emphasis level="strong">onde</emphasis> ele está.
+    </voice>
+    <visual>
+      Mapa da cidade de São Paulo (contorno simplificado) com heatmap ilustrativo: zonas mais verdes (verde #2D7D46) vs menos verdes (cinza #333).
+      Destaque para contraste: zona sul/parques vs periferia leste.
+      Overlay de texto editorial central: "ONDE o verde está"
+      Sem mapa detalhado por bairro — apenas conceito de desigualdade.
+    </visual>
+    <animation>
+      Mapa fade in 14f + scale 1.08→1.0.
+      Heatmap aparece com opacity 0→1 em 20f, com pulso sutil nas áreas menos verdes (opacity 0.6→1 loop 40f para chamar atenção).
+      Texto "ONDE" com BigNumber style (yellow #FFF200) scale 0.8→1 spring damping:15.
+      Saída: mapa zoom out 1.0→1.08 + fade 14f.
+    </animation>
+    <onscreen>
+      <text position="center" style="quote_highlight">Não basta quanto verde existe.</text>
+      <text position="center_below" style="quote_highlight_yellow">Importa onde ele está.</text>
+    </onscreen>
+    <assets>
+      <asset type="MAP" description="Mapa São Paulo capital — heatmap desigualdade verde" source="generated" required="true" filename="map_sp_capital_desigual.svg" />
+      <asset type="TEXT" description="Texto ONDE editorial" source="generated" required="true" filename="texto_onde" />
+    </assets>
+    <transition>zoom out 14f</transition>
+  </scene>
+
+  <!-- ============================================================
+       SCENE 11 — CONCLUSÃO: planejamento + continuidade
+       ============================================================ -->
+  <scene id="11_conclusao_planejamento" duration="20s" durationInFrames="600">
+    <voice>
+      Birigui, <break time="200ms"/> Sertãozinho <break time="200ms"/> e São José do Rio Preto mostram que uma cidade mais verde <break time="300ms"/> não aparece por acaso. <break time="500ms"/>
+      Ela depende de planejamento, <break time="200ms"/> espaço, <break time="200ms"/> manutenção <break time="200ms"/> e continuidade. <break time="500ms"/>
+      Décadas de escolhas.
+    </voice>
+    <visual>
+      Imagem aérea das 3 cidades (colagem editorial 3-up) — cada uma com borda verde, nome + 98.4/97.5/97.3 em amarelo pequeno.
+      Abaixo: 4 palavras-chave com ícones: PLANEJAMENTO · ESPAÇO · MANUTENÇÃO · CONTINUIDADE.
+      Fundo #0A0A0A, colagem com gap 12px.
+    </visual>
+    <animation>
+      3 imagens stagger slide up 16f cada (delay 0, 10, 20f) com opacity 0→1.
+      Palavras-chave fade in staggered 8f cada, com underline amarelo que desenha (width 0→100% em 14f).
+      Saída: colagem scale 1→1.02 + fade 12f.
+    </animation>
+    <onscreen>
+      <text position="bottom_center" style="keywords">PLANEJAMENTO · ESPAÇO · MANUTENÇÃO · CONTINUIDADE</text>
+    </onscreen>
+    <assets>
+      <asset type="IMAGE" description="Aerial Birigui arborizada" source="stock_or_generated" required="true" filename="aerial_birigui.jpg" />
+      <asset type="IMAGE" description="Aerial Sertãozinho arborizada" source="stock_or_generated" required="true" filename="aerial_sertaozinho.jpg" />
+      <asset type="IMAGE" description="Aerial São José do Rio Preto arborizada" source="stock_or_generated" required="true" filename="aerial_sjrp.jpg" />
+      <prompt>Cinematic aerial view of a medium Brazilian city with dense tree canopy covering residential streets, late afternoon, realistic documentary photography, natural lighting, no text</prompt>
+    </assets>
+    <transition>fade 12f</transition>
+  </scene>
+
+  <!-- ============================================================
+       SCENE 12 — PERGUNTA FINAL
+       ============================================================ -->
+  <scene id="12_pergunta_final" duration="14s" durationInFrames="420">
+    <voice>
+      A pergunta não é apenas <emphasis level="strong">quantas</emphasis> árvores uma cidade tem. <break time="400ms"/>
+      A pergunta é: <break time="300ms"/><emphasis level="strong">onde</emphasis> estão essas árvores?
+    </voice>
+    <visual>
+      Tela preta #0A0A0A. Texto editorial central em branco, com "onde" em amarelo #FFF200 grande.
+      Tipografia: 72px bold, tracking -1px, centralizado. Sem imagem — foco total no texto.
+    </visual>
+    <animation>
+      Texto entra com TextReveal (y 20→0 + opacity 0→1) em 18f, spring damping:200.
+      "onde" pulsa scale 1→1.04→1 em 30f após aparecer.
+      Hold 400f, saída fade 14f.
+    </animation>
+    <onscreen>
+      <text position="center" style="quote">A pergunta não é quantas árvores uma cidade tem.</text>
+      <text position="center_below" style="quote_yellow_big">A pergunta é: onde estão essas árvores?</text>
+    </onscreen>
+    <assets>
+      <asset type="TEXT" description="Texto pergunta final editorial" source="generated" required="true" filename="texto_pergunta_final" />
+    </assets>
+    <transition>fade 14f</transition>
+  </scene>
+
+  <!-- ============================================================
+       SCENE 13 — CTA COMENTÁRIOS
+       ============================================================ -->
+  <scene id="13_cta_comentarios" duration="9s" durationInFrames="270">
+    <voice>
+      E a sua cidade? <break time="400ms"/> É arborizada?
+    </voice>
+    <visual>
+      Tela #0A0A0A. Texto grande: "E A SUA CIDADE?" em branco, "É ARBORIZADA?" em amarelo #FFF200.
+      Abaixo: "Comente 👇" + ícones de comentário. Rodapé: "Fonte: IBGE — Censo 2022" em #888 14px.
+      Botão ilustrativo "Comentar" com borda amarela.
+    </visual>
+    <animation>
+      Texto scale 0.96→1 spring damping:15 em 18f, opacity 0→1.
+      "Comente" bounce sutil (y 4→0 em 12f).
+      Hold, fade out 12f + scale 1→1.02.
+    </animation>
+    <onscreen>
+      <text position="center" style="cta_big">E A SUA CIDADE?</text>
+      <text position="center_below" style="cta_yellow">É ARBORIZADA? — Comente 👇</text>
+    </onscreen>
+    <assets>
+      <asset type="TEXT" description="CTA comentários" source="generated" required="true" filename="cta_comentarios" />
+    </assets>
+    <transition>fade out 12f to black</transition>
+  </scene>
+
+</video>

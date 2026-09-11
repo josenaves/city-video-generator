@@ -27,7 +27,7 @@
       "visual": {
         "primaryColor": "#8B4513",
         "secondaryColor": "#D2691E",
-        "image": "cities/serra-da-saudade.jpg"
+        "image": "images/cities/mg/s/serra-da-saudade.jpg"
       }
     },
     {
@@ -44,7 +44,7 @@
       "visual": {
         "primaryColor": "#CD853F",
         "secondaryColor": "#8B4513",
-        "image": "cities/morro-da-garca.jpg"
+        "image": "images/cities/mg/m/morro-da-garca.jpg"
       }
     },
     {
@@ -61,7 +61,7 @@
       "visual": {
         "primaryColor": "#FFD700",
         "secondaryColor": "#B8860B",
-        "image": "cities/lassance.jpg"
+        "image": "images/cities/mg/l/lassance.jpg"
       }
     },
     {
@@ -78,7 +78,7 @@
       "visual": {
         "primaryColor": "#DEB887",
         "secondaryColor": "#8B4513",
-        "image": "cities/conego-marinho.jpg"
+        "image": "images/cities/mg/c/conego-marinho.jpg"
       }
     },
     {
@@ -95,7 +95,7 @@
       "visual": {
         "primaryColor": "#F4A460",
         "secondaryColor": "#8B4513",
-        "image": "cities/dom-bosco.jpg"
+        "image": "images/cities/mg/d/dom-bosco.jpg"
       }
     },
     {
@@ -112,7 +112,7 @@
       "visual": {
         "primaryColor": "#20B2AA",
         "secondaryColor": "#008B8B",
-        "image": "cities/guaraciama.jpg"
+        "image": "images/cities/mg/g/guaraciama.jpg"
       }
     },
     {
@@ -129,7 +129,7 @@
       "visual": {
         "primaryColor": "#696969",
         "secondaryColor": "#A9A9A9",
-        "image": "cities/senador-modestino.jpg"
+        "image": "images/cities/mg/s/senador-modestino.jpg"
       }
     },
     {
@@ -146,7 +146,7 @@
       "visual": {
         "primaryColor": "#4682B4",
         "secondaryColor": "#2E8B57",
-        "image": "cities/cabeceira-grande.jpg"
+        "image": "images/cities/mg/c/cabeceira-grande.jpg"
       }
     },
     {
@@ -163,7 +163,7 @@
       "visual": {
         "primaryColor": "#6B8E23",
         "secondaryColor": "#556B2F",
-        "image": "cities/montezuma.jpg"
+        "image": "images/cities/mg/m/montezuma.jpg"
       }
     },
     {
@@ -180,7 +180,7 @@
       "visual": {
         "primaryColor": "#DAA520",
         "secondaryColor": "#B8860B",
-        "image": "cities/jose-goncalves-minas.jpg"
+        "image": "images/cities/mg/j/jose-goncalves-minas.jpg"
       }
     }
   ]

@@ -12,7 +12,6 @@ import {
   CHAMP_CAMPAIGN_DURATION,
 } from "./ChampionshipVideo";
 
-// @ts-ignore
 import uberlandiaUberabaData from "./data/uberlandia-uberaba.json";
 import {
   CampaignVideo,
@@ -20,258 +19,148 @@ import {
 } from "./features/campaign-one-vs-many";
 import { Top10CidadesVideo } from "./features/top-10-cidades/Top10CidadesVideo";
 import { calculateTop10Duration } from "./features/top-10-cidades/utils";
+import { VoxExplainerVideo } from "./features/vox-explainer/VoxExplainerVideo";
+import { VOX_CIDADES_VERDES_TOTAL_FRAMES } from "./features/vox-explainer/utils/timing";
+import { Beat03Newsprint, Beat03Swiss, Beat03AmericanRetro } from "./features/vox-explainer/bakeoff/Beat03Bakeoff";
 
-// @ts-ignore
 import campaignTestData from "./data/campaign-test.json";
 
-// @ts-ignore
 import campoGrandeCuiabaData from "./data/campo-grande-cuiaba.json";
-// @ts-ignore
 import arceburgoGuaranesiaData from "./data/arceburgo-guaranesia.json";
-// @ts-ignore
 import saoJoseRioPardoMococaData from "./data/sao-jose-rio-pardo-mococa.json";
-// @ts-ignore
 import jundiaiSorocabaData from "./data/jundiai-sorocaba.json";
-// @ts-ignore
 import extremaPousoAlegreData from "./data/extrema-pouso-alegre.json";
-// @ts-ignore
 import bauruRibeiraoPretoData from "./data/bauru-ribeirao-preto.json";
-// @ts-ignore
 import alfenasGuaxupeData from "./data/alfenas-guaxupe.json";
-// @ts-ignore
 import lemeArarasData from "./data/leme-araras.json";
-// @ts-ignore
 import santaMariaPelotasData from "./data/santa-maria-pelotas.json";
-// @ts-ignore
 import joinvilleBlumenauData from "./data/joinville-blumenau.json";
-// @ts-ignore
 import assisBauruData from "./data/assis-bauru.json";
-// @ts-ignore
 import londrinaMaringaData from "./data/londrina-maringa.json";
-// @ts-ignore
 import itajaiJoinvilleData from "./data/itajai-joinville.json";
-// @ts-ignore
 import ribeiraoPretoSJRioPretoData from "./data/ribeirao-preto-sj-rio-preto.json";
-// @ts-ignore
 import bauruMariliaData from "./data/bauru-marilia.json";
-// @ts-ignore
 import saoSebastiaoPassosData from "./data/sao-sebastiao-passos.json";
-// @ts-ignore
 import francaSaoSebastiaoData from "./data/franca-sao-sebastiao.json";
-// @ts-ignore
 import tubaraoCriciumaData from "./data/tubarao-criciuma.json";
-// @ts-ignore
 import curitibaCampinasData from "./data/curitiba-campinas.json";
-// @ts-ignore
 import barueriItapeviData from "./data/barueri-itapevi.json";
-// @ts-ignore
 import barueriSaoCaetanoData from "./data/barueri-sao-caetano-do-sul.json";
-// @ts-ignore
 import barueriCarapicuibaData from "./data/barueri-carapicuiba.json";
-// @ts-ignore
 import barueriOsascoData from "./data/barueri-osasco.json";
-// @ts-ignore
 import barueriSantanaParnaibaData from "./data/barueri-santana-do-parnaiba.json";
-// @ts-ignore
 import portoUniaoUniaoDaVitoriaData from "./data/porto-uniao-uniao-da-vitoria.json";
-// @ts-ignore
 import mococaParaisoData from "./data/mococa-paraiso.json";
-// @ts-ignore
 import aracajuMaceioData from "./data/aracaju-maceio.json";
-// @ts-ignore
 import santaMariaPassoFundoData from "./data/santa-maria-passo-fundo.json";
-// @ts-ignore
 import muzambinhoArceburgoData from "./data/muzambinho-arceburgo.json";
-// @ts-ignore
 import ribeiraoSaoCarlosData from "./data/ribeirao-sao-carlos.json";
-// @ts-ignore
 import mariliaPrudenteData from "./data/marilia-prudente.json";
-// @ts-ignore
 import goianiaCampoGrandeData from "./data/goiania-campo-grande.json";
-// @ts-ignore
 import guaxupeTapiratibaData from "./data/guaxupe-tapiratiba.json";
-// @ts-ignore
 import guaxupeMococaData from "./data/guaxupe-mococa.json";
-// @ts-ignore
 import pelotasBageData from "./data/pelotas-bage.json";
-// @ts-ignore
 import pontaPoraDouradosData from "./data/ponta-pora-dourados.json";
-// @ts-ignore
 import mariliaAssisData from "./data/marilia-assis.json";
-// @ts-ignore
 import maringaPontaGrossaData from "./data/maringa-ponta-grossa.json";
-// @ts-ignore
 import pontaGrossaLondrinaData from "./data/ponta-grossa-londrina.json";
-// @ts-ignore
 import cabreuvaItupevaData from "./data/cabreuva-itupeva.json";
-// @ts-ignore
 import itupevaLouveiraData from "./data/itupeva-louveira.json";
-// @ts-ignore
 import vinhedoValinhosData from "./data/vinhedo-valinhos.json";
-// @ts-ignore
 import tresCoracoesVarginhaData from "./data/tres-coracoes-varginha.json";
-// @ts-ignore
 import mogiGuacuMogiMirimData from "./data/mogi-guacu-mogi-mirim.json";
-// @ts-ignore
 import saoJoseDosPinhaisCuritibaData from "./data/sao-jose-dos-pinhais-curitiba.json";
-// @ts-ignore
 import saoJoseDosPinhaisPontaGrossaData from "./data/sao-jose-dos-pinhais-ponta-grossa.json";
-// @ts-ignore
 import saoJoseDosPinhaisAraucariaData from "./data/sao-jose-dos-pinhais-araucaria.json";
-// @ts-ignore
 import joanopolisPiracaiaData from "./data/joanopolis-piracaia.json";
-// @ts-ignore
 import itapiraEstivaGerbiData from "./data/itapira-estiva-gerbi.json";
-// @ts-ignore
 import joaoPessoaMaceioData from "./data/joao-pessoa-maceio.json";
-// @ts-ignore
 import joaoPessoaNatalData from "./data/joao-pessoa-natal.json";
-// @ts-ignore
 import joaoPessoaRecifeData from "./data/joao-pessoa-recife.json";
-// @ts-ignore
 import francoDaRochaJundiaiData from "./data/franco-da-rocha-jundiai.json";
-// @ts-ignore
 import francoDaRochaFranciscoMoratoData from "./data/franco-da-rocha-francisco-morato.json";
-// @ts-ignore
 import guaxupeMuzambinhoData from "./data/guaxupe-muzambinho.json";
-// @ts-ignore
 import caieirasFrancoDaRochaData from "./data/caieiras-franco-da-rocha.json";
-// @ts-ignore
 import presidentePrudenteLondrinaData from "./data/presidente-prudente-londrina.json";
-// @ts-ignore
 import betimContagemData from "./data/betim-contagem.json";
-// @ts-ignore
 import aiuruocaCaxambuData from "./data/aiuruoca-caxambu.json";
-// @ts-ignore
 import tombosFariaLemosData from "./data/tombos-faria-lemos.json";
-// @ts-ignore
 import cacondeTapiratibaData from "./data/caconde-tapiratiba.json";
-// @ts-ignore
 import campinaGrandeDoSulQuatroBarrasData from "./data/campina-grande-do-sul-quatro-barras.json";
-// @ts-ignore
 import juruaiaMuzambinhoData from "./data/juruaia-muzambinho.json";
-// @ts-ignore
 import guaranesiaJuruaiaData from "./data/guaranesia-juruaia.json";
-// @ts-ignore
 import guaxupeGuaranesiaData from "./data/guaxupe-guaranesia.json";
-// @ts-ignore
 import cananeiaIlhaCompridaData from "./data/cananeia-ilha-comprida.json";
-// @ts-ignore
 import gaviaoPeixotoSaoJoseDosCamposData from "./data/gaviao-peixoto-sao-jose-dos-campos.json";
-// @ts-ignore
 import jundiaiItuData from "./data/jundiai-itu.json";
-// @ts-ignore
 import uberabaSacramentoData from "./data/uberaba-sacramento.json";
-// @ts-ignore
 import brusqueBlumenauData from "./data/brusque-blumenau.json";
-// @ts-ignore
 import varginhaPousoAlegreData from "./data/varginha-pouso-alegre.json";
-// @ts-ignore
 import aguasDeLindoiaSerraNegraData from "./data/aguas-de-lindoia-serra-negra.json";
-// @ts-ignore
 import jundiaiIndaiatubaData from "./data/jundiai-indaiatuba.json";
-// @ts-ignore
 import mococaSaoJoseRioPardoData from "./data/mococa-sao-jose-do-rio-pardo.json";
-// @ts-ignore
 import santaCruzDoSulLajeadoData from "./data/santa-cruz-do-sul-lajeado.json";
-// @ts-ignore
 import parintinsSantaremData from "./data/parintins-santarem.json";
-// @ts-ignore
 import novaRodelasPauloAfonsoData from "./data/nova-rodelas-paulo-afonso.json";
-// @ts-ignore
 import guaxupeRegiaoData from "./data/guaxupe-regiao-1v10.json";
 
-// @ts-ignore
 import caxambuSaoLourencoData from "./data/caxambu-sao-lourenco.json";
 
-// @ts-ignore
 import caxambuCampaignData from "./data/caxambu-campaign.json";
 
-// @ts-ignore
 import caxambuVs10Data from "./data/caxambu-vs-10.json";
 
-// @ts-ignore
 import jacuiVs10Data from "./data/jacui-vs-10.json";
 
-// @ts-expect-error JSON import without type definitions
 import mariliaVs10Data from "./data/marilia-vs-10.json";
-// @ts-ignore
 import tubaraoVs10Data from "./data/tubarao-vs-10.json";
 
-// @ts-ignore
 import caxiasDoSulPassoFundoData from "./data/caxias-do-sul-passo-fundo.json";
 
-// @ts-ignore
 import caxiasDoSulVs10Data from "./data/caxias-do-sul-vs-10.json";
 
-// @ts-ignore
 import tombosRessaquinhaData from "./data/tombos-ressaquinha.json";
-// @ts-ignore
 import mirassolVotuporangaData from "./data/mirassol-votuporanga.json";
-// @ts-ignore
 import atibaiaBragancaData from "./data/atibaia-braganca.json";
-// @ts-ignore
 import alfenasVarginhaData from "./data/alfenas-varginha.json";
-// @ts-ignore
 import varginhaTresCoracoesData from "./data/varginha-tres-coracoes.json";
-// @ts-ignore
 import gvIpatingaData from "./data/gv-ipatinga.json";
-// @ts-ignore
 import recifeOlindaData from "./data/recife-olinda.json";
-// @ts-ignore
 import juruaiaGuaxupeData from "./data/juruaia-guaxupe.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10PopulosasData from "./data/top-10/cidades-mais-populosas.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10PobresMinhasData from "./data/top-10/cidades-mais-pobres-minas.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10RicasSCData from "./data/top-10/cidades-mais-ricas-santa-catarina.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10ViolentasSCData from "./data/top-10/cidades-mais-violentas-santa-catarina.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10PobresSCData from "./data/top-10/cidades-mais-pobres-santa-catarina.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10PobresRSData from "./data/top-10/cidades-mais-pobres-rs.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10PobresParanaData from "./data/top-10/cidades-mais-pobres-parana.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10ViolentasParanaData from "./data/top-10/cidades-mais-violentas-parana.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10ViolentasMGData from "./data/top-10/cidades-mais-violentas-mg.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10PobresSPData from "./data/top-10/cidades-mais-pobres-sp.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10ViolentasSPData from "./data/top-10/cidades-mais-violentas-sp.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10PobresGoiasData from "./data/top-10/goias-poorest-cities.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10ViolentasGoiasData from "./data/top-10/cidades-mais-violentas-goias.json";
 
-// @ts-expect-error JSON import without type definitions
 import top10EnchentesData from "./data/top-10/piores-enchentes-brasil-30-anos.json";
 
 
 // Championships
-// @ts-ignore
 import mogiChampionshipData from "./data/championships/mogi.json";
-// @ts-ignore
 import oestePaulistaData from "./data/championships/oeste-paulista.json";
-// @ts-ignore
 import fronteiraMSData from "./data/championships/fronteira-ms.json";
-// @ts-ignore
 import capitaisSudesteData from "./data/championships/capitais-sudeste.json";
 
 // Each <Composition> is an entry in the sidebar!
@@ -324,7 +213,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="CampaignOneVsManyTest"
         component={CampaignVideo}
-        durationInFrames={calculateCampaignTotalDuration(campaignTestData)}
+        durationInFrames={calculateCampaignTotalDuration(campaignTestData as any)}
         fps={30}
         width={1920}
         height={1080}
@@ -344,7 +233,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="CaxambuCampaign"
         component={CampaignVideo}
-        durationInFrames={calculateCampaignTotalDuration(caxambuCampaignData)}
+        durationInFrames={calculateCampaignTotalDuration(caxambuCampaignData as any)}
         fps={30}
         width={1920}
         height={1080}
@@ -353,7 +242,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="CaxambuVs10Campaign"
         component={CampaignVideo}
-        durationInFrames={calculateCampaignTotalDuration(caxambuVs10Data)}
+        durationInFrames={calculateCampaignTotalDuration(caxambuVs10Data as any)}
         fps={30}
         width={1920}
         height={1080}
@@ -362,7 +251,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="JacuiVs10Campaign"
         component={CampaignVideo}
-        durationInFrames={calculateCampaignTotalDuration(jacuiVs10Data)}
+        durationInFrames={calculateCampaignTotalDuration(jacuiVs10Data as any)}
         fps={30}
         width={1920}
         height={1080}
@@ -371,7 +260,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="MariliaVs10Campaign"
         component={CampaignVideo}
-        durationInFrames={calculateCampaignTotalDuration(mariliaVs10Data)}
+        durationInFrames={calculateCampaignTotalDuration(mariliaVs10Data as any)}
         fps={30}
         width={1920}
         height={1080}
@@ -380,7 +269,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="TubaraoVs10Campaign"
         component={CampaignVideo}
-        durationInFrames={calculateCampaignTotalDuration(tubaraoVs10Data)}
+        durationInFrames={calculateCampaignTotalDuration(tubaraoVs10Data as any)}
         fps={30}
         width={1920}
         height={1080}
@@ -389,7 +278,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="CaxiasDoSulVs10Campaign"
         component={CampaignVideo}
-        durationInFrames={calculateCampaignTotalDuration(caxiasDoSulVs10Data)}
+        durationInFrames={calculateCampaignTotalDuration(caxiasDoSulVs10Data as any)}
         fps={30}
         width={1920}
         height={1080}
@@ -2056,6 +1945,23 @@ export const RemotionRoot: React.FC = () => {
           bpm: 140,
         }}
       />
+
+      {/* VoxExplainer — Cidades Mais Verdes de SP (3m45s) */}
+      <Composition
+        id="VoxCidadesMaisVerdesSP"
+        component={VoxExplainerVideo}
+        durationInFrames={VOX_CIDADES_VERDES_TOTAL_FRAMES}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          project: "cidades-mais-verdes-sp",
+          audioSrc: "audio/vox-cidades-verdes-ptbr.mp3",
+        }}
+      />
+      <Composition id="BakeoffBeat03Newsprint" component={Beat03Newsprint} durationInFrames={630} fps={30} width={1920} height={1080} />
+      <Composition id="BakeoffBeat03Swiss" component={Beat03Swiss} durationInFrames={630} fps={30} width={1920} height={1080} />
+      <Composition id="BakeoffBeat03AmericanRetro" component={Beat03AmericanRetro} durationInFrames={630} fps={30} width={1920} height={1080} />
     </>
 
   );

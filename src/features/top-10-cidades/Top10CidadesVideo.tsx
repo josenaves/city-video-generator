@@ -121,7 +121,7 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       {/* Background Audio with Fade Out */}
-      <Sequence from={0} durationInFrames={totalDuration}>
+      <Sequence durationInFrames={totalDuration}>
         <Audio src={staticFile(audioTrack)} volume={audioVolume} />
       </Sequence>
 

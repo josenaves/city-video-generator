@@ -25,11 +25,16 @@ export const BattleScene: React.FC<BattleSceneProps> = ({
     roundDuration,
     finalDuration
 }) => {
-    const formatValue = (val: number, format: string) => {
-        if (format === 'compact') return new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(val);
-        if (format === 'currency') return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumSignificantDigits: 3 }).format(val);
-        if (format === 'percent') return val.toFixed(1);
-        return val.toFixed(format === 'decimal3' ? 3 : 1);
+    const isVisualTie = (a: number, b: number, format: string): boolean => {
+        if (format === 'year' || format === 'integer') return Math.round(a) === Math.round(b);
+        if (format === 'decimal3') return Math.abs(a - b) < 0.0005;
+        if (format === 'percent' || format === 'decimal' || format === 'number') return Math.abs(a - b) < 0.05;
+        const fmt = (v: number) => {
+            if (format === 'compact') return new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(v);
+            if (format === 'currency') return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumSignificantDigits: 3 }).format(v);
+            return String(v);
+        };
+        return fmt(a) === fmt(b);
     };
 
     let wins1 = 0;
@@ -39,10 +44,7 @@ export const BattleScene: React.FC<BattleSceneProps> = ({
         const v1 = cityA.data[round.field];
         const v2 = cityB.data[round.field];
 
-        const f1 = formatValue(v1, round.format);
-        const f2 = formatValue(v2, round.format);
-
-        if (f1 === f2) {
+        if (isVisualTie(v1, v2, round.format)) {
             wins1++;
             wins2++;
             return;
@@ -64,7 +66,7 @@ export const BattleScene: React.FC<BattleSceneProps> = ({
 
     return (
         <AbsoluteFill>
-            <Sequence from={0} durationInFrames={introDuration}>
+            <Sequence durationInFrames={introDuration}>
                 <BattleIntro
                     city1Name={cityA.name}
                     city2Name={cityB.name}

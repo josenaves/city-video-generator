@@ -1,11 +1,11 @@
-# Remotion Best Practices from Gemini Skills
+# Remotion Best Practices — City Video Generator (audit 2026-09-11)
 
 ## Overview
-Project uses Remotion for city comparison videos. Key patterns observed in Root.tsx:
-- Multiple compositions for different city battles
+Project uses Remotion 4.0.523 + React 19 for city comparison videos. Verified 2026-09-11:
+- 128 Compositions in `src/Root.tsx:1` (2082 linhas) — 102 battles, 4 championships, 8 campaigns, 21 Top10, 1 Vox, 3 Bakeoff
 - Vertical (1080x1920) and horizontal (1920x1080) formats
-- Dynamic duration calculation based on data rounds
-- Top 10 ranking videos with vertical/horizontal variants
+- Dynamic duration calculation based on data rounds (`calculateDuration`, `calculateChampionshipDuration`, `calculateCampaignTotalDuration`, `calculateTop10Duration`, `VOX_CIDADES_VERDES_TOTAL_FRAMES=6750f`)
+- 400 images in `public/images/cities/`, 8 audio tracks, 29 SEO files, lint 160 problemas (2026-09-11)
 
 ## Key Rules from Skills
 ### Compositions
@@ -62,31 +62,40 @@ Project uses Remotion for city comparison videos. Key patterns observed in Root.
 - Can return props, durationInFrames, width, height, fps
 
 ## Project-Specific Patterns
-### Battle Videos
-- Use `calculateDuration()` function for dynamic timing based on rounds
-- Support both vertical (1080x1920) and horizontal (1920x1080) formats
-- Image references in public/images/cities/
-- **BPM-based timing system**:
-  - `calculateFramesPerBeat(bpm)` converts BPM to frames at 30fps
-  - `getTiming(beats, bpm)` for fixed timing (legacy)
-  - `getDynamicTiming(numRounds, bpm, isLong)` for variable timing patterns
-  - Dynamic timing uses patterns: standard `[4, 2, 6, 3, 5, 2, 4, 3]` beats or long `[10, 6, 12, 8, 10, 6, 14, 8, 10, 12]`
-  - Intro/final durations scale with `isLong` flag
-- Audio track configuration with volume control
-- Use `useDynamicTiming` and `isLong` flags for extended videos
-- Component structure: `BattleIntro` → multiple `BattleRound` → `BattleWinner`
+### Battle Videos (`src/BattleVideo.tsx:65`)
+- Use `calculateDuration(data, beatsOverride?, bpm?, useDynamicTiming?, isLong?)` `src/Root.tsx:282` for dynamic timing
+- Support both vertical (1080x1920) and horizontal (1920x1080) formats — horizontais em `Root.tsx:493` etc.
+- Image references in `public/images/cities/` via `staticFile()`; fallback `blumenau.jpg` → `images/cities/sc/b/blumenau.jpg`
+- **BPM-based timing system** (`src/BattleVideo.tsx:19`):
+  - `calculateFramesPerBeat(bpm) = (60/bpm)*30` → 14.0625f @128 BPM
+  - `getTiming(beats, bpm)` for fixed timing (legacy) — `intro=round=final=beats*2`
+  - `getDynamicTiming(numRounds, bpm, isLong)` `src/BattleVideo.tsx:26` — `standardBeats [4,2,6,3,5,2,4,3]`, `longBeats [10,6,12,8,10,6,14,8,10,12]`, intro 4→12, final 6→12
+- Audio track configuration with volume 0.5 default; `BattleVideo.tsx:94` `<Audio src={staticFile(audioTrack)} />`
+- Component structure: `BattleIntro` → N×`BattleRound` → `BattleWinner` + ProgressBar `BattleVideo.tsx:196`
 
-### Top 10 Ranking Videos
-- Separate vertical/horizontal compositions
-- Dynamic duration calculation with `calculateTop10Duration()`
-- Audio track configuration with BPM
+### Championship (`src/ChampionshipVideo.tsx:28`)
+- Fixed 128 BPM: `CHAMP_INTRO 4b`, `CHAMP_ROUND 6b`, `CHAMP_FINAL 4b`, `CHAMP_OPENING 12b`, `CHAMP_LEADERBOARD 8b`, `CHAMP_CHAMPION 14b`, `CHAMP_CAMPAIGN 18b`
+- `calculateChampionshipDuration(nCities, nRounds)` `src/Root.tsx:300` — round-robin `n*(n-1)/2`; total ~5006f = 2:46
 
-### Campaign Videos
-- One-vs-many format (`CampaignVideo` component)
-- Dynamic total duration calculation
+### Campaign Videos (`src/features/campaign-one-vs-many/CampaignVideo.tsx:11`)
+- One-vs-many format — scheduler `calculateCampaignSchedule()` `logic/scheduler.ts`
+- Scenes: Intro → Sponsorship → Battle loop → Status → Result; `calculateCampaignTotalDuration()`
+
+### Top 10 Ranking Videos (`src/features/top-10-cidades/Top10CidadesVideo.tsx:16`)
+- Vertical: intro 4b | 10-4 2b×7 | top2 4b×2 | champ 8b | outro 4b; Horizontal: intro16 | 10-4 12b | top2 16b | champ16 | conc12
+- `calculateTop10Duration(format, bpm?)` via `beatsToFrames(beats,bpm,fps)`; overrides 140 BPM for crime/poverty
+- 14 JSONs, 21 compositions; themes `elegant-dark` etc.; `sortCitiesByMetric()`
+
+### VoxExplainer (`src/features/vox-explainer/VoxExplainerVideo.tsx:1`)
+- Long-form 6750f = 3m45s (`VOX_CIDADES_VERDES_TOTAL_FRAMES` `utils/timing.ts:39`), NOT BPM — `durationToFrames("12s")=360f`
+- 13 scenes `Scene01…Scene13` + bakeoff 3×630f; components `BarChart`, `BigNumber`, `CityLabel`, `SplitComparison`, `TextReveal` with `damping:200`
+- Assets: `public/images/vox/cidades-verdes/`, `public/audio/vox-cidades-verdes-ptbr.mp3` (151.5s) + `.vtt`; 30 manifest items
 
 ## File Organization
-- Data files in `src/data/` (JSON imports)
-- Components in `src/features/` and root
-- Public images in `public/images/cities/`
-- Audio tracks in `public/audio/`
+- Data: `src/data/*.json` (102) + `championships/` (4) + `top-10/` (14) — imports com `// @ts-ignore`
+- Components: `src/components/` (4) + `src/features/` (campaign, top-10, vox-explainer)
+- Public: `public/images/cities/{uf}/{letra}/` (400 files), `public/audio/` (8 mp3), `public/intro/` (4 png)
+- SEO: `src/seo/*.seo.md` (29)
+- Scripts: `scripts/` (12 scripts — migrate, download, generate-top10, fetch-ibge)
+- Root: `src/Root.tsx` 2082 linhas, 128 Compositions
+- Lint 2026-09-11: 160 problemas (158 errors, 2 warnings) — `no-explicit-any`, `from-0`, `require-imports`

@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { AbsoluteFill, Sequence, Audio, staticFile } from 'remotion';
-import { ChampionshipManager, City, Round } from './utils/ChampionshipManager';
+import { ChampionshipManager, City, Round, Standing } from './utils/ChampionshipManager';
 import { ChampionshipOpening, ChampionshipLeaderboard, ChampionshipChampion, ChampionshipCampaign } from './components/ChampionshipComponents';
 import { BattleIntro } from './components/BattleIntro';
 import { BattleRound } from './components/BattleRound';
@@ -40,15 +40,15 @@ export const ChampionshipVideo: React.FC<ChampionshipVideoProps> = ({ championsh
         // Internal method to re-run matches one by one to capture incremental standings
         // We'll use the already generated matches from the real manager but calculate standings step by step
         const allMatches = manager.matches;
-        let incrementalStandings: Map<string, any> = new Map();
+        const incrementalStandings: Map<string, Standing> = new Map();
         cities.forEach(c => incrementalStandings.set(c.name, {
             city: c, points: 0, matchesPlayed: 0, wins: 0, draws: 0, losses: 0, roundsFor: 0, roundsAgainst: 0, roundBalance: 0
         }));
 
-        allMatches.forEach((match, index) => {
+        allMatches.forEach((match) => {
             // Update incremental standings
-            const sA = incrementalStandings.get(match.cityA.name);
-            const sB = incrementalStandings.get(match.cityB.name);
+            const sA = incrementalStandings.get(match.cityA.name)!;
+            const sB = incrementalStandings.get(match.cityB.name)!;
 
             sA.matchesPlayed++;
             sB.matchesPlayed++;
@@ -84,7 +84,7 @@ export const ChampionshipVideo: React.FC<ChampionshipVideoProps> = ({ championsh
         });
 
         return steps;
-    }, [manager, championshipName, cities, rounds]);
+    }, [manager, cities]);
 
     const battleDuration = CHAMP_INTRO_DURATION + (rounds.length * CHAMP_ROUND_DURATION) + CHAMP_FINAL_DURATION;
 
@@ -108,7 +108,7 @@ export const ChampionshipVideo: React.FC<ChampionshipVideoProps> = ({ championsh
                 const battleContent = (
                     <>
                         {/* 1. Battle Intro */}
-                        <Sequence from={0} durationInFrames={CHAMP_INTRO_DURATION}>
+                        <Sequence durationInFrames={CHAMP_INTRO_DURATION}>
                             <BattleIntro
                                 city1Name={match.cityA.name}
                                 city2Name={match.cityB.name}

@@ -93,7 +93,7 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({
         <AbsoluteFill style={{ backgroundColor: '#000' }}>
             <Audio src={staticFile(audioTrack)} volume={0.5} />
 
-            <Sequence from={0} durationInFrames={currentTiming.intro}>
+            <Sequence durationInFrames={currentTiming.intro}>
                 <BattleIntro
                     city1Name={city1.name}
                     city2Name={city2.name}
@@ -138,26 +138,24 @@ export const BattleVideo: React.FC<BattleVideoProps> = ({
             {(() => {
                 let wins1 = 0;
                 let wins2 = 0;
-                const formatValue = (val: number, format: string) => {
-                    if (format === 'year') return Math.round(val).toString();
-                    if (format === 'integer') return new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 }).format(val);
-                    if (format === 'number') return new Intl.NumberFormat('pt-BR').format(val);
-                    if (format === 'compact') return new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(val);
-                    if (format === 'currency') return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumSignificantDigits: 3 }).format(val);
-                    if (format === 'percent') return val.toFixed(1);
-                    if (format === 'decimal3') return val.toFixed(3);
-                    return val.toFixed(1);
+                const isVisualTie = (a: number, b: number, format: string): boolean => {
+                    if (format === 'year' || format === 'integer') return Math.round(a) === Math.round(b);
+                    if (format === 'decimal3') return Math.abs(a - b) < 0.0005;
+                    if (format === 'percent' || format === 'decimal' || format === 'number') return Math.abs(a - b) < 0.05;
+                    // compact/currency: visual rounding matters, compare formatted compact
+                    const fmt = (v: number) => {
+                        if (format === 'compact') return new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(v);
+                        if (format === 'currency') return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumSignificantDigits: 3 }).format(v);
+                        return String(v);
+                    };
+                    return fmt(a) === fmt(b);
                 };
 
                 rounds.forEach((round: any) => {
                     const v1 = city1.data[round.field];
                     const v2 = city2.data[round.field];
 
-                    // Check for tie using formatted values (visual tie)
-                    const f1 = formatValue(v1, round.format);
-                    const f2 = formatValue(v2, round.format);
-
-                    if (f1 === f2) {
+                    if (isVisualTie(v1, v2, round.format)) {
                         wins1++;
                         wins2++;
                         return;

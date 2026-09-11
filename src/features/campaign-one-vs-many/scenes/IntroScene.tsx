@@ -1,5 +1,5 @@
 import React from 'react';
-import { AbsoluteFill, interpolate, useCurrentFrame, staticFile } from 'remotion';
+import { AbsoluteFill, Img, interpolate, useCurrentFrame, staticFile } from 'remotion';
 import { City } from '../../../utils/ChampionshipManager';
 
 type IntroSceneProps = {
@@ -33,7 +33,7 @@ export const IntroScene: React.FC<IntroSceneProps> = ({
 
     return (
         <AbsoluteFill style={{ backgroundColor: '#000', opacity }}>
-            <img
+            <Img
                 src={staticFile(mainCity.visual.image)}
                 style={{
                     width: '100%',

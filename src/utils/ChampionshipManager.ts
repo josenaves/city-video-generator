@@ -82,11 +82,16 @@ export class ChampionshipManager {
         }
     }
 
-    private formatValue(val: number, format: string) {
-        if (format === 'compact') return new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(val);
-        if (format === 'currency') return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumSignificantDigits: 3 }).format(val);
-        if (format === 'percent') return val.toFixed(1);
-        return val.toFixed(format === 'decimal3' ? 3 : 1);
+    private isVisualTie(a: number, b: number, format: string): boolean {
+        if (format === 'year' || format === 'integer') return Math.round(a) === Math.round(b);
+        if (format === 'decimal3') return Math.abs(a - b) < 0.0005;
+        if (format === 'percent' || format === 'decimal' || format === 'number') return Math.abs(a - b) < 0.05;
+        const fmt = (v: number) => {
+            if (format === 'compact') return new Intl.NumberFormat('pt-BR', { notation: "compact" }).format(v);
+            if (format === 'currency') return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumSignificantDigits: 3 }).format(v);
+            return String(v);
+        };
+        return fmt(a) === fmt(b);
     }
 
     private runMatch(cityA: City, cityB: City): Match {
@@ -97,10 +102,7 @@ export class ChampionshipManager {
             const vA = cityA.data[round.field];
             const vB = cityB.data[round.field];
 
-            const fA = this.formatValue(vA, round.format);
-            const fB = this.formatValue(vB, round.format);
-
-            if (fA === fB) {
+            if (this.isVisualTie(vA, vB, round.format)) {
                 winsA++;
                 winsB++;
                 return;

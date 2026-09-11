@@ -1,3 +1,6 @@
+import fs from "fs";
+import path from "path";
+
 /**
  * Resolvedor de caminhos de imagens com compatibilidade retroativa
  * Suporta tanto caminhos antigos quanto novos
@@ -128,8 +131,6 @@ export function convertVideoDataToNewPaths(videoData: any): any {
 }
 
 export function updateJsonFilesWithNewPaths() {
-  const fs = require("fs");
-  const path = require("path");
 
   const dataDir = path.join(process.cwd(), "src/data");
   const files = fs.readdirSync(dataDir).filter((f) => f.endsWith(".json"));

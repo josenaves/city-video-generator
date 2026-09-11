@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="pt-BR">
+
+  <!-- SCENE 01 — 18s -->
+  <p>
+    <s>São Paulo é a cidade do concreto, <break time="300ms"/> dos prédios <break time="200ms"/> e do trânsito.</s>
+    <s>Vista de cima, <break time="200ms"/> ela parece uma imensidão cinza.</s>
+  </p>
+
+  <!-- SCENE 02 — 28s -->
+  <p>
+    <s>Mas existe um detalhe curioso.</s>
+    <s>Algumas cidades do interior do estado <break time="300ms"/> são muito mais arborizadas.</s>
+    <s>E algumas chegam perto de ter árvores em <emphasis level="strong">praticamente todas as ruas</emphasis>.</s>
+    <s>Hoje vamos descobrir quais são essas cidades <break time="300ms"/> — e o que elas fizeram diferente.</s>
+  </p>
+
+  <!-- SCENE 03 — 32s -->
+  <p>
+    <s>Segundo o Censo de 2022 do IBGE, <break time="300ms"/> as três cidades mais arborizadas do Brasil ficam no interior de São Paulo.</s>
+    <s><emphasis level="strong">Birigui</emphasis>, <break time="200ms"/> com <emphasis level="strong">98,4%</emphasis> das ruas com árvores.</s>
+    <s><emphasis level="strong">Sertãozinho</emphasis>, <break time="200ms"/> com <emphasis level="strong">97,5%</emphasis>.</s>
+    <s>E <emphasis level="strong">São José do Rio Preto</emphasis>, <break time="200ms"/> com <emphasis level="strong">97,3%</emphasis>.</s>
+  </p>
+
+  <!-- SCENE 04 — 30s -->
+  <p>
+    <s>Todas no interior paulista.</s>
+    <s>Birigui, <break time="200ms"/> no noroeste.</s>
+    <s>Sertãozinho, <break time="200ms"/> perto de Ribeirão Preto.</s>
+    <s>E Rio Preto, <break time="200ms"/> o polo do noroeste.</s>
+    <s>Cidades médias, <break time="200ms"/> que cresceram de forma planejada.</s>
+  </p>
+
+  <!-- SCENE 05 — 32s -->
+  <p>
+    <s>Arborização urbana não acontece por acaso.</s>
+    <s>Ela depende de <emphasis level="strong">planejamento</emphasis>, <break time="200ms"/> plantio, <break time="200ms"/> regras municipais <break time="200ms"/> e manutenção <break time="300ms"/> ao longo de décadas.</s>
+    <s>Não basta plantar. <break time="300ms"/> É preciso cuidar.</s>
+  </p>
+
+  <!-- SCENE 06 — 28s -->
+  <p>
+    <s>Pense assim:</s>
+    <s>plantio, <break time="200ms"/> crescimento, <break time="200ms"/> manutenção <break time="300ms"/> e, <break time="200ms"/> só então, <break time="300ms"/> uma cidade arborizada.</s>
+    <s>É um processo de <emphasis level="strong">anos</emphasis>, <break time="200ms"/> não de meses.</s>
+  </p>
+
+  <!-- SCENE 07 — 30s -->
+  <p>
+    <s>E por que isso importa?</s>
+    <s>Árvores dão <emphasis level="strong">sombra</emphasis>.</s>
+    <s>Reduzem o calor.</s>
+    <s>Deixam a rua mais confortável para quem caminha.</s>
+    <s>Em cidades quentes do interior, <break time="300ms"/> isso faz diferença todos os dias.</s>
+  </p>
+
+  <!-- SCENE 08 — 26s -->
+  <p>
+    <s>Compare:</s>
+    <s>uma rua sem árvores <break time="300ms"/> e uma rua arborizada.</s>
+    <s>A diferença não é só visual.</s>
+    <s>É térmica, <break time="200ms"/> é de conforto.</s>
+  </p>
+
+  <!-- SCENE 09 — 24s -->
+  <p>
+    <s>As árvores também ajudam com a chuva.</s>
+    <s>Parte da água fica nas copas, <break time="300ms"/> parte infiltra no solo.</s>
+    <s>É um benefício silencioso, <break time="200ms"/> mas importante.</s>
+  </p>
+
+  <!-- SCENE 10 — 34s -->
+  <p>
+    <s>E a capital?</s>
+    <s>São Paulo tem muitas áreas verdes, <break time="300ms"/> mas a distribuição é desigual.</s>
+    <s>Algumas regiões são bem arborizadas.</s>
+    <s>Outras, <break time="200ms"/> quase nada.</s>
+    <s>Não basta saber <emphasis level="strong">quanto</emphasis> verde existe. <break time="300ms"/> Importa <emphasis level="strong">onde</emphasis> ele está.</s>
+  </p>
+
+  <!-- SCENE 11 — 32s -->
+  <p>
+    <s>Birigui, <break time="200ms"/> Sertãozinho <break time="200ms"/> e São José do Rio Preto mostram que uma cidade mais verde <break time="300ms"/> não aparece por acaso.</s>
+    <s>Ela depende de planejamento, <break time="200ms"/> espaço, <break time="200ms"/> manutenção <break time="200ms"/> e continuidade.</s>
+    <s>Décadas de escolhas.</s>
+  </p>
+
+  <!-- SCENE 12 — 22s -->
+  <p>
+    <s>A pergunta não é apenas <emphasis level="strong">quantas</emphasis> árvores uma cidade tem.</s>
+    <s>A pergunta é: <break time="300ms"/><emphasis level="strong">onde</emphasis> estão essas árvores?</s>
+  </p>
+
+  <!-- SCENE 13 — 14s -->
+  <p>
+    <s>E a sua cidade? <break time="400ms"/> É arborizada?</s>
+  </p>
+
+</speak>
