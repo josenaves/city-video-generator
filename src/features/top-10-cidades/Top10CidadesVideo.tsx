@@ -110,13 +110,38 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
     ? (timeline.outro?.from || 0) + (timeline.outro?.duration || 0)
     : (timeline.conclusion?.from || 0) + (timeline.conclusion?.duration || 0);
 
-  // Audio Fade Out Logic
-  const audioVolume = interpolate(
-    frame,
-    [totalDuration - 60, totalDuration - 15],
-    [0.8, 0],
-    { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
-  );
+  // Audio Ducking + Fade Out — baixa para 0.25 durante TTS (35f por cidade)
+  const ttsWindow = 35;
+  const duckLow = 0.25;
+  const fadeFrames = 5;
+  const allStarts: number[] = [];
+  if (timeline) {
+    if (isVertical) {
+      timeline.regular?.forEach((s) => allStarts.push(s.from));
+      timeline.top3?.forEach((s) => allStarts.push(s.from));
+      allStarts.push(timeline.champion.from);
+    } else {
+      timeline.first8?.forEach((s) => allStarts.push(s.from));
+      timeline.middle?.forEach((s) => allStarts.push(s.from));
+      timeline.top3?.forEach((s) => allStarts.push(s.from));
+      allStarts.push(timeline.champion.from);
+    }
+  }
+  let duckVolume = 0.8;
+  for (const from of allStarts) {
+    const v = interpolate(
+      frame,
+      [from - fadeFrames, from, from + ttsWindow, from + ttsWindow + fadeFrames],
+      [0.8, duckLow, duckLow, 0.8],
+      { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
+    );
+    duckVolume = Math.min(duckVolume, v);
+  }
+  const fadeOut = interpolate(frame, [totalDuration - 60, totalDuration - 15], [1, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+  });
+  const audioVolume = duckVolume * fadeOut;
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>

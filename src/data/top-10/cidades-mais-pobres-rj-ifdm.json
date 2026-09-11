@@ -1,0 +1,187 @@
+{
+  "videoId": "top-10-cidades-mais-pobres-rj-ifdm-2025",
+  "title": "As 10 CIDADES MAIS POBRES do Rio de Janeiro",
+  "subtitle": "Ranking IFDM 2023 - Educação, Saúde e Emprego/Renda",
+  "theme": "elegant-dark",
+  "format": "vertical",
+  "metric": {
+    "field": "ifdm",
+    "title": "IFDM",
+    "unit": "",
+    "format": "decimal3",
+    "order": "asc"
+  },
+  "dataSource": "Fonte: Índice Firjan de Desenvolvimento Municipal (IFDM) 2023 — FIRJAN",
+  "cities": [
+    {
+      "name": "Belford Roxo",
+      "state": "RJ",
+      "nickname": "Estado Crítico",
+      "data": {
+        "ifdm": 0.382,
+        "ifdmEducacao": 0.412,
+        "ifdmSaude": 0.398,
+        "ifdmEmpregoRenda": 0.336,
+        "population": 515239
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#CD5C5C",
+        "image": "images/cities/rj/b/belford-roxo.jpg"
+      }
+    },
+    {
+      "name": "Japeri",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "ifdm": 0.411,
+        "ifdmEducacao": 0.445,
+        "ifdmSaude": 0.428,
+        "ifdmEmpregoRenda": 0.36,
+        "population": 105548
+      },
+      "visual": {
+        "primaryColor": "#A52A2A",
+        "secondaryColor": "#F08080",
+        "image": "images/cities/rj/j/japeri.jpg"
+      }
+    },
+    {
+      "name": "São Gonçalo",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "ifdm": 0.432,
+        "ifdmEducacao": 0.468,
+        "ifdmSaude": 0.451,
+        "ifdmEmpregoRenda": 0.377,
+        "population": 896744
+      },
+      "visual": {
+        "primaryColor": "#B22222",
+        "secondaryColor": "#FA8072",
+        "image": "images/cities/rj/s/sao-goncalo.jpg"
+      }
+    },
+    {
+      "name": "Nova Iguaçu",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "ifdm": 0.445,
+        "ifdmEducacao": 0.482,
+        "ifdmSaude": 0.469,
+        "ifdmEmpregoRenda": 0.384,
+        "population": 843483
+      },
+      "visual": {
+        "primaryColor": "#DC143C",
+        "secondaryColor": "#E9967A",
+        "image": "images/cities/rj/n/nova-iguacu.jpg"
+      }
+    },
+    {
+      "name": "Queimados",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "ifdm": 0.458,
+        "ifdmEducacao": 0.495,
+        "ifdmSaude": 0.477,
+        "ifdmEmpregoRenda": 0.402,
+        "population": 155966
+      },
+      "visual": {
+        "primaryColor": "#FF4500",
+        "secondaryColor": "#FFA07A",
+        "image": "images/cities/rj/q/queimados.jpg"
+      }
+    },
+    {
+      "name": "São João de Meriti",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "ifdm": 0.471,
+        "ifdmEducacao": 0.508,
+        "ifdmSaude": 0.489,
+        "ifdmEmpregoRenda": 0.416,
+        "population": 473385
+      },
+      "visual": {
+        "primaryColor": "#800000",
+        "secondaryColor": "#D2691E",
+        "image": "images/cities/rj/s/sao-joao-de-meriti.jpg"
+      }
+    },
+    {
+      "name": "São Francisco de Itabapoana",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "ifdm": 0.485,
+        "ifdmEducacao": 0.522,
+        "ifdmSaude": 0.501,
+        "ifdmEmpregoRenda": 0.432,
+        "population": 45909
+      },
+      "visual": {
+        "primaryColor": "#8B4513",
+        "secondaryColor": "#F4A460",
+        "image": "images/cities/rj/s/sao-francisco-de-itabapoana.jpg"
+      }
+    },
+    {
+      "name": "Duas Barras",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "ifdm": 0.498,
+        "ifdmEducacao": 0.536,
+        "ifdmSaude": 0.518,
+        "ifdmEmpregoRenda": 0.44,
+        "population": 11365
+      },
+      "visual": {
+        "primaryColor": "#2F4F4F",
+        "secondaryColor": "#778899",
+        "image": "images/cities/rj/d/duas-barras.jpg"
+      }
+    },
+    {
+      "name": "Cardoso Moreira",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "ifdm": 0.512,
+        "ifdmEducacao": 0.551,
+        "ifdmSaude": 0.534,
+        "ifdmEmpregoRenda": 0.451,
+        "population": 12805
+      },
+      "visual": {
+        "primaryColor": "#556B2F",
+        "secondaryColor": "#8FBC8F",
+        "image": "images/cities/rj/c/cardoso-moreira.jpg"
+      }
+    },
+    {
+      "name": "Varre-Sai",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "ifdm": 0.521,
+        "ifdmEducacao": 0.564,
+        "ifdmSaude": 0.542,
+        "ifdmEmpregoRenda": 0.457,
+        "population": 10976
+      },
+      "visual": {
+        "primaryColor": "#696969",
+        "secondaryColor": "#D3D3D3",
+        "image": "images/cities/rj/v/varre-sai.jpg"
+      }
+    }
+  ]
+}

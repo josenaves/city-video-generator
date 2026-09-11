@@ -1,61 +1,59 @@
 ---
 name: remotion-best-practices
-description: Best practices for Remotion - Video creation in React
-argument-hint: [topic]
-metadata:
-  tags: remotion, video, react, animation, composition
+description: Router for all Remotion skills
+version: 4.0.523
 ---
 
-# Remotion Best Practices
+## Preserve user changes
 
-Access comprehensive best practices and patterns for Remotion video creation.
+Users may make edits in the code outside of the conversation.
 
-## How to Use
+If you detect a surprising change made in the meanwhile, don't overwrite it, assume it was intentional or ask for confirmation.
 
-- Use `/remotion-best-practices` alone to see available topics
-- Use `/remotion-best-practices <topic>` to get specific guidelines (e.g., `/remotion-best-practices compositions`)
-- Or ask natural language questions about Remotion and this skill will be automatically invoked
+## Creating a video
 
-## Available Topics
+If the user asks to make, create, or build a new video or composition, load [Create a new Remotion video](./remotion-create/REFERENCE.md), whether or not a Remotion project already exists.
 
-$ARGUMENTS
+## New project setup
 
-When you provide a topic, I'll load the corresponding rule file with detailed explanations and code examples.
+If no Remotion project currently exists, load [Create a new Remotion project](./remotion-create/REFERENCE.md)
 
-## Quick Reference
+## React Markup Best Practices
 
-Here are the available rule files you can reference:
+If you are writing Remotion React Markup, load [Remotion Markup Best Practices](./remotion-markup/REFERENCE.md)
 
-- **compositions** - Defining compositions, stills, folders, default props and dynamic metadata
-- **sequencing** - Sequencing patterns for Remotion - delay, trim, limit duration of items
-- **assets** - Importing images, videos, audio, and fonts into Remotion
-- **audio** - Using audio and sound in Remotion - importing, trimming, volume, speed, pitch
-- **images** - Embedding images in Remotion using the Img component
-- **videos** - Embedding videos in Remotion - trimming, volume, speed, looping, pitch
-- **animations** - Fundamental animation skills for Remotion
-- **text-animations** - Typography and text animation patterns for Remotion
-- **timing** - Interpolation curves in Remotion - linear, easing, spring animations
-- **transitions** - Scene transition patterns for Remotion
-- **parameters** - Make a video parametrizable by adding a Zod schema
-- **measuring-text** - Measuring text dimensions, fitting text to containers, and checking overflow
-- **measuring-dom-nodes** - Measuring DOM element dimensions in Remotion
-- **tailwind** - Using TailwindCSS in Remotion
-- **fonts** - Loading Google Fonts and local fonts in Remotion
-- **calculate-metadata** - Dynamically set composition duration, dimensions, and props
-- **can-decode** - Check if a video can be decoded by the browser using Mediabunny
-- **get-video-duration** - Getting the duration of a video file in seconds with Mediabunny
-- **get-audio-duration** - Getting the duration of an audio file in seconds with Mediabunny
-- **get-video-dimensions** - Getting the width and height of a video file with Mediabunny
-- **extract-frames** - Extract frames from videos at specific timestamps using Mediabunny
-- **charts** - Chart and data visualization patterns for Remotion
-- **lottie** - Embedding Lottie animations in Remotion
-- **gifs** - Displaying GIFs synchronized with Remotion's timeline
-- **3d** - 3D content in Remotion using Three.js and React Three Fiber
-- **maps** - Add a map using Mapbox and animate it
-- **transparent-videos** - Rendering out a video with transparency
-- **trimming** - Trimming patterns for Remotion - cut the beginning or end of animations
-- **subtitles** - Working with captions and subtitles
+## Maps
 
-## Automatic Invocation
+For static maps, animated routes and markers, geographic explainers, Mapbox, MapLibre, MapTiler, GeoJSON, or 3D geographic flyovers, load [Remotion Maps](./remotion-maps/REFERENCE.md).
 
-This skill is automatically invoked when you ask questions about Remotion video creation, composition, sequencing, animations, or any related topic.
+## Multimedia
+
+For achieving multimedia tasks in the browser, such as trimming, cropping videos, or getting metadata from them, load [Remotion Multimedia](./remotion-multimedia/REFERENCE.md)
+
+## Improving Interactivity
+
+By structuring the Remotion markup well, we can allow users to interactively change things in the Studio and write back to code. If relevant: [Interactivity Best Practices](./remotion-interactivity/REFERENCE.md)
+
+## Rendering
+
+For advanced rendering beyond simple `npx remotion render`, see: [Rendering Best Practices](./remotion-render/REFERENCE.md)
+
+## Opening Remotion Studio
+
+To launch a project in Remotion Studio, open its exact local URL, or configure Studio CLI flags, load [Remotion Studio](./remotion-studio/REFERENCE.md).
+
+## Captions
+
+When working with Captions, load [Remotion Captions](./remotion-captions/REFERENCE.md).
+
+## Creating a SaaS, automation or application
+
+Use the [Remotion SaaS skill](./remotion-saas/REFERENCE.md) for knowledge about Remotion-powered SaaS apps, such as `<Player>`, rendering on Lambda, Vercel, Cloudflare, via Express.js, client-side rendering, or for finding the right SaaS template.
+
+## Looking up Remotion APIs and documentation
+
+To find and read current Remotion documentation, load [Remotion Docs](./remotion-docs/REFERENCE.md).
+
+## Upgrading
+
+To upgrade Remotion, related packages, compatible Mediabunny packages, and installed Remotion Agent Skills, load [Remotion Upgrade](./remotion-upgrade/REFERENCE.md).

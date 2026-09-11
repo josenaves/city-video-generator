@@ -1,6 +1,7 @@
 import React from "react";
 import {
   AbsoluteFill,
+  Audio,
   useCurrentFrame,
   interpolate,
   spring,
@@ -10,6 +11,7 @@ import {
 } from "remotion";
 import { Top10SceneProps } from "../types";
 import { getThemeColors, formatNumber } from "../utils";
+import { noise2D } from "@remotion/noise";
 
 /**
  * Top10RankingItem - High-Conversion UI/UX Redesign
@@ -60,13 +62,21 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
   const slideY = interpolate(contentSpring, [0, 1], [100, 0]);
   const rotationY = interpolate(entranceSpring, [0, 1], [15, 0]);
 
-  // Design Tokens
-  const glassBg = "rgba(10, 10, 11, 0.65)";
-  const glassBorder = "1px solid rgba(255, 255, 255, 0.12)";
+  // Design Tokens — duotone: vidro mais leve para mostrar fundo colorido
   const accentColor = cidade.visual.primaryColor || colors.accent;
+  const glassBg = "rgba(10, 10, 11, 0.45)";
+  const glassBorder = `1px solid ${accentColor}30`;
 
   const metricValue = cidade.data[metric.field];
   const formattedValue = formatNumber(metricValue, metric.format, metric.unit);
+
+  const citySlug = cidade.name
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+  const ttsSrc = `audio/cities/${cidade.state.toLowerCase()}/${citySlug}.mp3`;
 
   return (
     <AbsoluteFill
@@ -76,8 +86,10 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
         overflow: "hidden",
       }}
     >
-      {/* 1. Cinematic Background Layer */}
-      <AbsoluteFill style={{ zIndex: 0 }}>
+      {/* Narração TTS — nome da cidade (voz homem sério pt-BR-AntonioNeural) */}
+      {cidade.state === "RJ" && <Audio src={staticFile(ttsSrc)} volume={1} />}
+      {/* 1. Cinematic Duotone Background Layer — opção 4 */}
+      <AbsoluteFill style={{ zIndex: 0, backgroundColor: "#0F0F0F" }}>
         {!backgroundError && (
           <Img
             src={staticFile(cidade.visual.image)}
@@ -87,11 +99,28 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
               height: "100%",
               objectFit: "cover",
               transform: `scale(${kenBurns})`,
-              filter: `blur(80px) brightness(0.25)`,
-              opacity: 0.6,
+              filter: `grayscale(1) contrast(1.25) brightness(0.65) blur(40px)`,
+              opacity: 0.85,
             }}
           />
         )}
+        {/* Duotone wash — accentColor com mixBlendMode color */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: accentColor,
+            mixBlendMode: "color",
+            opacity: 0.55,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: `linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.55) 100%)`,
+          }}
+        />
 
         {/* Cinematic Parallax Glows */}
         <div style={{
@@ -104,6 +133,30 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
           transform: `translate(${Math.sin(frame / 40) * 40}px, ${Math.cos(frame / 40) * 40}px)`,
           filter: 'blur(100px)',
         }} />
+        {/* Dust sutil — 40 partículas com noise */}
+        {Array.from({ length: 40 }).map((_, i) => {
+          const nx = noise2D(`x-${cidade.name}-${i}`, frame / 80, i * 0.7) * 0.5 + 0.5;
+          const ny = noise2D(`y-${cidade.name}-${i}`, frame / 80, i * 0.7) * 0.5 + 0.5;
+          const size = 1 + (i % 3);
+          const opacityDust = 0.08 + (i % 4) * 0.03;
+          return (
+            <div
+              key={`dust-${i}`}
+              style={{
+                position: "absolute",
+                left: `${nx * 100}%`,
+                top: `${ny * 100}%`,
+                width: size,
+                height: size,
+                background: accentColor,
+                opacity: opacityDust,
+                borderRadius: 999,
+                filter: "blur(0.5px)",
+                transform: `translate(-50%, -50%)`,
+              }}
+            />
+          );
+        })}
       </AbsoluteFill>
 
       {/* 2. Content Layout */}
@@ -231,21 +284,31 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
             </p>
           </div>
 
-          {/* Obsidian Data Panel */}
+          {/* Obsidian Data Panel — com accent left */}
           <div
             style={{
               marginTop: "50px",
               background: glassBg,
-              backdropFilter: "blur(50px)",
+              backdropFilter: "blur(24px)",
               border: glassBorder,
               borderRadius: "40px",
               padding: "48px 60px",
               width: "100%",
               maxWidth: isVertical ? "none" : "620px",
               position: "relative",
-              boxShadow: "0 40px 80px rgba(0,0,0,0.7)",
+              boxShadow: "0 40px 80px rgba(0,0,0,0.5)",
+              borderLeft: `6px solid ${accentColor}`,
+              overflow: "hidden",
             }}
           >
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                background: `linear-gradient(90deg, ${accentColor}14, transparent 60%)`,
+                pointerEvents: "none",
+              }}
+            />
             <div
               style={{
                 fontSize: "20px",
@@ -261,7 +324,7 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
 
             <div
               style={{
-                fontSize: isVertical ? "130px" : "160px",
+                fontSize: isVertical ? "84px" : "96px",
                 color: "white",
                 fontWeight: 900,
                 lineHeight: 0.85,

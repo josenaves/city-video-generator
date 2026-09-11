@@ -156,6 +156,8 @@ import top10ViolentasGoiasData from "./data/top-10/cidades-mais-violentas-goias.
 
 import top10EnchentesData from "./data/top-10/piores-enchentes-brasil-30-anos.json";
 
+import top10PobresRJData from "./data/top-10/cidades-mais-pobres-rj-ifdm.json";
+
 
 // Championships
 import mogiChampionshipData from "./data/championships/mogi.json";
@@ -1940,6 +1942,38 @@ export const RemotionRoot: React.FC = () => {
           videoData: {
             ...top10EnchentesData,
             format: "horizontal",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Pobres do Rio de Janeiro — IFDM 2023 */}
+      <Composition
+        id="Top10CidadesMaisPobresRJ"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("vertical", 140)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: top10PobresRJData,
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+      <Composition
+        id="Top10CidadesMaisPobresRJHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("horizontal", 140)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10PobresRJData,
+            format: "horizontal",
+            videoId: "top-10-cidades-mais-pobres-rj-ifdm-2025-horizontal",
           },
           audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
           bpm: 140,
