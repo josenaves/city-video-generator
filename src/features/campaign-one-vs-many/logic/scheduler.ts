@@ -1,7 +1,7 @@
 import { CampaignOneVsManyInput } from "../types";
 import { CampaignState } from "../logic/state";
 import { orderBattlesForNarrative } from "../logic/narrative";
-import { beatsToFrames, snapToBeat } from "../logic/beat";
+import { beatsToFrames, snapToBeat, snapDownToBeat } from "../logic/beat";
 import { simulateMatch } from "../logic/utils";
 
 // Beats per Scene - Dynamic calculation based on number of battles
@@ -48,10 +48,12 @@ export function calculateCampaignSchedule(props: CampaignOneVsManyInput) {
   const totalBattleFrames = Math.floor(availableFrames * 0.75);
   const totalStatusFrames = availableFrames - totalBattleFrames;
 
-  // Snap major units to beat
-  const framesPerBattle = snapToBeat(Math.floor(totalBattleFrames / numBattles), bpm);
+  // Snap major units DOWN to beat — rounding up here accumulated over
+  // N battles + N-1 status scenes and exceeded maxTotalFrames.
+  // Leftover slack is absorbed by the result scene at the end.
+  const framesPerBattle = snapDownToBeat(Math.floor(totalBattleFrames / numBattles), bpm);
   const framesPerStatus = numStatusScenes > 0
-    ? snapToBeat(Math.floor(totalStatusFrames / numStatusScenes), bpm)
+    ? snapDownToBeat(Math.floor(totalStatusFrames / numStatusScenes), bpm)
     : 0;
 
   let currentFrame = 0;
@@ -131,14 +133,21 @@ export function calculateCampaignSchedule(props: CampaignOneVsManyInput) {
     }
   });
 
-  // --- Result Scene ---
-  steps.push({
+  // --- Result Scene (absorbs rounding slack so total lands exactly on cap) ---
+  const resultStep = {
     type: "result",
     from: currentFrame,
     duration: resultFrames,
     finalState: state,
-  });
+  };
+  steps.push(resultStep);
   currentFrame += resultFrames;
+
+  const slack = maxTotalFrames - currentFrame;
+  if (slack > 0) {
+    resultStep.duration += slack;
+    currentFrame += slack;
+  }
 
   // 🔥 FINAL SAFETY CHECK: Ensure we don't exceed maxTotalFrames
   if (currentFrame > maxTotalFrames) {
