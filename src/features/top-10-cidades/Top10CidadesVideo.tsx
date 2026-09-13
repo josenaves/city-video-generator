@@ -17,6 +17,7 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
   videoData,
   audioTrack = "audio/Beat Your Competition - Vibe Tracks.mp3",
   bpm = 128,
+  introAudio,
 }) => {
   const frame = useCurrentFrame();
 
@@ -137,6 +138,17 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
     );
     duckVolume = Math.min(duckVolume, v);
   }
+  // Duck também durante a narração da intro (começa no frame 0)
+  if (introAudio && timeline) {
+    const introWindow = timeline.intro.duration;
+    const introDuck = interpolate(
+      frame,
+      [0, introWindow, introWindow + fadeFrames],
+      [duckLow, duckLow, 0.8],
+      { extrapolateLeft: "clamp", extrapolateRight: "clamp" },
+    );
+    duckVolume = Math.min(duckVolume, introDuck);
+  }
   const fadeOut = interpolate(frame, [totalDuration - 60, totalDuration - 15], [1, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
@@ -161,6 +173,8 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
           subtitle={videoData.subtitle}
           theme={videoData.theme}
           format={videoData.format}
+          backgroundTone={videoData.backgroundTone}
+          introAudio={introAudio}
         />
       </Sequence>
 
@@ -180,6 +194,7 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
               metric={videoData.metric}
               theme={videoData.theme}
               format={videoData.format}
+              backgroundTone={videoData.backgroundTone}
             />
           </Sequence>
         ))}
@@ -202,6 +217,7 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
                   metric={videoData.metric}
                   theme={videoData.theme}
                   format={videoData.format}
+                  backgroundTone={videoData.backgroundTone}
                 />
               </Sequence>
             ))}
@@ -221,6 +237,7 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
                   metric={videoData.metric}
                   theme={videoData.theme}
                   format={videoData.format}
+                  backgroundTone={videoData.backgroundTone}
                 />
               </Sequence>
             ))}
@@ -242,6 +259,7 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
               metric={videoData.metric}
               theme={videoData.theme}
               format={videoData.format}
+              backgroundTone={videoData.backgroundTone}
             />
           </Sequence>
         ))}
@@ -258,6 +276,7 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
           metric={videoData.metric}
           theme={videoData.theme}
           format={videoData.format}
+          backgroundTone={videoData.backgroundTone}
         />
       </Sequence>
 
@@ -283,6 +302,7 @@ export const Top10CidadesVideo: React.FC<Top10VideoInput> = ({
           title={videoData.title}
           theme={videoData.theme}
           format={videoData.format}
+          backgroundTone={videoData.backgroundTone}
           cities={sortedCities}
         />
       </Sequence>

@@ -11,7 +11,8 @@ import {
 } from "remotion";
 import { Top10SceneProps } from "../types";
 import { getThemeColors, formatNumber } from "../utils";
-import { noise2D } from "@remotion/noise";
+import { getToneConfig } from "../utils/tones";
+import { FloatingParticles } from "../components/FloatingParticles";
 
 /**
  * Top10RankingItem - High-Conversion UI/UX Redesign
@@ -20,6 +21,7 @@ import { noise2D } from "@remotion/noise";
  * - Obsidian Depth & Cinematic Lighting
  * - Outfit Typography (Negative Tracking)
  * - Glassmorphism Layering
+ * - Floating Flying Particles
  */
 
 const FONT_FAMILY = "'Outfit', Inter, sans-serif";
@@ -31,6 +33,7 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
   metric,
   theme,
   format,
+  backgroundTone,
 }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
@@ -39,6 +42,9 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
 
   // Auto-detect orientation
   const isVertical = format === "vertical" || height > width;
+
+  // Active tone config
+  const toneConfig = getToneConfig(backgroundTone, position);
 
   // --- Animation Hooks ---
   const entranceSpring = spring({
@@ -62,10 +68,11 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
   const slideY = interpolate(contentSpring, [0, 1], [100, 0]);
   const rotationY = interpolate(entranceSpring, [0, 1], [15, 0]);
 
-  // Design Tokens — duotone: vidro mais leve para mostrar fundo colorido
-  const accentColor = cidade.visual.primaryColor || colors.accent;
-  const glassBg = "rgba(10, 10, 11, 0.45)";
-  const glassBorder = `1px solid ${accentColor}30`;
+  // Design Tokens — usa toneConfig para destaque sem dominar em vermelho
+  const accentColor = backgroundTone ? toneConfig.accentColor : (cidade.visual.primaryColor || colors.accent);
+  const secondaryAccent = backgroundTone ? toneConfig.secondaryColor : (cidade.visual.secondaryColor || colors.secondary);
+  const glassBg = "rgba(10, 10, 14, 0.55)";
+  const glassBorder = `1px solid ${accentColor}40`;
 
   const metricValue = cidade.data[metric.field];
   const formattedValue = formatNumber(metricValue, metric.format, metric.unit);
@@ -81,15 +88,15 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: "#070708", // Deep obsidian
+        backgroundColor: toneConfig.baseBg,
         fontFamily: FONT_FAMILY,
         overflow: "hidden",
       }}
     >
       {/* Narração TTS — nome da cidade (voz homem sério pt-BR-AntonioNeural) */}
-      {cidade.state === "RJ" && <Audio src={staticFile(ttsSrc)} volume={1} />}
-      {/* 1. Cinematic Duotone Background Layer — opção 4 */}
-      <AbsoluteFill style={{ zIndex: 0, backgroundColor: "#0F0F0F" }}>
+      {(cidade.state === "RJ" || cidade.state === "SC") && <Audio src={staticFile(ttsSrc)} volume={1} />}
+      {/* 1. Cinematic Background Layer com Partículas Flutuantes */}
+      <AbsoluteFill style={{ zIndex: 0, backgroundColor: toneConfig.baseBg }}>
         {!backgroundError && (
           <Img
             src={staticFile(cidade.visual.image)}
@@ -99,26 +106,26 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
               height: "100%",
               objectFit: "cover",
               transform: `scale(${kenBurns})`,
-              filter: `grayscale(1) contrast(1.25) brightness(0.65) blur(40px)`,
-              opacity: 0.85,
+              filter: `grayscale(0.65) contrast(1.2) brightness(0.65) blur(32px)`,
+              opacity: 0.8,
             }}
           />
         )}
-        {/* Duotone wash — accentColor com mixBlendMode color */}
+        {/* Mood & Color Wash */}
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background: accentColor,
+            background: toneConfig.washColor,
             mixBlendMode: "color",
-            opacity: 0.55,
+            opacity: toneConfig.washOpacity,
           }}
         />
         <div
           style={{
             position: "absolute",
             inset: 0,
-            background: `linear-gradient(180deg, transparent 30%, rgba(0,0,0,0.55) 100%)`,
+            background: `linear-gradient(180deg, ${toneConfig.baseBg}50 0%, transparent 30%, ${toneConfig.baseBg}f0 100%)`,
           }}
         />
 
@@ -127,36 +134,20 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
           position: 'absolute',
           top: '15%',
           right: '5%',
-          width: '800px',
-          height: '800px',
-          background: `radial-gradient(circle, ${accentColor}11 0%, transparent 70%)`,
+          width: '900px',
+          height: '900px',
+          background: `radial-gradient(circle, ${toneConfig.orbColor}25 0%, transparent 70%)`,
           transform: `translate(${Math.sin(frame / 40) * 40}px, ${Math.cos(frame / 40) * 40}px)`,
-          filter: 'blur(100px)',
+          filter: 'blur(120px)',
         }} />
-        {/* Dust sutil — 40 partículas com noise */}
-        {Array.from({ length: 40 }).map((_, i) => {
-          const nx = noise2D(`x-${cidade.name}-${i}`, frame / 80, i * 0.7) * 0.5 + 0.5;
-          const ny = noise2D(`y-${cidade.name}-${i}`, frame / 80, i * 0.7) * 0.5 + 0.5;
-          const size = 1 + (i % 3);
-          const opacityDust = 0.08 + (i % 4) * 0.03;
-          return (
-            <div
-              key={`dust-${i}`}
-              style={{
-                position: "absolute",
-                left: `${nx * 100}%`,
-                top: `${ny * 100}%`,
-                width: size,
-                height: size,
-                background: accentColor,
-                opacity: opacityDust,
-                borderRadius: 999,
-                filter: "blur(0.5px)",
-                transform: `translate(-50%, -50%)`,
-              }}
-            />
-          );
-        })}
+
+        {/* Partículas Voando Animadas */}
+        <FloatingParticles
+          count={isVertical ? 65 : 85}
+          colors={toneConfig.particleColors}
+          direction="up"
+          speedMultiplier={isVertical ? 1.2 : 0.9}
+        />
       </AbsoluteFill>
 
       {/* 2. Content Layout */}
@@ -218,13 +209,13 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
                 position: "absolute",
                 top: isVertical ? 60 : 40,
                 left: isVertical ? 60 : 40,
-                background: `linear-gradient(135deg, ${accentColor}, ${cidade.visual.secondaryColor || '#666'})`,
+                background: `linear-gradient(135deg, ${accentColor}, ${secondaryAccent})`,
                 padding: "14px 32px",
                 borderRadius: "16px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                boxShadow: "0 20px 40px rgba(0,0,0,0.6)",
+                boxShadow: `0 20px 40px ${accentColor}40`,
                 border: "1px solid rgba(255,255,255,0.3)",
               }}
             >

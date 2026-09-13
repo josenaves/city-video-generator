@@ -8,6 +8,8 @@ import {
 } from "remotion";
 import { Top10OutroProps } from "../types";
 import { getThemeColors } from "../utils";
+import { getToneConfig } from "../utils/tones";
+import { FloatingParticles } from "../components/FloatingParticles";
 
 const FONT_FAMILY = "'Outfit', Inter, sans-serif";
 
@@ -17,11 +19,14 @@ export const Top10Outro: React.FC<Top10OutroProps> = ({
   theme,
   format,
   cities,
+  backgroundTone,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const colors = getThemeColors(theme);
   const isVertical = format === "vertical";
+  const toneConfig = getToneConfig(backgroundTone);
+  const accent = backgroundTone ? toneConfig.accentColor : colors.accent;
 
   // --- Motion Physics ---
   const entranceSpring = spring({
@@ -45,15 +50,15 @@ export const Top10Outro: React.FC<Top10OutroProps> = ({
   const bgScale = interpolate(frame, [0, durationInFrames], [1, 1.1]);
 
   // Design Tokens
-  const glassBg = "rgba(10, 10, 10, 0.45)";
-  const glassBorder = "1px solid rgba(255, 255, 255, 0.12)";
+  const glassBg = "rgba(10, 10, 14, 0.55)";
+  const glassBorder = `1px solid ${accent}30`;
 
   const top3 = cities.slice(0, 3);
 
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: colors.background,
+        backgroundColor: toneConfig.baseBg,
         fontFamily: FONT_FAMILY,
         display: "flex",
         justifyContent: "center",
@@ -61,8 +66,8 @@ export const Top10Outro: React.FC<Top10OutroProps> = ({
         overflow: "hidden",
       }}
     >
-      {/* 1. Background Layer */}
-      <AbsoluteFill style={{ zIndex: 0 }}>
+      {/* 1. Background Layer with Floating Particles */}
+      <AbsoluteFill style={{ zIndex: 0, backgroundColor: toneConfig.baseBg }}>
         <div style={{
           position: "absolute",
           top: '50%',
@@ -70,9 +75,17 @@ export const Top10Outro: React.FC<Top10OutroProps> = ({
           width: '150%',
           height: '150%',
           transform: `translate(-50%, -50%) scale(${bgScale})`,
-          background: `radial-gradient(circle at center, ${colors.accent}11 0%, transparent 70%)`,
+          background: `radial-gradient(circle at center, ${toneConfig.orbColor}20 0%, transparent 70%)`,
           filter: 'blur(100px)',
         }} />
+
+        {/* Partículas Voando Animadas */}
+        <FloatingParticles
+          count={isVertical ? 70 : 90}
+          colors={toneConfig.particleColors}
+          direction="up"
+          speedMultiplier={1.1}
+        />
       </AbsoluteFill>
 
       {/* 2. Content */}
@@ -125,7 +138,7 @@ export const Top10Outro: React.FC<Top10OutroProps> = ({
             <div key={city.name} style={{
               background: glassBg,
               backdropFilter: "blur(20px)",
-              border: i === 0 ? `2px solid ${colors.accent}` : glassBorder,
+              border: i === 0 ? `2px solid ${accent}` : glassBorder,
               padding: "24px 40px",
               borderRadius: "24px",
               flex: 1,
@@ -133,9 +146,9 @@ export const Top10Outro: React.FC<Top10OutroProps> = ({
               flexDirection: "column",
               alignItems: "center",
               transform: i === 0 ? 'scale(1.1)' : 'scale(1)',
-              boxShadow: i === 0 ? `0 20px 40px ${colors.accent}33` : 'none',
+              boxShadow: i === 0 ? `0 20px 40px ${accent}33` : 'none',
             }}>
-              <span style={{ fontSize: "24px", fontWeight: 900, color: colors.accent, marginBottom: "8px" }}>#{i + 1}</span>
+              <span style={{ fontSize: "24px", fontWeight: 900, color: accent, marginBottom: "8px" }}>#{i + 1}</span>
               <span style={{ fontSize: "32px", fontWeight: 800, color: "white" }}>{city.name}</span>
             </div>
           ))}
@@ -149,14 +162,14 @@ export const Top10Outro: React.FC<Top10OutroProps> = ({
           alignItems: "center",
         }}>
           <div style={{
-            background: colors.accent,
+            background: accent,
             color: "white",
             padding: "24px 64px",
             borderRadius: "100px",
             fontSize: "42px",
             fontWeight: 900,
             letterSpacing: "0.1em",
-            boxShadow: `0 20px 60px ${colors.accent}66`,
+            boxShadow: `0 20px 60px ${accent}66`,
             cursor: "pointer",
             transform: `scale(${pulse})`,
           }}>

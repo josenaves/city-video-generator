@@ -158,6 +158,8 @@ import top10EnchentesData from "./data/top-10/piores-enchentes-brasil-30-anos.js
 
 import top10PobresRJData from "./data/top-10/cidades-mais-pobres-rj-ifdm.json";
 
+import top10FeiasSCData from "./data/top-10/cidades-mais-feias-santa-catarina.json";
+
 
 // Championships
 import mogiChampionshipData from "./data/championships/mogi.json";
@@ -1977,6 +1979,98 @@ export const RemotionRoot: React.FC = () => {
           },
           audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
           bpm: 140,
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Feias de Santa Catarina — Opções de Fundo Animado */}
+      {/* 1. Cyber Cyan & Electric Blue (Padrão Moderno) */}
+      <Composition
+        id="Top10CidadesMaisFeiasSC"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("vertical", 140)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: {
+            ...top10FeiasSCData,
+            format: "vertical",
+            backgroundTone: "cyber-cyan",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+      {/* 2. Obsidian Gold & Warm Amber (Dourado Premium) */}
+      <Composition
+        id="Top10CidadesMaisFeiasSC-Gold"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("vertical", 140)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: {
+            ...top10FeiasSCData,
+            format: "vertical",
+            backgroundTone: "obsidian-gold",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+      {/* 3. Cosmic Violet & Neon Purple (Roxo Vibrante) */}
+      <Composition
+        id="Top10CidadesMaisFeiasSC-Purple"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("vertical", 140)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: {
+            ...top10FeiasSCData,
+            format: "vertical",
+            backgroundTone: "neon-purple",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+      {/* 4. Dynamic Rank (Evolução de tons do #10 até o Campeão Dourado) */}
+      <Composition
+        id="Top10CidadesMaisFeiasSC-Dynamic"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("vertical", 140)}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: {
+            ...top10FeiasSCData,
+            format: "vertical",
+            backgroundTone: "dynamic-rank",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+        }}
+      />
+      <Composition
+        id="Top10CidadesMaisFeiasSCHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("horizontal", 140)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10FeiasSCData,
+            format: "horizontal",
+            videoId: "top-10-cidades-mais-feias-santa-catarina-horizontal",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+          introAudio: "audio/intro/top-10-cidades-mais-feias-santa-catarina.mp3",
         }}
       />
 

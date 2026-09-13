@@ -1,0 +1,158 @@
+{
+  "videoId": "top-10-cidades-mais-feias-santa-catarina-2024",
+  "title": "As 10 CIDADES MAIS FEIAS de Santa Catarina",
+  "subtitle": "Ranking Olhar Urbano - Mais Citadas como \"Feias\"",
+  "theme": "elegant-dark",
+  "format": "horizontal",
+  "backgroundTone": "cyber-cyan",
+  "metric": {
+    "field": "uglinessScore",
+    "title": "Índice de Feiúra",
+    "unit": "",
+    "format": "number",
+    "order": "desc"
+  },
+  "dataSource": "Fonte: Olhar Urbano - Ranking de Cidades Mais Feias SC",
+  "cities": [
+    {
+      "name": "Monte Castelo",
+      "state": "SC",
+      "nickname": "A Mais Feia de SC",
+      "data": {
+        "population": 2356,
+        "uglinessScore": 10
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sc/m/monte-castelo.jpg"
+      }
+    },
+    {
+      "name": "Lebon Régis",
+      "state": "SC",
+      "nickname": "Pequena e Feia",
+      "data": {
+        "population": 2987,
+        "uglinessScore": 9
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sc/l/lebon-regis.jpg"
+      }
+    },
+    {
+      "name": "Jaborá",
+      "state": "SC",
+      "nickname": "Feia do Oeste",
+      "data": {
+        "population": 3124,
+        "uglinessScore": 8
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sc/j/jabora.jpg"
+      }
+    },
+    {
+      "name": "Monte Carlo",
+      "state": "SC",
+      "nickname": "Monte Carlo Feio",
+      "data": {
+        "population": 4521,
+        "uglinessScore": 7
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sc/m/monte-carlo-sc.jpg"
+      }
+    },
+    {
+      "name": "Herval d'Oeste",
+      "state": "SC",
+      "nickname": "Oeste Feio",
+      "data": {
+        "population": 7234,
+        "uglinessScore": 6
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sc/h/herval-doeste.jpg"
+      }
+    },
+    {
+      "name": "Capinzal",
+      "state": "SC",
+      "nickname": "Feia do Meio-Oeste",
+      "data": {
+        "population": 21456,
+        "uglinessScore": 5
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sc/c/capinzal.jpg"
+      }
+    },
+    {
+      "name": "Porto União",
+      "state": "SC",
+      "nickname": "Fronteira Feia",
+      "data": {
+        "population": 38742,
+        "uglinessScore": 4
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sc/p/porto-uniao.jpg"
+      }
+    },
+    {
+      "name": "Fraiburgo",
+      "state": "SC",
+      "nickname": "Terra da Maçã Feia",
+      "data": {
+        "population": 34123,
+        "uglinessScore": 3
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sc/f/fraiburgo.jpg"
+      }
+    },
+    {
+      "name": "Campos Novos",
+      "state": "SC",
+      "nickname": "Serra Feia",
+      "data": {
+        "population": 36542,
+        "uglinessScore": 2
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sc/c/campos-novos.jpg"
+      }
+    },
+    {
+      "name": "Mafra",
+      "state": "SC",
+      "nickname": "A Menos Feia do Top 10",
+      "data": {
+        "population": 58234,
+        "uglinessScore": 1
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sc/m/mafra.jpg"
+      }
+    }
+  ]
+}

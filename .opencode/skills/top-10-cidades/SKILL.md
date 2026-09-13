@@ -168,7 +168,17 @@ public/images/cities/sp/s/sao-paulo.jpg
 public/images/cities/mg/b/belo-horizonte.jpg
 ```
 
-### 3. Registrar Composição
+### 3. Gerar Narração da Intro (REGRA: somente horizontal)
+
+Gere a locução de abertura com a mesma voz das cidades (`pt-BR-AntonioNeural`):
+
+```bash
+edge-tts --voice pt-BR-AntonioNeural --text "Canal Cidades Brasileiras apresenta... As 10 cidades mais XXXX de YYYY!" --write-media public/audio/intro/<slug>.mp3
+```
+
+⚠️ **REGRA (vale p/ todos os vídeos):** a narração de intro vai **somente** na composição horizontal, via prop `introAudio`. Versões verticais NUNCA levam `introAudio` — a intro vertical tem 4 beats (~1,7s) e não comporta narração; só a horizontal (intro 16 beats, ~7s) comporta.
+
+### 4. Registrar Composição
 
 Adicione em `src/Root.tsx`:
 
@@ -186,11 +196,25 @@ import top10Data from "./data/top-10/cidades-mais-ricas.json";
     videoData: top10Data,
   }}
 />;
+
+// Horizontal (YouTube) — ÚNICA que leva introAudio
+<Composition
+  id="Top10CidadesMaisRicasHorizontal"
+  component={Top10CidadesVideo}
+  durationInFrames={calculateTop10Duration("horizontal")}
+  fps={30}
+  width={1920}
+  height={1080}
+  defaultProps={{
+    videoData: { ...top10Data, format: "horizontal" },
+    introAudio: "audio/intro/<slug>.mp3",
+  }}
+/>;
 ```
 
 Para informações sobre composições, consulte [`compositions.md`](.agent/skills/remotion-best-practices/rules/compositions.md) e [`calculate-metadata.md`](.agent/skills/remotion-best-practices/rules/calculate-metadata.md).
 
-### 4. Renderizar Vídeo
+### 5. Renderizar Vídeo
 
 ```bash
 # Vertical (social media)
@@ -244,9 +268,10 @@ const scene1Frames = beatsToFrames(4, bpm, fps);
 
 O componente suporta:
 
-- Trilha sonora de fundo
+- Trilha sonora de fundo (com ducking automático p/ 0,25 durante narrações)
 - Efeitos sonoros para transições
-- Narração opcional
+- Narração das cidades (`audio/cities/{uf}/{slug}.mp3`, voz `pt-BR-AntonioNeural`)
+- Narração de intro ("Canal Cidades Brasileiras apresenta...") — SOMENTE na horizontal, via prop `introAudio`; nunca na vertical (ver passo 3)
 
 Consulte [`audio.md`](.agent/skills/remotion-best-practices/rules/audio.md).
 

@@ -1,9 +1,12 @@
+import { Top10BackgroundTone } from "./utils/tones";
+
 export interface Top10CidadesData {
   videoId: string;
   title: string;
   subtitle: string;
   theme: "elegant-dark" | "clean-modern" | "gradient-burst" | "data-focused";
   format: "vertical" | "horizontal";
+  backgroundTone?: Top10BackgroundTone;
   metric: {
     field: string;
     title: string;
@@ -31,6 +34,7 @@ export interface Top10VideoInput {
   overrideBeatsPerTransition?: number;
   audioTrack?: string;
   bpm?: number;
+  introAudio?: string;
 }
 
 export interface Top10SceneProps {
@@ -40,6 +44,7 @@ export interface Top10SceneProps {
   metric: Top10CidadesData["metric"];
   theme: Top10CidadesData["theme"];
   format: Top10CidadesData["format"];
+  backgroundTone?: Top10BackgroundTone;
 }
 
 export interface Top10IntroProps {
@@ -48,6 +53,8 @@ export interface Top10IntroProps {
   subtitle: string;
   theme: Top10CidadesData["theme"];
   format: Top10CidadesData["format"];
+  backgroundTone?: Top10BackgroundTone;
+  introAudio?: string;
 }
 
 export interface Top10OutroProps {
@@ -56,4 +63,5 @@ export interface Top10OutroProps {
   theme: Top10CidadesData["theme"];
   format: Top10CidadesData["format"];
   cities: Top10Cidade[];
+  backgroundTone?: Top10BackgroundTone;
 }

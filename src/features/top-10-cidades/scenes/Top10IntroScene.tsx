@@ -1,6 +1,8 @@
 import React from "react";
 import {
   AbsoluteFill,
+  Audio,
+  staticFile,
   useCurrentFrame,
   interpolate,
   spring,
@@ -8,6 +10,8 @@ import {
 } from "remotion";
 import { Top10IntroProps } from "../types";
 import { getThemeColors } from "../utils";
+import { getToneConfig } from "../utils/tones";
+import { FloatingParticles } from "../components/FloatingParticles";
 
 const FONT_FAMILY = "'Outfit', Inter, sans-serif";
 
@@ -17,11 +21,15 @@ export const Top10Intro: React.FC<Top10IntroProps> = ({
   subtitle,
   theme,
   format,
+  backgroundTone,
+  introAudio,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const colors = getThemeColors(theme);
   const isVertical = format === "vertical";
+  const toneConfig = getToneConfig(backgroundTone);
+  const accent = backgroundTone ? toneConfig.accentColor : colors.accent;
 
   // --- Motion Physics ---
   const entranceSpring = spring({
@@ -46,7 +54,7 @@ export const Top10Intro: React.FC<Top10IntroProps> = ({
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: colors.background,
+        backgroundColor: toneConfig.baseBg,
         fontFamily: FONT_FAMILY,
         display: "flex",
         justifyContent: "center",
@@ -54,15 +62,11 @@ export const Top10Intro: React.FC<Top10IntroProps> = ({
         overflow: "hidden",
       }}
     >
-      {/* 1. Atmospheric Background */}
-      <AbsoluteFill style={{ zIndex: 0 }}>
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: colors.background,
-          }}
-        />
+      {/* Narração da intro — "Canal Cidades Brasileiras apresenta..." (pt-BR-AntonioNeural) */}
+      {introAudio && <Audio src={staticFile(introAudio)} volume={1} />}
+
+      {/* 1. Atmospheric Background with Floating Particles */}
+      <AbsoluteFill style={{ zIndex: 0, backgroundColor: toneConfig.baseBg }}>
         {/* Cinematic Gradient Flow */}
         <div style={{
           position: "absolute",
@@ -70,23 +74,31 @@ export const Top10Intro: React.FC<Top10IntroProps> = ({
           left: '-20%',
           width: '140%',
           height: '140%',
-          background: `radial-gradient(circle at 50% 50%, ${colors.accent}11 0%, transparent 60%)`,
+          background: `radial-gradient(circle at 50% 50%, ${toneConfig.accentColor}20 0%, transparent 60%)`,
           transform: `scale(${bgScale}) rotate(${frame / 200}rad)`,
           filter: 'blur(100px)',
         }} />
 
-        {/* Dynamic Orbs */}
+        {/* Dynamic Glowing Orb */}
         <div style={{
           position: "absolute",
           top: '10%',
           right: '5%',
-          width: '600px',
-          height: '600px',
-          background: colors.accent,
+          width: '700px',
+          height: '700px',
+          background: toneConfig.orbColor,
           borderRadius: "50%",
-          filter: "blur(150px)",
-          opacity: interpolate(entranceSpring, [0, 1], [0, 0.1])
+          filter: "blur(160px)",
+          opacity: interpolate(entranceSpring, [0, 1], [0, 0.25])
         }} />
+
+        {/* Partículas Voando Animadas */}
+        <FloatingParticles
+          count={isVertical ? 65 : 85}
+          colors={toneConfig.particleColors}
+          direction="up"
+          speedMultiplier={1.1}
+        />
       </AbsoluteFill>
 
       {/* 2. Content */}
@@ -120,7 +132,7 @@ export const Top10Intro: React.FC<Top10IntroProps> = ({
               return (
                 <>
                   <span style={{ fontSize: isVertical ? '60px' : '80px', display: 'block', opacity: 0.8 }}>{part1} {prep}</span>
-                  <span style={{ color: colors.accent, display: 'block', marginTop: '10px' }}>{part2}</span>
+                  <span style={{ color: accent, display: 'block', marginTop: '10px' }}>{part2}</span>
                 </>
               );
             }
@@ -132,7 +144,7 @@ export const Top10Intro: React.FC<Top10IntroProps> = ({
           marginTop: '60px',
           height: '4px',
           width: '200px',
-          background: `linear-gradient(90deg, transparent, ${colors.accent}, transparent)`,
+          background: `linear-gradient(90deg, transparent, ${accent}, transparent)`,
         }} />
 
         <p style={{
