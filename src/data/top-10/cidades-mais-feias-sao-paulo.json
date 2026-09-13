@@ -1,0 +1,158 @@
+{
+  "videoId": "top-10-cidades-mais-feias-sao-paulo-2026",
+  "title": "As 10 CIDADES MAIS FEIAS de São Paulo",
+  "subtitle": "Ranking Paisagem Urbana - As Mais Citadas como \"Feias\"",
+  "theme": "elegant-dark",
+  "format": "horizontal",
+  "backgroundTone": "cyber-cyan",
+  "metric": {
+    "field": "uglinessScore",
+    "title": "Índice de Feiúra",
+    "unit": "",
+    "format": "number",
+    "order": "desc"
+  },
+  "dataSource": "Fonte: Ranking editorial - Critérios de paisagem urbana",
+  "cities": [
+    {
+      "name": "Cubatão",
+      "state": "SP",
+      "nickname": "A Mais Feia de SP",
+      "data": {
+        "population": 133821,
+        "uglinessScore": 10
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sp/c/cubatao.jpg"
+      }
+    },
+    {
+      "name": "Carapicuíba",
+      "state": "SP",
+      "nickname": "Cidade-Dormitório",
+      "data": {
+        "population": 400927,
+        "uglinessScore": 9
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sp/c/carapicuiba.jpg"
+      }
+    },
+    {
+      "name": "Francisco Morato",
+      "state": "SP",
+      "nickname": "Adensada e Cinza",
+      "data": {
+        "population": 165139,
+        "uglinessScore": 8
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sp/f/francisco-morato.jpg"
+      }
+    },
+    {
+      "name": "Mauá",
+      "state": "SP",
+      "nickname": "Industrial Densa",
+      "data": {
+        "population": 418912,
+        "uglinessScore": 7
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sp/m/maua.jpg"
+      }
+    },
+    {
+      "name": "Osasco",
+      "state": "SP",
+      "nickname": "Mar de Concreto",
+      "data": {
+        "population": 728615,
+        "uglinessScore": 6
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sp/o/osasco.jpg"
+      }
+    },
+    {
+      "name": "Ferraz de Vasconcelos",
+      "state": "SP",
+      "nickname": "Densa Sem Rosto",
+      "data": {
+        "population": 196500,
+        "uglinessScore": 5
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sp/f/ferraz-de-vasconcelos.jpg"
+      }
+    },
+    {
+      "name": "Itaquaquecetuba",
+      "state": "SP",
+      "nickname": "Expansão Desordenada",
+      "data": {
+        "population": 369275,
+        "uglinessScore": 4
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sp/i/itaquaquecetuba.jpg"
+      }
+    },
+    {
+      "name": "Franco da Rocha",
+      "state": "SP",
+      "nickname": "Morro Irregular",
+      "data": {
+        "population": 144849,
+        "uglinessScore": 3
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sp/f/franco-da-rocha.jpg"
+      }
+    },
+    {
+      "name": "Suzano",
+      "state": "SP",
+      "nickname": "Industrial Heterogênea",
+      "data": {
+        "population": 307364,
+        "uglinessScore": 2
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sp/s/suzano.jpg"
+      }
+    },
+    {
+      "name": "Diadema",
+      "state": "SP",
+      "nickname": "Densidade Máxima",
+      "data": {
+        "population": 393237,
+        "uglinessScore": 1
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/sp/d/diadema.jpg"
+      }
+    }
+  ]
+}

@@ -160,6 +160,8 @@ import top10PobresRJData from "./data/top-10/cidades-mais-pobres-rj-ifdm.json";
 
 import top10FeiasSCData from "./data/top-10/cidades-mais-feias-santa-catarina.json";
 
+import top10FeiasSPData from "./data/top-10/cidades-mais-feias-sao-paulo.json";
+
 
 // Championships
 import mogiChampionshipData from "./data/championships/mogi.json";
@@ -2071,6 +2073,26 @@ export const RemotionRoot: React.FC = () => {
           audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
           bpm: 140,
           introAudio: "audio/intro/top-10-cidades-mais-feias-santa-catarina.mp3",
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Feias de São Paulo — SOMENTE horizontal (regra introAudio) */}
+      <Composition
+        id="Top10CidadesMaisFeiasSPHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("horizontal", 140)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10FeiasSPData,
+            format: "horizontal",
+            videoId: "top-10-cidades-mais-feias-sao-paulo-horizontal",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+          introAudio: "audio/intro/top-10-cidades-mais-feias-sao-paulo.mp3",
         }}
       />
 

@@ -114,6 +114,7 @@ scripts/                 # migrate-images.js, update-json-paths.js, generate-top
 - **Ordenação:** `sortCitiesByMetric(cities, metric)` `Top10CidadesVideo.tsx:24` — `metric.order: "desc"|"asc"`
 - **Duração:** `calculateTop10Duration(format, bpm?)` em `utils/` — `beatsToFrames(beats,bpm,fps)` com default 128 BPM; alguns overrides 140 BPM (`Missing Persons` track)
 - **Narração de intro (REGRA — vale p/ todos os vídeos):** áudio de apresentação ("Canal Cidades Brasileiras apresenta...") SOMENTE na versão horizontal, via prop `introAudio` em `defaultProps` + `<Audio>` em `Top10IntroScene` (com ducking da trilha). Versões verticais NUNCA levam `introAudio` — intro de 4 beats (~1,7s) não comporta narração; só a horizontal (intro 16 beats) comporta
+- **Narração das cidades:** TTS `pt-BR-AntonioNeural` em `audio/cities/{uf}/{slug}.mp3`, tocado em `Top10RankingScene` somente p/ UFs habilitadas (hoje: `RJ`, `SC`, `SP`) — ao adicionar nova UF, gerar os 10 áudios + estender a condição no componente
 - **Instâncias 2026-09-11:** 21 compositions Top10 (populosas vertical+horizontal, pobres Minas vert+hor, ricas SC, pobres SC vert+hor, pobres RS vert+hor 140bpm, violentas SC vert+hor 140bpm, pobres PR hor, violentas PR hor, violentas MG hor, pobres SP vert+hor, violentas SP vert+hor, pobres Goiás hor, violentas Goiás hor, piores enchentes hor)
 
 ---
