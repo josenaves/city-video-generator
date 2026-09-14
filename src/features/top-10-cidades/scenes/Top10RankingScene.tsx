@@ -94,7 +94,7 @@ export const Top10RankingItem: React.FC<Top10SceneProps> = ({
       }}
     >
       {/* Narração TTS — nome da cidade (voz homem sério pt-BR-AntonioNeural) */}
-      {(cidade.state === "RJ" || cidade.state === "SC" || cidade.state === "SP") && <Audio src={staticFile(ttsSrc)} volume={1} />}
+      {(cidade.state === "RJ" || cidade.state === "SC" || cidade.state === "SP" || cidade.state === "PR") && <Audio src={staticFile(ttsSrc)} volume={1} />}
       {/* 1. Cinematic Background Layer com Partículas Flutuantes */}
       <AbsoluteFill style={{ zIndex: 0, backgroundColor: toneConfig.baseBg }}>
         {!backgroundError && (

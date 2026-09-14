@@ -162,6 +162,8 @@ import top10FeiasSCData from "./data/top-10/cidades-mais-feias-santa-catarina.js
 
 import top10FeiasSPData from "./data/top-10/cidades-mais-feias-sao-paulo.json";
 
+import top10FeiasPRData from "./data/top-10/cidades-mais-feias-parana.json";
+
 
 // Championships
 import mogiChampionshipData from "./data/championships/mogi.json";
@@ -2093,6 +2095,26 @@ export const RemotionRoot: React.FC = () => {
           audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
           bpm: 140,
           introAudio: "audio/intro/top-10-cidades-mais-feias-sao-paulo.mp3",
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Feias do Paraná — SOMENTE horizontal (regra introAudio) */}
+      <Composition
+        id="Top10CidadesMaisFeiasPRHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("horizontal", 140)}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10FeiasPRData,
+            format: "horizontal",
+            videoId: "top-10-cidades-mais-feias-parana-horizontal",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          bpm: 140,
+          introAudio: "audio/intro/top-10-cidades-mais-feias-parana.mp3",
         }}
       />
 

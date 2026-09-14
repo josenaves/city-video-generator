@@ -1,6 +1,6 @@
 ---
 name: SEO Top10 Ranking — Variante Viral
-description: Gera título/descrição/tags no template exato do vídeo mais acessado (Top10 IDH/IFDM) — sem ⚔️, com gancho país + 📊 Principais Revelações + Estatísticas Impactantes
+description: Gera título/descrição/tags no template exato do vídeo mais acessado (Top10 IDH/IFDM) — título com emoji de gancho + 📊 Principais Revelações + Estatísticas Impactantes
 ---
 
 # SEO Top10 Ranking — Variante Viral (RJ IFDM)
@@ -14,6 +14,8 @@ Use para **Top10** (`src/data/top-10/*.json`), não para Battle 1v1 (`⚔️`).
 ## Template obrigatório (espelhar ordem)
 
 ```md
+🏷️ Título: [título do vídeo — ver regra de Título abaixo]
+
 Você sabia que [gancho contraste estado rico vs pobreza com comparação internacional PNUD/Banco Mundial]? 🤔
 
 Este ranking revela as 10 cidades mais [pobres/ricas/violentas] de [Estado] segundo [IFDM FIRJAN / IDH PNUD] [ano]. Prepare-se para conhecer realidades surpreendentes que contrastam fortemente com a imagem de [prosperidade/segurança] do estado.
@@ -69,7 +71,12 @@ O canal para as pequenas, médias e grandes cidades brasileiras.
 
 ## Regras
 
-- **Título:** SEM `⚔️` e SEM `vs`. Use pergunta `Você sabia que [estado rico] tem cidades com [IFDM] comparável a [país]?` + ano. Ex: `Você sabia que no RJ tem cidade com IFDM comparável à Somália?`
+- **Título (OBRIGATÓRIO — primeira linha do `.seo.md` como `🏷️ Título:`):** seguir os padrões reais do canal — emoji de gancho no início + palavra-chave em CAPS + ano quando houver. Exemplos canônicos:
+  - `⚔️ AS 10 CIDADES MAIS POBRES DE SANTA CATARINA` (⚔️ choque/batalha)
+  - `🤢 As cidades mais FEIAS de São Paulo` (🤢🤮 nojo → tema feiúra)
+  - `🤮 As 10 cidades mais FEIAS de Santa Catarina 📉 2026` (📉 + ano)
+  - `🐀 AS 10 CIDADES MAIS POBRES de SÃO PAULO: O Lado Esquecido do Estado Mais Rico do Brasil 2026` (subtítulo após `:` + ano)
+  - Elementos: emoji-tema no início (`⚔️` `🤢` `🤮` `🐀` `📉`), keyword em CAPS (`FEIAS`, `POBRES`), subtítulo-gancho opcional após `:`, ano no fim (`2026`).
 - **Comparação internacional:** use `brazilian_knowledge` + PNUD/Banco Mundial para mapear `IFDM 0,382` → país (ex: Níger, Haiti, São Tomé). Obrigatório no `🔴`.
 - **Dados:** extraia de `src/data/top-10/*.json` `cities[]` ordenadas por `metric.order`. Calcule `min/max pop`, `média`, `região` (ex: Baixada Fluminense concentra 6/10).
 - **IDs:** `videoId` → `src/seo/[videoId].seo.md` (ex: `top-10-cidades-mais-pobres-rj-ifdm-2025.seo.md`)
@@ -79,7 +86,7 @@ O canal para as pequenas, médias e grandes cidades brasileiras.
 
 1. **Analisar** `src/data/top-10/*.json` — identifique #1, menor pop, padrão `abaixo de X`, concentração regional
 2. **Pesquisar** `brave_fetch` país comparável para `🔴`
-3. **Gerar** markdown seguindo template acima
+3. **Gerar** título (`🏷️ Título:` primeira linha, regra de Título) + markdown seguindo template acima
 4. **Salvar** `src/seo/[videoId].seo.md`
 
 ## Exemplo para RJ IFDM (este vídeo)

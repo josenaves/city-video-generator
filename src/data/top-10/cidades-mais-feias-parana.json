@@ -1,0 +1,168 @@
+{
+  "videoId": "top-10-cidades-mais-feias-parana-2026",
+  "title": "As 10 CIDADES MAIS FEIAS do Paraná",
+  "subtitle": "Ranking Paisagem Urbana - As Mais Citadas como \"Feias\"",
+  "theme": "elegant-dark",
+  "format": "horizontal",
+  "backgroundTone": "cyber-cyan",
+  "metric": {
+    "field": "uglinessScore",
+    "title": "Índice de Feiúra",
+    "unit": "",
+    "format": "number",
+    "order": "desc"
+  },
+  "dataSource": "Fonte: Ranking editorial - Critérios de paisagem urbana + estudo UNESP Ourinhos (Lobato)",
+  "cities": [
+    {
+      "name": "Almirante Tamandaré",
+      "state": "PR",
+      "nickname": "A Mais Feia do PR",
+      "data": {
+        "population": 92000,
+        "uglinessScore": 10,
+        "info": "Expansão urbana desordenada, aparência periférica"
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/pr/a/almirante-tamandare.webp"
+      }
+    },
+    {
+      "name": "Colombo",
+      "state": "PR",
+      "nickname": "Expansão Irregular",
+      "data": {
+        "population": 240720,
+        "uglinessScore": 9,
+        "info": "Bairros pouco planejados, paisagem urbana irregular"
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/pr/c/colombo.webp"
+      }
+    },
+    {
+      "name": "Araucária",
+      "state": "PR",
+      "nickname": "Polo Industrial",
+      "data": {
+        "population": 180000,
+        "uglinessScore": 8,
+        "info": "Forte presença industrial, infraestrutura pesada"
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/pr/a/araucaria.webp"
+      }
+    },
+    {
+      "name": "Paranaguá",
+      "state": "PR",
+      "nickname": "Porto e Contraste",
+      "data": {
+        "population": 145829,
+        "uglinessScore": 7,
+        "info": "Zonas portuárias/industriais com problemas de conservação"
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/pr/p/paranagua.webp"
+      }
+    },
+    {
+      "name": "Piraquara",
+      "state": "PR",
+      "nickname": "Fragmentada",
+      "data": {
+        "population": 114970,
+        "uglinessScore": 6,
+        "info": "Urbanização fragmentada, ocupação periférica"
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/pr/p/piraquara.webp"
+      }
+    },
+    {
+      "name": "São José dos Pinhais",
+      "state": "PR",
+      "nickname": "Crescimento Acelerado",
+      "data": {
+        "population": 329222,
+        "uglinessScore": 5,
+        "info": "Áreas industriais e bairros pouco integrados"
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/pr/s/sao-jose-dos-pinhais.webp"
+      }
+    },
+    {
+      "name": "Pinhais",
+      "state": "PR",
+      "nickname": "Densa e Uniforme",
+      "data": {
+        "population": 134788,
+        "uglinessScore": 4,
+        "info": "Densidade elevada, pouca variedade arquitetônica"
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/pr/p/pinhais.webp"
+      }
+    },
+    {
+      "name": "Campo Largo",
+      "state": "PR",
+      "nickname": "Capital da Louça",
+      "data": {
+        "population": 78000,
+        "uglinessScore": 3,
+        "info": "Indústrias, rodovias e crescimento pouco homogêneo"
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/pr/c/campo-largo.webp"
+      }
+    },
+    {
+      "name": "Sarandi",
+      "state": "PR",
+      "nickname": "Residencial Uniforme",
+      "data": {
+        "population": 48000,
+        "uglinessScore": 2,
+        "info": "Bairros de aparência semelhante, pouca diferenciação"
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/pr/s/sarandi.jpeg"
+      }
+    },
+    {
+      "name": "Lobato",
+      "state": "PR",
+      "nickname": "Em Deterioração",
+      "data": {
+        "population": 5200,
+        "uglinessScore": 1,
+        "info": "Deterioração e descontinuidade urbana (UNESP)"
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#FFB6C1",
+        "image": "images/cities/pr/l/lobato.jpeg"
+      }
+    }
+  ]
+}

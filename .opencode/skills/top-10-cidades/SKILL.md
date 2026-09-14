@@ -77,6 +77,41 @@ As imagens devem seguir a estrutura unificada em `public/images/cities/{estado}/
 
 Consulte [`images.md`](.agent/skills/remotion-best-practices/rules/images.md) para boas práticas de carregamento de imagens.
 
+### 🖼️ Serviço de Assets (cidades-brasileiras-data) — FONTE CANÔNICA DE HERO IMAGES
+
+**NUNCA use Wikimedia/Wikipedia direto.** As hero images vêm do serviço local
+`cidades-brasileiras-data` (`bun run src/api/server.ts` em
+`/home/josenaves/Projects/cidades-brasileiras-data`), já curadas e com licença
+`public domain`. Guia completo em `docs/mcp-cli-integration-guide.md` do outro repo.
+
+> **Porta: `4000`** (desde 2026-09-14; antes era `3000`). Não confundir com o
+> Remotion Studio (`npm run dev`), que usa a `3000`. Se `localhost:4000` não
+> responder, o serviço está fora do ar — avisar o usuário em vez de voltar
+> para Wikimedia.
+
+| Via | Como | Quando usar |
+|-----|------|-------------|
+| **REST** (preferida) | `GET http://localhost:4000/v1/cities/:uf/:slug/media?type=hero` | Consultar hero + metadados (path, checksum, licença) via `curl` |
+| **REST** dados | `GET http://localhost:4000/v1/cities/:uf/:slug` | Nome, população, fundação, mesorregião p/ preencher o JSON |
+| **CLI** | `bun run src/import/asset-manager.ts add:hero --city=UF/slug --file=...` (rodar no outro repo) | Cadastrar nova hero quando a cidade não tiver (`"count":0`) |
+| **MCP** | Servidor `cidades-brasileiras-data` já registrado em `opencode.json` → tools `get_city_media`, `get_city` (heroes, dados, feriados) | Preferir ao REST quando as tools MCP estiverem disponíveis na sessão |
+
+- **Sem token/API key**: endpoints GET são somente-leitura e não exigem auth.
+- Arquivos físicos ficam em `data/media/cities/{uf}/{letra}/{slug}/hero.{webp|jpeg}`
+  **no outro repo** — copiar para `public/images/cities/{uf}/{letra}/{slug}.{ext}`
+  **neste repo** e referenciar esse caminho no JSON (via `staticFile()`).
+- Verificar a imagem com `file <hero>` antes de copiar (deve ser landscape real,
+  não thumbnail; ignorar campos `width/height` absurdos no metadato JSON).
+
+Exemplo (hero + dados de Sarandi/PR via REST):
+
+```bash
+curl -s "http://localhost:4000/v1/cities/PR/sarandi/media?type=hero"
+curl -s "http://localhost:4000/v1/cities/PR/sarandi"
+cp /home/josenaves/Projects/cidades-brasileiras-data/data/media/cities/pr/s/sarandi/hero.jpeg \
+   public/images/cities/pr/s/sarandi.jpeg
+```
+
 ## Configuração do Vídeo
 
 ### Schema do Arquivo JSON
@@ -178,7 +213,37 @@ edge-tts --voice pt-BR-AntonioNeural --text "Canal Cidades Brasileiras apresenta
 
 ⚠️ **REGRA (vale p/ todos os vídeos):** a narração de intro vai **somente** na composição horizontal, via prop `introAudio`. Versões verticais NUNCA levam `introAudio` — a intro vertical tem 4 beats (~1,7s) e não comporta narração; só a horizontal (intro 16 beats, ~7s) comporta.
 
-### 4. Registrar Composição
+### 4. Gerar Narrações das Cidades (OBRIGATÓRIO)
+
+Cada cidade do ranking tem locução do próprio nome (mesma voz `pt-BR-AntonioNeural`),
+tocada em `Top10RankingScene` durante a exibição da cidade:
+
+```bash
+mkdir -p public/audio/cities/<uf-minusculo>
+edge-tts --voice pt-BR-AntonioNeural --text "<Nome da Cidade>" --write-media public/audio/cities/<uf-minusculo>/<slug>.mp3
+```
+
+- **Regra do slug** (idêntica ao `citySlug` em `Top10RankingScene.tsx:80`): remover
+  acentos, minúsculas, tudo que não for `[a-z0-9]` vira `-`. Ex: `São José dos Pinhais` → `sao-jose-dos-pinhais`.
+- **Habilitar a UF**: `Top10RankingScene.tsx:97` só toca o áudio p/ UFs listadas na
+  condição — adicionar o estado (ex: `|| cidade.state === "PR"`).
+- ⚠️ **Efeito colateral**: habilitar a UF afeta TODOS os vídeos Top10 dela. Verificar
+  se as cidades dos outros JSONs da UF têm mp3 e gerar os faltantes, senão o render
+  quebra por áudio inexistente. Conferir com:
+
+```bash
+python3 -c "
+import json, glob, unicodedata, os, re
+def slug(n):
+    n = unicodedata.normalize('NFD', n)
+    n = ''.join(c for c in n if unicodedata.category(c) != 'Mn')
+    return re.sub(r'^-|\-$', '', re.sub(r'[^a-z0-9]+', '-', n.lower()))
+have = set(os.listdir('public/audio/cities/<uf-minusculo>'))
+print([c['name'] for f in glob.glob('src/data/top-10/*.json') for c in json.load(open(f)).get('cities', []) if c.get('state')=='<UF>' and slug(c['name'])+'.mp3' not in have])
+"
+```
+
+### 5. Registrar Composição
 
 Adicione em `src/Root.tsx`:
 
@@ -214,7 +279,7 @@ import top10Data from "./data/top-10/cidades-mais-ricas.json";
 
 Para informações sobre composições, consulte [`compositions.md`](.agent/skills/remotion-best-practices/rules/compositions.md) e [`calculate-metadata.md`](.agent/skills/remotion-best-practices/rules/calculate-metadata.md).
 
-### 5. Renderizar Vídeo
+### 6. Renderizar Vídeo
 
 ```bash
 # Vertical (social media)
@@ -223,6 +288,16 @@ npm run build:video Top10CidadesMaisRicas
 # Horizontal (YouTube)
 npm run build:video:youtube Top10CidadesMaisRicas
 ```
+
+> ⚠️ **NÃO renderize automaticamente.** O usuário prefere subir o Remotion Studio
+> (`npm run dev`) e conferir o vídeo lá antes de qualquer render.
+
+### 7. Gerar SEO (OBRIGATÓRIO)
+
+Todo vídeo Top10 sai com o arquivo de SEO. Carregar a skill `youtube_seo_top10`
+(variante viral — template do vídeo mais acessado, SEM ⚔️) e salvar em
+`src/seo/[videoId].seo.md` (ex: `src/seo/top-10-cidades-mais-feias-parana-2026.seo.md`),
+espelhando o `.seo.md` mais parecido com o tema (ex: Feias SP p/ Feias PR).
 
 ## Implementação Técnica
 

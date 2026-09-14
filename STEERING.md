@@ -114,7 +114,7 @@ scripts/                 # migrate-images.js, update-json-paths.js, generate-top
 - **Ordenação:** `sortCitiesByMetric(cities, metric)` `Top10CidadesVideo.tsx:24` — `metric.order: "desc"|"asc"`
 - **Duração:** `calculateTop10Duration(format, bpm?)` em `utils/` — `beatsToFrames(beats,bpm,fps)` com default 128 BPM; alguns overrides 140 BPM (`Missing Persons` track)
 - **Narração de intro (REGRA — vale p/ todos os vídeos):** áudio de apresentação ("Canal Cidades Brasileiras apresenta...") SOMENTE na versão horizontal, via prop `introAudio` em `defaultProps` + `<Audio>` em `Top10IntroScene` (com ducking da trilha). Versões verticais NUNCA levam `introAudio` — intro de 4 beats (~1,7s) não comporta narração; só a horizontal (intro 16 beats) comporta
-- **Narração das cidades:** TTS `pt-BR-AntonioNeural` em `audio/cities/{uf}/{slug}.mp3`, tocado em `Top10RankingScene` somente p/ UFs habilitadas (hoje: `RJ`, `SC`, `SP`) — ao adicionar nova UF, gerar os 10 áudios + estender a condição no componente
+- **Narração das cidades:** TTS `pt-BR-AntonioNeural` em `audio/cities/{uf}/{slug}.mp3`, tocado em `Top10RankingScene` somente p/ UFs habilitadas (hoje: `RJ`, `SC`, `SP`, `PR` — PR habilitado em 2026-09-14 p/ Feias do Paraná + 14 áudios extras p/ Pobres/Violentas/Populosas) — ao adicionar nova UF, gerar os áudios + estender a condição no componente
 - **Instâncias 2026-09-11:** 21 compositions Top10 (populosas vertical+horizontal, pobres Minas vert+hor, ricas SC, pobres SC vert+hor, pobres RS vert+hor 140bpm, violentas SC vert+hor 140bpm, pobres PR hor, violentas PR hor, violentas MG hor, pobres SP vert+hor, violentas SP vert+hor, pobres Goiás hor, violentas Goiás hor, piores enchentes hor)
 
 ---
@@ -167,6 +167,7 @@ Ver `src/features/campaign-one-vs-many/types.ts:1` — `{ mainCity, opponentCiti
 - 729 pastas (27 UFs × 26 letras + 1 extra verificado 2026-09-11 via `find`), ~400 arquivos imagem (`find -type f | wc -l = 400` em 2026-09-11; `ls` anterior deu 1792 por contar glob errado)
 - Caminho no JSON deve ser **relativo a `public/`** sem `public/` prefix → usar com `staticFile()`
 - Compatibilidade retroativa: `blumenau.jpg` → resolve para `images/cities/sc/b/blumenau.jpg` via `utils/city-image-path.ts`
+- **Fonte canônica de heroes:** serviço `cidades-brasileiras-data` em `http://localhost:4000` (porta 4000 desde 2026-09-14; NÃO é a 3000 do Studio) — `GET /v1/cities/:uf/:slug/media?type=hero`, sem auth; detalhe na skill `top-10-cidades`
 
 ---
 
