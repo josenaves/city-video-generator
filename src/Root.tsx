@@ -164,6 +164,8 @@ import top10FeiasSPData from "./data/top-10/cidades-mais-feias-sao-paulo.json";
 
 import top10FeiasPRData from "./data/top-10/cidades-mais-feias-parana.json";
 
+import top10CorruptasRJData from "./data/top-10/cidades-mais-corruptas-rj.json";
+
 
 // Championships
 import mogiChampionshipData from "./data/championships/mogi.json";
@@ -2115,6 +2117,37 @@ export const RemotionRoot: React.FC = () => {
           audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
           bpm: 140,
           introAudio: "audio/intro/top-10-cidades-mais-feias-parana.mp3",
+        }}
+      />
+
+      {/* Top 10 Cidades Mais Corruptas do Rio de Janeiro */}
+      <Composition
+        id="Top10CidadesMaisCorruptasRJ"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("vertical")}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          videoData: top10CorruptasRJData,
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+        }}
+      />
+      <Composition
+        id="Top10CidadesMaisCorruptasRJHorizontal"
+        component={Top10CidadesVideo}
+        durationInFrames={calculateTop10Duration("horizontal")}
+        fps={30}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          videoData: {
+            ...top10CorruptasRJData,
+            format: "horizontal",
+            videoId: "top-10-cidades-mais-corruptas-rj-horizontal",
+          },
+          audioTrack: "audio/Missing Persons - Jeremy Blake.mp3",
+          introAudio: "audio/intro/top-10-cidades-mais-corruptas-rj.mp3",
         }}
       />
 

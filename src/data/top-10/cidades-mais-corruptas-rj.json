@@ -1,0 +1,157 @@
+{
+  "videoId": "top-10-cidades-mais-corruptas-rj-2026",
+  "title": "As 10 CIDADES MAIS CORRUPTAS do Rio de Janeiro",
+  "subtitle": "Ranking CIPDK - Índice de Corrupção Per Capita (TCU 2001-2020)",
+  "theme": "elegant-dark",
+  "format": "vertical",
+  "metric": {
+    "field": "cipdk",
+    "title": "CIPDK",
+    "unit": "",
+    "format": "number",
+    "order": "desc"
+  },
+  "dataSource": "Fonte: Revista do TCU — Índice de Corrupção Per Capita (CIPDK), baseado em contas julgadas irregulares entre 2001 e 2020, normalizadas pela população",
+  "cities": [
+    {
+      "name": "Miguel Pereira",
+      "state": "RJ",
+      "nickname": "Campeã da Corrupção",
+      "data": {
+        "cipdk": 27,
+        "population": 26582
+      },
+      "visual": {
+        "primaryColor": "#8B0000",
+        "secondaryColor": "#CD5C5C",
+        "image": "images/cities/rj/m/miguel-pereira.webp"
+      }
+    },
+    {
+      "name": "Mangaratiba",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "cipdk": 23,
+        "population": 41220
+      },
+      "visual": {
+        "primaryColor": "#A52A2A",
+        "secondaryColor": "#F08080",
+        "image": "images/cities/rj/m/mangaratiba.jpg"
+      }
+    },
+    {
+      "name": "Varre-Sai",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "cipdk": 11,
+        "population": 10976
+      },
+      "visual": {
+        "primaryColor": "#B22222",
+        "secondaryColor": "#FA8072",
+        "image": "images/cities/rj/v/varre-sai.jpg"
+      }
+    },
+    {
+      "name": "Cambuci",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "cipdk": 10,
+        "population": 14616
+      },
+      "visual": {
+        "primaryColor": "#DC143C",
+        "secondaryColor": "#E9967A",
+        "image": "images/cities/rj/c/cambuci.jpg"
+      }
+    },
+    {
+      "name": "Laje do Muriaé",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "cipdk": 8,
+        "population": 7491
+      },
+      "visual": {
+        "primaryColor": "#FF4500",
+        "secondaryColor": "#FFA07A",
+        "image": "images/cities/rj/l/laje-do-muriae.webp"
+      }
+    },
+    {
+      "name": "Iguaba Grande",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "cipdk": 6,
+        "population": 27920
+      },
+      "visual": {
+        "primaryColor": "#800000",
+        "secondaryColor": "#D2691E",
+        "image": "images/cities/rj/i/iguaba-grande.jpg"
+      }
+    },
+    {
+      "name": "Rio das Flores",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "cipdk": 5,
+        "population": 8954
+      },
+      "visual": {
+        "primaryColor": "#8B4513",
+        "secondaryColor": "#F4A460",
+        "image": "images/cities/rj/r/rio-das-flores.png"
+      }
+    },
+    {
+      "name": "Rio de Janeiro",
+      "state": "RJ",
+      "nickname": "A Capital",
+      "data": {
+        "cipdk": 5,
+        "population": 6625849
+      },
+      "visual": {
+        "primaryColor": "#2F4F4F",
+        "secondaryColor": "#778899",
+        "image": "images/cities/rj/r/rio-de-janeiro.webp"
+      }
+    },
+    {
+      "name": "Rio Bonito",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "cipdk": 4,
+        "population": 60930
+      },
+      "visual": {
+        "primaryColor": "#556B2F",
+        "secondaryColor": "#8FBC8F",
+        "image": "images/cities/rj/r/rio-bonito.webp"
+      }
+    },
+    {
+      "name": "Guapimirim",
+      "state": "RJ",
+      "nickname": "",
+      "data": {
+        "cipdk": 4,
+        "population": 51696
+      },
+      "visual": {
+        "primaryColor": "#696969",
+        "secondaryColor": "#D3D3D3",
+        "image": "images/cities/rj/g/guapimirim.jpg"
+      }
+    }
+  ]
+}
